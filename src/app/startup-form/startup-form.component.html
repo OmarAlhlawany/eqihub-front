@@ -1,13 +1,10 @@
-<div class="startup-form-container">
+<h2 class="form-title">{{ 'STARTUP_FORM.TITLE' | translate }}</h2>
 
-<div class="form-header text-center">
-    <h1>Join as Startup</h1>
-    <p>Please fill the form below to receive a quote for your project. <br> Feel free to add as much detail as needed.</p>
-  </div>
-  
-  <form [formGroup]="startupForm" (ngSubmit)="onSubmit()" class="form-container">
-    <!-- Step Indicator -->
-    <div class="form-steps-indicator d-flex align-items-center mb-4">
+<div class="investor-form-container">
+
+  <form [formGroup]="investorForm" (ngSubmit)="onSubmit()" class="form-container">
+    <!-- Step Indicator (Hidden on Step 5) -->
+    <div *ngIf="currentStep !== 5" class="form-steps-indicator d-flex align-items-center mb-4">
       <div class="step-indicator">
         <span class="step-circle" [ngClass]="{'active': currentStep >= 1, 'unlocked': currentStep > 1}">1</span>
         <div class="step-line" [ngClass]="{'half-filled': currentStep === 1, 'fully-filled': currentStep > 1}"></div>
@@ -21,140 +18,237 @@
         <div class="step-line" [ngClass]="{'half-filled': currentStep === 3, 'fully-filled': currentStep > 3}"></div>
       </div>
       <div class="step-indicator">
-        <span class="step-circle" [ngClass]="{'active': currentStep >= 4, 'unlocked': currentStep === 4}">4</span>
+        <span class="step-circle" [ngClass]="{'active': currentStep >= 4, 'unlocked': currentStep > 4}">4</span>
+      </div>
+      <!-- Step 5 Indicator (Only shown on Step 5) -->
+      <div class="step-indicator" *ngIf="currentStep === 5">
+        <span class="step-circle" [ngClass]="{'active': currentStep >= 5, 'unlocked': currentStep === 5}">5</span>
       </div>
     </div>
-  
-    <!-- Step 1: Contact Details -->
-    <div *ngIf="currentStep === 1" class="form-step">
-      <h3>Contact details</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisc.</p>
-  
-      <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="name">Name *</label>
-          <div class="input-wrapper">
-            <input id="name" formControlName="name" placeholder="John Carter" class="form-control" required />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="email">Email *</label>
-          <div class="input-wrapper">
-            <input id="email" type="email" formControlName="email" placeholder="Email address" class="form-control" required />
-          </div>
-        </div>
-      </div>
-  
-      <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="phoneNumber">Phone Number *</label>
-          <div class="input-wrapper">
-            <input id="phoneNumber" type="tel" formControlName="phoneNumber" placeholder="(123) 456 - 7890" class="form-control" required />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="company">Company *</label>
-          <div class="input-wrapper">
-            <input id="company" formControlName="company" placeholder="Company name" class="form-control" required />
-          </div>
-        </div>
-      </div>
+
+<!-- Step 1: Contact Details -->
+<div *ngIf="currentStep === 1" class="form-step step-1">
+  <h3>{{ 'INVESTOR_FORM.STEP_1.TITLE' | translate }}</h3>
+  <p>{{ 'INVESTOR_FORM.STEP_1.DESCRIPTION' | translate }}</p>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="name">{{ 'INVESTOR_FORM.STEP_1.NAME' | translate }} *</label>
+      <input id="name" formControlName="name" placeholder="{{ 'INVESTOR_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
     </div>
-  
-    <!-- Step 2: Business Details -->
-    <div *ngIf="currentStep === 2" class="form-step">
-      <div class="form-group">
-        <label for="businessModel">Business Model *</label>
-        <select id="businessModel" formControlName="businessModel" class="form-control" required>
-          <option value="">Select Business Model</option>
-          <option value="B2B">B2B</option>
-          <option value="B2C">B2C</option>
-          <option value="C2C">C2C</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-  
-      <div class="form-group">
-        <label for="fundingStage">Funding Stage *</label>
-        <select id="fundingStage" formControlName="fundingStage" class="form-control" required>
-          <option value="">Select Funding Stage</option>
-          <option value="Pre-Seed">Pre-Seed</option>
-          <option value="Seed">Seed</option>
-          <option value="Series A">Series A</option>
-          <option value="Series B+">Series B+</option>
-        </select>
-      </div>
-  
-      <div class="form-group">
-        <label for="fundingAmount">Funding Amount *</label>
-        <div class="input-wrapper">
-          <input id="fundingAmount" formControlName="fundingAmount" placeholder="Enter funding amount" class="form-control" required />
-        </div>
-      </div>
+    <div class="col-md-6">
+      <label for="email">{{ 'INVESTOR_FORM.STEP_1.EMAIL' | translate }} *</label>
+      <input id="email" type="email" formControlName="email" placeholder="{{ 'INVESTOR_FORM.STEP_1.EMAIL_PLACEHOLDER' | translate }}" class="form-control" required />
     </div>
-  
-    <!-- Step 3: Project Budget -->
-    <div *ngIf="currentStep === 3" class="form-step">
-      <h3 class="step-title">What's your project budget?</h3>
-  
-      <div class="budget-options">
-        <div class="custom-control custom-radio budget-option">
-          <input type="radio" formControlName="projectBudget" value="$10,000 - $20,000" class="custom-control-input" id="budget1" required />
-          <label class="custom-control-label" for="budget1">$10,000 - $20,000</label>
-        </div>
-  
-        <div class="custom-control custom-radio budget-option">
-          <input type="radio" formControlName="projectBudget" value="$20,000 - $50,000" class="custom-control-input" id="budget2" required />
-          <label class="custom-control-label" for="budget2">$20,000 - $50,000</label>
-        </div>
-  
-        <div class="custom-control custom-radio budget-option">
-          <input type="radio" formControlName="projectBudget" value="$50,000+" class="custom-control-input" id="budget3" required />
-          <label class="custom-control-label" for="budget3">$50,000+</label>
-        </div>
-  
-        <div class="custom-control custom-radio budget-option" [class.selected]="startupForm.controls['projectBudget'].value === 'Other'">
-          <div class="other-budget-container">
-            <label class="custom-control-label other-budget-label" for="budget4">Other</label>
-            <input type="text" formControlName="otherBudget" placeholder="Specify amount" class="form-control other-budget-input" *ngIf="startupForm.controls['projectBudget'].value === 'Other'" />
-          </div>
-          <input type="radio" formControlName="projectBudget" value="Other" class="custom-control-input" id="budget4" required />
-        </div>
-      </div>
-    </div>
-  
-    <!-- Step 4: Additional Information -->
-    <div *ngIf="currentStep === 4" class="form-step">
-      <div class="form-group">
-        <label for="geographicalScope">Geographical Scope *</label>
-        <select id="geographicalScope" formControlName="geographicalScope" class="form-control" required>
-          <option value="region1">Region 1</option>
-          <option value="region2">Region 2</option>
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-  
-      <label>Would you like to co-invest?</label>
-      <div class="form-check">
-        <input type="radio" formControlName="coInvest" value="yes" class="form-check-input" id="coInvestYes" />
-        <label class="form-check-label" for="coInvestYes">Yes</label>
-      </div>
-      <div class="form-check">
-        <input type="radio" formControlName="coInvest" value="no" class="form-check-input" id="coInvestNo" />
-        <label class="form-check-label" for="coInvestNo">No</label>
-      </div>
-  
-      <div class="form-group">
-        <label for="additionalNotes">Additional Notes</label>
-        <textarea id="additionalNotes" formControlName="additionalNotes" placeholder="Additional notes" class="form-control"></textarea>
-      </div>
-    </div>
-  
-    <!-- Navigation Buttons -->
-    <div class="form-navigation d-flex justify-content-between">
-      <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary">Previous</button>
-      <button type="button" (click)="nextStep()" [disabled]="currentStep === 4" class="btn btn-primary">Next</button>
-      <button type="submit" *ngIf="currentStep === 4" class="btn btn-success">Submit</button>
-    </div>
-  </form>
   </div>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="phoneNumber">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER' | translate }} *</label>
+      <input id="phoneNumber" type="tel" formControlName="phoneNumber" placeholder="{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_PLACEHOLDER' | translate }}" class="form-control" required />
+    </div>
+    <div class="col-md-6">
+      <label for="company">{{ 'INVESTOR_FORM.STEP_1.COMPANY' | translate }} *</label>
+      <input id="company" formControlName="company" placeholder="{{ 'INVESTOR_FORM.STEP_1.COMPANY_PLACEHOLDER' | translate }}" class="form-control" required />
+    </div>
+  </div>
+</div>
+
+
+<!-- Step 2: Investment Details -->
+<div *ngIf="currentStep === 2" class="form-step step-2">
+  <div class="form-group">
+    <label for="investment">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT' | translate }} *</label>
+    <select id="investment" formControlName="investment" required>
+      <option value="">{{ 'INVESTOR_FORM.STEP_2.ANGEL_INVESTMENT' | translate }}</option>
+      <option value="">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT_FUNDING' | translate }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="favoriteInvestment">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT' | translate }} *</label>
+    <select id="favoriteInvestment" formControlName="favoriteInvestment" required>
+      <option value="">{{ 'INVESTOR_FORM.STEP_2.YOUR_FAVORITE_INVESTMENT' | translate }}</option>
+    </select>
+  </div>
+
+  <!-- Selected Tags Display -->
+  <div class="form-group">
+    <label for="favoriteSectors">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS' | translate }} *</label>
+
+    <!-- Dropdown Button -->
+    <div class="dropdown">
+      <button type="button" class="dropdown-toggle" (click)="toggleDropdown()">
+        {{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_SECTORS' | translate }}
+      </button>
+
+      <!-- Dropdown List -->
+      <div class="dropdown-menu show" *ngIf="showDropdown">
+        <span 
+          class="dropdown-item"
+          *ngFor="let tag of tags"
+          (click)="toggleTag(tag)"
+          [class.selected]="selectedTags.includes(tag)"
+        >
+          {{ tag | translate }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Display Selected Tags -->
+    <div class="tags-input" id="favoriteSectors">
+      <span class="tag selected" *ngFor="let tag of selectedTags">
+        {{ tag | translate }}
+        <span class="tag-close" (click)="removeTag(tag)">×</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Step 3: Project Budget -->
+<div *ngIf="currentStep === 3" class="form-step step-3">
+  <h3>{{ 'INVESTOR_FORM.STEP_3.PROJECT_BUDGET' | translate }}</h3>
+  <div class="budget-options">
+    <div class="custom-control custom-radio budget-option">
+      <input
+        type="radio"
+        formControlName="projectBudget"
+        value="$100M - $500M"
+        class="custom-control-input"
+        id="budget1"
+        required
+      />
+      <label class="custom-control-label" for="budget1">{{ 'INVESTOR_FORM.STEP_3.BUDGET_1' | translate }}</label>
+    </div>
+    <div class="custom-control custom-radio budget-option">
+      <input
+        type="radio"
+        formControlName="projectBudget"
+        value="$10,000 - $20,000"
+        class="custom-control-input"
+        id="budget2"
+        required
+      />
+      <label class="custom-control-label" for="budget2">{{ 'INVESTOR_FORM.STEP_3.BUDGET_2' | translate }}</label>
+    </div>
+    <div class="custom-control custom-radio budget-option">
+      <input
+        type="radio"
+        formControlName="projectBudget"
+        value="$20,000 - $50,000"
+        class="custom-control-input"
+        id="budget3"
+        required
+      />
+      <label class="custom-control-label" for="budget3">{{ 'INVESTOR_FORM.STEP_3.BUDGET_3' | translate }}</label>
+    </div>
+    <div class="custom-control custom-radio budget-option">
+      <input
+        type="radio"
+        formControlName="projectBudget"
+        value="$50,000+"
+        class="custom-control-input"
+        id="budget4"
+        required
+      />
+      <label class="custom-control-label" for="budget4">{{ 'INVESTOR_FORM.STEP_3.BUDGET_4' | translate }}</label>
+    </div>
+    <div
+      class="custom-control custom-radio budget-option full-width"
+      [class.selected]="investorForm.controls['projectBudget'].value === 'Other'"
+    >
+      <div class="other-budget-container">
+        <label class="custom-control-label other-budget-label" for="budget5">
+          <input
+            type="radio"
+            formControlName="projectBudget"
+            value="Other"
+            class="custom-control-input"
+            id="budget5"
+            required
+          />
+          {{ 'INVESTOR_FORM.STEP_3.OTHER' | translate }}
+        </label>
+        <input
+          type="text"
+          formControlName="otherBudget"
+          placeholder="{{ 'INVESTOR_FORM.STEP_3.OTHER_PLACEHOLDER' | translate }}"
+          class="form-control other-budget-input"
+          *ngIf="investorForm.controls['projectBudget'].value === 'Other'"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Step 4: Additional Information -->
+<div *ngIf="currentStep === 4" class="form-step step-4">
+<!-- Geographical Scope Dropdown -->
+<div class="form-group">
+  <label for="geographicalScope">
+    {{ 'INVESTOR_FORM.STEP_4.GEOGRAPHICAL_SCOPE' | translate }} *
+  </label>
+  <select id="geographicalScope" formControlName="geographicalScope" class="form-control" required>
+    <option value="" disabled selected>
+      {{ 'INVESTOR_FORM.STEP_4.SELECT_GEOGRAPHICAL_SCOPE' | translate }}
+    </option>
+    <option value="region1">
+      {{ 'INVESTOR_FORM.STEP_4.REGION_1' | translate }}
+    </option>
+    <option value="region2">
+      {{ 'INVESTOR_FORM.STEP_4.REGION_2' | translate }}
+    </option>
+    <option value="region3">
+      {{ 'INVESTOR_FORM.STEP_4.REGION_3' | translate }}
+    </option>
+  </select>
+</div>
+
+<!-- Investment Privacy Dropdown -->
+<div class="form-group">
+  <label for="investmentPrivacy">
+    {{ 'INVESTOR_FORM.STEP_4.INVESTMENT_PRIVACY' | translate }}
+  </label>
+  <select id="investmentPrivacy" formControlName="investmentPrivacy" class="form-control" required>
+    <option value="" disabled selected>
+      {{ 'INVESTOR_FORM.STEP_4.SELECT_INVESTMENT_PRIVACY' | translate }}
+    </option>
+    <option value="private">
+      {{ 'INVESTOR_FORM.STEP_4.PRIVACY_PRIVATE' | translate }}
+    </option>
+    <option value="public">
+      {{ 'INVESTOR_FORM.STEP_4.PRIVACY_PUBLIC' | translate }}
+    </option>
+  </select>
+</div>
+</div>
+
+
+
+<!-- Step 5: Submit Step -->
+<div *ngIf="currentStep === 5" class="form-step step-5">
+  <div class="submit-box">
+    <img src="../../assets/submit.png" alt="Submit Icon" class="submit-icon" />
+    <h4 class="submit-title">{{ 'INVESTOR_FORM.STEP_5.SUBMIT_TITLE' | translate }}</h4>
+    <p class="submit-description">
+      {{ 'INVESTOR_FORM.STEP_5.SUBMIT_DESCRIPTION' | translate }}
+    </p>
+  </div>
+  <div class="submit-button-container">
+    <button type="submit" *ngIf="currentStep === 5" class="btn btn-success">{{ 'INVESTOR_FORM.STEP_5.SUBMIT_BUTTON' | translate }}</button>
+  </div>
+</div>
+
+  </form>
+
+<!-- Navigation Buttons -->
+<div class="form-navigation" [ngClass]="{'multiple-buttons': currentStep !== 1}">
+  <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary" *ngIf="currentStep !== 1">
+    {{ 'INVESTOR_FORM.NAVIGATION.PREVIOUS_STEP' | translate }}
+  </button>
+  <button type="button" (click)="nextStep()" [disabled]="currentStep === 5" class="btn btn-primary" *ngIf="currentStep !== 5">
+    {{ 'INVESTOR_FORM.NAVIGATION.NEXT_STEP' | translate }}
+  </button>
+</div>
+
+</div>

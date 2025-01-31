@@ -4,7 +4,9 @@
       "TITLE_INVESTOR": "Join As Investor",
       "TITLE_STARTUP": "Join As Start up"
     },
-  
+  "STARTUP_FORM": {
+    "TITLE": "Join as Startup"
+  },
   "INVESTOR_FORM": {
     "TITLE": "Join as Investor",
     "STEP_1": {

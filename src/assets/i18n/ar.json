@@ -4,6 +4,9 @@
     "TITLE_INVESTOR": "انضم كمستثمر",
     "TITLE_STARTUP": "انضم كشركة ناشئة"
   },
+  "STARTUP_FORM": {
+    "TITLE": "انضم كشركة ناشئة"
+  },
   "INVESTOR_FORM": {
     "TITLE": "انضم كمستثمر",
     "STEP_1": {
