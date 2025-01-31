@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 
 // AoT requires an exported function for the TranslateLoader
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json?cacheBuster=' + new Date().getTime());
 }
 
 export const appConfig: ApplicationConfig = {

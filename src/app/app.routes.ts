@@ -7,4 +7,5 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'investor-form', component: InvestorFormComponent },
   { path: 'startup-form', component: StartupFormComponent },
+  { path: '**', redirectTo: '' } // Redirect unknown routes
 ];
