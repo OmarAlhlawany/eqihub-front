@@ -1,1 +1,154 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  
+}
+
+/* Ensure the header does not overlap the background */
+header {
+  background-color: #ffffff; /* Solid white background */
+  padding: 10px;
+  text-align: left;
+  position: relative; /* Ensure the header is part of the normal flow */
+  z-index: 1; /* Ensure the header stays above the background */
+}
+
+/* Prevent header from being affected by RTL direction */
+body[dir="rtl"] header {
+  direction: ltr !important;
+
+  text-align: left !important; /* Force left alignment */
+}
+
+/* Global Styles - RTL Support */
+body[dir="rtl"] {
+
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+body[dir="rtl"] .investor-form-container {
+  direction: rtl;
+}
+
+body[dir="rtl"] .form-container {
+  direction: rtl;
+}
+
+body[dir="rtl"] .form-navigation {
+  justify-content: space-between;
+}
+
+body[dir="rtl"] .step-indicator {
+  flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .step-circle {
+  order: 1;
+}
+
+body[dir="rtl"] .step-line {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+body[dir="rtl"] .step-line::before {
+  left: auto;
+  right: 0;
+}
+
+body[dir="rtl"] .step-1 label,
+body[dir="rtl"] .step-2 label,
+body[dir="rtl"] .step-3 label,
+body[dir="rtl"] .step-4 label {
+  text-align: right;
+}
+
+body[dir="rtl"] .step-2 .tags-input {
+  text-align: right; /* Align the tags and dropdown items to the right */
+}
+
+body[dir="rtl"] .step-2 .tags-input .tag {
+  text-align: right; /* Align individual tags to the right */
+  direction: rtl; /* Ensure tags are displayed correctly in RTL mode */
+}
+
+body[dir="rtl"] .step-2 .dropdown-toggle {
+  text-align: right; /* Align the dropdown button text to the right */
+}
+
+body[dir="rtl"] .step-2 .dropdown-menu {
+  text-align: right; 
+}
+
+body[dir="rtl"] .step-2 .dropdown-menu.show {
+  right: 0; /
+}
+
+body[dir="rtl"] .step-2 .tag-close {
+  padding-left: 10px; 
+  padding-right: 0; 
+}
+
+body[dir="rtl"] .step-2 .dropdown-item {
+  text-align: right; 
+}
+
+body[dir="rtl"] .step-2 .tags-input .tag .tag-close {
+  left: auto; 
+  right: 5px; 
+}
+
+body[dir="rtl"] .step-2 .form-group label {
+  text-align: right; 
+}
+
+
+
+body[dir="rtl"] .tag {
+  text-align: right;
+}
+
+body[dir="rtl"] .step-3 .budget-options {
+  direction: ltr; /* Force LTR layout inside RTL mode */
+}
+
+body[dir="rtl"] .step-3 .budget-option {
+  flex-direction: row; /* Keep the radio button on the left */
+}
+
+body[dir="rtl"] .step-3 .budget-option input[type="radio"] {
+  margin-left: 0; /* Reset margin */
+  margin-right: 10px; /* Adjust for RTL */
+}
+
+body[dir="rtl"] .step-3 .budget-option label {
+  text-align: right; /* Align text properly */
+}
+
+body[dir="rtl"] .step-3 .budget-option.full-width {
+  justify-content: flex-start; /* Keep input aligned properly */
+}
+
+body[dir="rtl"] .step-3 .other-budget-input {
+  margin-left: 0; /* Reset */
+  margin-right: 20px; /* Adjust for RTL */
+}
+
+body[dir="rtl"] .step-4 .form-check-container {
+  gap: 30px;
+  flex-direction: row-reverse;
+}
+
+
+
+body[dir="rtl"] .step-5 .submit-box {
+  text-align: right;
+}
+
+body[dir="rtl"] .form-check-container {
+  flex-direction: row-reverse;
+}

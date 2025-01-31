@@ -1,0 +1,12 @@
+<header class="header">
+  <a routerLink="/">
+    <img src="../../assets/equihub-logo.png" alt="EquiHub Logo" class="header-logo">
+  </a>
+
+  <!-- Single Language Switcher Button -->
+  <div class="language-switcher">
+    <button (click)="toggleLanguage()">
+      {{ currentLanguage === 'en' ? 'العربية' : 'English' }}
+    </button>
+  </div>
+</header>

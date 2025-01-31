@@ -1,0 +1,96 @@
+{
+  "HEADER": {
+    "TITLE_DEFAULT": "إيكوي هب",
+    "TITLE_INVESTOR": "انضم كمستثمر",
+    "TITLE_STARTUP": "انضم كشركة ناشئة"
+  },
+  "INVESTOR_FORM": {
+    "TITLE": "انضم كمستثمر",
+    "STEP_1": {
+      "TITLE": "تفاصيل الاتصال",
+      "DESCRIPTION": "يرجى ملء النموذج أدناه لتلقي عرض لمشروعك. لا تتردد في إضافة أكبر قدر ممكن من التفاصيل.",
+      "NAME": "الاسم",
+      "NAME_PLACEHOLDER": "جون كارتر",
+      "EMAIL": "البريد الإلكتروني",
+      "EMAIL_PLACEHOLDER": "عنوان البريد الإلكتروني",
+      "PHONENUMBER": "رقم الهاتف",
+      "PHONENUMBER_PLACEHOLDER": "(123) 456 - 7890",
+      "COMPANY": "الشركة",
+      "COMPANY_PLACEHOLDER": "اسم الشركة"
+    },
+    "STEP_2": {
+      "INVESTMENT": "الاستثمار",
+      "ANGEL_INVESTMENT": "الاستثمار الملاك",
+      "INVESTMENT_FUNDING": "تمويل الاستثمار",
+      "FAVORITE_INVESTMENT": "الاستثمار المفضل لديك",
+      "YOUR_FAVORITE_INVESTMENT": "استثمارك المفضل",
+      "FAVORITE_SECTORS": "القطاعات المفضلة",
+      "SELECTED_SECTORS": "القطاعات المحددة",
+      "SELECT_FAVORITE_SECTORS": "حدد القطاعات المفضلة",
+    "TAG_TECHNOLOGY": "التكنولوجيا",
+    "TAG_FINTECH": "التكنولوجيا المالية",
+    "TAG_ECOMMERCE": "التجارة الإلكترونية",
+    "TAG_HEALTHCARE": "الصحة والتكنولوجيا الصحية",
+    "TAG_EDTECH": "التعليم والتكنولوجيا التعليمية",
+    "TAG_RENEWABLE_ENERGY": "الطاقة المتجددة",
+    "TAG_MANUFACTURING": "الصناعات التحويلية",
+    "TAG_LOGISTICS": "النقل والخدمات اللوجستية",
+    "TAG_REAL_ESTATE": "العقارات",
+    "TAG_AI": "الذكاء الاصطناعي",
+    "TAG_BIG_DATA": "البيانات الضخمة وتحليل البيانات",
+    "TAG_CYBERSECURITY": "الأمن السيبراني",
+    "TAG_DIGITAL_MARKETING": "التسويق الرقمي",
+    "TAG_GENERAL_TRADE": "التجارة العامة",
+    "TAG_TRAVEL_TOURISM": "السفر والسياحة",
+    "TAG_FOOD_BEVERAGE": "الأغذية والمشروبات",
+    "TAG_RETAIL": "التجزئة",
+    "TAG_SPORTS_ENTERTAINMENT": "الرياضة والترفيه",
+    "TAG_ROBOTICS": "الروبوتات",
+    "TAG_AGRITECH": "التكنولوجيا الزراعية",
+    "TAG_ENVIRONMENT_SUSTAINABILITY": "البيئة والاستدامة",
+    "TAG_AR_VR": "الواقع المعزز والافتراضي",
+    "TAG_DIGITAL_PAYMENTS": "المدفوعات الرقمية",
+    "TAG_FINANCIAL_SERVICES": "الخدمات المالية",
+    "TAG_MEDIA_COMMUNICATION": "الوسائط الإعلامية",
+    "TAG_GAMING": "الألعاب الإلكترونية",
+    "TAG_BIOTECH": "التكنولوجيا الحيوية",
+    "TAG_INSURTECH": "التأمين",
+    "TAG_PROPERTY_DEVELOPMENT": "التطوير العقاري",
+    "TAG_SOCIAL_INNOVATION": "الابتكار الاجتماعي"
+    },
+    "STEP_3": {
+      "PROJECT_BUDGET": "ما هو ميزانية مشروعك؟",
+      "BUDGET_1": "$100M - $500M",
+      "BUDGET_2": "$10,000 - $20,000",
+      "BUDGET_3": "$20,000 - $50,000",
+      "BUDGET_4": "$50,000+",
+      "OTHER": "أخرى",
+      "OTHER_PLACEHOLDER": "حدد المبلغ"
+    },
+    "STEP_4": {
+      "GEOGRAPHICAL_SCOPE": "النطاق الجغرافي",
+      "SELECT_GEOGRAPHICAL_SCOPE": "اختر منطقة",
+      "REGION_1": "الإمارات العربية المتحدة",
+      "REGION_2": "الخليج",
+      "REGION_3": "إقليمي",
+      "CO_INVEST": "هل ترغب في الاستثمار المشترك؟",
+      "CO_INVEST_YES": "نعم",
+      "CO_INVEST_NO": "لا",
+      "INVESTMENT_PRIVACY": "هل تريد تسليط الضوء على استثماراتك أم تفضل الحفاظ على الخصوصية؟",
+      "SELECT_INVESTMENT_PRIVACY": "اختر خيار الخصوصية",
+      "PRIVACY_PRIVATE": "الحفاظ على الخصوصية",
+      "PRIVACY_PUBLIC": "الإعلان عن استثماراتي",
+      "ADDITIONAL_NOTES": "ملاحظات إضافية",
+      "ADDITIONAL_NOTES_PLACEHOLDER": "ملاحظات إضافية"
+    },
+    "STEP_5": {
+      "SUBMIT_TITLE": "إرسال طلب المستثمر",
+      "SUBMIT_DESCRIPTION": "يرجى مراجعة جميع المعلومات التي أدخلتها في الخطوات السابقة، وإذا كانت جميع البيانات صحيحة، قدم رسالتك لتلقي عرض المشروع خلال 24 - 48 ساعة.",
+      "SUBMIT_BUTTON": "إرسال"
+    },
+    "NAVIGATION": {
+      "PREVIOUS_STEP": "الخطوة السابقة",
+      "NEXT_STEP": "الخطوة التالية"
+    }
+  }
+}

@@ -1,0 +1,907 @@
+/* Investor Form Styles */
+.investor-form-container {
+  background-image: url('../../assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.form-title {
+  text-align: center; /* Center-align the title */
+  font-size: 36px; /* Larger font size for prominence */
+  font-weight: bold; /* Bold the text */
+  color: #4b49ac; /* Use the primary color from your project */
+  margin-bottom: 20px; /* Add space below the title */
+  text-transform: uppercase; /* Capitalize the title */
+  background-color: #ffffff;
+  width: 100%;
+
+}
+
+body[dir="rtl"] .form-title {
+  text-align: right; /* Right-align for Arabic (RTL) */
+}
+
+body[dir="rtl"] .investor-form-container {
+  direction: rtl !important;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 500px; /* Smaller width for a more square shape */
+  padding: 20px; /* Reduced padding */
+  background: white;
+  border-radius: 20px; /* Smaller border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 400px; /* Adjusted for square shape */
+}
+
+/* Step Indicator */
+.form-steps-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0; /* Removed gap between indicator and form */
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 5px 0;
+}
+
+.step-circle {
+  width: 24px; /* Smaller circle */
+  height: 24px; /* Smaller circle */
+  line-height: 24px; /* Adjusted line height */
+  border-radius: 50%;
+  background-color: #ccc;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  z-index: 1;
+  transition: box-shadow 0.3s ease;
+  font-size: 12px; /* Smaller font size */
+}
+
+.step-circle.active {
+  background-color: #2B37A0;
+  color: white;
+}
+
+.step-circle.unlocked {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.step-line {
+  width: 100px; /* Shorter line */
+  height: 4px; /* Thinner line */
+  background-color: #ccc;
+  margin: 0 5px; /* Reduced margin */
+  position: relative;
+  overflow: hidden;
+}
+
+.step-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #2B37A0;
+  transition: width 0.3s ease;
+}
+
+.step-line.half-filled::before {
+  width: 50%;
+}
+
+.step-line.fully-filled::before {
+  width: 100%;
+}
+
+/* Form Steps */
+.form-step {
+  margin-top: 10px; /* Reduced margin */
+}
+
+/* Step 1: Contact Details */
+.step-1 h3 {
+  font-size: 18px; /* Smaller font size */
+  font-weight: bold;
+}
+
+.step-1 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: semibold;
+  font-size: 14px; /* Smaller font size */
+}
+
+.step-1 input {
+  width: 100%; /* Full width */
+  height: 40px; /* Smaller height */
+  padding: 8px; /* Reduced padding */
+  margin-top: 3px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Smaller border radius */
+  font-size: 14px; /* Smaller font size */
+}
+
+/* Step 2: Investment Details */
+.step-2 {
+  font-size: 14px;
+}
+
+.step-2 h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Labels */
+.step-2 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Select Inputs */
+.step-2 select,
+.step-2 .dropdown-toggle {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Dropdown Button (same style as select) */
+.step-2 .dropdown-toggle {
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-weight: normal;
+}
+
+.step-2 .dropdown-toggle::after {
+  float: right;
+  margin-top: 6px;
+}
+
+/* Dropdown Menu */
+.step-2 .dropdown-menu {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 5px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step-2 .dropdown-menu .dropdown-item {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.step-2 .dropdown-menu .dropdown-item:hover,
+.step-2 .dropdown-menu .dropdown-item.selected {
+  background-color: #4252e1;
+  color: white;
+}
+
+/* Tags Container */
+.step-2 .tags-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  gap: 8px;
+  border-radius: 20px;
+  background: none;
+  border: none;
+}
+
+/* Selected Tags */
+.step-2 .tags-input .tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #4252e1;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Remove Tag */
+.step-2 .tags-input .tag .tag-close {
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* Step 3: Project Budget */
+.step-3 h3 {
+  font-size: 18px; /* Smaller font size */
+  font-weight: bold;
+}
+
+.step-3 .budget-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 10px; /* Reduced gap */
+  margin-top: 10px; /* Reduced margin */
+}
+
+.step-3 .budget-option {
+  width: 100%; /* Full width */
+  height: 60px; /* Smaller height */
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Smaller border radius */
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.step-3 .budget-option input[type="radio"] {
+  margin-left: 10px;
+  margin-right: 10px; /* Adjusted margin */
+  width: 16px; /* Smaller radio button */
+  height: 16px; /* Smaller radio button */
+  cursor: pointer;
+}
+
+.step-3 .budget-option label {
+  flex: 1;
+  margin: 0;
+  font-size: 14px; /* Smaller font size */
+}
+
+.step-3 .budget-option:hover,
+.step-3 .budget-option:focus-within {
+  border-color: #007bff;
+  background-color: #e9f5ff;
+}
+
+.step-3 .budget-option.selected {
+  border-color: #007bff;
+  background-color: #e9f5ff;
+}
+
+.step-3 .budget-option.full-width {
+  grid-column: span 2; /* Spans two columns */
+  height: 60px; /* Match the height of other options */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; /* Reduced padding */
+}
+
+.step-3 .other-budget-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.step-3 .other-budget-label {
+  font-size: 14px; /* Smaller font size */
+  display: flex;
+  align-items: center;
+}
+
+.step-3 .other-budget-input {
+  display: none;
+  width: 60%; /* Input width */
+  height: 40px; /* Smaller height */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px; /* Smaller font size */
+  padding: 8px; /* Reduced padding */
+  margin-left: 10px; /* Adjusted margin */
+}
+
+.step-3 .budget-option.full-width.selected .other-budget-input {
+  display: block;
+}
+
+/* Step 4: Additional Information */
+.step-4 h3 {
+  font-size: 18px; /* Smaller font size */
+  font-weight: bold;
+}
+
+.step-4 label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: semibold;
+  font-size: 14px; /* Smaller font size */
+}
+
+.step-4 select {
+  width: 100%; /* Full width */
+  height: 35px;
+  padding: 3px; /* Reduced padding */
+  margin: 3px 0 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Smaller border radius */
+  font-size: 14px; /* Smaller font size */
+}
+
+.step-4 textarea {
+  width: 100%; /* Full width */
+  height: 50px; /* Adjust height */
+  padding: 6px; /* Reduced padding for mobile */
+  font-size: 12px; /* Smaller font size */
+  line-height: 18px; /* Improved readability */
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+  resize: vertical; /* Allow vertical resizing */
+  transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+.step-4 .form-check-container {
+  display: flex;
+  gap: 15px; /* Reduced gap */
+  align-items: center;
+}
+
+.step-4 .form-check-label {
+  font-size: 14px; /* Smaller font size */
+}
+/* Placeholder style */
+.step-4 textarea::placeholder {
+  font-size: 14px; /* Same as text */
+  color: #aaa; /* Lighter color for placeholder */
+  font-style: italic; /* Italicized for distinction */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Focus state for textarea */
+.step-4 textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Adjust when typing */
+.step-4 textarea:focus::placeholder {
+  color: transparent; /* Hide placeholder text on focus */
+}
+
+/* Step 5: Submit Step */
+.step-5 .submit-box {
+  width: 100%; /* Full width */
+  text-align: center;
+}
+
+.step-5 .submit-icon {
+  margin: 20px; /* Reduced margin */
+  width: 100px; /* Smaller icon */
+  height: 100px; /* Smaller icon */
+}
+
+.step-5 .submit-title {
+  font-size: 18px; /* Smaller font size */
+  font-weight: bold;
+  margin-top: 10px;
+  color: #2B37A0;
+}
+
+.step-5 .submit-description {
+  font-size: 14px; /* Smaller font size */
+  color: #2B37A0;
+  margin-top: 10px;
+  padding: 0 20px; /* Reduced padding */
+}
+
+.step-5 .submit-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-success {
+  background-color: #2B37A0;
+  color: white;
+  padding: 8px 20px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: #1f2d7a;
+}
+
+/* Navigation Buttons (Moved Outside Form) */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Space between form and buttons */
+  width: 100%;
+  max-width: 500px; /* Match form width */
+}
+
+.btn {
+  padding: 8px 20px; /* Reduced padding */
+  border-radius: 20px; /* Smaller border radius */
+  cursor: pointer;
+  font-size: 14px; /* Smaller font size */
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #091690;
+  border: 2px solid #091690;
+}
+
+.btn-primary {
+  background-color: #2B37A0;
+  color: white;
+}
+
+
+
+
+/* Media Queries for Responsive Design */
+
+/* Mobile screens */
+@media (max-width: 767px) {
+  .investor-form-container {
+    min-height: 80vh; /* Reduce min-height on mobile */
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  .form-title {
+    font-size: 28px; /* Reduce font size for mobile */
+    margin-bottom: 15px; /* Adjust margin */
+    padding: 5px 0; /* Reduce padding */
+  }
+
+  .form-container {
+    width: 100%; /* Ensure form takes full width on mobile */
+    max-width: 100%; /* Remove max-width constraint */
+    padding: 15px; /* Reduce form padding */
+  }
+.form-steps-indicator {
+  gap: 5px; /* Reduce gap on mobile */
+  flex-direction: column; /* Stack the steps vertically on small screens */
+  align-items: flex-start; /* Align steps to the left */
+}
+
+.step-indicator {
+  padding: 10px 0; /* Add padding to ensure the steps are separated */
+}
+
+.step-circle {
+  width: 20px; /* Smaller circle on mobile */
+  height: 20px; /* Smaller circle */
+  line-height: 20px; /* Adjusted line height */
+  font-size: 10px; /* Smaller font size */
+}
+
+.step-line {
+  width: 50px; /* Shorter line on mobile */
+  margin: 0 3px; /* Reduced margin between circle and line */
+}
+.form-step {
+  padding: 0 10px; /* Add padding for mobile screens */
+}
+
+.step-1 h3 {
+  font-size: 16px; /* Adjust font size for mobile */
+}
+
+.step-1 label {
+  font-size: 12px; /* Adjust label font size for mobile */
+}
+
+.step-1 input {
+  height: 35px; /* Slightly smaller input height */
+  padding: 6px; /* Adjust padding */
+  font-size: 12px; /* Adjust font size for smaller screens */
+}
+.step-2 h3 {
+  font-size: 16px; /* Adjust font size for mobile */
+}
+
+.step-2 label {
+  font-size: 12px; /* Adjust label font size for mobile */
+}
+
+.step-2 select,
+.step-2 .dropdown-toggle {
+  height: 35px; /* Smaller height for mobile */
+  padding: 6px; /* Adjust padding for mobile */
+  font-size: 12px; /* Smaller font size */
+}
+
+.step-2 .tags-input {
+  height: 35px; /* Adjust height for mobile */
+  padding: 6px; /* Adjust padding */
+  font-size: 12px; /* Smaller font size */
+}
+
+.step-2 .tags-input .tag {
+  padding: 4px 6px; /* Adjust padding for smaller screens */
+  font-size: 11px; /* Adjust font size */
+}
+
+.step-2 .tags-container .tag {
+  font-size: 11px; /* Smaller font size */
+  padding: 5px 8px; /* Adjust padding */
+}
+
+.step-3 h3 {
+  font-size: 16px; /* Smaller font size for mobile */
+  margin-bottom: 8px;
+}
+
+.step-3 .budget-options {
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 8px; /* Reduced gap */
+}
+
+.step-3 .budget-option {
+  height: 50px; /* Smaller height for mobile */
+  font-size: 12px; /* Smaller font size */
+  padding: 8px; /* Adjust padding */
+}
+
+.step-3 .budget-option input[type="radio"] {
+  width: 14px; /* Smaller radio button */
+  height: 14px; /* Smaller radio button */
+}
+
+.step-3 .budget-option label {
+  font-size: 12px; /* Smaller font size for label */
+}
+
+.step-3 .budget-option.full-width {
+  height: 50px; /* Smaller height */
+  padding: 8px; /* Adjust padding */
+}
+
+.step-3 .other-budget-input {
+  width: 100%; /* Full width on mobile */
+  height: 35px; /* Smaller height */
+  font-size: 12px; /* Smaller font size */
+  padding: 6px; /* Reduced padding */
+}
+
+.step-3 .other-budget-container {
+  flex-direction: column; /* Stack elements for mobile */
+}
+
+.step-3 .other-budget-label {
+  font-size: 12px; /* Smaller font size for label */
+}
+
+.step-4 {
+  width: 100%;
+  padding: 10px;
+}
+
+.step-4 h3 {
+  font-size: 16px; /* Slightly smaller for mobile */
+}
+
+.step-4 label {
+  font-size: 12px; /* Smaller font size */
+}
+
+.step-4 select,
+.step-4 textarea {
+  font-size: 12px; /* Consistent smaller font */
+}
+
+.step-4 .form-check-container {
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 10px; /* Adjust gap */
+}
+
+.step-4 .form-check-label {
+  font-size: 12px; /* Smaller font size for radio buttons */
+}
+
+
+.step-5 .submit-box {
+  padding: 15px; /* Reduce padding for mobile */
+}
+
+.step-5 .submit-icon {
+  width: 80px; /* Smaller icon on mobile */
+  height: 80px; /* Smaller icon on mobile */
+  margin: 15px; /* Reduced margin */
+}
+
+.step-5 .submit-title {
+  font-size: 16px; /* Smaller font size */
+  margin-top: 5px;
+}
+
+.step-5 .submit-description {
+  font-size: 12px; /* Smaller font size */
+  margin-top: 5px;
+  padding: 0 10px; /* Reduced padding */
+}
+
+.step-5 .submit-button-container {
+  flex-direction: column; /* Stack the button vertically */
+  margin-top: 15px;
+}
+
+.step-5 .submit-button {
+  width: 100%; /* Full width button */
+  padding: 10px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  border-radius: 20px; /* Slightly rounded corners */
+}
+.step-5 .submit-box {
+  padding: 15px; /* Reduce padding for mobile */
+}
+
+.step-5 .submit-icon {
+  width: 80px; /* Smaller icon on mobile */
+  height: 80px; /* Smaller icon on mobile */
+  margin: 15px; /* Reduced margin */
+}
+
+.step-5 .submit-title {
+  font-size: 16px; /* Smaller font size */
+  margin-top: 5px;
+}
+
+.step-5 .submit-description {
+  font-size: 12px; /* Smaller font size */
+  margin-top: 5px;
+  padding: 0 10px; /* Reduced padding */
+}
+
+.step-5 .submit-button-container {
+  flex-direction: column; /* Stack the button vertically */
+  margin-top: 15px;
+}
+
+.step-5 .submit-button {
+  width: 100%; /* Full width button */
+  padding: 10px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  border-radius: 20px; /* Slightly rounded corners */
+}
+}
+
+
+/* Tablet screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .investor-form-container {
+    min-height: 85vh; /* Adjust min-height for tablet */
+  }
+
+  .form-title {
+    font-size: 32px; /* Adjust font size for tablet */
+    margin-bottom: 18px; /* Adjust margin for better spacing */
+  }
+
+  .form-container {
+    width: 90%; /* Keep form width as percentage */
+    max-width: 480px; /* Adjust max-width for tablets */
+    padding: 18px; /* Slightly reduce padding */
+  }
+  .form-steps-indicator {
+    gap: 8px; /* Adjust gap for tablet */
+    flex-direction: row; /* Keep steps in a row */
+  }
+
+  .step-indicator {
+    padding: 8px 0; /* Adjust padding for tablet */
+  }
+
+  .step-circle {
+    width: 22px; /* Slightly smaller circle for tablet */
+    height: 22px; /* Adjusted size */
+    line-height: 22px; /* Adjusted line height */
+    font-size: 11px; /* Slightly smaller font size */
+  }
+
+  .step-line {
+    width: 60px; /* Shorter line on tablet */
+    margin: 0 4px; /* Adjust margin */
+  }
+  .form-step {
+    padding: 0 15px; /* Adjust padding for tablets */
+  }
+
+  .step-1 h3 {
+    font-size: 17px; /* Adjust font size for tablet */
+  }
+
+  .step-1 label {
+    font-size: 13px; /* Adjust label font size for tablet */
+  }
+
+  .step-1 input {
+    height: 38px; /* Slightly bigger input height for tablets */
+    padding: 7px; /* Adjust padding */
+    font-size: 13px; /* Adjust font size for tablet */
+  }
+  .step-2 h3 {
+    font-size: 17px; /* Adjust font size for tablet */
+  }
+
+  .step-2 label {
+    font-size: 13px; /* Adjust label font size for tablet */
+  }
+
+  .step-2 select {
+    height: 38px; /* Slightly larger height for tablets */
+    padding: 7px; /* Adjust padding */
+    font-size: 13px; /* Adjust font size */
+  }
+
+  .step-2 .tags-input {
+    height: 38px; /* Slightly larger height for tablets */
+    padding: 7px; /* Adjust padding */
+    font-size: 13px; /* Adjust font size */
+  }
+
+  .step-2 .tags-input .tag {
+    padding: 4px 8px; /* Adjust padding */
+    font-size: 12px; /* Standard font size */
+  }
+
+  .step-2 .tags-container .tag {
+    font-size: 12px; /* Adjust font size */
+    padding: 5px 10px; /* Adjust padding */
+  }
+  .step-3 h3 {
+    font-size: 17px; /* Adjust font size for tablet */
+  }
+
+  .step-3 .budget-options {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 10px; /* Standard gap */
+  }
+
+  .step-3 .budget-option {
+    height: 55px; /* Slightly larger height for tablets */
+    padding: 9px; /* Adjust padding */
+  }
+
+  .step-3 .budget-option input[type="radio"] {
+    width: 15px; /* Slightly larger radio button */
+    height: 15px; /* Slightly larger radio button */
+  }
+
+  .step-3 .budget-option label {
+    font-size: 13px; /* Adjust label font size */
+  }
+
+  .step-3 .budget-option.full-width {
+    height: 55px; /* Slightly larger height */
+  }
+
+  .step-3 .other-budget-input {
+    width: 80%; /* Slightly smaller than mobile */
+    height: 38px; /* Slightly larger height */
+    font-size: 13px; /* Adjust font size */
+    padding: 7px; /* Adjust padding */
+  }
+  
+  .step-4 {
+    width: 80%; /* Reduce width for tablet view */
+    padding: 15px;
+  }
+
+  .step-4 h3 {
+    font-size: 17px; /* Slightly larger font for tablets */
+  }
+
+  .step-4 label {
+    font-size: 13px; /* Slightly smaller font size */
+  }
+
+  .step-4 select,
+  .step-4 textarea {
+    font-size: 13px; /* Adjust font size for better readability */
+  }
+
+  .step-4 .form-check-container {
+    gap: 12px; /* Slightly reduced gap */
+  }
+
+  .step-4 .form-check-label {
+    font-size: 13px; /* Adjust radio button label size */
+  }
+  
+  .step-5 .submit-box {
+    padding: 20px; /* Normal padding for tablet */
+  }
+
+  .step-5 .submit-icon {
+    width: 90px; /* Adjust icon size for tablet */
+    height: 90px;
+    margin: 18px; /* Adjust margin for tablet */
+  }
+
+  .step-5 .submit-title {
+    font-size: 17px; /* Adjust font size for tablet */
+    margin-top: 8px;
+  }
+
+  .step-5 .submit-description {
+    font-size: 13px; /* Adjust font size for tablet */
+    margin-top: 8px;
+    padding: 0 15px; /* Adjust padding for tablet */
+  }
+
+  .step-5 .submit-button-container {
+    margin-top: 20px;
+  }
+
+  .step-5 .submit-button {
+    width: 80%; /* Slightly smaller width */
+    padding: 12px 20px; /* Adjust padding */
+    font-size: 15px; /* Adjust font size */
+  }
+  .step-5 .submit-box {
+    padding: 20px; /* Normal padding for tablet */
+  }
+
+  .step-5 .submit-icon {
+    width: 90px; /* Adjust icon size for tablet */
+    height: 90px;
+    margin: 18px; /* Adjust margin for tablet */
+  }
+
+  .step-5 .submit-title {
+    font-size: 17px; /* Adjust font size for tablet */
+    margin-top: 8px;
+  }
+
+  .step-5 .submit-description {
+    font-size: 13px; /* Adjust font size for tablet */
+    margin-top: 8px;
+    padding: 0 15px; /* Adjust padding for tablet */
+  }
+
+  .step-5 .submit-button-container {
+    margin-top: 20px;
+  }
+
+  .step-5 .submit-button {
+    width: 80%; /* Slightly smaller width */
+    padding: 12px 20px; /* Adjust padding */
+    font-size: 15px; /* Adjust font size */
+  }
+}
+
+
+
+
+

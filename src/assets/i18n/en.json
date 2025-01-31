@@ -1,0 +1,98 @@
+{
+    "HEADER": {
+      "TITLE_DEFAULT": "EquiHub",
+      "TITLE_INVESTOR": "Join As Investor",
+      "TITLE_STARTUP": "Join As Start up"
+    },
+  
+  "INVESTOR_FORM": {
+    "TITLE": "Join as Investor",
+    "STEP_1": {
+      "TITLE": "Contact details",
+      "DESCRIPTION": "Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.",
+      "NAME": "Name",
+      "NAME_PLACEHOLDER": "John Carter",
+      "EMAIL": "Email",
+      "EMAIL_PLACEHOLDER": "Email address",
+      "PHONENUMBER": "Phone Number",
+      "PHONENUMBER_PLACEHOLDER": "(123) 456 - 7890",
+      "COMPANY": "Company",
+      "COMPANY_PLACEHOLDER": "Company name"
+    },
+
+    "STEP_2": {
+      "INVESTMENT": "Investment",
+      "ANGEL_INVESTMENT": "Angel investment",
+      "INVESTMENT_FUNDING": "Investment Funding",
+      "FAVORITE_INVESTMENT": "Your favorite investment",
+      "YOUR_FAVORITE_INVESTMENT": "Your favorite investment",
+      "FAVORITE_SECTORS": "Favorite Sectors",
+      "SELECTED_SECTORS": "Selected Sectors",
+      "SELECT_FAVORITE_SECTORS": "Select favorite sectors",
+      "TAG_TECHNOLOGY": "Technology",
+      "TAG_FINTECH": "FinTech",
+      "TAG_ECOMMERCE": "E-Commerce",
+      "TAG_HEALTHCARE": "Healthcare & HealthTech",
+      "TAG_EDTECH": "Education & EdTech",
+      "TAG_RENEWABLE_ENERGY": "Renewable Energy",
+      "TAG_MANUFACTURING": "Manufacturing",
+      "TAG_LOGISTICS": "Logistics & Transportation",
+      "TAG_REAL_ESTATE": "Real Estate",
+      "TAG_AI": "Artificial Intelligence",
+      "TAG_BIG_DATA": "Big Data & Analytics",
+      "TAG_CYBERSECURITY": "Cybersecurity",
+      "TAG_DIGITAL_MARKETING": "Digital Marketing",
+      "TAG_GENERAL_TRADE": "General Trade",
+      "TAG_TRAVEL_TOURISM": "Travel & Tourism",
+      "TAG_FOOD_BEVERAGE": "Food & Beverage",
+      "TAG_RETAIL": "Retail",
+      "TAG_SPORTS_ENTERTAINMENT": "Sports & Entertainment",
+      "TAG_ROBOTICS": "Robotics",
+      "TAG_AGRITECH": "AgriTech",
+      "TAG_ENVIRONMENT_SUSTAINABILITY": "Environmental & Sustainability",
+      "TAG_AR_VR": "AR/VR",
+      "TAG_DIGITAL_PAYMENTS": "Digital Payments",
+      "TAG_FINANCIAL_SERVICES": "Financial Services",
+      "TAG_MEDIA_COMMUNICATION": "Media & Communication",
+      "TAG_GAMING": "Gaming",
+      "TAG_BIOTECH": "BioTech",
+      "TAG_INSURTECH": "InsurTech",
+      "TAG_PROPERTY_DEVELOPMENT": "Property Development",
+      "TAG_SOCIAL_INNOVATION": "Social Innovation"
+    },
+    "STEP_3": {
+      "PROJECT_BUDGET": "What's your project budget?",
+      "BUDGET_1": "$100M - $500M",
+      "BUDGET_2": "$10,000 - $20,000",
+      "BUDGET_3": "$20,000 - $50,000",
+      "BUDGET_4": "$50,000+",
+      "OTHER": "Other",
+      "OTHER_PLACEHOLDER": "Specify amount"
+    },
+    "STEP_4": {
+      "GEOGRAPHICAL_SCOPE": "Geographical Scope",
+      "SELECT_GEOGRAPHICAL_SCOPE": "Select a region",
+      "REGION_1": "United Arab Emirates",
+      "REGION_2": "GCC",
+      "REGION_3": "Regional",
+      "CO_INVEST": "Would you like to co-invest?",
+      "CO_INVEST_YES": "Yes",
+      "CO_INVEST_NO": "No",
+      "INVESTMENT_PRIVACY": "Would you like to highlight your investments or keep them private?",
+      "SELECT_INVESTMENT_PRIVACY": "Select privacy option",
+      "PRIVACY_PRIVATE": "Keep my investments private",
+      "PRIVACY_PUBLIC": "Announce my investments",
+      "ADDITIONAL_NOTES": "Additional Notes",
+      "ADDITIONAL_NOTES_PLACEHOLDER": "Additional notes"
+    },
+    "STEP_5": {
+      "SUBMIT_TITLE": "Submit your investor request",
+      "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
+      "SUBMIT_BUTTON": "Submit"
+    },
+    "NAVIGATION": {
+      "PREVIOUS_STEP": "Previous Step",
+      "NEXT_STEP": "Next Step"
+    }
+  }
+}
