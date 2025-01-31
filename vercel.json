@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/dist/equi-hub/browser/$1"
+        "dest": "/$1"
       }
     ]
   }
