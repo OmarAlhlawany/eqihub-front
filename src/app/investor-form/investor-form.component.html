@@ -204,6 +204,22 @@
   </select>
 </div>
 
+<!-- Co-Invest -->
+<div class="form-group">
+  <label>{{ 'INVESTOR_FORM.STEP_4.CO_INVEST' | translate }}</label>
+  <div class="form-check-container">
+    <div class="form-check">
+      <input type="radio" formControlName="coInvest" value="yes" class="form-check-input" id="coInvestYes" />
+      <label class="form-check-label" for="coInvestYes">{{ 'INVESTOR_FORM.STEP_4.CO_INVEST_YES' | translate }}</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" formControlName="coInvest" value="no" class="form-check-input" id="coInvestNo" />
+      <label class="form-check-label" for="coInvestNo">{{ 'INVESTOR_FORM.STEP_4.CO_INVEST_NO' | translate }}</label>
+    </div>
+  </div>
+</div>
+
+
 <!-- Investment Privacy Dropdown -->
 <div class="form-group">
   <label for="investmentPrivacy">
@@ -221,6 +237,13 @@
     </option>
   </select>
 </div>
+
+  <!--Additional Notes -->
+<div class="form-group">
+  <label for="additionalNotes">{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES' | translate }}</label>
+  <textarea id="additionalNotes" formControlName="additionalNotes" placeholder="{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES_PLACEHOLDER' | translate }}" class="form-control"></textarea>
+</div>
+
 </div>
 
 
