@@ -2,15 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "dist/equi-hub/browser/index.html",
+        "src": "dist/equi-hub/browser/**/*",
         "use": "@vercel/static"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/$1" 
-    }
+        "dest": "/$1"
+      }
     ]
   }
   
