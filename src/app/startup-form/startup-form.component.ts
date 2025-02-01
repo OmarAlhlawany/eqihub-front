@@ -14,7 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class StartupFormComponent implements OnInit {
   startupForm: FormGroup;
-  currentStep: number = 1;
+  currentStep: number = 2;
 
   constructor(
     private fb: FormBuilder,
@@ -35,7 +35,7 @@ export class StartupFormComponent implements OnInit {
       problemSolved: ['', [Validators.required, Validators.minLength(20)]],
 
       // Step 2: Funding Details
-      fundingAmount: ['', [Validators.required, Validators.min(0)]],
+      fundingAmount: ['', [Validators.required,]],
       fundingUsage: ['', [Validators.required, Validators.minLength(20)]],
       previousFundingSources: ['', [Validators.required]],
       targetMarket: ['', [Validators.required, Validators.minLength(10)]],
@@ -116,7 +116,7 @@ export class StartupFormComponent implements OnInit {
   }
 
   nextStep() {
-    if (this.currentStep < 5) {
+    if (this.currentStep < 6) {
         this.currentStep++; // Move to the next step
       }
   }
@@ -162,7 +162,7 @@ export class StartupFormComponent implements OnInit {
 /*
 
 nextStep() {
-    if (this.currentStep < 5) {
+    if (this.currentStep < 6) {
       // Mark all form controls as touched to show validation errors
       this.markCurrentStepControlsAsTouched();
 

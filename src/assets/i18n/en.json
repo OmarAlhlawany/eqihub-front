@@ -72,22 +72,32 @@
       "TITLE": "Funding Details",
       "DESCRIPTION": "Provide details about your funding requirements.",
       "FUNDING_AMOUNT": "Funding Amount",
-      "FUNDING_AMOUNT_PLACEHOLDER": "Enter the funding amount",
+      "SELECT_FUNDING_AMOUNT": "Enter the funding amount",
       "FUNDING_AMOUNT_REQUIRED": "Funding amount is required.",
+      "FUNDING_AMOUNT_1":"$50K–$100K",
+      "FUNDING_AMOUNT_2":"$100K–$500K",
+      "FUNDING_AMOUNT_3":"$500K–$1M",
+      "FUNDING_AMOUNT_4":"$1M+",
+
       "FUNDING_USAGE": "Funding Usage",
       "FUNDING_USAGE_PLACEHOLDER": "Describe how the funding will be used",
       "FUNDING_USAGE_REQUIRED": "Funding usage is required.",
+      "FUNDING_USAGE_MIN_LENGTH": "Funding usage must be at least 20 characters.",
+      
       "PREVIOUS_FUNDING_SOURCES": "Previous Funding Sources",
       "PREVIOUS_FUNDING_SOURCES_PLACEHOLDER": "List your previous funding sources",
       "PREVIOUS_FUNDING_SOURCES_REQUIRED": "Previous funding sources are required.",
+      
       "TARGET_MARKET": "Target Market",
       "TARGET_MARKET_PLACEHOLDER": "Describe your target market",
       "TARGET_MARKET_REQUIRED": "Target market is required.",
+      
       "OPEN_TO_CO_INVESTMENT": "Open to Co-Investment?",
       "SELECT_OPEN_TO_CO_INVESTMENT": "Select an option",
       "OPEN_TO_CO_INVESTMENT_REQUIRED": "This field is required.",
       "YES": "Yes",
       "NO": "No",
+      
       "CURRENT_PARTNERS": "Current Partners",
       "CURRENT_PARTNERS_PLACEHOLDER": "List your current partners"
     },

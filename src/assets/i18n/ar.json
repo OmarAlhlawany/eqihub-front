@@ -71,23 +71,35 @@
     "STEP_2": {
       "TITLE": "تفاصيل التمويل",
       "DESCRIPTION": "قدم تفاصيل عن متطلبات التمويل الخاصة بك.",
+      
       "FUNDING_AMOUNT": "مبلغ التمويل",
       "FUNDING_AMOUNT_PLACEHOLDER": "أدخل مبلغ التمويل",
+      "SELECT_FUNDING_AMOUNT": "اختر مبلغ التمويل",
       "FUNDING_AMOUNT_REQUIRED": "مبلغ التمويل مطلوب.",
+      "FUNDING_AMOUNT_1":"$50K–$100K",
+      "FUNDING_AMOUNT_2":"$100K–$500K",
+      "FUNDING_AMOUNT_3":"$500K–$1M",
+      "FUNDING_AMOUNT_4":"$1M+",
+
       "FUNDING_USAGE": "استخدام التمويل",
       "FUNDING_USAGE_PLACEHOLDER": "صف كيفية استخدام التمويل",
       "FUNDING_USAGE_REQUIRED": "استخدام التمويل مطلوب.",
+      "FUNDING_USAGE_MIN_LENGTH": "استخدام التمويل يجب ان يكون على الأقل 20 حرف.",
+      
       "PREVIOUS_FUNDING_SOURCES": "مصادر التمويل السابقة",
       "PREVIOUS_FUNDING_SOURCES_PLACEHOLDER": "اذكر مصادر التمويل السابقة",
       "PREVIOUS_FUNDING_SOURCES_REQUIRED": "مصادر التمويل السابقة مطلوبة.",
+      
       "TARGET_MARKET": "السوق المستهدف",
       "TARGET_MARKET_PLACEHOLDER": "صف سوقك المستهدف",
       "TARGET_MARKET_REQUIRED": "السوق المستهدف مطلوب.",
+      
       "OPEN_TO_CO_INVESTMENT": "هل أنت منفتح على الاستثمار المشترك؟",
       "SELECT_OPEN_TO_CO_INVESTMENT": "اختر خيارًا",
       "OPEN_TO_CO_INVESTMENT_REQUIRED": "هذا الحقل مطلوب.",
       "YES": "نعم",
       "NO": "لا",
+      
       "CURRENT_PARTNERS": "الشركاء الحاليون",
       "CURRENT_PARTNERS_PLACEHOLDER": "اذكر شركاءك الحاليين"
     },

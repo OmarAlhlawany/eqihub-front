@@ -1,9 +1,7 @@
 <h2 class="form-title">{{ 'INVESTOR_FORM.TITLE' | translate }}</h2>
 
 <div class="investor-form-container">
-
   <form [formGroup]="investorForm" (ngSubmit)="onSubmit()" class="form-container">
-    
     <!-- Step Indicator (Hidden on Step 5) -->
     <div *ngIf="currentStep !== 5" class="form-steps-indicator d-flex align-items-center mb-4">
       <div class="step-indicator">
