@@ -79,9 +79,9 @@
 /* Mobile screens */
 @media (max-width: 767px) {
   .header {
-    flex-direction: column; /* Stack the logo and language buttons vertically */
+    flex-direction: row; /* Stack the logo and language buttons vertically */
     align-items: center; /* Center align items */
-    justify-content: center; /* Center content horizontally */
+    justify-content: space-between; /* Center content horizontally */
     padding: 15px; /* Adjust padding for mobile */
   }
 

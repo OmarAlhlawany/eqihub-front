@@ -490,7 +490,7 @@ body[dir="rtl"] .investor-form-container {
   }
 .form-steps-indicator {
   gap: 5px; /* Reduce gap on mobile */
-  flex-direction: column; /* Stack the steps vertically on small screens */
+  flex-direction: row; /* Stack the steps vertically on small screens */
   align-items: flex-start; /* Align steps to the left */
 }
 
