@@ -166,39 +166,51 @@
     <!-- Step 3: Financial Information -->
     <div *ngIf="currentStep === 3" class="form-step step-3">
       <div class="row mb-3">
-        <label for="fundingAmount">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT' | translate }} *</label>
+        <label for="fundingAmount">{{ 'STARTUP_FORM.STEP_3.FUNDING_AMOUNT' | translate }} *</label>
         <select id="fundingAmount"  formControlName="fundingAmount" class="form-control" required >
-          <option value="">{{ 'STARTUP_FORM.STEP_2.SELECT_FUNDING_AMOUNT' | translate }}</option>
-          <option value="amount1">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_1' | translate }}</option>
-          <option value="amount2">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_2' | translate }}</option>
-          <option value="amount3">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_3' | translate }}</option>
-          <option value="amount4">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_4' | translate }}</option>
+          <option value="">{{ 'STARTUP_FORM.STEP_3.SELECT_FUNDING_AMOUNT' | translate }}</option>
+          <option value="amount1">{{ 'STARTUP_FORM.STEP_3.FUNDING_AMOUNT_1' | translate }}</option>
+          <option value="amount2">{{ 'STARTUP_FORM.STEP_3.FUNDING_AMOUNT_2' | translate }}</option>
+          <option value="amount3">{{ 'STARTUP_FORM.STEP_3.FUNDING_AMOUNT_3' | translate }}</option>
+          <option value="amount4">{{ 'STARTUP_FORM.STEP_3.FUNDING_AMOUNT_4' | translate }}</option>
         </select>
         <div *ngIf="startupForm.get('fundingAmount')?.invalid && (startupForm.get('fundingAmount')?.dirty || startupForm.get('fundingAmount')?.touched)" class="text-danger">
-          {{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_REQUIRED' | translate }}
+          {{ 'STARTUP_FORM.STEP_3.FUNDING_AMOUNT_REQUIRED' | translate }}
         </div>
       </div>
 
       <div class="row mb-3">
-        <label for="fundingUsage">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE' | translate }} *</label>
-        <textarea id="fundingUsage" formControlName="fundingUsage" placeholder="{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
+        <label for="fundingUsage">{{ 'STARTUP_FORM.STEP_3.FUNDING_USAGE' | translate }} *</label>
+        <textarea id="fundingUsage" formControlName="fundingUsage" placeholder="{{ 'STARTUP_FORM.STEP_3.FUNDING_USAGE_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
         <div *ngIf="startupForm.get('fundingUsage')?.invalid && (startupForm.get('fundingUsage')?.dirty || startupForm.get('fundingUsage')?.touched)" class="text-danger">
-            <div *ngIf="startupForm.get('fundingUsage')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_REQUIRED' | translate }}</div>
-            <div *ngIf="startupForm.get('fundingUsage')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_MIN_LENGTH' | translate }}</div>
+            <div *ngIf="startupForm.get('fundingUsage')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_3.FUNDING_USAGE_REQUIRED' | translate }}</div>
+            <div *ngIf="startupForm.get('fundingUsage')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_3.FUNDING_USAGE_MIN_LENGTH' | translate }}</div>
         </div>
       </div>
 
       <div class="row mb-3">
-        <label for="previousFundingSources">{{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES' | translate }} *</label>
-        <textarea id="previousFundingSources" formControlName="previousFundingSources" placeholder="{{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
-        <div *ngIf="startupForm.get('previousFundingSources')?.invalid && (startupForm.get('previousFundingSources')?.dirty || startupForm.get('previousFundingSources')?.touched)" class="text-danger">{{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES_REQUIRED' | translate }}
+        <label for="previousFundingSources">{{ 'STARTUP_FORM.STEP_3.PREVIOUS_FUNDING_SOURCES' | translate }} *</label>
+        <select id="previousFundingSources" formControlName="previousFundingSources" class="form-control" required >
+          <option value="">{{ 'STARTUP_FORM.STEP_3.SELECT_PREVIOUS_FUNDING_SOURCES' | translate }}</option>
+          <option value="source1">{{ 'STARTUP_FORM.STEP_3.PREVIOUS_FUNDING_SOURCES_1' | translate }}</option>
+          <option value="source2">{{ 'STARTUP_FORM.STEP_3.PREVIOUS_FUNDING_SOURCES_2' | translate }}</option>
+          <option value="source3">{{ 'STARTUP_FORM.STEP_3.PREVIOUS_FUNDING_SOURCES_3' | translate }}</option>
+          <option value="source4">{{ 'STARTUP_FORM.STEP_3.PREVIOUS_FUNDING_SOURCES_4' | translate }}</option>
+          <option value="source5">{{ 'STARTUP_FORM.STEP_3.PREVIOUS_FUNDING_SOURCES_5' | translate }}</option>
+        </select>
+        <div *ngIf="startupForm.get('previousFundingSources')?.invalid && (startupForm.get('previousFundingSources')?.dirty || startupForm.get('previousFundingSources')?.touched)" class="text-danger">{{ 'STARTUP_FORM.STEP_3.PREVIOUS_FUNDING_SOURCES_REQUIRED' | translate }}
         </div>
         </div>
 
       <div class="row mb-3">
-        <label for="targetMarket">{{ 'STARTUP_FORM.STEP_2.TARGET_MARKET' | translate }} *</label>
-        <textarea id="targetMarket" formControlName="targetMarket" placeholder="{{ 'STARTUP_FORM.STEP_2.TARGET_MARKET_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
-        <div *ngIf="startupForm.get('targetMarket')?.invalid && (startupForm.get('targetMarket')?.dirty || startupForm.get('targetMarket')?.touched)" class="text-danger">{{ 'STARTUP_FORM.STEP_2.TARGET_MARKET_REQUIRED' | translate }}
+        <label for="targetMarket">{{ 'STARTUP_FORM.STEP_3.TARGET_MARKET' | translate }} *</label>
+        <select id="targetMarket" formControlName="targetMarket" class="form-control" required >
+          <option value="">{{ 'STARTUP_FORM.STEP_3.SELECT_TARGET_MARKET' | translate }}</option>
+          <option value="market1">{{ 'STARTUP_FORM.STEP_3.TARGET_MARKET_1' | translate }}</option>
+          <option value="market2">{{ 'STARTUP_FORM.STEP_3.TARGET_MARKET_2' | translate }}</option>
+          <option value="market3">{{ 'STARTUP_FORM.STEP_3.TARGET_MARKET_3' | translate }}</option>
+        </select>
+        <div *ngIf="startupForm.get('targetMarket')?.invalid && (startupForm.get('targetMarket')?.dirty || startupForm.get('targetMarket')?.touched)" class="text-danger">{{ 'STARTUP_FORM.STEP_3.TARGET_MARKET_REQUIRED' | translate }}
         </div>
       </div>
     </div>
@@ -206,37 +218,34 @@
     <!-- Step 4: Exit Strategy -->
     <div *ngIf="currentStep === 4" class="form-step step-4">
       <div class="row mb-3">
-        <label for="openToCoInvestment">{{ 'STARTUP_FORM.STEP_2.OPEN_TO_CO_INVESTMENT' | translate }} *</label>
+        <label for="openToCoInvestment">{{ 'STARTUP_FORM.STEP_4.OPEN_TO_CO_INVESTMENT' | translate }} *</label>
       <select id="openToCoInvestment" formControlName="openToCoInvestment" class="form-control" required>
-        <option value="">{{ 'STARTUP_FORM.STEP_2.SELECT_OPEN_TO_CO_INVESTMENT' | translate }}</option>
-        <option value="yes">{{ 'STARTUP_FORM.STEP_2.YES' | translate }}</option>
-        <option value="no">{{ 'STARTUP_FORM.STEP_2.NO' | translate }}</option>
-      </select>
-      <div *ngIf="startupForm.get('openToCoInvestment')?.invalid && (startupForm.get('openToCoInvestment')?.dirty || startupForm.get('openToCoInvestment')?.touched)" class="text-danger">
-        {{ 'STARTUP_FORM.STEP_2.OPEN_TO_CO_INVESTMENT_REQUIRED' | translate }}
-      </div>
-      </div>
-
-      <div class="row mb-3">
-        <label for="currentPartners">{{ 'STARTUP_FORM.STEP_2.CURRENT_PARTNERS' | translate }}</label>
-        <textarea id="currentPartners" formControlName="currentPartners" placeholder="{{ 'STARTUP_FORM.STEP_2.CURRENT_PARTNERS_PLACEHOLDER' | translate }}" class="form-control"></textarea>
-      </div>
-
-      <div class="row mb-3">
-        <label for="hasExitStrategy">{{ 'STARTUP_FORM.STEP_4.HAS_EXIT_STRATEGY' | translate }} *</label>
-      <select id="hasExitStrategy" formControlName="hasExitStrategy" class="form-control" required>
-        <option value="">{{ 'STARTUP_FORM.STEP_4.SELECT_HAS_EXIT_STRATEGY' | translate }}</option>
+        <option value="">{{ 'STARTUP_FORM.STEP_4.SELECT_OPEN_TO_CO_INVESTMENT' | translate }}</option>
         <option value="yes">{{ 'STARTUP_FORM.STEP_4.YES' | translate }}</option>
         <option value="no">{{ 'STARTUP_FORM.STEP_4.NO' | translate }}</option>
       </select>
-      <div *ngIf="startupForm.get('hasExitStrategy')?.invalid && (startupForm.get('hasExitStrategy')?.dirty || startupForm.get('hasExitStrategy')?.touched)" class="text-danger">
-        {{ 'STARTUP_FORM.STEP_4.HAS_EXIT_STRATEGY_REQUIRED' | translate }}
+      <div *ngIf="startupForm.get('openToCoInvestment')?.invalid && (startupForm.get('openToCoInvestment')?.dirty || startupForm.get('openToCoInvestment')?.touched)" class="text-danger">
+        {{ 'STARTUP_FORM.STEP_4.OPEN_TO_CO_INVESTMENT_REQUIRED' | translate }}
       </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="currentPartners">{{ 'STARTUP_FORM.STEP_4.CURRENT_PARTNERS' | translate }}</label>
+        <textarea id="currentPartners" formControlName="currentPartners" placeholder="{{ 'STARTUP_FORM.STEP_4.CURRENT_PARTNERS_PLACEHOLDER' | translate }}" class="form-control"></textarea>
+      </div>
+
+      <div class="row mb-3">
+
       </div>
       
       <div class="row mb-3">
         
       </div>
+
+      <div class="row mb-3">
+        
+      </div>
+
       <div class="row mb-3">
         
       </div>
@@ -245,12 +254,41 @@
     <!-- Step 5: Submit Step -->
     <div *ngIf="currentStep === 5" class="form-step step-5">
       <div class="row mb-3">
+     
+      </div>
+
+      <div class="row mb-3">
+        
+      </div>
+
+      <div class="row mb-3">
+        
+      </div>
+
+      <div class="row mb-3">
+        
+      </div>
+
+      <div class="row mb-3">
+        <label for="hasExitStrategy">{{ 'STARTUP_FORM.STEP_4.HAS_EXIT_STRATEGY' | translate }} *</label>
+        <select id="hasExitStrategy" formControlName="hasExitStrategy" class="form-control" required>
+          <option value="">{{ 'STARTUP_FORM.STEP_4.SELECT_HAS_EXIT_STRATEGY' | translate }}</option>
+          <option value="yes">{{ 'STARTUP_FORM.STEP_4.YES' | translate }}</option>
+          <option value="no">{{ 'STARTUP_FORM.STEP_4.NO' | translate }}</option>
+        </select>
+        <div *ngIf="startupForm.get('hasExitStrategy')?.invalid && (startupForm.get('hasExitStrategy')?.dirty || startupForm.get('hasExitStrategy')?.touched)" class="text-danger">
+          {{ 'STARTUP_FORM.STEP_4.HAS_EXIT_STRATEGY_REQUIRED' | translate }}
+        </div>
+      </div>
+
+      <div class="row mb-3">
         <label for="exitStrategy">{{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY' | translate }} *</label>
         <textarea id="exitStrategy" formControlName="exitStrategy" placeholder="{{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
         <div *ngIf="startupForm.get('exitStrategy')?.invalid && (startupForm.get('exitStrategy')?.dirty || startupForm.get('exitStrategy')?.touched)" class="text-danger">
           {{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY_REQUIRED' | translate }}
         </div>
       </div>
+
     </div>
 
     <!-- Step 6: Submit Step -->

@@ -72,38 +72,8 @@
       "PROBLEM_SOLVED": "ما هو المشكلة التي تحلها شركتك الناشئة؟",
       "PROBLEM_SOLVED_PLACEHOLDER": "صف المشكلة التي تحلها شركتك الناشئة",
       "PROBLEM_SOLVED_REQUIRED": "وصف المشكلة مطلوب.",
-      "PROBLEM_SOLVED_MIN_LENGTH": "وصف المشكلة يجب ان يكون على الأقل 10 حروف.",
+      "PROBLEM_SOLVED_MIN_LENGTH": "وصف المشكلة يجب ان يكون على الأقل 10 حروف."
 
-      "FUNDING_AMOUNT": " مبلغ التمويل المطلوب",
-      "FUNDING_AMOUNT_PLACEHOLDER": "أدخل مبلغ التمويل",
-      "SELECT_FUNDING_AMOUNT": "اختر مبلغ التمويل",
-      "FUNDING_AMOUNT_REQUIRED": "مبلغ التمويل مطلوب.",
-      "FUNDING_AMOUNT_1":"$50K–$100K",
-      "FUNDING_AMOUNT_2":"$100K–$500K",
-      "FUNDING_AMOUNT_3":"$500K–$1M",
-      "FUNDING_AMOUNT_4":"$1M+",
-
-      "FUNDING_USAGE": "كيفية استخدام التمويل؟",
-      "FUNDING_USAGE_PLACEHOLDER": "صف كيفية استخدام التمويل",
-      "FUNDING_USAGE_REQUIRED": "استخدام التمويل مطلوب.",
-      "FUNDING_USAGE_MIN_LENGTH": "استخدام التمويل يجب ان يكون على الأقل 20 حرف.",
-      
-      "PREVIOUS_FUNDING_SOURCES": "مصادر التمويل السابقة",
-      "PREVIOUS_FUNDING_SOURCES_PLACEHOLDER": "اذكر مصادر التمويل السابقة",
-      "PREVIOUS_FUNDING_SOURCES_REQUIRED": "مصادر التمويل السابقة مطلوبة.",
-      
-      "TARGET_MARKET": "السوق المستهدف",
-      "TARGET_MARKET_PLACEHOLDER": "صف سوقك المستهدف",
-      "TARGET_MARKET_REQUIRED": "السوق المستهدف مطلوب.",
-      
-      "OPEN_TO_CO_INVESTMENT": "هل أنت منفتح على الاستثمار المشترك؟",
-      "SELECT_OPEN_TO_CO_INVESTMENT": "اختر خيارًا",
-      "OPEN_TO_CO_INVESTMENT_REQUIRED": "هذا الحقل مطلوب.",
-      "YES": "نعم",
-      "NO": "لا",
-      
-      "CURRENT_PARTNERS": "الشركاء الحاليون",
-      "CURRENT_PARTNERS_PLACEHOLDER": "اذكر شركاءك الحاليين"
     },
     "STEP_3": {
       "TITLE": "المعلومات المالية",
@@ -131,15 +101,55 @@
       "BREAK_EVEN_POINT_REQUIRED": "نقطة التعادل مطلوبة.",
       "FINANCIAL_GOAL_NEXT_3_YEARS": "الهدف المالي (الـ3 سنوات القادمة)",
       "FINANCIAL_GOAL_NEXT_3_YEARS_PLACEHOLDER": "صف هدفك المالي",
-      "FINANCIAL_GOAL_NEXT_3_YEARS_REQUIRED": "الهدف المالي مطلوب."
+      "FINANCIAL_GOAL_NEXT_3_YEARS_REQUIRED": "الهدف المالي مطلوب.",
+
+      "FUNDING_AMOUNT": " مبلغ التمويل المطلوب",
+      "FUNDING_AMOUNT_PLACEHOLDER": "أدخل مبلغ التمويل",
+      "SELECT_FUNDING_AMOUNT": "اختر مبلغ التمويل",
+      "FUNDING_AMOUNT_REQUIRED": "مبلغ التمويل مطلوب.",
+      "FUNDING_AMOUNT_1":"$50K–$100K",
+      "FUNDING_AMOUNT_2":"$100K–$500K",
+      "FUNDING_AMOUNT_3":"$500K–$1M",
+      "FUNDING_AMOUNT_4":"$1M+",
+
+      "FUNDING_USAGE": "كيفية استخدام التمويل؟",
+      "FUNDING_USAGE_PLACEHOLDER": "صف كيفية استخدام التمويل",
+      "FUNDING_USAGE_REQUIRED": "استخدام التمويل مطلوب.",
+      "FUNDING_USAGE_MIN_LENGTH": "استخدام التمويل يجب ان يكون على الأقل 20 حرف.",
+      
+      "PREVIOUS_FUNDING_SOURCES": "مصادر التمويل السابقة",
+      "SELECT_PREVIOUS_FUNDING_SOURCES": "اختر مصادر التمويل السابقة",
+      "PREVIOUS_FUNDING_SOURCES_REQUIRED": "مصادر التمويل السابقة مطلوبة.",
+      "PERVIOUS_FUNDING_SOURCE_1":"ملائكي",
+      "PERVIOUS_FUNDING_SOURCE_2":"قروض",
+      "PERVIOUS_FUNDING_SOURCE_3":"تمويل ذاتي",
+      "PERVIOUS_FUNDING_SOURCE_4":"صناديق استثمار",
+      "PERVIOUS_FUNDING_SOURCE_5":"مصادر اخرى",
+      
+      "TARGET_MARKET": "السوق المستهدف للمشروع",
+      "SELECT_TARGET_MARKET": "اختر السوق المستهدف",
+      "TARGET_MARKET_REQUIRED": "السوق المستهدف مطلوب.",
+      "TARGET_MARKET_1":"محلي (الامارات العربية المتحدة)",
+      "TARGET_MARKET_2":"خليجي",
+      "TARGET_MARKET_3":"إقليمي"
     },
     "STEP_4": {
       "TITLE": "استراتيجية الخروج",
       "DESCRIPTION": "قدم تفاصيل عن استراتيجية الخروج الخاصة بك.",
       "HAS_EXIT_STRATEGY": "هل لديك استراتيجية خروج؟",
+
+      "OPEN_TO_CO_INVESTMENT": "هل أنت منفتح على الاستثمار المشترك؟",
+      "SELECT_OPEN_TO_CO_INVESTMENT": "اختر خيارًا",
+      "OPEN_TO_CO_INVESTMENT_REQUIRED": "هذا الحقل مطلوب.",
+      "CO_INVESTMENT_YES": "نعم",
+      "CO_INVESTMENT_NO": "لا",
+      
+      "CURRENT_PARTNERS": "الشركاء الحاليون",
+      "CURRENT_PARTNERS_PLACEHOLDER": "اذكر شركاءك الحاليين",
+
       "SELECT_HAS_EXIT_STRATEGY": "اختر خيارًا",
-      "YES": "نعم",
-      "NO": "لا",
+      "EXIT_STRATEGY_YES": "نعم",
+      "EXIT_STRATEGY_NO": "لا",
       "HAS_EXIT_STRATEGY_REQUIRED": "هذا الحقل مطلوب.",
       "EXIT_STRATEGY": "استراتيجية الخروج",
       "EXIT_STRATEGY_PLACEHOLDER": "صف استراتيجية الخروج الخاصة بك",

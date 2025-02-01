@@ -72,37 +72,9 @@
       "PROBLEM_SOLVED": "What problem does your startup solve?",
       "PROBLEM_SOLVED_PLACEHOLDER": "Describe the problem your startup solves",
       "PROBLEM_SOLVED_REQUIRED": "Problem solved is required.",
-      "PROBLEM_SOLVED_MIN_LENGTH": "Problem solved must be at least 10 characters.",
+      "PROBLEM_SOLVED_MIN_LENGTH": "Problem solved must be at least 10 characters."
 
-      "FUNDING_AMOUNT": "Amount required for funding",
-      "SELECT_FUNDING_AMOUNT": "Select the funding amount",
-      "FUNDING_AMOUNT_REQUIRED": "Funding amount is required.",
-      "FUNDING_AMOUNT_1":"$50K–$100K",
-      "FUNDING_AMOUNT_2":"$100K–$500K",
-      "FUNDING_AMOUNT_3":"$500K–$1M",
-      "FUNDING_AMOUNT_4":"$1M+",
-
-      "FUNDING_USAGE": "How will the funding be used? ",
-      "FUNDING_USAGE_PLACEHOLDER": "Describe how the funding will be used",
-      "FUNDING_USAGE_REQUIRED": "Funding usage is required.",
-      "FUNDING_USAGE_MIN_LENGTH": "Funding usage must be at least 20 characters.",
       
-      "PREVIOUS_FUNDING_SOURCES": "What are the previous sources of funding? ",
-      "PREVIOUS_FUNDING_SOURCES_PLACEHOLDER": "List your previous funding sources",
-      "PREVIOUS_FUNDING_SOURCES_REQUIRED": "Previous funding sources are required.",
-      
-      "TARGET_MARKET": "Target Market",
-      "TARGET_MARKET_PLACEHOLDER": "Describe your target market",
-      "TARGET_MARKET_REQUIRED": "Target market is required.",
-      
-      "OPEN_TO_CO_INVESTMENT": "Open to Co-Investment?",
-      "SELECT_OPEN_TO_CO_INVESTMENT": "Select an option",
-      "OPEN_TO_CO_INVESTMENT_REQUIRED": "This field is required.",
-      "YES": "Yes",
-      "NO": "No",
-      
-      "CURRENT_PARTNERS": "Current Partners",
-      "CURRENT_PARTNERS_PLACEHOLDER": "List your current partners"
     },
     "STEP_3": {
       "TITLE": "Financial Information",
@@ -130,15 +102,55 @@
       "BREAK_EVEN_POINT_REQUIRED": "Break-even point is required.",
       "FINANCIAL_GOAL_NEXT_3_YEARS": "Financial Goal (Next 3 Years)",
       "FINANCIAL_GOAL_NEXT_3_YEARS_PLACEHOLDER": "Describe your financial goal",
-      "FINANCIAL_GOAL_NEXT_3_YEARS_REQUIRED": "Financial goal is required."
+      "FINANCIAL_GOAL_NEXT_3_YEARS_REQUIRED": "Financial goal is required.",
+
+      "FUNDING_AMOUNT": "Amount required for funding",
+      "SELECT_FUNDING_AMOUNT": "Select the funding amount",
+      "FUNDING_AMOUNT_REQUIRED": "Funding amount is required.",
+      "FUNDING_AMOUNT_1":"$50K–$100K",
+      "FUNDING_AMOUNT_2":"$100K–$500K",
+      "FUNDING_AMOUNT_3":"$500K–$1M",
+      "FUNDING_AMOUNT_4":"$1M+",
+
+      "FUNDING_USAGE": "How will the funding be used? ",
+      "FUNDING_USAGE_PLACEHOLDER": "Describe how the funding will be used",
+      "FUNDING_USAGE_REQUIRED": "Funding usage is required.",
+      "FUNDING_USAGE_MIN_LENGTH": "Funding usage must be at least 20 characters.",
+      
+      "PREVIOUS_FUNDING_SOURCES": "What are the previous sources of funding? ",
+      "SELECT_PREVIOUS_FUNDING_SOURCES": "Select previous funding sources",
+      "PREVIOUS_FUNDING_SOURCES_REQUIRED": "Previous funding sources are required.",
+      "PREVIOUS_FUNDING_SOURCES_1":"Angel Funding",
+      "PREVIOUS_FUNDING_SOURCES_2":"Loans",
+      "PREVIOUS_FUNDING_SOURCES_3":"Self-financing",
+      "PREVIOUS_FUNDING_SOURCES_4":"Investment funds",
+      "PREVIOUS_FUNDING_SOURCES_5":"Other Sources",
+      
+      "TARGET_MARKET": "Target market for the project*",
+      "SELECT_TARGET_MARKET": "Select the target market",
+      "TARGET_MARKET_REQUIRED": "Target market is required.",
+      "TARGET_MARKET_1":"Local (UAE)",
+      "TARGET_MARKET_2":"Gulf",
+      "TARGET_MARKET_3":"Regional"
+
     },
     "STEP_4": {
       "TITLE": "Exit Strategy",
       "DESCRIPTION": "Provide details about your exit strategy.",
+      
+      "OPEN_TO_CO_INVESTMENT": "Open to Co-Investment?",
+      "SELECT_OPEN_TO_CO_INVESTMENT": "Select an option",
+      "OPEN_TO_CO_INVESTMENT_REQUIRED": "This field is required.",
+      "CO_INVESTMENT_YES": "Yes",
+      "CO_INVESTMENT_NO": "No",
+      
+      "CURRENT_PARTNERS": "Current Partners",
+      "CURRENT_PARTNERS_PLACEHOLDER": "List your current partners",
+
       "HAS_EXIT_STRATEGY": "Do You Have an Exit Strategy?",
       "SELECT_HAS_EXIT_STRATEGY": "Select an option",
-      "YES":"Yes",
-      "NO":"No",
+      "EXIT_STRATEGY_YES":"Yes",
+      "EXIT_STRATEGY_NO":"No",
       "HAS_EXIT_STRATEGY_REQUIRED": "This field is required.",
       "EXIT_STRATEGY": "Exit Strategy",
       "EXIT_STRATEGY_PLACEHOLDER": "Describe your exit strategy",
