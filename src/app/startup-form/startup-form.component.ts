@@ -28,7 +28,7 @@ export class StartupFormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]{10,15}$/)]],
       companyName: ['', [Validators.required, Validators.minLength(2)]],
-      website: ['', [Validators.pattern(/^(http|https):\/\/[^ "]+$/)]],
+      website: ['', [Validators.required, Validators.pattern(/^(http|https):\/\/[^ "]+$/)]],
       productService: ['', [Validators.required, Validators.minLength(10)]],
       sector: ['', [Validators.required]],
       operationalStage: ['', [Validators.required]],
@@ -117,14 +117,8 @@ export class StartupFormComponent implements OnInit {
 
   nextStep() {
     if (this.currentStep < 5) {
-      // Mark all form controls as touched to show validation errors
-      this.markCurrentStepControlsAsTouched();
-
-      // Check if the current step is valid
-      if (this.isStepValid(this.currentStep)) {
         this.currentStep++; // Move to the next step
       }
-    }
   }
 
   // Helper method to mark all form controls for the current step as touched
@@ -163,3 +157,31 @@ export class StartupFormComponent implements OnInit {
     }
   }
 }
+
+
+/*
+
+nextStep() {
+    if (this.currentStep < 5) {
+      // Mark all form controls as touched to show validation errors
+      this.markCurrentStepControlsAsTouched();
+
+      // Check if the current step is valid
+      if (this.isStepValid(this.currentStep)) {
+        this.currentStep++; // Move to the next step
+      }
+    }
+  }
+
+  */
+
+
+/*
+
+nextStep() {
+    if (this.currentStep < 5) {
+        this.currentStep++; // Move to the next step
+      }
+  }
+
+*/
