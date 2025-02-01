@@ -14,7 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class StartupFormComponent implements OnInit {
   startupForm: FormGroup;
-  currentStep: number = 5;
+  currentStep: number = 1;
 
   constructor(
     private fb: FormBuilder,
