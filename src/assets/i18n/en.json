@@ -1,11 +1,119 @@
 {
-    "HEADER": {
-      "TITLE_DEFAULT": "EquiHub",
-      "TITLE_INVESTOR": "Join As Investor",
-      "TITLE_STARTUP": "Join As Start up"
-    },
   "STARTUP_FORM": {
-    "TITLE": "Join as Startup"
+    "TITLE": "Join as Startup",
+    "STEP_1": {
+      "TITLE": "Basic Information",
+      "DESCRIPTION": "Provide basic details about your startup.",
+      "NAME": "Name",
+      "NAME_PLACEHOLDER": "Enter your name",
+      "NAME_REQUIRED": "Name is required.",
+      "EMAIL": "Email",
+      "EMAIL_PLACEHOLDER": "Enter your email",
+      "EMAIL_REQUIRED": "Email is required.",
+      "PHONE_NUMBER": "Phone Number",
+      "PHONE_NUMBER_PLACEHOLDER": "Enter your phone number",
+      "PHONE_NUMBER_REQUIRED": "Phone number is required.",
+      "COMPANY_NAME": "Company Name",
+      "COMPANY_NAME_PLACEHOLDER": "Enter your company name",
+      "COMPANY_NAME_REQUIRED": "Company name is required.",
+      "WEBSITE": "Website",
+      "WEBSITE_PLACEHOLDER": "Enter your website URL",
+      "WEBSITE_INVALID": "Please enter a valid URL.",
+      "PRODUCT_SERVICE": "Product or Service",
+      "PRODUCT_SERVICE_PLACEHOLDER": "Describe your product or service",
+      "PRODUCT_SERVICE_REQUIRED": "Product or service is required.",
+      "SECTOR": "Sector",
+      "SELECT_SECTOR": "Select your sector",
+      "SECTOR_REQUIRED": "Sector is required.",
+      "SECTOR_TECHNOLOGY": "Technology",
+      "SECTOR_FINTECH": "Fintech",
+      "SECTOR_ECOMMERCE": "E-commerce",
+      "SECTOR_HEALTHCARE": "Healthcare",
+      "SECTOR_EDTECH": "Edtech",
+      "OPERATIONAL_STAGE": "Operational Stage",
+      "SELECT_OPERATIONAL_STAGE": "Select your operational stage",
+      "OPERATIONAL_STAGE_REQUIRED": "Operational stage is required.",
+      "STAGE_IDEA": "Idea",
+      "STAGE_PROTOTYPE": "Prototype",
+      "STAGE_LAUNCHED": "Launched",
+      "STAGE_SCALING": "Scaling",
+      "PROBLEM_SOLVED": "Problem Solved",
+      "PROBLEM_SOLVED_PLACEHOLDER": "Describe the problem your startup solves",
+      "PROBLEM_SOLVED_REQUIRED": "Problem solved is required."
+    },
+    "STEP_2": {
+      "TITLE": "Funding Details",
+      "DESCRIPTION": "Provide details about your funding requirements.",
+      "FUNDING_AMOUNT": "Funding Amount",
+      "FUNDING_AMOUNT_PLACEHOLDER": "Enter the funding amount",
+      "FUNDING_AMOUNT_REQUIRED": "Funding amount is required.",
+      "FUNDING_USAGE": "Funding Usage",
+      "FUNDING_USAGE_PLACEHOLDER": "Describe how the funding will be used",
+      "FUNDING_USAGE_REQUIRED": "Funding usage is required.",
+      "PREVIOUS_FUNDING_SOURCES": "Previous Funding Sources",
+      "PREVIOUS_FUNDING_SOURCES_PLACEHOLDER": "List your previous funding sources",
+      "PREVIOUS_FUNDING_SOURCES_REQUIRED": "Previous funding sources are required.",
+      "TARGET_MARKET": "Target Market",
+      "TARGET_MARKET_PLACEHOLDER": "Describe your target market",
+      "TARGET_MARKET_REQUIRED": "Target market is required.",
+      "OPEN_TO_CO_INVESTMENT": "Open to Co-Investment?",
+      "SELECT_OPEN_TO_CO_INVESTMENT": "Select an option",
+      "OPEN_TO_CO_INVESTMENT_REQUIRED": "This field is required.",
+      "YES": "Yes",
+      "NO": "No",
+      "CURRENT_PARTNERS": "Current Partners",
+      "CURRENT_PARTNERS_PLACEHOLDER": "List your current partners"
+    },
+    "STEP_3": {
+      "TITLE": "Financial Information",
+      "DESCRIPTION": "Provide financial details about your startup.",
+      "MONTHLY_REVENUE": "Monthly Revenue",
+      "MONTHLY_REVENUE_PLACEHOLDER": "Enter your monthly revenue",
+      "MONTHLY_REVENUE_REQUIRED": "Monthly revenue is required.",
+      "IS_PROFITABLE": "Is Your Startup Profitable?",
+      "SELECT_IS_PROFITABLE": "Select an option",
+      "IS_PROFITABLE_REQUIRED": "This field is required.",
+      "REVENUE_GROWTH_RATE": "Revenue Growth Rate",
+      "REVENUE_GROWTH_RATE_PLACEHOLDER": "Enter your revenue growth rate",
+      "REVENUE_GROWTH_RATE_REQUIRED": "Revenue growth rate is required.",
+      "REVENUE_GOAL_NEXT_12_MONTHS": "Revenue Goal (Next 12 Months)",
+      "REVENUE_GOAL_NEXT_12_MONTHS_PLACEHOLDER": "Enter your revenue goal",
+      "REVENUE_GOAL_NEXT_12_MONTHS_REQUIRED": "Revenue goal is required.",
+      "HAS_DEBT": "Do You Have Debt?",
+      "SELECT_HAS_DEBT": "Select an option",
+      "HAS_DEBT_REQUIRED": "This field is required.",
+      "DEBT_AMOUNT": "Debt Amount",
+      "DEBT_AMOUNT_PLACEHOLDER": "Enter your debt amount",
+      "DEBT_AMOUNT_REQUIRED": "Debt amount is required.",
+      "BREAK_EVEN_POINT": "Break-Even Point",
+      "BREAK_EVEN_POINT_PLACEHOLDER": "When do you expect to break even?",
+      "BREAK_EVEN_POINT_REQUIRED": "Break-even point is required.",
+      "FINANCIAL_GOAL_NEXT_3_YEARS": "Financial Goal (Next 3 Years)",
+      "FINANCIAL_GOAL_NEXT_3_YEARS_PLACEHOLDER": "Describe your financial goal",
+      "FINANCIAL_GOAL_NEXT_3_YEARS_REQUIRED": "Financial goal is required."
+    },
+    "STEP_4": {
+      "TITLE": "Exit Strategy",
+      "DESCRIPTION": "Provide details about your exit strategy.",
+      "HAS_EXIT_STRATEGY": "Do You Have an Exit Strategy?",
+      "SELECT_HAS_EXIT_STRATEGY": "Select an option",
+      "YES":"Yes",
+      "NO":"No",
+      "HAS_EXIT_STRATEGY_REQUIRED": "This field is required.",
+      "EXIT_STRATEGY": "Exit Strategy",
+      "EXIT_STRATEGY_PLACEHOLDER": "Describe your exit strategy",
+      "EXIT_STRATEGY_REQUIRED": "Exit strategy is required."
+    },
+    "STEP_5": {
+      "SUBMIT_TITLE": "Submit your investor request",
+      "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
+      "SUBMIT_BUTTON": "Submit"
+    },
+    "NAVIGATION": {
+      "PREVIOUS_STEP": "Previous Step",
+      "NEXT_STEP": "Next Step",
+      "SUBMIT": "Submit"
+    }
   },
   "INVESTOR_FORM": {
     "TITLE": "Join as Investor",
@@ -126,4 +234,5 @@
       "NEXT_STEP": "Next Step"
     }
   }
-}
+  }
+
