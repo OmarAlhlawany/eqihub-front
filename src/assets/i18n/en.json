@@ -25,17 +25,23 @@
       "COMPANY_NAME_MIN_LENGTH": "Company name must be at least 2 characters.",
       
       "WEBSITE": "Website",
-      "WEBSITE_PLACEHOLDER": "Enter your website URL",
+      "WEBSITE_PLACEHOLDER": "http://www.example.com",
       "WEBSITE_REQUIRED": "Website is required.",
-      "WEBSITE_INVALID": "Please enter a valid URL.",
+      "WEBSITE_INVALID": "Please enter a valid URL."
       
-      "PRODUCT_SERVICE": "Product or Service",
+    },
+    "STEP_2": {
+      "TITLE": "Funding Details",
+      "DESCRIPTION": "Provide details about your funding requirements.",
+
+
+      "PRODUCT_SERVICE": "What is the primary product or service your company offers?",
       "PRODUCT_SERVICE_PLACEHOLDER": "Describe your product or service",
       "PRODUCT_SERVICE_REQUIRED": "Product or service is required.",
       "PRODUCT_SERVICE_MIN_LENGTH": "Product or service must be at least 10 characters.",
       
-      "SECTOR": "Company Sector",
-      "SELECT_SECTOR": "Select your sector",
+      "SECTOR": "The sector to which the company belongs",
+      "SELECT_SECTOR": "Select your Company sector",
       "SECTOR_REQUIRED": "Sector is required.",
       "SECTOR_TECHNOLOGY": "Technology",
       "SECTOR_FINTECH": "Fintech",
@@ -54,37 +60,34 @@
       "SECTOR_ARTIFICIAL_INTELLIGENCE": "Artificial Intelligence",
       "SECTOR_OTHER": "Other",
       
-      "OPERATIONAL_STAGE": "Operational Stage",
-      "SELECT_OPERATIONAL_STAGE": "Select your operational stage",
-      "OPERATIONAL_STAGE_REQUIRED": "Operational stage is required.",
+      "OPERATIONAL_STAGE": "Operational phase of the project",
+      "SELECT_OPERATIONAL_STAGE": "Select your operational phase",
+      "OPERATIONAL_STAGE_REQUIRED": "Operational phase is required.",
       "STAGE_PRE_SEED": "Pre-Seed",
       "STAGE_SEED": "Seed",
       "STAGE_PRE_SERIES_A": "Pre-Series A",
       "STAGE_SERIES_A": "Series A",
       "STAGE_SERIES_B": "Series B",
       
-      "PROBLEM_SOLVED": "Problem Solved",
+      "PROBLEM_SOLVED": "What problem does your startup solve?",
       "PROBLEM_SOLVED_PLACEHOLDER": "Describe the problem your startup solves",
       "PROBLEM_SOLVED_REQUIRED": "Problem solved is required.",
-      "PROBLEM_SOLVED_MIN_LENGTH": "Problem solved must be at least 10 characters."
-    },
-    "STEP_2": {
-      "TITLE": "Funding Details",
-      "DESCRIPTION": "Provide details about your funding requirements.",
-      "FUNDING_AMOUNT": "Funding Amount",
-      "SELECT_FUNDING_AMOUNT": "Enter the funding amount",
+      "PROBLEM_SOLVED_MIN_LENGTH": "Problem solved must be at least 10 characters.",
+
+      "FUNDING_AMOUNT": "Amount required for funding",
+      "SELECT_FUNDING_AMOUNT": "Select the funding amount",
       "FUNDING_AMOUNT_REQUIRED": "Funding amount is required.",
       "FUNDING_AMOUNT_1":"$50K–$100K",
       "FUNDING_AMOUNT_2":"$100K–$500K",
       "FUNDING_AMOUNT_3":"$500K–$1M",
       "FUNDING_AMOUNT_4":"$1M+",
 
-      "FUNDING_USAGE": "Funding Usage",
+      "FUNDING_USAGE": "How will the funding be used? ",
       "FUNDING_USAGE_PLACEHOLDER": "Describe how the funding will be used",
       "FUNDING_USAGE_REQUIRED": "Funding usage is required.",
       "FUNDING_USAGE_MIN_LENGTH": "Funding usage must be at least 20 characters.",
       
-      "PREVIOUS_FUNDING_SOURCES": "Previous Funding Sources",
+      "PREVIOUS_FUNDING_SOURCES": "What are the previous sources of funding? ",
       "PREVIOUS_FUNDING_SOURCES_PLACEHOLDER": "List your previous funding sources",
       "PREVIOUS_FUNDING_SOURCES_REQUIRED": "Previous funding sources are required.",
       

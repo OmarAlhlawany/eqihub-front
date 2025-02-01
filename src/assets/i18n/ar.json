@@ -25,17 +25,23 @@
       "COMPANY_NAME_MIN_LENGTH": "اسم الشركة يجب ان يكون على الأقل 2 حروف.",
       
       "WEBSITE": "الموقع الإلكتروني",
-      "WEBSITE_PLACEHOLDER": "أدخل رابط موقعك الإلكتروني",
+      "WEBSITE_PLACEHOLDER": "http://www.example.com",
       "WEBSITE_REQUIRED": "الموقع الإلكتروني مطلوب.",
-      "WEBSITE_INVALID": "يرجى إدخال رابط صحيح.",
+      "WEBSITE_INVALID": "يرجى إدخال رابط صحيح."
       
-      "PRODUCT_SERVICE": "المنتج أو الخدمة",
-      "PRODUCT_SERVICE_PLACEHOLDER": "صف منتجك أو خدمتك",
+
+    },
+    "STEP_2": {
+      "TITLE": "تفاصيل التمويل",
+      "DESCRIPTION": "قدم تفاصيل عن متطلبات التمويل الخاصة بك.",
+      
+      "PRODUCT_SERVICE": "ما هو المنتج او الخدمة التي تقدمها شركتك؟",
+      "PRODUCT_SERVICE_PLACEHOLDER": "صف المنتج او الخدمة التي تقدمها شركتك",
       "PRODUCT_SERVICE_REQUIRED": "المنتج أو الخدمة مطلوب.",
       "PRODUCT_SERVICE_MIN_LENGTH": "المنتج أو الخدمة يجب ان يكون على الأقل 10 حروف.",
 
-      "SECTOR": "قطاع الشركة",
-      "SELECT_SECTOR": "اختر قطاعك",
+      "SECTOR": "ما هو قطاع الذي تنتمي اليه شركتك؟",
+      "SELECT_SECTOR": "حدد قطاع شركتك",
       "SECTOR_REQUIRED": "القطاع مطلوب.",
       "SECTOR_TECHNOLOGY": "التكنولوجيا",
       "SECTOR_FINTECH": "التكنولوجيا المالية",
@@ -54,7 +60,7 @@
       "SECTOR_ARTIFICIAL_INTELLIGENCE": "الذكاء الاصطناعي",
       "SECTOR_OTHER": "اخرى",
       
-      "OPERATIONAL_STAGE": "المرحلة التشغيلية",
+      "OPERATIONAL_STAGE": "ما هي المرحلة التشغيلية التي تقدمها شركتك؟",
       "SELECT_OPERATIONAL_STAGE": "اختر المرحلة التشغيلية",
       "OPERATIONAL_STAGE_REQUIRED": "المرحلة التشغيلية مطلوبة.",
       "STAGE_PRE_SEED": "قبل التمويل",
@@ -63,16 +69,12 @@
       "STAGE_SERIES_A": "المجموعة A",
       "STAGE_SERIES_B": "المجموعة B",
       
-      "PROBLEM_SOLVED": "المشكلة التي تحلها",
+      "PROBLEM_SOLVED": "ما هو المشكلة التي تحلها شركتك الناشئة؟",
       "PROBLEM_SOLVED_PLACEHOLDER": "صف المشكلة التي تحلها شركتك الناشئة",
       "PROBLEM_SOLVED_REQUIRED": "وصف المشكلة مطلوب.",
-      "PROBLEM_SOLVED_MIN_LENGTH": "وصف المشكلة يجب ان يكون على الأقل 10 حروف."
-    },
-    "STEP_2": {
-      "TITLE": "تفاصيل التمويل",
-      "DESCRIPTION": "قدم تفاصيل عن متطلبات التمويل الخاصة بك.",
-      
-      "FUNDING_AMOUNT": "مبلغ التمويل",
+      "PROBLEM_SOLVED_MIN_LENGTH": "وصف المشكلة يجب ان يكون على الأقل 10 حروف.",
+
+      "FUNDING_AMOUNT": " مبلغ التمويل المطلوب",
       "FUNDING_AMOUNT_PLACEHOLDER": "أدخل مبلغ التمويل",
       "SELECT_FUNDING_AMOUNT": "اختر مبلغ التمويل",
       "FUNDING_AMOUNT_REQUIRED": "مبلغ التمويل مطلوب.",
@@ -81,7 +83,7 @@
       "FUNDING_AMOUNT_3":"$500K–$1M",
       "FUNDING_AMOUNT_4":"$1M+",
 
-      "FUNDING_USAGE": "استخدام التمويل",
+      "FUNDING_USAGE": "كيفية استخدام التمويل؟",
       "FUNDING_USAGE_PLACEHOLDER": "صف كيفية استخدام التمويل",
       "FUNDING_USAGE_REQUIRED": "استخدام التمويل مطلوب.",
       "FUNDING_USAGE_MIN_LENGTH": "استخدام التمويل يجب ان يكون على الأقل 20 حرف.",

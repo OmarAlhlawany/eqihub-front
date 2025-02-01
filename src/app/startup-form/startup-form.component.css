@@ -391,37 +391,41 @@ body[dir="rtl"] .investor-form-container {
   color: transparent; /* Hide placeholder text on focus */
 }
 
+
+
 /* Step 5: Submit Step */
-.step-5 .submit-box {
+.step-6 .submit-box {
   width: 100%; /* Full width */
   text-align: center;
 }
 
-.step-5 .submit-icon {
+.step-6 .submit-icon {
   margin: 20px; /* Reduced margin */
   width: 100px; /* Smaller icon */
   height: 100px; /* Smaller icon */
 }
 
-.step-5 .submit-title {
+.step-6 .submit-title {
   font-size: 18px; /* Smaller font size */
   font-weight: bold;
   margin-top: 10px;
   color: #2B37A0;
 }
 
-.step-5 .submit-description {
+.step-6 .submit-description {
   font-size: 14px; /* Smaller font size */
   color: #2B37A0;
   margin-top: 10px;
   padding: 0 20px; /* Reduced padding */
 }
 
-.step-5 .submit-button-container {
+.step-6 .submit-button-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
+
+
 
 .btn-success {
   background-color: #2B37A0;

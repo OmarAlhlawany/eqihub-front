@@ -37,7 +37,10 @@
       <div class="row mb-3">
         <div class="col-md-6">
           <label for="name">{{ 'STARTUP_FORM.STEP_1.NAME' | translate }} *</label>
-          <input id="name" formControlName="name" placeholder="{{ 'STARTUP_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
+          <div class="input-icon-container">
+            <i class="material-icons">person</i> <!-- Icon for name -->
+            <input id="name" formControlName="name" placeholder="{{ 'STARTUP_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
           <div *ngIf="startupForm.get('name')?.invalid && (startupForm.get('name')?.dirty || startupForm.get('name')?.touched)" class="text-danger">
             <div *ngIf="startupForm.get('name')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_1.NAME_REQUIRED' | translate }}</div>
             <div *ngIf="startupForm.get('name')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_1.NAME_MIN_LENGTH' | translate }}</div>          
@@ -46,24 +49,35 @@
 
         <div class="col-md-6">
           <label for="email">{{ 'STARTUP_FORM.STEP_1.EMAIL' | translate }} *</label>
-          <input id="email" type="email" formControlName="email" placeholder="{{ 'STARTUP_FORM.STEP_1.EMAIL_PLACEHOLDER' | translate }}" class="form-control" required />
+          <div class="input-icon-container">
+            <i class="material-icons">email</i> <!-- Icon for email -->    
+            <input id="email" type="email" formControlName="email" placeholder="{{ 'STARTUP_FORM.STEP_1.EMAIL_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
           <div *ngIf="startupForm.get('email')?.invalid && (startupForm.get('email')?.dirty || startupForm.get('email')?.touched)" class="text-danger">
             <div *ngIf="startupForm.get('email')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_1.EMAIL_REQUIRED' | translate }}</div>
-            <div *ngIf="startupForm.get('email')?.errors?.['email']">{{ 'STARTUP_FORM.STEP_1.EMAIL_INVALID' | translate }}</div>          </div>
+            <div *ngIf="startupForm.get('email')?.errors?.['email']">{{ 'STARTUP_FORM.STEP_1.EMAIL_INVALID' | translate }}</div>          
+          </div>
         </div>
       </div>
       <div class="row mb-3">
         <div class="col-md-6">
           <label for="phoneNumber">{{ 'STARTUP_FORM.STEP_1.PHONE_NUMBER' | translate }} *</label>
-          <input id="phoneNumber" type="tel" formControlName="phoneNumber" placeholder="{{ 'STARTUP_FORM.STEP_1.PHONE_NUMBER_PLACEHOLDER' | translate }}" class="form-control" required />
+          <div class="input-icon-container">
+            <i class="material-icons">phone</i> <!-- Icon for phone number -->    
+            <input id="phoneNumber" type="tel" formControlName="phoneNumber" placeholder="{{ 'STARTUP_FORM.STEP_1.PHONE_NUMBER_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
           <div *ngIf="startupForm.get('phoneNumber')?.invalid && (startupForm.get('phoneNumber')?.dirty || startupForm.get('phoneNumber')?.touched)" class="text-danger">
             <div *ngIf="startupForm.get('phoneNumber')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_1.PHONE_NUMBER_REQUIRED' | translate }}</div>
-            <div *ngIf="startupForm.get('phoneNumber')?.errors?.['pattern']">{{ 'STARTUP_FORM.STEP_1.PHONE_NUMBER_INVALID' | translate }}</div>          </div>
+            <div *ngIf="startupForm.get('phoneNumber')?.errors?.['pattern']">{{ 'STARTUP_FORM.STEP_1.PHONE_NUMBER_INVALID' | translate }}</div>          
+          </div>
         </div>
 
         <div class="col-md-6">
           <label for="companyName">{{ 'STARTUP_FORM.STEP_1.COMPANY_NAME' | translate }} *</label>
-          <input id="companyName" formControlName="companyName" placeholder="{{ 'STARTUP_FORM.STEP_1.COMPANY_NAME_PLACEHOLDER' | translate }}" class="form-control" required />
+          <div class="input-icon-container">
+            <i class="material-icons">business</i> <!-- Icon for company -->
+            <input id="companyName" formControlName="companyName" placeholder="{{ 'STARTUP_FORM.STEP_1.COMPANY_NAME_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
           <div *ngIf="startupForm.get('companyName')?.invalid && (startupForm.get('companyName')?.dirty || startupForm.get('companyName')?.touched)" class="text-danger">
             <div *ngIf="startupForm.get('companyName')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_1.COMPANY_NAME_REQUIRED' | translate }}</div>
             <div *ngIf="startupForm.get('companyName')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_1.COMPANY_NAME_MIN_LENGTH' | translate }}</div>   
@@ -74,212 +88,117 @@
       <div class="row mb-3">
         <div class="col-md-6">
           <label for="website">{{ 'STARTUP_FORM.STEP_1.WEBSITE' | translate }}</label>
-          <input id="website" formControlName="website" placeholder="{{ 'STARTUP_FORM.STEP_1.WEBSITE_PLACEHOLDER' | translate }}" class="form-control" required />
+          <div class="input-icon-container">
+            <i class="material-icons">link</i> <!-- Icon for website -->
+            <input id="website" formControlName="website" placeholder="{{ 'STARTUP_FORM.STEP_1.WEBSITE_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
           <div *ngIf="startupForm.get('website')?.invalid && (startupForm.get('website')?.dirty || startupForm.get('website')?.touched)" class="text-danger">
             <div *ngIf="startupForm.get('website')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_1.WEBSITE_REQUIRED' | translate }}</div>
             <div *ngIf="startupForm.get('website')?.errors?.['pattern']">{{ 'STARTUP_FORM.STEP_1.WEBSITE_INVALID' | translate }}</div>
           </div>
         </div>
-
-        <div class="col-md-6">
-          <label for="productService">{{ 'STARTUP_FORM.STEP_1.PRODUCT_SERVICE' | translate }} *</label>
-          <input id="productService" formControlName="productService" placeholder="{{ 'STARTUP_FORM.STEP_1.PRODUCT_SERVICE_PLACEHOLDER' | translate }}" class="form-control" required />
-          <div *ngIf="startupForm.get('productService')?.invalid && (startupForm.get('productService')?.dirty || startupForm.get('productService')?.touched)" class="text-danger">
-            <div *ngIf="startupForm.get('productService')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_1.PRODUCT_SERVICE_REQUIRED' | translate }}</div>
-            <div *ngIf="startupForm.get('productService')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_1.PRODUCT_SERVICE_MIN_LENGTH' | translate }}</div>
-          </div>
-        </div>
       </div>
-
-      <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="sector">{{ 'STARTUP_FORM.STEP_1.SECTOR' | translate }} *</label>
-          <select id="sector" formControlName="sector" class="form-control" required>
-            <option value="">{{ 'STARTUP_FORM.STEP_1.SELECT_SECTOR' | translate }}</option>
-            <option value="technology">{{ 'STARTUP_FORM.STEP_1.SECTOR_TECHNOLOGY' | translate }}</option>
-            <option value="fintech">{{ 'STARTUP_FORM.STEP_1.SECTOR_FINTECH' | translate }}</option>
-            <option value="healthTech">{{ 'STARTUP_FORM.STEP_1.SECTOR_HEALTH_TECH' | translate }}</option>
-            <option value="edtech">{{ 'STARTUP_FORM.STEP_1.SECTOR_EDTECH' | translate }}</option>
-            <option value="ecommerce">{{ 'STARTUP_FORM.STEP_1.SECTOR_ECOMMERCE' | translate }}</option>
-            <option value="Renewable Energy">{{ 'STARTUP_FORM.STEP_1.SECTOR_RENEWABLE_ENERGY' | translate }}</option>
-            <option value="Cybersecurity">{{ 'STARTUP_FORM.STEP_1.SECTOR_CYBERSECURITY' | translate }}</option>
-            <option value="AgriTech">{{ 'STARTUP_FORM.STEP_1.SECTOR_AGRI_TECH' | translate }}</option>
-            <option value="PropTech">{{'STARTUP_FORM.STEP_1.SECTOR_PROP_TECH' | translate }}</option>
-            <option value="Gaming">{{ 'STARTUP_FORM.STEP_1.SECTOR_GAMING' | translate }}</option>
-            <option value="Sports & Fitness">{{ 'STARTUP_FORM.STEP_1.SECTOR_SPORTS_FITNESS' | translate }}</option>
-            <option value="Logistics & Transportation">{{ 'STARTUP_FORM.STEP_1.SECTOR_LOGISTICS_TRANSPORTATION' | translate }}</option>
-            <option value="Food & Beverage">{{ 'STARTUP_FORM.STEP_1.SECTOR_FOOD_BEVERAGE' | translate }}</option>
-            <option value="Sustainability">{{ 'STARTUP_FORM.STEP_1.SECTOR_SUSTAINABILITY' | translate }}</option>
-            <option value="Artificial Intelligence">{{ 'STARTUP_FORM.STEP_1.SECTOR_ARTIFICIAL_INTELLIGENCE' | translate }}</option>
-            <option value="Other">{{ 'STARTUP_FORM.STEP_1.SECTOR_OTHER' | translate }}</option>
-          </select>
-          <div *ngIf="startupForm.get('sector')?.invalid && (startupForm.get('sector')?.dirty || startupForm.get('sector')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_1.SECTOR_REQUIRED' | translate }}
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <label for="operationalStage">{{ 'STARTUP_FORM.STEP_1.OPERATIONAL_STAGE' | translate }} *</label>
-          <select id="operationalStage" formControlName="operationalStage" class="form-control" required>
-            <option value="">{{ 'STARTUP_FORM.STEP_1.SELECT_OPERATIONAL_STAGE' | translate }}</option>
-            <option value="preSeed">{{ 'STARTUP_FORM.STEP_1.STAGE_PRE_SEED' | translate }}</option>
-            <option value="seed">{{ 'STARTUP_FORM.STEP_1.STAGE_SEED' | translate }}</option>
-            <option value="preSeriesA">{{ 'STARTUP_FORM.STEP_1.STAGE_PRE_SERIES_A' | translate }}</option>
-            <option value="seriesA">{{ 'STARTUP_FORM.STEP_1.STAGE_SERIES_A' | translate }}</option>
-            <option value="seriesB">{{ 'STARTUP_FORM.STEP_1.STAGE_SERIES_B' | translate }}</option>
-          </select>
-          <div *ngIf="startupForm.get('operationalStage')?.invalid && (startupForm.get('operationalStage')?.dirty || startupForm.get('operationalStage')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_1.OPERATIONAL_STAGE_REQUIRED' | translate }}
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-md-12">
-          <label for="problemSolved">{{ 'STARTUP_FORM.STEP_1.PROBLEM_SOLVED' | translate }} *</label>
-          <textarea id="problemSolved" formControlName="problemSolved" placeholder="{{ 'STARTUP_FORM.STEP_1.PROBLEM_SOLVED_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
-          <div *ngIf="startupForm.get('problemSolved')?.invalid && (startupForm.get('problemSolved')?.dirty || startupForm.get('problemSolved')?.touched)" class="text-danger">
-            <div *ngIf="startupForm.get('problemSolved')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_1.PROBLEM_SOLVED_REQUIRED' | translate }}</div>
-            <div *ngIf="startupForm.get('problemSolved')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_1.PROBLEM_SOLVED_MIN_LENGTH' | translate }}</div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
     <!-- Step 2: Funding Details -->
     <div *ngIf="currentStep === 2" class="form-step step-2">
+      
       <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="fundingAmount">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT' | translate }} *</label>
-          <select id="fundingAmount"  formControlName="fundingAmount" class="form-control" required >
-            <option value="">{{ 'STARTUP_FORM.STEP_2.SELECT_FUNDING_AMOUNT' | translate }}</option>
-            <option value="amount1">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_1' | translate }}</option>
-            <option value="amount2">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_2' | translate }}</option>
-            <option value="amount3">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_3' | translate }}</option>
-            <option value="amount4">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_4' | translate }}</option>
-          </select>
-          <div *ngIf="startupForm.get('fundingAmount')?.invalid && (startupForm.get('fundingAmount')?.dirty || startupForm.get('fundingAmount')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_REQUIRED' | translate }}
-          </div>
-        </div>
-        
-        <div class="col-md-6">
-          <label for="fundingUsage">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE' | translate }} *</label>
-          <textarea id="fundingUsage" formControlName="fundingUsage" placeholder="{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
-          <div *ngIf="startupForm.get('fundingUsage')?.invalid && (startupForm.get('fundingUsage')?.dirty || startupForm.get('fundingUsage')?.touched)" class="text-danger">
-              <div *ngIf="startupForm.get('fundingUsage')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_REQUIRED' | translate }}</div>
-              <div *ngIf="startupForm.get('fundingUsage')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_MIN_LENGTH' | translate }}</div>
-          </div>
+        <label for="productService">{{ 'STARTUP_FORM.STEP_2.PRODUCT_SERVICE' | translate }} *</label>
+        <input id="productService" formControlName="productService" placeholder="{{ 'STARTUP_FORM.STEP_2.PRODUCT_SERVICE_PLACEHOLDER' | translate }}" class="form-control" required />
+        <div *ngIf="startupForm.get('productService')?.invalid && (startupForm.get('productService')?.dirty || startupForm.get('productService')?.touched)" class="text-danger">
+        <div *ngIf="startupForm.get('productService')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_2.PRODUCT_SERVICE_REQUIRED' | translate }}</div>
+        <div *ngIf="startupForm.get('productService')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_2.PRODUCT_SERVICE_MIN_LENGTH' | translate }}</div>
+      </div>
+       </div>
+
+      <div class="row mb-3">
+        <label for="sector">{{ 'STARTUP_FORM.STEP_2.SECTOR' | translate }} *</label>
+        <select id="sector" formControlName="sector" class="form-control" required>
+        <option value="">{{ 'STARTUP_FORM.STEP_2.SELECT_SECTOR' | translate }}</option>
+        <option value="technology">{{ 'STARTUP_FORM.STEP_2.SECTOR_TECHNOLOGY' | translate }}</option>
+        <option value="fintech">{{ 'STARTUP_FORM.STEP_2.SECTOR_FINTECH' | translate }}</option>
+        <option value="healthTech">{{ 'STARTUP_FORM.STEP_2.SECTOR_HEALTH_TECH' | translate }}</option>
+        <option value="edtech">{{ 'STARTUP_FORM.STEP_2.SECTOR_EDTECH' | translate }}</option>
+      <option value="ecommerce">{{ 'STARTUP_FORM.STEP_2.SECTOR_ECOMMERCE' | translate }}</option>
+        <option value="Renewable Energy">{{ 'STARTUP_FORM.STEP_2.SECTOR_RENEWABLE_ENERGY' | translate }}</option>
+        <option value="Cybersecurity">{{ 'STARTUP_FORM.STEP_2.SECTOR_CYBERSECURITY' | translate }}</option>
+        <option value="AgriTech">{{ 'STARTUP_FORM.STEP_2.SECTOR_AGRI_TECH' | translate }}</option>
+        <option value="PropTech">{{'STARTUP_FORM.STEP_2.SECTOR_PROP_TECH' | translate }}</option>
+        <option value="Gaming">{{ 'STARTUP_FORM.STEP_2.SECTOR_GAMING' | translate }}</option>
+        <option value="Sports & Fitness">{{ 'STARTUP_FORM.STEP_2.SECTOR_SPORTS_FITNESS' | translate }}</option>
+        <option value="Logistics & Transportation">{{ 'STARTUP_FORM.STEP_2.SECTOR_LOGISTICS_TRANSPORTATION' | translate }}</option>
+        <option value="Food & Beverage">{{ 'STARTUP_FORM.STEP_2.SECTOR_FOOD_BEVERAGE' | translate }}</option>
+        <option value="Sustainability">{{ 'STARTUP_FORM.STEP_2.SECTOR_SUSTAINABILITY' | translate }}</option>
+        <option value="Artificial Intelligence">{{ 'STARTUP_FORM.STEP_2.SECTOR_ARTIFICIAL_INTELLIGENCE' | translate }}</option>
+        <option value="Other">{{ 'STARTUP_FORM.STEP_2.SECTOR_OTHER' | translate }}</option>
+        </select>
+        <div *ngIf="startupForm.get('sector')?.invalid && (startupForm.get('sector')?.dirty || startupForm.get('sector')?.touched)" class="text-danger">{{ 'STARTUP_FORM.STEP_2.SECTOR_REQUIRED' | translate }}
         </div>
       </div>
+
       <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="previousFundingSources">{{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES' | translate }} *</label>
-          <textarea id="previousFundingSources" formControlName="previousFundingSources" placeholder="{{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
-          <div *ngIf="startupForm.get('previousFundingSources')?.invalid && (startupForm.get('previousFundingSources')?.dirty || startupForm.get('previousFundingSources')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES_REQUIRED' | translate }}
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="targetMarket">{{ 'STARTUP_FORM.STEP_2.TARGET_MARKET' | translate }} *</label>
-          <textarea id="targetMarket" formControlName="targetMarket" placeholder="{{ 'STARTUP_FORM.STEP_2.TARGET_MARKET_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
-          <div *ngIf="startupForm.get('targetMarket')?.invalid && (startupForm.get('targetMarket')?.dirty || startupForm.get('targetMarket')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_2.TARGET_MARKET_REQUIRED' | translate }}
-          </div>
+        <label for="operationalStage">{{ 'STARTUP_FORM.STEP_2.OPERATIONAL_STAGE' | translate }} *</label>
+        <select id="operationalStage" formControlName="operationalStage" class="form-control" required>
+          <option value="">{{ 'STARTUP_FORM.STEP_2.SELECT_OPERATIONAL_STAGE' | translate }}</option>
+          <option value="preSeed">{{ 'STARTUP_FORM.STEP_2.STAGE_PRE_SEED' | translate }}</option>
+          <option value="seed">{{ 'STARTUP_FORM.STEP_2.STAGE_SEED' | translate }}</option>
+          <option value="preSeriesA">{{ 'STARTUP_FORM.STEP_2.STAGE_PRE_SERIES_A' | translate }}</option>
+          <option value="seriesA">{{ 'STARTUP_FORM.STEP_2.STAGE_SERIES_A' | translate }}</option>
+          <option value="seriesB">{{ 'STARTUP_FORM.STEP_2.STAGE_SERIES_B' | translate }}</option>
+        </select>
+        <div *ngIf="startupForm.get('operationalStage')?.invalid && (startupForm.get('operationalStage')?.dirty || startupForm.get('operationalStage')?.touched)" class="text-danger">{{ 'STARTUP_FORM.STEP_2.OPERATIONAL_STAGE_REQUIRED' | translate }}
         </div>
       </div>
+
+      
       <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="openToCoInvestment">{{ 'STARTUP_FORM.STEP_2.OPEN_TO_CO_INVESTMENT' | translate }} *</label>
-          <select id="openToCoInvestment" formControlName="openToCoInvestment" class="form-control" required>
-            <option value="">{{ 'STARTUP_FORM.STEP_2.SELECT_OPEN_TO_CO_INVESTMENT' | translate }}</option>
-            <option value="yes">{{ 'STARTUP_FORM.STEP_2.YES' | translate }}</option>
-            <option value="no">{{ 'STARTUP_FORM.STEP_2.NO' | translate }}</option>
-          </select>
-          <div *ngIf="startupForm.get('openToCoInvestment')?.invalid && (startupForm.get('openToCoInvestment')?.dirty || startupForm.get('openToCoInvestment')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_2.OPEN_TO_CO_INVESTMENT_REQUIRED' | translate }}
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="currentPartners">{{ 'STARTUP_FORM.STEP_2.CURRENT_PARTNERS' | translate }}</label>
-          <textarea id="currentPartners" formControlName="currentPartners" placeholder="{{ 'STARTUP_FORM.STEP_2.CURRENT_PARTNERS_PLACEHOLDER' | translate }}" class="form-control"></textarea>
+        <label for="problemSolved">{{ 'STARTUP_FORM.STEP_2.PROBLEM_SOLVED' | translate }} *</label>
+        <textarea id="problemSolved" formControlName="problemSolved" placeholder="{{ 'STARTUP_FORM.STEP_2.PROBLEM_SOLVED_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
+        <div *ngIf="startupForm.get('problemSolved')?.invalid && (startupForm.get('problemSolved')?.dirty || startupForm.get('problemSolved')?.touched)" class="text-danger">
+          <div *ngIf="startupForm.get('problemSolved')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_2.PROBLEM_SOLVED_REQUIRED' | translate }}</div>
+          <div *ngIf="startupForm.get('problemSolved')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_2.PROBLEM_SOLVED_MIN_LENGTH' | translate }}</div>
         </div>
       </div>
+
     </div>
 
     <!-- Step 3: Financial Information -->
     <div *ngIf="currentStep === 3" class="form-step step-3">
       <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="monthlyRevenue">{{ 'STARTUP_FORM.STEP_3.MONTHLY_REVENUE' | translate }} *</label>
-          <input id="monthlyRevenue" type="number" formControlName="monthlyRevenue" placeholder="{{ 'STARTUP_FORM.STEP_3.MONTHLY_REVENUE_PLACEHOLDER' | translate }}" class="form-control" required />
-          <div *ngIf="startupForm.get('monthlyRevenue')?.invalid && (startupForm.get('monthlyRevenue')?.dirty || startupForm.get('monthlyRevenue')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_3.MONTHLY_REVENUE_REQUIRED' | translate }}
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="isProfitable">{{ 'STARTUP_FORM.STEP_3.IS_PROFITABLE' | translate }} *</label>
-          <select id="isProfitable" formControlName="isProfitable" class="form-control" required>
-            <option value="">{{ 'STARTUP_FORM.STEP_3.SELECT_IS_PROFITABLE' | translate }}</option>
-            <option value="yes">{{ 'STARTUP_FORM.STEP_3.YES' | translate }}</option>
-            <option value="no">{{ 'STARTUP_FORM.STEP_3.NO' | translate }}</option>
-          </select>
-          <div *ngIf="startupForm.get('isProfitable')?.invalid && (startupForm.get('isProfitable')?.dirty || startupForm.get('isProfitable')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_3.IS_PROFITABLE_REQUIRED' | translate }}
-          </div>
+        <label for="fundingAmount">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT' | translate }} *</label>
+        <select id="fundingAmount"  formControlName="fundingAmount" class="form-control" required >
+          <option value="">{{ 'STARTUP_FORM.STEP_2.SELECT_FUNDING_AMOUNT' | translate }}</option>
+          <option value="amount1">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_1' | translate }}</option>
+          <option value="amount2">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_2' | translate }}</option>
+          <option value="amount3">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_3' | translate }}</option>
+          <option value="amount4">{{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_4' | translate }}</option>
+        </select>
+        <div *ngIf="startupForm.get('fundingAmount')?.invalid && (startupForm.get('fundingAmount')?.dirty || startupForm.get('fundingAmount')?.touched)" class="text-danger">
+          {{ 'STARTUP_FORM.STEP_2.FUNDING_AMOUNT_REQUIRED' | translate }}
         </div>
       </div>
+
       <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="revenueGrowthRate">{{ 'STARTUP_FORM.STEP_3.REVENUE_GROWTH_RATE' | translate }} *</label>
-          <input id="revenueGrowthRate" type="number" formControlName="revenueGrowthRate" placeholder="{{ 'STARTUP_FORM.STEP_3.REVENUE_GROWTH_RATE_PLACEHOLDER' | translate }}" class="form-control" required />
-          <div *ngIf="startupForm.get('revenueGrowthRate')?.invalid && (startupForm.get('revenueGrowthRate')?.dirty || startupForm.get('revenueGrowthRate')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_3.REVENUE_GROWTH_RATE_REQUIRED' | translate }}
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="revenueGoalNext12Months">{{ 'STARTUP_FORM.STEP_3.REVENUE_GOAL_NEXT_12_MONTHS' | translate }} *</label>
-          <input id="revenueGoalNext12Months" type="number" formControlName="revenueGoalNext12Months" placeholder="{{ 'STARTUP_FORM.STEP_3.REVENUE_GOAL_NEXT_12_MONTHS_PLACEHOLDER' | translate }}" class="form-control" required />
-          <div *ngIf="startupForm.get('revenueGoalNext12Months')?.invalid && (startupForm.get('revenueGoalNext12Months')?.dirty || startupForm.get('revenueGoalNext12Months')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_3.REVENUE_GOAL_NEXT_12_MONTHS_REQUIRED' | translate }}
-          </div>
+        <label for="fundingUsage">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE' | translate }} *</label>
+        <textarea id="fundingUsage" formControlName="fundingUsage" placeholder="{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
+        <div *ngIf="startupForm.get('fundingUsage')?.invalid && (startupForm.get('fundingUsage')?.dirty || startupForm.get('fundingUsage')?.touched)" class="text-danger">
+            <div *ngIf="startupForm.get('fundingUsage')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_REQUIRED' | translate }}</div>
+            <div *ngIf="startupForm.get('fundingUsage')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_2.FUNDING_USAGE_MIN_LENGTH' | translate }}</div>
         </div>
       </div>
+
       <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="hasDebt">{{ 'STARTUP_FORM.STEP_3.HAS_DEBT' | translate }} *</label>
-          <select id="hasDebt" formControlName="hasDebt" class="form-control" required>
-            <option value="">{{ 'STARTUP_FORM.STEP_3.SELECT_HAS_DEBT' | translate }}</option>
-            <option value="yes">{{ 'STARTUP_FORM.STEP_3.YES' | translate }}</option>
-            <option value="no">{{ 'STARTUP_FORM.STEP_3.NO' | translate }}</option>
-          </select>
-          <div *ngIf="startupForm.get('hasDebt')?.invalid && (startupForm.get('hasDebt')?.dirty || startupForm.get('hasDebt')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_3.HAS_DEBT_REQUIRED' | translate }}
-          </div>
+        <label for="previousFundingSources">{{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES' | translate }} *</label>
+        <textarea id="previousFundingSources" formControlName="previousFundingSources" placeholder="{{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
+        <div *ngIf="startupForm.get('previousFundingSources')?.invalid && (startupForm.get('previousFundingSources')?.dirty || startupForm.get('previousFundingSources')?.touched)" class="text-danger">{{ 'STARTUP_FORM.STEP_2.PREVIOUS_FUNDING_SOURCES_REQUIRED' | translate }}
         </div>
-        <div class="col-md-6" *ngIf="startupForm.get('hasDebt')?.value === 'yes'">
-          <label for="debtAmount">{{ 'STARTUP_FORM.STEP_3.DEBT_AMOUNT' | translate }} *</label>
-          <input id="debtAmount" type="number" formControlName="debtAmount" placeholder="{{ 'STARTUP_FORM.STEP_3.DEBT_AMOUNT_PLACEHOLDER' | translate }}" class="form-control" required />
-          <div *ngIf="startupForm.get('debtAmount')?.invalid && (startupForm.get('debtAmount')?.dirty || startupForm.get('debtAmount')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_3.DEBT_AMOUNT_REQUIRED' | translate }}
-          </div>
         </div>
-      </div>
+
       <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="breakEvenPoint">{{ 'STARTUP_FORM.STEP_3.BREAK_EVEN_POINT' | translate }} *</label>
-          <input id="breakEvenPoint" type="text" formControlName="breakEvenPoint" placeholder="{{ 'STARTUP_FORM.STEP_3.BREAK_EVEN_POINT_PLACEHOLDER' | translate }}" class="form-control" required />
-          <div *ngIf="startupForm.get('breakEvenPoint')?.invalid && (startupForm.get('breakEvenPoint')?.dirty || startupForm.get('breakEvenPoint')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_3.BREAK_EVEN_POINT_REQUIRED' | translate }}
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="financialGoalNext3Years">{{ 'STARTUP_FORM.STEP_3.FINANCIAL_GOAL_NEXT_3_YEARS' | translate }} *</label>
-          <textarea id="financialGoalNext3Years" formControlName="financialGoalNext3Years" placeholder="{{ 'STARTUP_FORM.STEP_3.FINANCIAL_GOAL_NEXT_3_YEARS_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
-          <div *ngIf="startupForm.get('financialGoalNext3Years')?.invalid && (startupForm.get('financialGoalNext3Years')?.dirty || startupForm.get('financialGoalNext3Years')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_3.FINANCIAL_GOAL_NEXT_3_YEARS_REQUIRED' | translate }}
-          </div>
+        <label for="targetMarket">{{ 'STARTUP_FORM.STEP_2.TARGET_MARKET' | translate }} *</label>
+        <textarea id="targetMarket" formControlName="targetMarket" placeholder="{{ 'STARTUP_FORM.STEP_2.TARGET_MARKET_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
+        <div *ngIf="startupForm.get('targetMarket')?.invalid && (startupForm.get('targetMarket')?.dirty || startupForm.get('targetMarket')?.touched)" class="text-danger">{{ 'STARTUP_FORM.STEP_2.TARGET_MARKET_REQUIRED' | translate }}
         </div>
       </div>
     </div>
@@ -287,38 +206,50 @@
     <!-- Step 4: Exit Strategy -->
     <div *ngIf="currentStep === 4" class="form-step step-4">
       <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="hasExitStrategy">{{ 'STARTUP_FORM.STEP_4.HAS_EXIT_STRATEGY' | translate }} *</label>
-          <select id="hasExitStrategy" formControlName="hasExitStrategy" class="form-control" required>
-            <option value="">{{ 'STARTUP_FORM.STEP_4.SELECT_HAS_EXIT_STRATEGY' | translate }}</option>
-            <option value="yes">{{ 'STARTUP_FORM.STEP_4.YES' | translate }}</option>
-            <option value="no">{{ 'STARTUP_FORM.STEP_4.NO' | translate }}</option>
-          </select>
-          <div *ngIf="startupForm.get('hasExitStrategy')?.invalid && (startupForm.get('hasExitStrategy')?.dirty || startupForm.get('hasExitStrategy')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_4.HAS_EXIT_STRATEGY_REQUIRED' | translate }}
-          </div>
-        </div>
-        <div class="col-md-6" *ngIf="startupForm.get('hasExitStrategy')?.value === 'yes'">
-          <label for="exitStrategy">{{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY' | translate }} *</label>
-          <textarea id="exitStrategy" formControlName="exitStrategy" placeholder="{{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
-          <div *ngIf="startupForm.get('exitStrategy')?.invalid && (startupForm.get('exitStrategy')?.dirty || startupForm.get('exitStrategy')?.touched)" class="text-danger">
-            {{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY_REQUIRED' | translate }}
-          </div>
-        </div>
+        <label for="openToCoInvestment">{{ 'STARTUP_FORM.STEP_2.OPEN_TO_CO_INVESTMENT' | translate }} *</label>
+      <select id="openToCoInvestment" formControlName="openToCoInvestment" class="form-control" required>
+        <option value="">{{ 'STARTUP_FORM.STEP_2.SELECT_OPEN_TO_CO_INVESTMENT' | translate }}</option>
+        <option value="yes">{{ 'STARTUP_FORM.STEP_2.YES' | translate }}</option>
+        <option value="no">{{ 'STARTUP_FORM.STEP_2.NO' | translate }}</option>
+      </select>
+      <div *ngIf="startupForm.get('openToCoInvestment')?.invalid && (startupForm.get('openToCoInvestment')?.dirty || startupForm.get('openToCoInvestment')?.touched)" class="text-danger">
+        {{ 'STARTUP_FORM.STEP_2.OPEN_TO_CO_INVESTMENT_REQUIRED' | translate }}
+      </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="currentPartners">{{ 'STARTUP_FORM.STEP_2.CURRENT_PARTNERS' | translate }}</label>
+        <textarea id="currentPartners" formControlName="currentPartners" placeholder="{{ 'STARTUP_FORM.STEP_2.CURRENT_PARTNERS_PLACEHOLDER' | translate }}" class="form-control"></textarea>
+      </div>
+
+      <div class="row mb-3">
+        <label for="hasExitStrategy">{{ 'STARTUP_FORM.STEP_4.HAS_EXIT_STRATEGY' | translate }} *</label>
+      <select id="hasExitStrategy" formControlName="hasExitStrategy" class="form-control" required>
+        <option value="">{{ 'STARTUP_FORM.STEP_4.SELECT_HAS_EXIT_STRATEGY' | translate }}</option>
+        <option value="yes">{{ 'STARTUP_FORM.STEP_4.YES' | translate }}</option>
+        <option value="no">{{ 'STARTUP_FORM.STEP_4.NO' | translate }}</option>
+      </select>
+      <div *ngIf="startupForm.get('hasExitStrategy')?.invalid && (startupForm.get('hasExitStrategy')?.dirty || startupForm.get('hasExitStrategy')?.touched)" class="text-danger">
+        {{ 'STARTUP_FORM.STEP_4.HAS_EXIT_STRATEGY_REQUIRED' | translate }}
+      </div>
+      </div>
+      
+      <div class="row mb-3">
+        
+      </div>
+      <div class="row mb-3">
+        
       </div>
     </div>
 
     <!-- Step 5: Submit Step -->
     <div *ngIf="currentStep === 5" class="form-step step-5">
-      <div class="submit-box">
-        <img src="../../assets/submit.png" alt="Submit Icon" class="submit-icon" />
-        <h4 class="submit-title">{{ 'STARTUP_FORM.STEP_5.SUBMIT_TITLE' | translate }}</h4>
-        <p class="submit-description">
-          {{ 'STARTUP_FORM.STEP_5.SUBMIT_DESCRIPTION' | translate }}
-        </p>
-      </div>
-      <div class="submit-button-container">
-        <button type="submit" *ngIf="currentStep === 5" class="btn btn-success">{{ 'STARTUP_FORM.STEP_5.SUBMIT_BUTTON' | translate }}</button>
+      <div class="row mb-3">
+        <label for="exitStrategy">{{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY' | translate }} *</label>
+        <textarea id="exitStrategy" formControlName="exitStrategy" placeholder="{{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
+        <div *ngIf="startupForm.get('exitStrategy')?.invalid && (startupForm.get('exitStrategy')?.dirty || startupForm.get('exitStrategy')?.touched)" class="text-danger">
+          {{ 'STARTUP_FORM.STEP_4.EXIT_STRATEGY_REQUIRED' | translate }}
+        </div>
       </div>
     </div>
 
@@ -349,3 +280,7 @@
 
   </div>
 </div>
+
+
+
+

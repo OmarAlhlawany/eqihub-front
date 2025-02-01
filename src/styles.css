@@ -16,6 +16,28 @@ header {
   z-index: 1; /* Ensure the header stays above the background */
 }
 
+.input-icon-container {
+  position: relative;
+}
+
+.input-icon-container .material-icons {
+  position: absolute;
+  right: 10px; /* Move icon to the right */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #A0A3BD; /* Icon color */
+  font-size: 20px; /* Adjust icon size */
+  pointer-events: none; /* Ensure the icon doesn't interfere with input */
+}
+
+.input-icon-container input {
+  padding-right: 40px; /* Add padding to prevent text overlap with the icon */
+}
+
+body[dir="rtl"] .input-icon-container .material-icons {
+  left: 10px; /* Move icon to the left */
+  right: auto;
+}
 /* Prevent header from being affected by RTL direction */
 body[dir="rtl"] header {
   direction: ltr !important;
@@ -65,6 +87,11 @@ body[dir="rtl"] .step-2 label,
 body[dir="rtl"] .step-3 label,
 body[dir="rtl"] .step-4 label {
   text-align: right;
+}
+
+body[dir="rtl"] .step-1 .input-icon-container #phoneNumber {
+  text-align: right;
+  direction: rtl;
 }
 
 body[dir="rtl"] .step-2 .tags-input {
