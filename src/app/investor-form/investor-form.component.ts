@@ -62,7 +62,7 @@ export class InvestorFormComponent implements OnInit {
       // Step 1
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
       email: ['', [Validators.required, Validators.email]],
-      phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]{10,15}$/)]], // Example: 10-15 digits
+      phoneNumber: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]], // Example: 10-15 digits
       company: ['', [Validators.required, Validators.minLength(2)]],
       // Step 2
       investment: ['', Validators.required],
