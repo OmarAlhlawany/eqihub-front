@@ -14,7 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class StartupFormComponent implements OnInit {
   startupForm: FormGroup;
-  currentStep: number = 6; // Start from step 1
+  currentStep: number = 1; // Start from step 1
 
   
   constructor(
@@ -27,7 +27,7 @@ export class StartupFormComponent implements OnInit {
       // Step 1: Basic Information
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]{10,15}$/)]],
+      phoneNumber: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]],
       companyName: ['', [Validators.required, Validators.minLength(2)]],
       website: ['', [Validators.required, Validators.pattern(/^(http|https):\/\/[^ "]+$/)]],
       productService: ['', [Validators.required, Validators.minLength(10)]],
@@ -39,7 +39,7 @@ export class StartupFormComponent implements OnInit {
       fundingAmount: ['', [Validators.required]],
       fundingUsage: ['', [Validators.required, Validators.minLength(20)]],
       previousFundingSources: ['', [Validators.required]],
-      targetMarket: ['', [Validators.required, Validators.minLength(10)]],
+      targetMarket: ['', [Validators.required]],
       openToJointInvestment: ['', [Validators.required]],
       hasExistingPartners: ['', [Validators.required]],
 
@@ -97,12 +97,12 @@ export class StartupFormComponent implements OnInit {
           this.startupForm.get('fundingAmount')?.valid &&
           this.startupForm.get('fundingUsage')?.valid &&
           this.startupForm.get('previousFundingSources')?.valid &&
-          this.startupForm.get('targetMarket')?.valid &&
-          this.startupForm.get('openToJointInvestment')?.valid &&
-          this.startupForm.get('hasExistingPartners')?.valid
+          this.startupForm.get('targetMarket')?.valid 
         );
       case 4:
         return !!(
+          this.startupForm.get('openToJointInvestment')?.valid &&
+          this.startupForm.get('hasExistingPartners')?.valid&&
           this.startupForm.get('monthlyRevenue')?.valid &&
           this.startupForm.get('isProfitable')?.valid &&
           this.startupForm.get('profitPercentage')?.valid &&
@@ -122,10 +122,17 @@ export class StartupFormComponent implements OnInit {
     }
   }
 
+
   nextStep() {
     if (this.currentStep < 6) {
+      // Mark all form controls as touched to show validation errors
+      this.markCurrentStepControlsAsTouched();
+
+      // Check if the current step is valid
+      if (this.isStepValid(this.currentStep)) {
         this.currentStep++; // Move to the next step
       }
+    }
   }
 
   prevStep() {
