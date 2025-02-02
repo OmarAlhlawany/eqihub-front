@@ -324,7 +324,7 @@
 
   <!-- Submit Button for Step 4 -->
   <ng-container *ngIf="currentStep === 4"  >
-    <button type="submit" [disabled]="!isStepValid(4)" class="btn btn-success"  (click)="nextStep()">
+    <button type="submit" [disabled]="!isStepValid(4)" class="btn btn-success"  (click)="nextStep()" (click) = "onSubmit()">
       {{ 'INVESTOR_FORM.STEP_5.SUBMIT_BUTTON' | translate }}
     </button>
       </ng-container>
