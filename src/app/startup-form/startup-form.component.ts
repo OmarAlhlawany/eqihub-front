@@ -14,7 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class StartupFormComponent implements OnInit {
   startupForm: FormGroup;
-  currentStep: number = 4;
+  currentStep: number = 5; // Start from step 1
 
   constructor(
     private fb: FormBuilder,
@@ -35,26 +35,28 @@ export class StartupFormComponent implements OnInit {
       problemSolved: ['', [Validators.required, Validators.minLength(20)]],
 
       // Step 2: Funding Details
-      fundingAmount: ['', [Validators.required,]],
+      fundingAmount: ['', [Validators.required]],
       fundingUsage: ['', [Validators.required, Validators.minLength(20)]],
       previousFundingSources: ['', [Validators.required]],
       targetMarket: ['', [Validators.required, Validators.minLength(10)]],
-      openToCoInvestment: ['', [Validators.required]],
-      currentPartners: [''],
+      openToJointInvestment: ['', [Validators.required]],
+      hasExistingPartners: ['', [Validators.required]],
 
       // Step 3: Financial Information
       monthlyRevenue: ['', [Validators.required, Validators.min(0)]],
       isProfitable: ['', [Validators.required]],
-      revenueGrowthRate: ['', [Validators.required, Validators.min(0)]],
-      revenueGoalNext12Months: ['', [Validators.required, Validators.min(0)]],
-      hasDebt: ['', [Validators.required]],
-      debtAmount: [''],
-      breakEvenPoint: ['', [Validators.required]],
-      financialGoalNext3Years: ['', [Validators.required, Validators.minLength(20)]],
+      profitPercentage: ['', [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)]],
+      revenueGoal: ['', [Validators.required, Validators.min(0)]],
 
       // Step 4: Exit Strategy
+      hasMajorDebts: ['', [Validators.required]],
+      currentDebtSize: [''],
+      breakEvenPoint: ['', [Validators.required]],
+      financialGoal: ['', [Validators.required, Validators.minLength(20)]],
       hasExitStrategy: ['', [Validators.required]],
-      exitStrategy: [''],
+      exitStrategyDetails: [''],
+
+      // Step 5: Financial Goals (fields already included in Step 4)
     });
 
     this.translate.setDefaultLang('en');
@@ -80,35 +82,39 @@ export class StartupFormComponent implements OnInit {
           this.startupForm.get('email')?.valid &&
           this.startupForm.get('phoneNumber')?.valid &&
           this.startupForm.get('companyName')?.valid &&
-          this.startupForm.get('website')?.valid &&
+          this.startupForm.get('website')?.valid
+        );
+      case 2:
+        return !!(
           this.startupForm.get('productService')?.valid &&
           this.startupForm.get('sector')?.valid &&
           this.startupForm.get('operationalStage')?.valid &&
           this.startupForm.get('problemSolved')?.valid
         );
-      case 2:
+      case 3:
         return !!(
           this.startupForm.get('fundingAmount')?.valid &&
           this.startupForm.get('fundingUsage')?.valid &&
           this.startupForm.get('previousFundingSources')?.valid &&
           this.startupForm.get('targetMarket')?.valid &&
-          this.startupForm.get('openToCoInvestment')?.valid
-        );
-      case 3:
-        return !!(
-          this.startupForm.get('monthlyRevenue')?.valid &&
-          this.startupForm.get('isProfitable')?.valid &&
-          this.startupForm.get('revenueGrowthRate')?.valid &&
-          this.startupForm.get('revenueGoalNext12Months')?.valid &&
-          this.startupForm.get('hasDebt')?.valid &&
-          (this.startupForm.get('hasDebt')?.value === 'no' || this.startupForm.get('debtAmount')?.valid) &&
-          this.startupForm.get('breakEvenPoint')?.valid &&
-          this.startupForm.get('financialGoalNext3Years')?.valid
+          this.startupForm.get('openToJointInvestment')?.valid &&
+          this.startupForm.get('hasExistingPartners')?.valid
         );
       case 4:
         return !!(
+          this.startupForm.get('monthlyRevenue')?.valid &&
+          this.startupForm.get('isProfitable')?.valid &&
+          this.startupForm.get('profitPercentage')?.valid &&
+          this.startupForm.get('revenueGoal')?.valid
+        );
+      case 5:
+        return !!(
+          this.startupForm.get('hasMajorDebts')?.valid &&
+          (this.startupForm.get('hasMajorDebts')?.value === 'no' || this.startupForm.get('currentDebtSize')?.valid) &&
+          this.startupForm.get('breakEvenPoint')?.valid &&
+          this.startupForm.get('financialGoal')?.valid &&
           this.startupForm.get('hasExitStrategy')?.valid &&
-          (this.startupForm.get('hasExitStrategy')?.value === 'no' || this.startupForm.get('exitStrategy')?.valid)
+          (this.startupForm.get('hasExitStrategy')?.value === 'no' || this.startupForm.get('exitStrategyDetails')?.valid)
         );
       default:
         return true;
@@ -116,33 +122,9 @@ export class StartupFormComponent implements OnInit {
   }
 
   nextStep() {
-    if (this.currentStep < 6) {
+    if (this.currentStep < 5) {
         this.currentStep++; // Move to the next step
       }
-  }
-
-  // Helper method to mark all form controls for the current step as touched
-  markCurrentStepControlsAsTouched() {
-    const stepControls = this.getControlsForStep(this.currentStep);
-    stepControls.forEach((controlName) => {
-      this.startupForm.get(controlName)?.markAsTouched();
-    });
-  }
-
-  // Helper method to get form controls for the current step
-  getControlsForStep(step: number): string[] {
-    switch (step) {
-      case 1:
-        return ['name', 'email', 'phoneNumber', 'companyName', 'website', 'productService', 'sector', 'operationalStage', 'problemSolved'];
-      case 2:
-        return ['fundingAmount', 'fundingUsage', 'previousFundingSources', 'targetMarket', 'openToCoInvestment'];
-      case 3:
-        return ['monthlyRevenue', 'isProfitable', 'revenueGrowthRate', 'revenueGoalNext12Months', 'hasDebt', 'debtAmount', 'breakEvenPoint', 'financialGoalNext3Years'];
-      case 4:
-        return ['hasExitStrategy', 'exitStrategy'];
-      default:
-        return [];
-    }
   }
 
   prevStep() {
@@ -151,9 +133,36 @@ export class StartupFormComponent implements OnInit {
     }
   }
 
+  markCurrentStepControlsAsTouched() {
+    const stepControls = this.getControlsForStep(this.currentStep);
+    stepControls.forEach((controlName) => {
+      this.startupForm.get(controlName)?.markAsTouched();
+    });
+  }
+
+  getControlsForStep(step: number): string[] {
+    switch (step) {
+      case 1:
+        return ['name', 'email', 'phoneNumber', 'companyName', 'website'];
+      case 2:
+        return ['productService', 'sector', 'operationalStage', 'problemSolved'];
+      case 3:
+        return ['fundingAmount', 'fundingUsage', 'previousFundingSources', 'targetMarket', 'openToJointInvestment', 'hasExistingPartners'];
+      case 4:
+        return ['monthlyRevenue', 'isProfitable', 'profitPercentage', 'revenueGoal'];
+      case 5:
+        return ['hasMajorDebts', 'currentDebtSize', 'breakEvenPoint', 'financialGoal', 'hasExitStrategy', 'exitStrategyDetails'];
+      default:
+        return [];
+    }
+  }
+
   onSubmit() {
     if (this.startupForm.valid) {
       console.log('Form Submitted!', this.startupForm.value);
+      // You can add your form submission logic here (e.g., API call)
+    } else {
+      console.log('Form is invalid. Please check the fields.');
     }
   }
 }

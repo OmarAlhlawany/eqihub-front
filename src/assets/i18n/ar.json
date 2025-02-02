@@ -31,10 +31,7 @@
       
 
     },
-    "STEP_2": {
-      "TITLE": "تفاصيل التمويل",
-      "DESCRIPTION": "قدم تفاصيل عن متطلبات التمويل الخاصة بك.",
-      
+    "STEP_2": {      
       "PRODUCT_SERVICE": "ما هو المنتج او الخدمة التي تقدمها شركتك؟",
       "PRODUCT_SERVICE_PLACEHOLDER": "صف المنتج او الخدمة التي تقدمها شركتك",
       "PRODUCT_SERVICE_REQUIRED": "المنتج أو الخدمة مطلوب.",
@@ -76,8 +73,6 @@
 
     },
     "STEP_3": {
-      "TITLE": "المعلومات المالية",
-      "DESCRIPTION": "قدم التفاصيل المالية عن شركتك الناشئة.",
       "MONTHLY_REVENUE": "الإيرادات الشهرية",
       "MONTHLY_REVENUE_PLACEHOLDER": "أدخل إيراداتك الشهرية",
       "MONTHLY_REVENUE_REQUIRED": "الإيرادات الشهرية مطلوبة.",
@@ -134,31 +129,72 @@
       "TARGET_MARKET_3":"إقليمي"
     },
     "STEP_4": {
-      "TITLE": "استراتيجية الخروج",
-      "DESCRIPTION": "قدم تفاصيل عن استراتيجية الخروج الخاصة بك.",
-      "HAS_EXIT_STRATEGY": "هل لديك استراتيجية خروج؟",
+      "OPEN_TO_JOINT_INVESTMENT": "هل ترغب في التواصل مع مستثمرين؟",
+      "OPEN_TO_JOINT_INVESTMENT_REQUIRED": "هذا الحقل مطلوب.",
+      "OPEN_TO_JOINT_INVESTMENT_YES": "نعم",
+      "OPEN_TO_JOINT_INVESTMENT_NO": "لا",
 
-      "OPEN_TO_CO_INVESTMENT": "هل أنت منفتح على الاستثمار المشترك؟",
-      "SELECT_OPEN_TO_CO_INVESTMENT": "اختر خيارًا",
-      "OPEN_TO_CO_INVESTMENT_REQUIRED": "هذا الحقل مطلوب.",
-      "CO_INVESTMENT_YES": "نعم",
-      "CO_INVESTMENT_NO": "لا",
-      
-      "CURRENT_PARTNERS": "الشركاء الحاليون",
-      "CURRENT_PARTNERS_PLACEHOLDER": "اذكر شركاءك الحاليين",
+      "HAS_EXISTING_PARTNERS": "هل لديك شركاء؟",
+      "HAS_EXISTING_PARTNERS_REQUIRED": "هذا الحقل مطلوب.",
+      "HAS_EXISTING_PARTNERS_YES": "نعم",
+      "HAS_EXISTING_PARTNERS_NO": "لا",
 
-      "SELECT_HAS_EXIT_STRATEGY": "اختر خيارًا",
-      "EXIT_STRATEGY_YES": "نعم",
-      "EXIT_STRATEGY_NO": "لا",
-      "HAS_EXIT_STRATEGY_REQUIRED": "هذا الحقل مطلوب.",
-      "EXIT_STRATEGY": "استراتيجية الخروج",
-      "EXIT_STRATEGY_PLACEHOLDER": "صف استراتيجية الخروج الخاصة بك",
-      "EXIT_STRATEGY_REQUIRED": "استراتيجية الخروج مطلوبة."
+      "MONTHLY_REVENUE": "ما هو متوسط ايرادتك الشهرية الحالي؟",
+      "MONTHLY_REVENUE_PLACEHOLDER": "يرجى ادخال ايراداتك الشهرية",
+      "MONTHLY_REVENUE_REQUIRED": "الإيرادات الشهرية مطلوبة.",
+      "MONTHLY_REVENUE_INVALID": "الإيرادات الشهرية غير صحيحة.",
+
+      "IS_PROFITABLE": "هل شركتك تحقق أرباحًا؟",
+      "IS_PROFITABLE_REQUIRED": "هذا الحقل مطلوب.",
+      "IS_PROFITABLE_YES": "نعم",
+      "IS_PROFITABLE_NO": "لا",
+
+      "PROFIT_PERCENTAGE": "ما هي نسبة الربح التي تحلها شركتك الناشئة خلال اخر 12 شهر؟",
+      "PROFIT_PERCENTAGE_PLACEHOLDER": "يرجى ادخال نسبة الربح",
+      "PROFIT_PERCENTAGE_REQUIRED": "نسبة الربح مطلوبة.",
+      "PROFIT_PERCENTAGE_INVALID": "نسبة الربح غير صحيحة.",
+
+      "REVENUE_GOAL": "ما هو هدفك للإيرادات خلال 12 شهر القادم؟",
+      "REVENUE_GOAL_PLACEHOLDER": "يرجى ادخال هدف الإيرادات",
+      "REVENUE_GOAL_REQUIRED": "هدف الإيرادات مطلوب.",
+      "REVENUE_GOAL_INVALID": "هدف الإيرادات غير صحيح."
     },
     "STEP_5": {
-      "SUBMIT_TITLE": "إرسال طلب المستثمر",
-      "SUBMIT_DESCRIPTION": "يرجى مراجعة جميع المعلومات التي أدخلتها في الخطوات السابقة، وإذا كانت جميع البيانات صحيحة، قدم رسالتك لتلقي عرض المشروع خلال 24 - 48 ساعة.",
-      "SUBMIT_BUTTON": "إرسال"
+      "HAS_MAJOR_DEBTS": "هل لديك أي ديون أو التزامات مالية كبيرة؟",
+      "HAS_MAJOR_DEBTS_REQUIRED": "هذا الحقل مطلوب.",
+      "HAS_MAJOR_DEBTS_YES": "نعم",
+      "HAS_MAJOR_DEBTS_NO": "لا",
+      
+      "CURRENT_DEBT_SIZE": "اذا كان نعم، ما هو حجم الديون الحالي؟",
+      "CURRENT_DEBT_SIZE_PLACEHOLDER": "يرجى ادخال حجم الديون الحالية",
+      "CURRENT_DEBT_SIZE_REQUIRED": "حجم الديون الحالية مطلوب.",
+      "CURRENT_DEBT_SIZE_INVALID": "حجم الديون الحالية غير صحيح.",
+
+      "BREAK_EVEN_POINT":"متى تتوقع تصلك النقطة النهاية؟",
+      "BREAK_EVEN_POINT_REQUIRED": "هذا الحقل مطلوب.",
+      "BREAK_EVEN_POINT_PLACEHOLDER": "يرجى ادخال نقطة النهاية",
+      "BREAK_EVEN_POINT_INVALID": "نقطة النهاية غير صحيح.",
+
+      "FINANCIAL_GOAL":"ما هو هدفك للمال خلال 3 سنوات القادمة؟",
+      "FINANCIAL_GOAL_REQUIRED": "هدف المال مطلوب.",
+      "FINANCIAL_GOAL_PLACEHOLDER": "يرجى ادخال هدف المال",
+      "FINANCIAL_GOAL_INVALID": "هدف المال غير صحيح.",
+
+      "HAS_EXIT_STRATEGY":"هل لديك استراتيجة خروج موثقة؟",
+      "HAS_EXIT_STRATEGY_REQUIRED": "هذا الحقل مطلوب.",
+      "HAS_EXIT_STRATEGY_YES": "نعم",
+      "HAS_EXIT_STRATEGY_NO": "لا",
+
+      "EXIT_STRATEGY_DETAILS":"اذا كان نعم، ما هي استراتيجية الخروج الخاصة بك؟",
+      "EXIT_STRATEGY_DETAILS_REQUIRED": "هذا الحقل مطلوب.",
+      "EXIT_STRATEGY_DETAILS_PLACEHOLDER": "يرجى ادخال استراتيجية الخروج",
+      "EXIT_STRATEGY_DETAILS_INVALID": "استراتيجية الخروج غير صحيحة."
+      
+    },
+    "STEP_6": {
+      "TITLE": "اقتراح المشروع",
+      "DESCRIPTION": "يرجى ملء النموذج الأخير لتلقي عرض لمشروعك. لا تتردد فيإضافة اكبر قدر ممكن من التفاصيل.",
+      "SUBMIT_BUTTON": "ارسال"
     },
     "NAVIGATION": {
       "PREVIOUS_STEP": "السابق",

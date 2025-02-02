@@ -31,10 +31,6 @@
       
     },
     "STEP_2": {
-      "TITLE": "Funding Details",
-      "DESCRIPTION": "Provide details about your funding requirements.",
-
-
       "PRODUCT_SERVICE": "What is the primary product or service your company offers?",
       "PRODUCT_SERVICE_PLACEHOLDER": "Describe your product or service",
       "PRODUCT_SERVICE_REQUIRED": "Product or service is required.",
@@ -77,8 +73,6 @@
       
     },
     "STEP_3": {
-      "TITLE": "Financial Information",
-      "DESCRIPTION": "Provide financial details about your startup.",
       "MONTHLY_REVENUE": "Monthly Revenue",
       "MONTHLY_REVENUE_PLACEHOLDER": "Enter your monthly revenue",
       "MONTHLY_REVENUE_REQUIRED": "Monthly revenue is required.",
@@ -135,30 +129,70 @@
 
     },
     "STEP_4": {
-      "TITLE": "Exit Strategy",
-      "DESCRIPTION": "Provide details about your exit strategy.",
-      
-      "OPEN_TO_CO_INVESTMENT": "Open to Co-Investment?",
-      "SELECT_OPEN_TO_CO_INVESTMENT": "Select an option",
-      "OPEN_TO_CO_INVESTMENT_REQUIRED": "This field is required.",
-      "CO_INVESTMENT_YES": "Yes",
-      "CO_INVESTMENT_NO": "No",
-      
-      "CURRENT_PARTNERS": "Current Partners",
-      "CURRENT_PARTNERS_PLACEHOLDER": "List your current partners",
+      "OPEN_TO_JOINT_INVESTMENT": "Are you open to a joint investment?",  
+      "OPEN_TO_JOINT_INVESTMENT_REQUIRED": "This field is required.",
+      "OPEN_TO_JOINT_INVESTMENT_YES": "Yes",
+      "OPEN_TO_JOINT_INVESTMENT_NO": "No",
 
-      "HAS_EXIT_STRATEGY": "Do You Have an Exit Strategy?",
-      "SELECT_HAS_EXIT_STRATEGY": "Select an option",
-      "EXIT_STRATEGY_YES":"Yes",
-      "EXIT_STRATEGY_NO":"No",
-      "HAS_EXIT_STRATEGY_REQUIRED": "This field is required.",
-      "EXIT_STRATEGY": "Exit Strategy",
-      "EXIT_STRATEGY_PLACEHOLDER": "Describe your exit strategy",
-      "EXIT_STRATEGY_REQUIRED": "Exit strategy is required."
+      "HAS_EXISTING_PARTNERS": "Do you have existing partners?",
+      "HAS_EXISTING_PARTNERS_REQUIRED": "This field is required.",
+      "HAS_EXISTING_PARTNERS_YES": "Yes",
+      "HAS_EXISTING_PARTNERS_NO": "No",
+
+      "MONTHLY_REVENUE": "What is your average monthly revenue currently?",
+      "MONTHLY_REVENUE_PLACEHOLDER": "Enter your monthly revenue",
+      "MONTHLY_REVENUE_REQUIRED": "Monthly revenue is required.",
+      "MONTHLY_REVENUE_INVALID": "Monthly revenue is invalid.",
+
+      "IS_PROFITABLE": "Is your company currently profitable?",
+      "IS_PROFITABLE_REQUIRED": "This field is required.",
+      "IS_PROFITABLE_YES": "Yes",
+      "IS_PROFITABLE_NO": "No",
+
+      "PROFIT_PERCENTAGE": "What is your revenue growth rate over the last 12 months?",
+      "PROFIT_PERCENTAGE_PLACEHOLDER": "Enter your profit percentage",
+      "PROFIT_PERCENTAGE_REQUIRED": "Profit percentage is required.",
+      "PROFIT_PERCENTAGE_INVALID": "Profit percentage is invalid.",
+
+      "REVENUE_GOAL": "What is your main revenue goal over the next 12 months?",
+      "REVENUE_GOAL_PLACEHOLDER": "Enter your revenue goal",
+      "REVENUE_GOAL_REQUIRED": "Revenue goal is required.",
+      "REVENUE_GOAL_INVALID": "Revenue goal is invalid."
     },
     "STEP_5": {
-      "SUBMIT_TITLE": "Submit your investor request",
-      "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
+      "HAS_MAJOR_DEBTS": "Do you have any major debts or financial obligations?",
+      "HAS_MAJOR_DEBTS_REQUIRED": "This field is required.",
+      "HAS_MAJOR_DEBTS_YES": "Yes",
+      "HAS_MAJOR_DEBTS_NO": "No",
+
+      "CURRENT_DEBT_SIZE": "If yes, what is the current debt size?",
+      "CURRENT_DEBT_SIZE_PLACEHOLDER": "Enter your current debt size",
+      "CURRENT_DEBT_SIZE_REQUIRED": "Current debt size is required.",
+      "CURRENT_DEBT_SIZE_INVALID": "Current debt size is invalid.",
+
+      "BREAK_EVEN_POINT":"When do you expect to reach the break-even point?",
+      "BREAK_EVEN_POINT_REQUIRED": "This field is required.",
+      "BREAK_EVEN_POINT_PLACEHOLDER": "Enter break-even point",
+      "BREAK_EVEN_POINT_INVALID": "Break-even point is invalid.",
+
+      "FINANCIAL_GOAL":"What is your financial goal for the next three years?",
+      "FINANCIAL_GOAL_REQUIRED": "This field is required.",
+      "FINANCIAL_GOAL_PLACEHOLDER": "Enter your financial goal",
+      "FINANCIAL_GOAL_INVALID": "Financial goal is invalid.",
+
+      "HAS_EXIT_STRATEGY":"Do you have a clear exit strategy?",
+      "HAS_EXIT_STRATEGY_REQUIRED": "This field is required.",
+      "HAS_EXIT_STRATEGY_YES": "Yes",
+      "HAS_EXIT_STRATEGY_NO": "No",
+
+      "EXIT_STRATEGY_DETAILS":"If yes, what is your exit strategy?",
+      "EXIT_STRATEGY_DETAILS_REQUIRED": "This field is required.",
+      "EXIT_STRATEGY_DETAILS_PLACEHOLDER": "Enter your exit strategy",
+      "EXIT_STRATEGY_DETAILS_INVALID": "Exit strategy is invalid."
+    },
+    "STEP_6": {
+      "TITLE": "Submit Application",
+      "DESCRIPTION": "Please review all the information you have provided in the previous steps, and if all the information is correct, submit your application for review within 24 - 48 hours.",
       "SUBMIT_BUTTON": "Submit"
     },
     "NAVIGATION": {

@@ -391,9 +391,54 @@ body[dir="rtl"] .investor-form-container {
   color: transparent; /* Hide placeholder text on focus */
 }
 
+/* Step 5 */
 
+.step-5 label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: semibold;
+  font-size: 14px; /* Smaller font size */
+}
+.step-5 textarea {
+  width: 100%; /* Full width */
+  height: 50px; /* Adjust height */
+  padding: 6px; /* Reduced padding for mobile */
+  font-size: 12px; /* Smaller font size */
+  line-height: 18px; /* Improved readability */
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+  resize: vertical; /* Allow vertical resizing */
+  transition: border-color 0.3s ease; /* Smooth border color change */
+}
 
-/* Step 5: Submit Step */
+.step-5 .form-check-container {
+  display: flex;
+  gap: 15px; /* Reduced gap */
+  align-items: center;
+}
+
+.step-5 .form-check-label {
+  font-size: 14px; /* Smaller font size */
+}
+/* Placeholder style */
+.step-5 textarea::placeholder {
+  font-size: 14px; /* Same as text */
+  color: #aaa; /* Lighter color for placeholder */
+  font-style: italic; /* Italicized for distinction */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Focus state for textarea */
+.step-5 textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Adjust when typing */
+.step-5 textarea:focus::placeholder {
+  color: transparent; /* Hide placeholder text on focus */
+}
+/* Step 6: Submit Step */
 .step-6 .submit-box {
   width: 100%; /* Full width */
   text-align: center;
@@ -634,65 +679,65 @@ body[dir="rtl"] .investor-form-container {
 }
 
 
-.step-5 .submit-box {
+.step-6 .submit-box {
   padding: 15px; /* Reduce padding for mobile */
 }
 
-.step-5 .submit-icon {
+.step-6 .submit-icon {
   width: 80px; /* Smaller icon on mobile */
   height: 80px; /* Smaller icon on mobile */
   margin: 15px; /* Reduced margin */
 }
 
-.step-5 .submit-title {
+.step-6 .submit-title {
   font-size: 16px; /* Smaller font size */
   margin-top: 5px;
 }
 
-.step-5 .submit-description {
+.step-6 .submit-description {
   font-size: 12px; /* Smaller font size */
   margin-top: 5px;
   padding: 0 10px; /* Reduced padding */
 }
 
-.step-5 .submit-button-container {
+.step-6 .submit-button-container {
   flex-direction: column; /* Stack the button vertically */
   margin-top: 15px;
 }
 
-.step-5 .submit-button {
+.step-6 .submit-button {
   width: 100%; /* Full width button */
   padding: 10px; /* Reduced padding */
   font-size: 14px; /* Smaller font size */
   border-radius: 20px; /* Slightly rounded corners */
 }
-.step-5 .submit-box {
+.step-6 .submit-box {
   padding: 15px; /* Reduce padding for mobile */
 }
 
-.step-5 .submit-icon {
+.step-6 .submit-icon {
   width: 80px; /* Smaller icon on mobile */
   height: 80px; /* Smaller icon on mobile */
   margin: 15px; /* Reduced margin */
 }
 
-.step-5 .submit-title {
+.step-6 .submit-title {
   font-size: 16px; /* Smaller font size */
   margin-top: 5px;
 }
 
-.step-5 .submit-description {
+.step-6 .submit-description {
   font-size: 12px; /* Smaller font size */
   margin-top: 5px;
   padding: 0 10px; /* Reduced padding */
 }
 
-.step-5 .submit-button-container {
+.step-6 .submit-button-container {
   flex-direction: column; /* Stack the button vertically */
   margin-top: 15px;
 }
 
-.step-5 .submit-button {
+.step-6 .submit-button {
   width: 100%; /* Full width button */
   padding: 10px; /* Reduced padding */
   font-size: 14px; /* Smaller font size */
@@ -843,62 +888,62 @@ body[dir="rtl"] .investor-form-container {
     font-size: 13px; /* Adjust radio button label size */
   }
   
-  .step-5 .submit-box {
+  .step-6 .submit-box {
     padding: 20px; /* Normal padding for tablet */
   }
 
-  .step-5 .submit-icon {
+  .step-6 .submit-icon {
     width: 90px; /* Adjust icon size for tablet */
     height: 90px;
     margin: 18px; /* Adjust margin for tablet */
   }
 
-  .step-5 .submit-title {
+  .step-6 .submit-title {
     font-size: 17px; /* Adjust font size for tablet */
     margin-top: 8px;
   }
 
-  .step-5 .submit-description {
+  .step-6 .submit-description {
     font-size: 13px; /* Adjust font size for tablet */
     margin-top: 8px;
     padding: 0 15px; /* Adjust padding for tablet */
   }
 
-  .step-5 .submit-button-container {
+  .step-6 .submit-button-container {
     margin-top: 20px;
   }
 
-  .step-5 .submit-button {
+  .step-6 .submit-button {
     width: 80%; /* Slightly smaller width */
     padding: 12px 20px; /* Adjust padding */
     font-size: 15px; /* Adjust font size */
   }
-  .step-5 .submit-box {
+  .step-6 .submit-box {
     padding: 20px; /* Normal padding for tablet */
   }
 
-  .step-5 .submit-icon {
+  .step-6 .submit-icon {
     width: 90px; /* Adjust icon size for tablet */
     height: 90px;
     margin: 18px; /* Adjust margin for tablet */
   }
 
-  .step-5 .submit-title {
+  .step-6 .submit-title {
     font-size: 17px; /* Adjust font size for tablet */
     margin-top: 8px;
   }
 
-  .step-5 .submit-description {
+  .step-6 .submit-description {
     font-size: 13px; /* Adjust font size for tablet */
     margin-top: 8px;
     padding: 0 15px; /* Adjust padding for tablet */
   }
 
-  .step-5 .submit-button-container {
+  .step-6 .submit-button-container {
     margin-top: 20px;
   }
 
-  .step-5 .submit-button {
+  .step-6 .submit-button {
     width: 80%; /* Slightly smaller width */
     padding: 12px 20px; /* Adjust padding */
     font-size: 15px; /* Adjust font size */
