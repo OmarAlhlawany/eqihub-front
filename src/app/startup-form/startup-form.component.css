@@ -558,436 +558,581 @@ body[dir="rtl"] .investor-form-container {
 
 /* Mobile screens */
 @media (max-width: 767px) {
-  .investor-form-container {
-    min-height: 80vh; /* Reduce min-height on mobile */
-    padding: 10px; /* Reduce padding for mobile */
+  .startup-form-container {
+    min-height: 100vh; /* Use full screen height on mobile */
+    padding: 20px;
   }
 
   .form-title {
-    font-size: 28px; /* Reduce font size for mobile */
-    margin-bottom: 15px; /* Adjust margin */
-    padding: 5px 0; /* Reduce padding */
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-bottom: 15px; /* Reduce bottom margin */
   }
 
   .form-container {
-    width: 100%; /* Ensure form takes full width on mobile */
-    max-width: 100%; /* Remove max-width constraint */
-    padding: 15px; /* Reduce form padding */
+    width: 100%;
+    padding: 15px; /* Reduce padding on mobile */
+    max-width: 100%; /* Full width */
+    border-radius: 10px; /* Smaller border radius */
+    min-height: 350px; /* Adjusted height for mobile */
   }
-.form-steps-indicator {
-  gap: 5px; /* Reduce gap on mobile */
-  flex-direction: row; /* Stack the steps vertically on small screens */
-  align-items: flex-start; /* Align steps to the left */
-}
-
-.step-indicator {
-  padding: 10px 0; /* Add padding to ensure the steps are separated */
-}
-
-.step-circle {
-  width: 20px; /* Smaller circle on mobile */
-  height: 20px; /* Smaller circle */
-  line-height: 20px; /* Adjusted line height */
-  font-size: 10px; /* Smaller font size */
-}
-
-.step-line {
-  width: 50px; /* Shorter line on mobile */
-  margin: 0 3px; /* Reduced margin between circle and line */
-}
+    /* Line under the step indicators */
+    .step-indicator-line {
+      bottom: 5px; /* Adjusted for smaller screens */
+    }
+  
+    /* Step Indicator */
+    .form-steps-indicator {
+      flex-direction: column; /* Stack indicators vertically */
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+  
+    .step-indicator {
+      justify-content: center; /* Center indicators on small screens */
+      padding: 10px 0;
+    }
+  
+    .step-circle {
+      width: 20px; /* Smaller circle */
+      height: 20px; /* Smaller circle */
+      line-height: 20px; /* Adjusted line height */
+      font-size: 10px; /* Smaller font size */
+    }
+  
+    .step-line {
+      width: 50px; /* Shorter line */
+      height: 3px; /* Thinner line */
+      margin: 0 3px; /* Smaller margin */
+    }
+/* Form Steps */
 .form-step {
-  padding: 0 10px; /* Add padding for mobile screens */
+  margin-top: 15px; /* Slightly larger margin on mobile */
 }
 
+/* Step 1: Contact Details */
 .step-1 h3 {
-  font-size: 16px; /* Adjust font size for mobile */
+  font-size: 16px; /* Slightly smaller font size for mobile */
 }
 
 .step-1 label {
-  font-size: 12px; /* Adjust label font size for mobile */
+  font-size: 12px; /* Smaller font size for labels */
+  margin-bottom: 3px; /* Reduced margin for mobile */
 }
 
 .step-1 input {
-  height: 35px; /* Slightly smaller input height */
-  padding: 6px; /* Adjust padding */
-  font-size: 12px; /* Adjust font size for smaller screens */
+  height: 35px; /* Reduced height for input on mobile */
+  padding: 6px; /* Reduced padding for mobile */
+  font-size: 12px; /* Reduced font size for input */
+  border-radius: 15px; /* Smaller border radius for input */
 }
-.step-2 h3 {
-  font-size: 16px; /* Adjust font size for mobile */
-}
-
-.step-2 label {
-  font-size: 12px; /* Adjust label font size for mobile */
-}
-
-.step-2 select,
-.step-2 .dropdown-toggle {
-  height: 35px; /* Smaller height for mobile */
-  padding: 6px; /* Adjust padding for mobile */
-  font-size: 12px; /* Smaller font size */
-}
-
-.step-2 .tags-input {
-  height: 35px; /* Adjust height for mobile */
-  padding: 6px; /* Adjust padding */
-  font-size: 12px; /* Smaller font size */
-}
-
-.step-2 .tags-input .tag {
-  padding: 4px 6px; /* Adjust padding for smaller screens */
-  font-size: 11px; /* Adjust font size */
-}
-
-.step-2 .tags-container .tag {
-  font-size: 11px; /* Smaller font size */
-  padding: 5px 8px; /* Adjust padding */
-}
-
-.step-3 h3 {
-  font-size: 16px; /* Smaller font size for mobile */
-  margin-bottom: 8px;
-}
-
-.step-3 .budget-options {
-  grid-template-columns: 1fr; /* Single column for mobile */
-  gap: 8px; /* Reduced gap */
-}
-
-.step-3 .budget-option {
-  height: 50px; /* Smaller height for mobile */
-  font-size: 12px; /* Smaller font size */
-  padding: 8px; /* Adjust padding */
-}
-
-.step-3 .budget-option input[type="radio"] {
-  width: 14px; /* Smaller radio button */
-  height: 14px; /* Smaller radio button */
-}
-
-.step-3 .budget-option label {
-  font-size: 12px; /* Smaller font size for label */
-}
-
-.step-3 .budget-option.full-width {
-  height: 50px; /* Smaller height */
-  padding: 8px; /* Adjust padding */
-}
-
-.step-3 .other-budget-input {
-  width: 100%; /* Full width on mobile */
-  height: 35px; /* Smaller height */
-  font-size: 12px; /* Smaller font size */
-  padding: 6px; /* Reduced padding */
-}
-
-.step-3 .other-budget-container {
-  flex-direction: column; /* Stack elements for mobile */
-}
-
-.step-3 .other-budget-label {
-  font-size: 12px; /* Smaller font size for label */
-}
-
-.step-4 {
-  width: 100%;
-  padding: 10px;
-}
-
-.step-4 h3 {
-  font-size: 16px; /* Slightly smaller for mobile */
-}
-
-.step-4 label {
-  font-size: 12px; /* Smaller font size */
-}
-
-.step-4 select,
-.step-4 textarea {
-  font-size: 12px; /* Consistent smaller font */
-}
-
-.step-4 .form-check-container {
-  flex-direction: column; /* Stack vertically on mobile */
-  gap: 10px; /* Adjust gap */
-}
-
-.step-4 .form-check-label {
-  font-size: 12px; /* Smaller font size for radio buttons */
-}
-
-
-.step-6 .submit-box {
-  padding: 15px; /* Reduce padding for mobile */
-}
-
-.step-6 .submit-icon {
-  width: 80px; /* Smaller icon on mobile */
-  height: 80px; /* Smaller icon on mobile */
-  margin: 15px; /* Reduced margin */
-}
-
-.step-6 .submit-title {
-  font-size: 16px; /* Smaller font size */
-  margin-top: 5px;
-}
-
-.step-6 .submit-description {
-  font-size: 12px; /* Smaller font size */
-  margin-top: 5px;
-  padding: 0 10px; /* Reduced padding */
-}
-
-.step-6 .submit-button-container {
-  flex-direction: column; /* Stack the button vertically */
-  margin-top: 15px;
-}
-
-.step-6 .submit-button {
-  width: 100%; /* Full width button */
-  padding: 10px; /* Reduced padding */
-  font-size: 14px; /* Smaller font size */
-  border-radius: 20px; /* Slightly rounded corners */
-}
-.step-6 .submit-box {
-  padding: 15px; /* Reduce padding for mobile */
-}
-
-.step-6 .submit-icon {
-  width: 80px; /* Smaller icon on mobile */
-  height: 80px; /* Smaller icon on mobile */
-  margin: 15px; /* Reduced margin */
-}
-
-.step-6 .submit-title {
-  font-size: 16px; /* Smaller font size */
-  margin-top: 5px;
-}
-
-.step-6 .submit-description {
-  font-size: 12px; /* Smaller font size */
-  margin-top: 5px;
-  padding: 0 10px; /* Reduced padding */
-}
-
-.step-6 .submit-button-container {
-  flex-direction: column; /* Stack the button vertically */
-  margin-top: 15px;
-}
-
-.step-6 .submit-button {
-  width: 100%; /* Full width button */
-  padding: 10px; /* Reduced padding */
-  font-size: 14px; /* Smaller font size */
-  border-radius: 20px; /* Slightly rounded corners */
-}
-}
-
-
-/* Tablet screens */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .investor-form-container {
-    min-height: 85vh; /* Adjust min-height for tablet */
+  /* Step 2: Startup Details */
+  .step-2 {
+    font-size: 13px; /* Slightly smaller font size on mobile */
   }
 
-  .form-title {
-    font-size: 32px; /* Adjust font size for tablet */
-    margin-bottom: 18px; /* Adjust margin for better spacing */
-  }
-
-  .form-container {
-    width: 90%; /* Keep form width as percentage */
-    max-width: 480px; /* Adjust max-width for tablets */
-    padding: 18px; /* Slightly reduce padding */
-  }
-  .form-steps-indicator {
-    gap: 8px; /* Adjust gap for tablet */
-    flex-direction: row; /* Keep steps in a row */
-  }
-
-  .step-indicator {
-    padding: 8px 0; /* Adjust padding for tablet */
-  }
-
-  .step-circle {
-    width: 22px; /* Slightly smaller circle for tablet */
-    height: 22px; /* Adjusted size */
-    line-height: 22px; /* Adjusted line height */
-    font-size: 11px; /* Slightly smaller font size */
-  }
-
-  .step-line {
-    width: 60px; /* Shorter line on tablet */
-    margin: 0 4px; /* Adjust margin */
-  }
-  .form-step {
-    padding: 0 15px; /* Adjust padding for tablets */
-  }
-
-  .step-1 h3 {
-    font-size: 17px; /* Adjust font size for tablet */
-  }
-
-  .step-1 label {
-    font-size: 13px; /* Adjust label font size for tablet */
-  }
-
-  .step-1 input {
-    height: 38px; /* Slightly bigger input height for tablets */
-    padding: 7px; /* Adjust padding */
-    font-size: 13px; /* Adjust font size for tablet */
-  }
   .step-2 h3 {
-    font-size: 17px; /* Adjust font size for tablet */
+    font-size: 16px; /* Smaller heading font size on mobile */
+    margin-bottom: 15px; /* Reduced spacing below heading */
   }
 
+  /* Labels */
   .step-2 label {
-    font-size: 13px; /* Adjust label font size for tablet */
+    font-size: 12px; /* Smaller label font size */
+    margin-bottom: 3px; /* Reduced margin below labels */
   }
 
-  .step-2 select {
-    height: 38px; /* Slightly larger height for tablets */
-    padding: 7px; /* Adjust padding */
-    font-size: 13px; /* Adjust font size */
+  /* Input Fields */
+  .step-2 .form-control {
+    height: 35px; /* Reduced height of input fields */
+    padding: 6px; /* Reduced padding for mobile */
+    font-size: 12px; /* Smaller font size */
+    border-radius: 15px; /* Smaller border radius */
+    text-indent: 8px; /* Reduced indentation */
+    margin-bottom: 8px; /* Reduced margin below input fields */
   }
 
-  .step-2 .tags-input {
-    height: 38px; /* Slightly larger height for tablets */
-    padding: 7px; /* Adjust padding */
-    font-size: 13px; /* Adjust font size */
+  /* Textarea */
+  .step-2 textarea.form-control {
+    height: 60px; /* Reduced height for textarea */
   }
 
-  .step-2 .tags-input .tag {
-    padding: 4px 8px; /* Adjust padding */
-    font-size: 12px; /* Standard font size */
+  /* Select Dropdown */
+  .step-2 select.form-control {
+    padding-right: 20px; /* Adjust space for arrow */
   }
 
-  .step-2 .tags-container .tag {
-    font-size: 12px; /* Adjust font size */
-    padding: 5px 10px; /* Adjust padding */
+  /* Row Spacing */
+  .step-2 .row.mb-3 {
+    margin-bottom: 10px; /* Reduced row spacing */
   }
+  /* Step 3: Financial Information */
+  .step-3 {
+    font-size: 13px; /* Slightly smaller font size on mobile */
+  }
+
   .step-3 h3 {
-    font-size: 17px; /* Adjust font size for tablet */
+    font-size: 16px; /* Smaller heading font size on mobile */
+    margin-bottom: 15px; /* Reduced spacing below heading */
   }
 
-  .step-3 .budget-options {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-    gap: 10px; /* Standard gap */
+  /* Labels */
+  .step-3 label {
+    font-size: 12px; /* Smaller label font size */
+    margin-bottom: 3px; /* Reduced margin below labels */
   }
 
-  .step-3 .budget-option {
-    height: 55px; /* Slightly larger height for tablets */
-    padding: 9px; /* Adjust padding */
+  /* Input Fields */
+  .step-3 .form-control {
+    height: 35px; /* Reduced height of input fields */
+    padding: 6px; /* Reduced padding for mobile */
+    font-size: 12px; /* Smaller font size */
+    border-radius: 15px; /* Smaller border radius */
+    text-indent: 8px; /* Reduced indentation */
+    margin-bottom: 8px; /* Reduced margin below input fields */
   }
 
-  .step-3 .budget-option input[type="radio"] {
-    width: 15px; /* Slightly larger radio button */
-    height: 15px; /* Slightly larger radio button */
+  /* Textarea */
+  .step-3 textarea.form-control {
+    height: 60px; /* Reduced height for textarea */
   }
 
-  .step-3 .budget-option label {
-    font-size: 13px; /* Adjust label font size */
+  /* Select Dropdown */
+  .step-3 select.form-control {
+    padding-right: 20px; /* Adjust space for arrow */
   }
 
-  .step-3 .budget-option.full-width {
-    height: 55px; /* Slightly larger height */
+  /* Row Spacing */
+  .step-3 .row.mb-3 {
+    margin-bottom: 10px; /* Reduced row spacing */
   }
-
-  .step-3 .other-budget-input {
-    width: 80%; /* Slightly smaller than mobile */
-    height: 38px; /* Slightly larger height */
-    font-size: 13px; /* Adjust font size */
-    padding: 7px; /* Adjust padding */
-  }
-  
-  .step-4 {
-    width: 80%; /* Reduce width for tablet view */
-    padding: 15px;
-  }
-
+  /* Step 4: Exit Strategy */
   .step-4 h3 {
-    font-size: 17px; /* Slightly larger font for tablets */
+    font-size: 16px; /* Slightly smaller heading font size */
+    margin-bottom: 12px; /* Reduced spacing below heading */
   }
 
   .step-4 label {
-    font-size: 13px; /* Slightly smaller font size */
+    font-size: 12px; /* Smaller label font size */
+    margin-bottom: 6px; /* Reduced margin below labels */
   }
 
-  .step-4 select,
+  .step-4 .form-control {
+    font-size: 12px; /* Smaller font size for inputs */
+    padding: 6px; /* Reduced padding */
+    border-radius: 15px; /* Smaller border radius */
+    text-indent: 8px; /* Reduced text indent */
+  }
+
+  .step-4 select {
+    font-size: 12px; /* Smaller font size for select */
+    padding: 6px; /* Reduced padding */
+    border-radius: 15px; /* Smaller border radius */
+  }
+
   .step-4 textarea {
-    font-size: 13px; /* Adjust font size for better readability */
+    font-size: 12px; /* Smaller font size for textarea */
+    height: 50px; /* Reduced height for textarea */
+    padding: 6px; /* Reduced padding */
+    border-radius: 15px; /* Smaller border radius */
   }
 
   .step-4 .form-check-container {
-    gap: 12px; /* Slightly reduced gap */
+    gap: 8px; /* Reduced gap between checkboxes */
+    flex-wrap: wrap;
   }
 
   .step-4 .form-check-label {
-    font-size: 13px; /* Adjust radio button label size */
+    font-size: 12px; /* Smaller font size for checkbox labels */
   }
-  
+
+  .step-4 .text-danger {
+    font-size: 12px; /* Smaller error message font size */
+  }
+  /* Step 5: Financial Goals */
+  .step-5 h3 {
+    font-size: 16px; /* Slightly smaller heading font size */
+    margin-bottom: 12px; /* Reduced spacing below heading */
+  }
+
+  .step-5 label {
+    font-size: 12px; /* Smaller label font size */
+    margin-bottom: 6px; /* Reduced margin below labels */
+  }
+
+  .step-5 .form-control {
+    font-size: 12px; /* Smaller font size for inputs */
+    padding: 6px; /* Reduced padding */
+    border-radius: 15px; /* Smaller border radius */
+    text-indent: 8px; /* Reduced text indent */
+  }
+
+  .step-5 textarea {
+    font-size: 12px; /* Smaller font size for textarea */
+    height: 50px; /* Reduced height for textarea */
+    padding: 6px; /* Reduced padding */
+    border-radius: 15px; /* Smaller border radius */
+  }
+
+  .step-5 .form-check-container {
+    gap: 8px; /* Reduced gap between checkboxes */
+    flex-wrap: wrap;
+  }
+
+  .step-5 .form-check-label {
+    font-size: 12px; /* Smaller font size for checkbox labels */
+  }
+
+  .step-5 .text-danger {
+    font-size: 12px; /* Smaller error message font size */
+  }
+  /* Step 6: Submit Step */
   .step-6 .submit-box {
-    padding: 20px; /* Normal padding for tablet */
+    text-align: center;
   }
 
   .step-6 .submit-icon {
-    width: 90px; /* Adjust icon size for tablet */
-    height: 90px;
-    margin: 18px; /* Adjust margin for tablet */
+    width: 80px; /* Smaller icon on mobile */
+    height: 80px; /* Smaller icon on mobile */
+    margin: 15px; /* Reduced margin */
   }
 
   .step-6 .submit-title {
-    font-size: 17px; /* Adjust font size for tablet */
-    margin-top: 8px;
+    font-size: 16px; /* Smaller font size */
+    margin-top: 8px; /* Adjusted margin */
   }
 
   .step-6 .submit-description {
-    font-size: 13px; /* Adjust font size for tablet */
-    margin-top: 8px;
-    padding: 0 15px; /* Adjust padding for tablet */
+    font-size: 12px; /* Smaller font size */
+    padding: 0 15px; /* Reduced padding */
+    margin-top: 8px; /* Adjusted margin */
   }
 
-  .step-6 .submit-button-container {
-    margin-top: 20px;
+  .step-6 .submitted-text {
+    font-size: 14px; /* Smaller font size for submitted text */
+    padding: 8px 16px; /* Reduced padding */
+    border-radius: 20px; /* Smaller border radius */
+    margin-top: 15px; /* Adjusted margin */
   }
+/* Button Styles */
+.btn-success {
+  padding: 6px 15px; /* Smaller padding for mobile */
+  font-size: 12px; /* Smaller font size */
+}
 
-  .step-6 .submit-button {
-    width: 80%; /* Slightly smaller width */
-    padding: 12px 20px; /* Adjust padding */
-    font-size: 15px; /* Adjust font size */
-  }
-  .step-6 .submit-box {
-    padding: 20px; /* Normal padding for tablet */
-  }
+.btn-success:hover {
+  background-color: #1f2d7a;
+}
 
-  .step-6 .submit-icon {
-    width: 90px; /* Adjust icon size for tablet */
-    height: 90px;
-    margin: 18px; /* Adjust margin for tablet */
-  }
+/* Navigation Buttons */
+.form-navigation {
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 15px; /* Increased space between buttons */
+  max-width: 90%; /* Adjust width to fit screen */
+}
 
-  .step-6 .submit-title {
-    font-size: 17px; /* Adjust font size for tablet */
-    margin-top: 8px;
-  }
+.btn {
+  padding: 6px 15px; /* Smaller padding for mobile */
+  font-size: 12px; /* Smaller font size */
+}
 
-  .step-6 .submit-description {
-    font-size: 13px; /* Adjust font size for tablet */
-    margin-top: 8px;
-    padding: 0 15px; /* Adjust padding for tablet */
-  }
+.btn-secondary {
+  background-color: #ffffff;
+  color: #091690;
+  border: 2px solid #091690;
+}
 
-  .step-6 .submit-button-container {
-    margin-top: 20px;
-  }
-
-  .step-6 .submit-button {
-    width: 80%; /* Slightly smaller width */
-    padding: 12px 20px; /* Adjust padding */
-    font-size: 15px; /* Adjust font size */
-  }
+.btn-primary {
+  background-color: #2B37A0;
+  color: white;
+}
 }
 
 
+/* responsive Tablet screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .startup-form-container {
+    min-height: 80vh; /* Adjust height on tablet */
+    padding: 30px; /* Add extra padding for larger devices */
+  }
 
+  .form-title {
+    font-size: 30px; /* Medium font size for tablets */
+    margin-bottom: 18px; /* Adjusted margin for tablets */
+  }
 
+  .form-container {
+    width: 100%;
+    padding: 20px; /* Standard padding for tablets */
+    max-width: 600px; /* Wider container */
+    border-radius: 15px; /* Slightly smaller border radius */
+    min-height: 380px; /* Adjusted height */
+  }
+/* Line under the step indicators */
+.step-indicator-line {
+  bottom: 8px; /* Adjusted for tablet */
+}
 
+/* Step Indicator */
+.form-steps-indicator {
+  justify-content: space-evenly; /* Space evenly on tablets */
+  margin-bottom: 5px;
+}
+
+.step-indicator {
+  padding: 8px 0;
+}
+
+.step-circle {
+  width: 22px; /* Slightly smaller circle */
+  height: 22px; /* Slightly smaller circle */
+  line-height: 22px; /* Adjusted line height */
+  font-size: 11px; /* Slightly smaller font size */
+}
+
+.step-line {
+  width: 60px; /* Shorter line */
+  height: 3px; /* Thinner line */
+  margin: 0 4px; /* Adjusted margin */
+}
+ /* Form Steps */
+ .form-step {
+  margin-top: 12px; /* Adjusted margin for tablets */
+}
+
+/* Step 1: Contact Details */
+.step-1 h3 {
+  font-size: 17px; /* Adjusted font size for tablet */
+}
+
+.step-1 label {
+  font-size: 13px; /* Slightly larger font size for tablets */
+  margin-bottom: 4px; /* Adjusted margin */
+}
+
+.step-1 input {
+  height: 38px; /* Slightly larger height for tablets */
+  padding: 7px; /* Adjusted padding */
+  font-size: 13px; /* Adjusted font size for tablets */
+  border-radius: 18px; /* Adjusted border radius for tablets */
+}
+  /* Step 2: Startup Details */
+  .step-2 {
+    font-size: 13.5px; /* Slightly smaller font size on tablets */
+  }
+
+  .step-2 h3 {
+    font-size: 17px; /* Adjusted heading font size for tablets */
+    margin-bottom: 18px; /* Adjusted spacing below heading */
+  }
+
+  /* Labels */
+  .step-2 label {
+    font-size: 13px; /* Slightly larger font size on tablets */
+    margin-bottom: 4px; /* Adjusted spacing below labels */
+  }
+
+  /* Input Fields */
+  .step-2 .form-control {
+    height: 38px; /* Slightly larger height for input fields */
+    padding: 7px; /* Adjusted padding */
+    font-size: 13px; /* Adjusted font size for tablets */
+    border-radius: 18px; /* Adjusted border radius for tablets */
+    text-indent: 9px; /* Slightly increased indentation */
+    margin-bottom: 9px; /* Adjusted margin below input fields */
+  }
+
+  /* Textarea */
+  .step-2 textarea.form-control {
+    height: 65px; /* Adjusted height for textarea */
+  }
+
+  /* Select Dropdown */
+  .step-2 select.form-control {
+    padding-right: 22px; /* Adjusted space for arrow */
+  }
+
+  /* Row Spacing */
+  .step-2 .row.mb-3 {
+    margin-bottom: 12px; /* Adjusted row spacing */
+  }
+  /* Step 3: Financial Information */
+  .step-3 {
+    font-size: 13.5px; /* Slightly smaller font size on tablets */
+  }
+
+  .step-3 h3 {
+    font-size: 17px; /* Adjusted heading font size for tablets */
+    margin-bottom: 18px; /* Adjusted spacing below heading */
+  }
+
+  /* Labels */
+  .step-3 label {
+    font-size: 13px; /* Slightly larger font size on tablets */
+    margin-bottom: 4px; /* Adjusted spacing below labels */
+  }
+
+  /* Input Fields */
+  .step-3 .form-control {
+    height: 38px; /* Slightly larger height for input fields */
+    padding: 7px; /* Adjusted padding */
+    font-size: 13px; /* Adjusted font size for tablets */
+    border-radius: 18px; /* Adjusted border radius for tablets */
+    text-indent: 9px; /* Slightly increased indentation */
+    margin-bottom: 9px; /* Adjusted margin below input fields */
+  }
+
+  /* Textarea */
+  .step-3 textarea.form-control {
+    height: 65px; /* Adjusted height for textarea */
+  }
+
+  /* Select Dropdown */
+  .step-3 select.form-control {
+    padding-right: 22px; /* Adjusted space for arrow */
+  }
+
+  /* Row Spacing */
+  .step-3 .row.mb-3 {
+    margin-bottom: 12px; /* Adjusted row spacing */
+  }
+  /* Step 4: Exit Strategy */
+  .step-4 h3 {
+    font-size: 17px; /* Slightly smaller heading font size for tablets */
+    margin-bottom: 14px; /* Adjusted spacing below heading */
+  }
+
+  .step-4 label {
+    font-size: 13px; /* Adjusted label font size for tablets */
+    margin-bottom: 7px; /* Adjusted margin below labels */
+  }
+
+  .step-4 .form-control {
+    font-size: 13px; /* Adjusted font size for inputs */
+    padding: 7px; /* Adjusted padding */
+    border-radius: 18px; /* Slightly larger border radius */
+    text-indent: 9px; /* Adjusted text indent */
+  }
+
+  .step-4 select {
+    font-size: 13px; /* Adjusted font size for select */
+    padding: 7px; /* Adjusted padding */
+    border-radius: 18px; /* Slightly larger border radius */
+  }
+
+  .step-4 textarea {
+    font-size: 13px; /* Adjusted font size for textarea */
+    height: 55px; /* Adjusted height for textarea */
+    padding: 7px; /* Adjusted padding */
+    border-radius: 18px; /* Slightly larger border radius */
+  }
+
+  .step-4 .form-check-container {
+    gap: 10px; /* Adjusted gap between checkboxes */
+    flex-wrap: wrap;
+  }
+
+  .step-4 .form-check-label {
+    font-size: 13px; /* Adjusted font size for checkbox labels */
+  }
+
+  .step-4 .text-danger {
+    font-size: 12px; /* Adjusted error message font size */
+  }
+  /* Step 5: Financial Goals */
+  .step-5 h3 {
+    font-size: 17px; /* Slightly smaller heading font size for tablets */
+    margin-bottom: 14px; /* Adjusted spacing below heading */
+  }
+
+  .step-5 label {
+    font-size: 13px; /* Adjusted label font size for tablets */
+    margin-bottom: 7px; /* Adjusted margin below labels */
+  }
+
+  .step-5 .form-control {
+    font-size: 13px; /* Adjusted font size for inputs */
+    padding: 7px; /* Adjusted padding */
+    border-radius: 18px; /* Slightly larger border radius */
+    text-indent: 9px; /* Adjusted text indent */
+  }
+
+  .step-5 textarea {
+    font-size: 13px; /* Adjusted font size for textarea */
+    height: 55px; /* Adjusted height for textarea */
+    padding: 7px; /* Adjusted padding */
+    border-radius: 18px; /* Slightly larger border radius */
+  }
+
+  .step-5 .form-check-container {
+    gap: 10px; /* Adjusted gap between checkboxes */
+    flex-wrap: wrap;
+  }
+
+  .step-5 .form-check-label {
+    font-size: 13px; /* Adjusted font size for checkbox labels */
+  }
+
+  .step-5 .text-danger {
+    font-size: 12px; /* Adjusted error message font size */
+  }
+  /* Step 6: Submit Step */
+  .step-6 .submit-box {
+    text-align: center;
+  }
+
+  .step-6 .submit-icon {
+    width: 90px; /* Adjusted icon size for tablet */
+    height: 90px; /* Adjusted icon size for tablet */
+    margin: 18px; /* Slightly reduced margin */
+  }
+
+  .step-6 .submit-title {
+    font-size: 17px; /* Adjusted font size for tablets */
+    margin-top: 9px; /* Adjusted margin */
+  }
+
+  .step-6 .submit-description {
+    font-size: 13px; /* Adjusted font size for tablets */
+    padding: 0 18px; /* Slightly adjusted padding */
+    margin-top: 9px; /* Adjusted margin */
+  }
+
+  .step-6 .submitted-text {
+    font-size: 15px; /* Slightly larger font size */
+    padding: 9px 18px; /* Slightly larger padding */
+    border-radius: 22px; /* Slightly larger border radius */
+    margin-top: 18px; /* Adjusted margin */
+  }
+  /* Button Styles */
+  .btn-success {
+    padding: 7px 18px; /* Adjusted padding for tablet */
+    font-size: 13px; /* Adjusted font size for tablet */
+  }
+
+  .btn-success:hover {
+    background-color: #1f2d7a;
+  }
+
+  /* Navigation Buttons */
+  .form-navigation {
+    gap: 12px; /* Slightly increased gap */
+    max-width: 80%; /* Adjust width for tablet screens */
+  }
+
+  .btn {
+    padding: 7px 18px; /* Adjusted padding for tablet */
+    font-size: 13px; /* Adjusted font size for tablet */
+  }
+
+  .btn-secondary {
+    background-color: #ffffff;
+    color: #091690;
+    border: 2px solid #091690;
+  }
+
+  .btn-primary {
+    background-color: #2B37A0;
+    color: white;
+  }
+
+}
