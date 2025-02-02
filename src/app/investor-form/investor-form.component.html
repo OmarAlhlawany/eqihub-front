@@ -33,7 +33,7 @@
   <div class="row mb-3">
 
     <div class="col-md-6">
-      <label for="name">{{ 'INVESTOR_FORM.STEP_1.NAME' | translate }} *</label>
+      <label for="name">{{ 'INVESTOR_FORM.STEP_1.NAME' | translate }}<span class="required-asterisk">*</span></label>
       <div class="input-icon-container">
         <i class="material-icons">person</i> <!-- Icon for name -->
         <input id="name" formControlName="name" placeholder="{{ 'INVESTOR_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
@@ -45,7 +45,7 @@
     </div>
 
     <div class="col-md-6">
-      <label for="email">{{ 'INVESTOR_FORM.STEP_1.EMAIL' | translate }} *</label>
+      <label for="email">{{ 'INVESTOR_FORM.STEP_1.EMAIL' | translate }}<span class="required-asterisk">*</span></label>
       <div class="input-icon-container">
         <i class="material-icons">email</i> <!-- Icon for email -->
         <input id="email" type="email" formControlName="email" placeholder="{{ 'INVESTOR_FORM.STEP_1.EMAIL_PLACEHOLDER' | translate }}" class="form-control" required />
@@ -61,7 +61,7 @@
   <div class="row mb-3">
 
     <div class="col-md-6">
-      <label for="phoneNumber">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER' | translate }} *</label>
+      <label for="phoneNumber">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER' | translate }}<span class="required-asterisk">*</span></label>
       <div class="input-icon-container">
         <i class="material-icons">phone</i> <!-- Icon for phone number -->
         <input id="phoneNumber" type="tel" formControlName="phoneNumber" placeholder="{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_PLACEHOLDER' | translate }}" class="form-control" required />
@@ -73,7 +73,7 @@
     </div>
 
     <div class="col-md-6">
-      <label for="company">{{ 'INVESTOR_FORM.STEP_1.COMPANY' | translate }} *</label>
+      <label for="company">{{ 'INVESTOR_FORM.STEP_1.COMPANY' | translate }}<span class="required-asterisk">*</span></label>
       <div class="input-icon-container">
         <i class="material-icons">business</i> <!-- Icon for company -->
         <input id="company" formControlName="company" placeholder="{{ 'INVESTOR_FORM.STEP_1.COMPANY_PLACEHOLDER' | translate }}" class="form-control" required />
@@ -90,7 +90,7 @@
 <!-- Step 2: Investment Details -->
 <div *ngIf="currentStep === 2" class="form-step step-2">
   <div class="form-group">
-    <label for="investment">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT' | translate }} *</label>
+    <label for="investment">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT' | translate }}<span class="required-asterisk">*</span></label>
     <select id="investment" formControlName="investment" required (change)="onInvestmentChange()">
       <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_2.SELECT_INVESTMENT' | translate }}</option>
       <option value="angel">{{ 'INVESTOR_FORM.STEP_2.ANGEL_INVESTMENT' | translate }}</option>
@@ -102,7 +102,7 @@
   </div>
 
   <div class="form-group">
-    <label for="favoriteInvestment">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT' | translate }} *</label>
+    <label for="favoriteInvestment">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT' | translate }}<span class="required-asterisk">*</span></label>
     <select id="favoriteInvestment" formControlName="favoriteInvestment" required (change)="onFavoriteInvestmentChange()">
       <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_INVESTMENT' | translate }}</option>
       <option value="preSeed">{{ 'INVESTOR_FORM.STEP_2.PRE_SEED' | translate }}</option>
@@ -116,7 +116,7 @@
 
   <!-- Selected Tags Display -->
   <div class="form-group">
-    <label for="favoriteSectors">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS' | translate }} *</label>
+    <label for="favoriteSectors">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS' | translate }}<span class="required-asterisk">*</span></label>
     <div class="dropdown" style="position: relative;">
       <button type="button" class="dropdown-toggle" (click)="toggleDropdown()">
         {{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_SECTORS' | translate }}
@@ -146,7 +146,7 @@
 
 <!-- Step 3: Project Budget -->
 <div *ngIf="currentStep === 3" class="form-step step-3">
-  <h3>{{ 'INVESTOR_FORM.STEP_3.PROJECT_BUDGET' | translate }}</h3>
+  <h3>{{ 'INVESTOR_FORM.STEP_3.PROJECT_BUDGET' | translate }} <span class="required-asterisk">*</span></h3>
   <div class="budget-options">
     <div class="custom-control custom-radio budget-option">
       <input
@@ -233,8 +233,7 @@
 <!-- Geographical Scope Dropdown -->
 <div class="form-group">
   <label for="geographicalScope">
-    {{ 'INVESTOR_FORM.STEP_4.GEOGRAPHICAL_SCOPE' | translate }} *
-  </label>
+    {{ 'INVESTOR_FORM.STEP_4.GEOGRAPHICAL_SCOPE' | translate }} <span class="required-asterisk">*</span></label>
   <select id="geographicalScope" formControlName="geographicalScope" class="form-control" required>
     <option value="" disabled selected>
       {{ 'INVESTOR_FORM.STEP_4.SELECT_GEOGRAPHICAL_SCOPE' | translate }}

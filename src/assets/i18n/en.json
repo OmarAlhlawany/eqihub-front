@@ -2,8 +2,8 @@
   "STARTUP_FORM": {
     "TITLE": "Join as Startup",
     "STEP_1": {
-      "TITLE": "Basic Information",
-      "DESCRIPTION": "Provide basic details about your startup.",
+      "TITLE": "Contact details",
+      "DESCRIPTION": "Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.",
       "NAME": "Name",
       "NAME_PLACEHOLDER": "Enter your name",
       "NAME_REQUIRED": "Name is required.",

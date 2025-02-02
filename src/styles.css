@@ -34,6 +34,12 @@ header {
   padding-right: 40px; /* Add padding to prevent text overlap with the icon */
 }
 
+.required-asterisk {
+  color: red; /* Makes the asterisk red */
+  font-size: inherit; /* Ensures it matches the surrounding text size */
+  margin-left: 2px; /* Optional: Adds a small space between the text and the asterisk */
+}
+
 body[dir="rtl"] .input-icon-container .material-icons {
   left: 10px; /* Move icon to the left */
   right: auto;
