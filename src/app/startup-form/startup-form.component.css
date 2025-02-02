@@ -83,7 +83,7 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-line {
-  width: 100px; /* Shorter line */
+  width: 70px; /* Shorter line */
   height: 4px; /* Thinner line */
   background-color: #ccc;
   margin: 0 5px; /* Reduced margin */
@@ -539,7 +539,7 @@ body[dir="rtl"] .investor-form-container {
   }
 .form-steps-indicator {
   gap: 5px; /* Reduce gap on mobile */
-  flex-direction: column; /* Stack the steps vertically on small screens */
+  flex-direction: row; /* Stack the steps vertically on small screens */
   align-items: flex-start; /* Align steps to the left */
 }
 

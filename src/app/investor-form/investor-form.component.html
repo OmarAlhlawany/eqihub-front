@@ -87,7 +87,6 @@
   </div>
 </div>
 
-
 <!-- Step 2: Investment Details -->
 <div *ngIf="currentStep === 2" class="form-step step-2">
   <div class="form-group">
@@ -118,7 +117,7 @@
   <!-- Selected Tags Display -->
   <div class="form-group">
     <label for="favoriteSectors">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS' | translate }} *</label>
-    <div class="dropdown">
+    <div class="dropdown" style="position: relative;">
       <button type="button" class="dropdown-toggle" (click)="toggleDropdown()">
         {{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_SECTORS' | translate }}
       </button>
@@ -142,7 +141,6 @@
         <div *ngIf="investorForm.get('favoriteSectors')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS_REQUIRED' | translate }}</div>
       </div>
     </div>
-    
   </div>
 </div>
 
@@ -230,8 +228,6 @@
   </div>
 </div>
 
-
-
 <!-- Step 4: Additional Information -->
 <div *ngIf="currentStep === 4" class="form-step step-4">
 <!-- Geographical Scope Dropdown -->
@@ -293,8 +289,6 @@
   </div>
 
 </div>
-
-
 
 <!-- Step 5: Submit Step -->
 <div *ngIf="currentStep === 5" class="form-step step-5">
