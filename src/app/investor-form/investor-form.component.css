@@ -148,6 +148,7 @@ body[dir="rtl"] .investor-form-container {
   border: 1px solid #ccc;
   border-radius: 20px; /* Smaller border radius */
   font-size: 14px; /* Smaller font size */
+  text-indent: 10px; ;
 }
 
 /* Step 2: Investment Details */
@@ -181,6 +182,7 @@ body[dir="rtl"] .investor-form-container {
   font-size: 14px;
   background-color: white;
   cursor: pointer;
+  text-indent: 10px;
 }
 
 /* Dropdown Button (same style as select) */
@@ -314,6 +316,8 @@ body[dir="rtl"] .investor-form-container {
   width: 16px; /* Smaller radio button */
   height: 16px; /* Smaller radio button */
   cursor: pointer;
+  text-indent: 10px;
+
 }
 
 .step-3 .budget-option label {
@@ -398,6 +402,8 @@ body[dir="rtl"] .investor-form-container {
   background-position: right 8px center; /* Position arrow */
   background-size: 12px; /* Size of arrow */
   padding-right: 25px; /* Add space for arrow */
+  text-indent: 10px;
+
 }
 
 
@@ -473,9 +479,15 @@ body[dir="rtl"] .investor-form-container {
   padding: 0 20px; /* Reduced padding */
 }
 
-.step-5 .submit-button-container {
-  display: flex;
-  justify-content: center;
+.step-5 .submitted-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  background-color: #2B37A0; /* Dark blue */
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-align: center;
+  display: inline-block;
   margin-top: 20px;
 }
 

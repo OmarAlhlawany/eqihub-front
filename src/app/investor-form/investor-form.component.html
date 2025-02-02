@@ -301,23 +301,33 @@
     <p class="submit-description">
       {{ 'INVESTOR_FORM.STEP_5.SUBMIT_DESCRIPTION' | translate }}
     </p>
-  </div>
-  <div class="submit-button-container">
-    <button type="submit" *ngIf="currentStep === 5" class="btn btn-success">{{ 'INVESTOR_FORM.STEP_5.SUBMIT_BUTTON' | translate }}</button>
+    <div class="submitted-text">Submitted</div>
   </div>
 </div>
+
 
   </form>
 
 <!-- Navigation Buttons -->
 <div class="form-navigation" [ngClass]="{'multiple-buttons': currentStep !== 1}">
+  <!-- Previous Button -->
   <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary" *ngIf="currentStep !== 1">
     {{ 'INVESTOR_FORM.NAVIGATION.PREVIOUS_STEP' | translate }}
   </button>
-  <button type="button" (click)="nextStep()" class="btn btn-primary" *ngIf="currentStep !== 5">
-    {{ 'INVESTOR_FORM.NAVIGATION.NEXT_STEP' | translate }}
-  </button>
 
+  <!-- Next or Submit Button -->
+  <ng-container *ngIf="currentStep !== 4 && currentStep !== 5">
+    <button type="button" (click)="nextStep()" class="btn btn-primary">
+      {{ 'INVESTOR_FORM.NAVIGATION.NEXT_STEP' | translate }}
+    </button>
+  </ng-container>
+
+  <!-- Submit Button for Step 4 -->
+  <ng-container *ngIf="currentStep === 4"  >
+    <button type="submit" [disabled]="!isStepValid(4)" class="btn btn-success"  (click)="nextStep()">
+      {{ 'INVESTOR_FORM.STEP_5.SUBMIT_BUTTON' | translate }}
+    </button>
+      </ng-container>
 </div>
 
 </div>
