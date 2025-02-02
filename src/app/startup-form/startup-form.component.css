@@ -582,7 +582,7 @@ body[dir="rtl"] .investor-form-container {
   
     /* Step Indicator */
     .form-steps-indicator {
-      flex-direction: column; /* Stack indicators vertically */
+      flex-direction: row; /* Stack indicators vertically */
       align-items: flex-start;
       margin-bottom: 10px;
     }
@@ -616,7 +616,7 @@ body[dir="rtl"] .investor-form-container {
 
 .step-1 label {
   font-size: 12px; /* Smaller font size for labels */
-  margin-bottom: 3px; /* Reduced margin for mobile */
+  margin-bottom: 8px; /* Reduced margin for mobile */
 }
 
 .step-1 input {
@@ -624,6 +624,7 @@ body[dir="rtl"] .investor-form-container {
   padding: 6px; /* Reduced padding for mobile */
   font-size: 12px; /* Reduced font size for input */
   border-radius: 15px; /* Smaller border radius for input */
+  margin-bottom: 8px; /* Reduced margin for mobile */
 }
   /* Step 2: Startup Details */
   .step-2 {
