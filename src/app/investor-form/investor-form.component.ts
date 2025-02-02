@@ -14,7 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class InvestorFormComponent implements OnInit {
   investorForm: FormGroup;
-  currentStep: number = 1;
+  currentStep: number = 4;
 
   tags: string[] = [
     'INVESTOR_FORM.STEP_2.TAG_TECHNOLOGY',
@@ -179,9 +179,15 @@ export class InvestorFormComponent implements OnInit {
 
   nextStep() {
     if (this.currentStep < 5) {
-       this.currentStep++; // Move to the next step
-     }
-   }
+      // Mark all form controls as touched to show validation errors
+      this.markCurrentStepControlsAsTouched();
+  
+      // Check if the current step is valid
+      if (this.isStepValid(this.currentStep)) {
+        this.currentStep++; // Move to the next step
+      }
+    }
+  }
 
   // Helper method to mark all form controls for the current step as touched
   markCurrentStepControlsAsTouched() {

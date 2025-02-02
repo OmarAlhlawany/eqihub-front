@@ -40,6 +40,8 @@ header {
   margin-left: 2px; /* Optional: Adds a small space between the text and the asterisk */
 }
 
+
+
 body[dir="rtl"] .input-icon-container .material-icons {
   left: 10px; /* Move icon to the left */
   right: auto;
@@ -87,6 +89,7 @@ body[dir="rtl"] .step-line::before {
   left: auto;
   right: 0;
 }
+
 
 body[dir="rtl"] .step-1 label,
 body[dir="rtl"] .step-2 label,
@@ -140,7 +143,6 @@ body[dir="rtl"] .step-2 .form-group label {
 }
 
 
-
 body[dir="rtl"] .tag {
   text-align: right;
 }
@@ -159,7 +161,7 @@ body[dir="rtl"] .step-3 .budget-option input[type="radio"] {
 }
 
 body[dir="rtl"] .step-3 .budget-option label {
-  text-align: right; /* Align text properly */
+  text-align: left; /* Align text properly */
 }
 
 body[dir="rtl"] .step-3 .budget-option.full-width {
@@ -173,7 +175,7 @@ body[dir="rtl"] .step-3 .other-budget-input {
 
 body[dir="rtl"] .step-4 .form-check-container {
   gap: 30px;
-  flex-direction: row-reverse;
+  flex-direction:row;
 }
 
 

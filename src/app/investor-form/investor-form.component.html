@@ -24,6 +24,10 @@
         <span class="step-circle" [ngClass]="{'active': currentStep >= 5, 'unlocked': currentStep === 5}">5</span>
       </div>
     </div>
+    <!-- Line under the step indicators -->
+    <div *ngIf="currentStep !== 5" class="step-indicator-line"></div>
+
+
 
 <!-- Step 1: Contact Details -->
 <div *ngIf="currentStep === 1" class="form-step step-1">
@@ -234,7 +238,7 @@
 <div class="form-group">
   <label for="geographicalScope">
     {{ 'INVESTOR_FORM.STEP_4.GEOGRAPHICAL_SCOPE' | translate }} <span class="required-asterisk">*</span></label>
-  <select id="geographicalScope" formControlName="geographicalScope" class="form-control" required>
+  <select id="geographicalScope" formControlName="geographicalScope" class="form-control"  required>
     <option value="" disabled selected>
       {{ 'INVESTOR_FORM.STEP_4.SELECT_GEOGRAPHICAL_SCOPE' | translate }}
     </option>

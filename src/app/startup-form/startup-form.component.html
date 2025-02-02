@@ -28,7 +28,9 @@
         <span class="step-circle" [ngClass]="{'active': currentStep >= 6, 'unlocked': currentStep === 6}">6</span>
       </div>
     </div>
-
+    <!-- Line under the step indicators -->
+    <div class="step-indicator-line"></div>
+    
     <!-- Step 1: Basic Information -->
     <div *ngIf="currentStep === 1" class="form-step step-1">
       <h3>{{ 'STARTUP_FORM.STEP_1.TITLE' | translate }}</h3>

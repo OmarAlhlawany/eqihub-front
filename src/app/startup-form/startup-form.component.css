@@ -44,6 +44,17 @@ body[dir="rtl"] .investor-form-container {
   min-height: 400px; /* Adjusted for square shape */
 }
 
+/* Line under the step indicators */
+.step-indicator-line {
+  position: relative;
+  bottom: 10px; /* Adjust this value to position the line correctly */
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #D9DBE9; /* Color of the line */
+  z-index: 1; /* Ensure the line is behind the step indicators */
+}
+
 /* Step Indicator */
 .form-steps-indicator {
   display: flex;

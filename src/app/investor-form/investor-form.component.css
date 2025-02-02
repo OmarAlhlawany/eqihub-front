@@ -44,6 +44,16 @@ body[dir="rtl"] .investor-form-container {
   min-height: 400px; /* Adjusted for square shape */
 }
 
+/* Line under the step indicators */
+.step-indicator-line {
+  position: relative;
+  bottom: 10px; /* Adjust this value to position the line correctly */
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #D9DBE9; /* Color of the line */
+  z-index: 1; /* Ensure the line is behind the step indicators */
+}
 /* Step Indicator */
 .form-steps-indicator {
   display: flex;
@@ -126,6 +136,8 @@ body[dir="rtl"] .investor-form-container {
   margin-bottom: 5px;
   font-weight: semibold;
   font-size: 14px; /* Smaller font size */
+  font-weight: bold;
+
 }
 
 .step-1 input {
@@ -177,11 +189,13 @@ body[dir="rtl"] .investor-form-container {
   background-color: #fff;
   border: 1px solid #ccc;
   font-weight: normal;
+  border-radius: 20px;
 }
 
 .step-2 .dropdown-toggle::after {
   float: right;
   margin-top: 6px;
+  border-radius: 50%;
 }
 
 /* Dropdown Menu */
@@ -204,7 +218,8 @@ body[dir="rtl"] .investor-form-container {
 .step-2 .dropdown-menu .dropdown-item {
   padding: 8px 12px;
   font-size: 14px;
-  cursor: pointer;
+  cursor: pointer ;
+  border-radius: 5px;
   transition: background 0.3s ease;
 }
 
@@ -363,10 +378,11 @@ body[dir="rtl"] .investor-form-container {
 .step-4 label {
   display: block;
   margin-bottom: 10px;
-  font-weight: semibold;
+  font-weight: bold;
   font-size: 14px; /* Smaller font size */
 }
 
+/* Dropdown list with cursor arrow */
 .step-4 select {
   width: 100%; /* Full width */
   height: 35px;
@@ -375,29 +391,36 @@ body[dir="rtl"] .investor-form-container {
   border: 1px solid #ccc;
   border-radius: 20px; /* Smaller border radius */
   font-size: 14px; /* Smaller font size */
+  cursor: pointer; /* Show pointer cursor */
+  appearance: none; /* Remove default arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 8px center; /* Position arrow */
+  background-size: 12px; /* Size of arrow */
+  padding-right: 25px; /* Add space for arrow */
 }
 
+
+
+/* Make "Yes" and "No" labels not bold */
+.step-4 .form-check-label {
+  font-size: 14px; /* Smaller font size */
+  font-weight: normal; /* Remove bold */
+}
+
+/* Textarea with border radius */
 .step-4 textarea {
   width: 100%; /* Full width */
   height: 50px; /* Adjust height */
   padding: 6px; /* Reduced padding for mobile */
   font-size: 12px; /* Smaller font size */
   line-height: 18px; /* Improved readability */
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 8px; /* Added border radius */
   border: 1px solid #ccc; /* Light border */
   resize: vertical; /* Allow vertical resizing */
   transition: border-color 0.3s ease; /* Smooth border color change */
 }
 
-.step-4 .form-check-container {
-  display: flex;
-  gap: 15px; /* Reduced gap */
-  align-items: center;
-}
-
-.step-4 .form-check-label {
-  font-size: 14px; /* Smaller font size */
-}
 /* Placeholder style */
 .step-4 textarea::placeholder {
   font-size: 14px; /* Same as text */
@@ -415,6 +438,13 @@ body[dir="rtl"] .investor-form-container {
 /* Adjust when typing */
 .step-4 textarea:focus::placeholder {
   color: transparent; /* Hide placeholder text on focus */
+}
+
+/* Form check container */
+.step-4 .form-check-container {
+  display: flex;
+  gap: 15px; /* Reduced gap */
+  align-items: center;
 }
 
 /* Step 5: Submit Step */
@@ -517,11 +547,12 @@ body[dir="rtl"] .investor-form-container {
 .form-steps-indicator {
   gap: 5px; /* Reduce gap on mobile */
   flex-direction: row; /* Stack the steps vertically on small screens */
+  justify-content: space-between;
   align-items: flex-start; /* Align steps to the left */
 }
 
 .step-indicator {
-  padding: 10px 0; /* Add padding to ensure the steps are separated */
+  padding: 5px 0; /* Add padding to ensure the steps are separated */
 }
 
 .step-circle {
@@ -532,8 +563,8 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-line {
-  width: 50px; /* Shorter line on mobile */
-  margin: 0 3px; /* Reduced margin between circle and line */
+  width: 60px; /* Shorter line on mobile */
+  margin: 0 10px; /* Reduced margin between circle and line */
 }
 .form-step {
   padding: 0 10px; /* Add padding for mobile screens */
@@ -615,13 +646,13 @@ body[dir="rtl"] .investor-form-container {
 
 .step-3 .other-budget-input {
   width: 100%; /* Full width on mobile */
-  height: 35px; /* Smaller height */
+  height: 30px; /* Smaller height */
   font-size: 12px; /* Smaller font size */
   padding: 6px; /* Reduced padding */
 }
 
 .step-3 .other-budget-container {
-  flex-direction: column; /* Stack elements for mobile */
+  flex-direction: row; /* Stack elements for mobile */
 }
 
 .step-3 .other-budget-label {
@@ -639,6 +670,7 @@ body[dir="rtl"] .investor-form-container {
 
 .step-4 label {
   font-size: 12px; /* Smaller font size */
+  
 }
 
 .step-4 select,
@@ -647,7 +679,7 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-4 .form-check-container {
-  flex-direction: column; /* Stack vertically on mobile */
+  flex-direction: row; /* Stack vertically on mobile */
   gap: 10px; /* Adjust gap */
 }
 
@@ -735,13 +767,18 @@ body[dir="rtl"] .investor-form-container {
   }
 
   .form-container {
-    width: 90%; /* Keep form width as percentage */
+    width: 100%; /* Keep form width as percentage */
     max-width: 480px; /* Adjust max-width for tablets */
     padding: 18px; /* Slightly reduce padding */
   }
   .form-steps-indicator {
     gap: 8px; /* Adjust gap for tablet */
     flex-direction: row; /* Keep steps in a row */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px; /* Adjust padding for tablets */
+    margin-bottom: 15px;
+    width: 100%;
   }
 
   .step-indicator {
@@ -756,8 +793,8 @@ body[dir="rtl"] .investor-form-container {
   }
 
   .step-line {
-    width: 60px; /* Shorter line on tablet */
-    margin: 0 4px; /* Adjust margin */
+    width: 80px; /* Shorter line on tablet */
+    margin: 0 10px; /* Adjust margin */
   }
   .form-step {
     padding: 0 15px; /* Adjust padding for tablets */
