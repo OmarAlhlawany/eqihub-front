@@ -4,6 +4,7 @@ body, html {
   padding: 0;
   height: 100%;
   width: 100%;
+  transition:  15s ease !important;
   
 }
 
@@ -40,7 +41,11 @@ header {
   margin-left: 2px; /* Optional: Adds a small space between the text and the asterisk */
 }
 
-
+.text-danger {
+  font-size: 12px; /* Smaller font size for errors */
+  color: #dc3545; /* Red color for errors */
+  margin-top: 5px; /* Spacing above error messages */
+}
 
 body[dir="rtl"] .input-icon-container .material-icons {
   left: 10px; /* Move icon to the left */

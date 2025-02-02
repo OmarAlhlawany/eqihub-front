@@ -29,8 +29,8 @@
       </div>
     </div>
     <!-- Line under the step indicators -->
-    <div class="step-indicator-line"></div>
-    
+    <div class="step-indicator-line" *ngIf="currentStep !== 6"></div>
+
     <!-- Step 1: Basic Information -->
     <div *ngIf="currentStep === 1" class="form-step step-1">
       <h3>{{ 'STARTUP_FORM.STEP_1.TITLE' | translate }}</h3>
@@ -89,7 +89,7 @@
 
       <div class="row mb-3">
         <div class="col-md-6">
-          <label for="website">{{ 'STARTUP_FORM.STEP_1.WEBSITE' | translate }}</label>
+          <label for="website">{{ 'STARTUP_FORM.STEP_1.WEBSITE' | translate }}<span class="required-asterisk">*</span></label>
           <div class="input-icon-container">
             <i class="material-icons">link</i> <!-- Icon for website -->
             <input id="website" formControlName="website" placeholder="{{ 'STARTUP_FORM.STEP_1.WEBSITE_PLACEHOLDER' | translate }}" class="form-control" required />
@@ -222,6 +222,7 @@
       <div class="row mb-3">
         <label>{{ 'STARTUP_FORM.STEP_4.OPEN_TO_JOINT_INVESTMENT' | translate }}<span class="required-asterisk">*</span></label>
         <div class="form-check-container">
+          
         <div class="form-check">
           <input type="radio" id="jointInvestmentYes" formControlName="openToJointInvestment" value="yes" class="form-check-input" required />
           <label class="form-check-label" for="jointInvestmentYes">{{ 'STARTUP_FORM.STEP_4.OPEN_TO_JOINT_INVESTMENT_YES' | translate }}</label>
@@ -299,7 +300,7 @@
     </div>
 
     <!-- Step 5: Financial Goals -->
-    <div *ngIf="currentStep === 5" class="form-step step-5">
+    <div  *ngIf="currentStep === 5" class="form-step step-5">
       <div class="row mb-3">
         <label>{{ 'STARTUP_FORM.STEP_5.HAS_MAJOR_DEBTS' | translate }}<span class="required-asterisk">*</span></label>
         <div class="form-check-container">
@@ -375,22 +376,31 @@
         <p class="submit-description">
           {{ 'STARTUP_FORM.STEP_6.SUBMIT_DESCRIPTION' | translate }}
         </p>
-      </div>
-      <div class="submit-button-container">
-        <button type="submit" *ngIf="currentStep === 6" class="btn btn-success">{{ 'STARTUP_FORM.STEP_6.SUBMIT_BUTTON' | translate }}</button>
+        <div class="submitted-text">{{ 'STARTUP_FORM.STEP_6.SUBMITTED_TEXT' | translate }}</div>
       </div>
     </div>
 
   </form>
 
   <!-- Navigation Buttons -->
-  <div class="form-navigation" [ngClass]="{'multiple-buttons': currentStep !== 1}">
-    <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary" *ngIf="currentStep !== 1">
-      {{ 'STARTUP_FORM.NAVIGATION.PREVIOUS_STEP' | translate }}
-    </button>
-    <button type="button" (click)="nextStep()" class="btn btn-primary" *ngIf="currentStep !== 6">
+<div class="form-navigation" [ngClass]="{'multiple-buttons': currentStep !== 1}">
+  <!-- Previous Button -->
+  <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary" *ngIf="currentStep !== 1">
+    {{ 'STARTUP_FORM.NAVIGATION.PREVIOUS_STEP' | translate }}
+  </button>
+
+  <!-- Next or Submit Button -->
+  <ng-container *ngIf="currentStep !== 5 && currentStep !== 6">
+    <button type="button" (click)="nextStep()" class="btn btn-primary">
       {{ 'STARTUP_FORM.NAVIGATION.NEXT_STEP' | translate }}
     </button>
+  </ng-container>
 
-  </div>
+  <!-- Submit Button for Step 5 -->
+  <ng-container *ngIf="currentStep === 5"  >
+    <button type="submit" [disabled]="!isStepValid(5)" class="btn btn-success"  (click)="nextStep()" (click) = "onSubmit()">
+      {{ 'STARTUP_FORM.STEP_6.SUBMIT_BUTTON' | translate }}
+    </button>
+      </ng-container>
+</div>
 </div>

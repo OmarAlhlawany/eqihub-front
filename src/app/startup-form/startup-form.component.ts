@@ -14,8 +14,9 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class StartupFormComponent implements OnInit {
   startupForm: FormGroup;
-  currentStep: number = 5; // Start from step 1
+  currentStep: number = 6; // Start from step 1
 
+  
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -122,7 +123,7 @@ export class StartupFormComponent implements OnInit {
   }
 
   nextStep() {
-    if (this.currentStep < 5) {
+    if (this.currentStep < 6) {
         this.currentStep++; // Move to the next step
       }
   }

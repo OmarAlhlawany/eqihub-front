@@ -32,7 +32,7 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .form-container {
-  width: 90%;
+  width: 100%;
   max-width: 500px; /* Smaller width for a more square shape */
   padding: 20px; /* Reduced padding */
   background: white;
@@ -135,7 +135,7 @@ body[dir="rtl"] .investor-form-container {
 .step-1 label {
   display: block;
   margin-bottom: 5px;
-  font-weight: semibold;
+  font-weight: bold;
   font-size: 14px; /* Smaller font size */
 }
 
@@ -147,308 +147,328 @@ body[dir="rtl"] .investor-form-container {
   border: 1px solid #ccc;
   border-radius: 20px; /* Smaller border radius */
   font-size: 14px; /* Smaller font size */
+  text-indent: 10px;
 }
 
-/* Step 2: Investment Details */
+/* Step 2: Startup Details */
 .step-2 {
-  font-size: 14px;
+  font-size: 14px; /* Base font size */
 }
 
 .step-2 h3 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 18px; /* Heading font size */
+  font-weight: bold; /* Bold heading */
+  margin-bottom: 20px; /* Spacing below heading */
 }
 
 /* Labels */
 .step-2 label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 14px;
+  display: block; /* Ensure labels are on their own line */
+  margin-bottom: 5px; /* Spacing below labels */
+  font-weight: bold; /* Bold labels */
+  font-size: 14px; /* Label font size */
 }
 
-/* Select Inputs */
-.step-2 select,
-.step-2 .dropdown-toggle {
-  width: 100%;
-  height: 40px;
-  padding: 8px;
-  margin-top: 3px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 14px;
-  background-color: white;
-  cursor: pointer;
-}
-
-/* Dropdown Button (same style as select) */
-.step-2 .dropdown-toggle {
-  text-align: left;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  font-weight: normal;
-}
-
-.step-2 .dropdown-toggle::after {
-  float: right;
-  margin-top: 6px;
-}
-
-/* Dropdown Menu */
-.step-2 .dropdown-menu {
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  padding: 5px 0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.step-2 .dropdown-menu .dropdown-item {
-  padding: 8px 12px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.step-2 .dropdown-menu .dropdown-item:hover,
-.step-2 .dropdown-menu .dropdown-item.selected {
-  background-color: #4252e1;
-  color: white;
-}
-
-/* Tags Container */
-.step-2 .tags-input {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 8px;
-  margin-top: 3px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  gap: 8px;
-  border-radius: 20px;
-  background: none;
-  border: none;
-}
-
-/* Selected Tags */
-.step-2 .tags-input .tag {
-  display: inline-flex;
-  align-items: center;
-  background-color: #4252e1;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-}
-
-/* Remove Tag */
-.step-2 .tags-input .tag .tag-close {
-  margin-left: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-
-/* Step 3: Project Budget */
-.step-3 h3 {
-  font-size: 18px; /* Smaller font size */
-  font-weight: bold;
-}
-
-.step-3 .budget-options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  gap: 10px; /* Reduced gap */
-  margin-top: 10px; /* Reduced margin */
-}
-
-.step-3 .budget-option {
+/* Input Fields */
+.step-2 .form-control {
   width: 100%; /* Full width */
-  height: 60px; /* Smaller height */
-  display: flex;
-  align-items: center;
-  margin: 0;
-  border: 1px solid #ccc;
-  border-radius: 10px; /* Smaller border radius */
-  background-color: #f9f9f9;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
+  height: 40px; /* Fixed height */
+  padding: 8px; /* Padding inside input */
+  margin-top: 3px; /* Spacing above input */
+  margin-bottom: 10px; /* Spacing below input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+  background-color: white; /* White background */
+  cursor: pointer; /* Pointer cursor */
+  transition: border-color 0.3s ease; /* Smooth border transition */
+  text-indent: 10px;
 }
 
-.step-3 .budget-option input[type="radio"] {
-  margin-left: 10px;
-  margin-right: 10px; /* Adjusted margin */
-  width: 16px; /* Smaller radio button */
-  height: 16px; /* Smaller radio button */
-  cursor: pointer;
+/* Input Focus State */
+.step-2 .form-control:focus {
+  border-color: #4252e1; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
 }
 
-.step-3 .budget-option label {
-  flex: 1;
-  margin: 0;
-  font-size: 14px; /* Smaller font size */
+/* Textarea */
+.step-2 textarea.form-control {
+  height: 70px; /* Fixed height for textarea */
+  resize: vertical; /* Allow vertical resizing */
 }
 
-.step-3 .budget-option:hover,
-.step-3 .budget-option:focus-within {
-  border-color: #007bff;
-  background-color: #e9f5ff;
+/* Select Dropdown */
+.step-2 select.form-control {
+  appearance: none; /* Remove default arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 8px center; /* Position arrow */
+  background-size: 12px; /* Size of arrow */
+  padding-right: 25px; /* Add space for arrow */
 }
 
-.step-3 .budget-option.selected {
-  border-color: #007bff;
-  background-color: #e9f5ff;
+/* Required Asterisk */
+.step-2 .required-asterisk {
+  color: red; /* Red color for asterisk */
+  margin-left: 4px; /* Spacing between label and asterisk */
 }
 
-.step-3 .budget-option.full-width {
-  grid-column: span 2; /* Spans two columns */
-  height: 60px; /* Match the height of other options */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px; /* Reduced padding */
+/* Row Spacing */
+.step-2 .row.mb-3 {
+  margin-bottom: 15px; /* Spacing between rows */
 }
 
-.step-3 .other-budget-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
+
+/* Step 3: Financial Information */
+.step-3 {
+  font-size: 14px; /* Base font size */
 }
 
-.step-3 .other-budget-label {
-  font-size: 14px; /* Smaller font size */
-  display: flex;
-  align-items: center;
+.step-3 h3 {
+  font-size: 18px; /* Heading font size */
+  font-weight: bold; /* Bold heading */
+  margin-bottom: 20px; /* Spacing below heading */
 }
 
-.step-3 .other-budget-input {
-  display: none;
-  width: 60%; /* Input width */
-  height: 40px; /* Smaller height */
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px; /* Smaller font size */
-  padding: 8px; /* Reduced padding */
-  margin-left: 10px; /* Adjusted margin */
+/* Labels */
+.step-3 label {
+  display: block; /* Ensure labels are on their own line */
+  margin-bottom: 5px; /* Spacing below labels */
+  font-weight: bold; /* Bold labels */
+  font-size: 14px; /* Label font size */
 }
 
-.step-3 .budget-option.full-width.selected .other-budget-input {
-  display: block;
+/* Input Fields */
+.step-3 .form-control {
+  width: 100%; /* Full width */
+  height: 40px; /* Fixed height */
+  padding: 8px; /* Padding inside input */
+  margin-top: 3px; /* Spacing above input */
+  margin-bottom: 10px; /* Spacing below input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+  background-color: white; /* White background */
+  cursor: pointer; /* Pointer cursor */
+  transition: border-color 0.3s ease; /* Smooth border transition */
+  text-indent: 10px;
 }
 
-/* Step 4: Additional Information */
+/* Input Focus State */
+.step-3 .form-control:focus {
+  border-color: #4252e1; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Textarea */
+.step-3 textarea.form-control {
+  height: 70px; /* Fixed height for textarea */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Select Dropdown */
+.step-3 select.form-control {
+  appearance: none; /* Remove default arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 8px center; /* Position arrow */
+  background-size: 12px; /* Size of arrow */
+  padding-right: 25px; /* Add space for arrow */
+}
+
+/* Required Asterisk */
+.step-3 .required-asterisk {
+  color: red; /* Red color for asterisk */
+  margin-left: 4px; /* Spacing between label and asterisk */
+}
+
+/* Row Spacing */
+.step-3 .row.mb-3 {
+  margin-bottom: 15px; /* Spacing between rows */
+}
+
+
+/* Step 4: Exit Strategy */
 .step-4 h3 {
-  font-size: 18px; /* Smaller font size */
+  font-size: 18px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .step-4 label {
   display: block;
-  margin-bottom: 10px;
-  font-weight: semibold;
-  font-size: 14px; /* Smaller font size */
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.step-4 .form-control {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  text-indent: 10px;
 }
 
 .step-4 select {
-  width: 100%; /* Full width */
-  height: 35px;
-  padding: 3px; /* Reduced padding */
-  margin: 3px 0 5px 0;
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 20px; /* Smaller border radius */
-  font-size: 14px; /* Smaller font size */
+  border-radius: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .step-4 textarea {
-  width: 100%; /* Full width */
-  height: 50px; /* Adjust height */
-  padding: 6px; /* Reduced padding for mobile */
-  font-size: 12px; /* Smaller font size */
-  line-height: 18px; /* Improved readability */
-  border-radius: 4px; /* Rounded corners */
-  border: 1px solid #ccc; /* Light border */
-  resize: vertical; /* Allow vertical resizing */
-  transition: border-color 0.3s ease; /* Smooth border color change */
+  width: 100%;
+  height: 60px;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-4 .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.step-4 select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.step-4 textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  outline: none;
 }
 
 .step-4 .form-check-container {
   display: flex;
-  gap: 15px; /* Reduced gap */
+  gap: 12px;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.step-4 .form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .step-4 .form-check-label {
-  font-size: 14px; /* Smaller font size */
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 450;
 }
-/* Placeholder style */
+
 .step-4 textarea::placeholder {
-  font-size: 14px; /* Same as text */
-  color: #aaa; /* Lighter color for placeholder */
-  font-style: italic; /* Italicized for distinction */
-  transition: color 0.3s ease; /* Smooth color transition */
+  font-size: 14px;
+  color: #aaa;
+  font-style: italic;
+  transition: color 0.3s ease;
 }
 
-/* Focus state for textarea */
-.step-4 textarea:focus {
-  border-color: #007bff; /* Change border color on focus */
-  outline: none; /* Remove default outline */
-}
-
-/* Adjust when typing */
 .step-4 textarea:focus::placeholder {
-  color: transparent; /* Hide placeholder text on focus */
+  color: transparent;
 }
 
-/* Step 5 */
+.step-4 .text-danger {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+
+/* Step 5: Financial Goals */
+.step-5 h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
 .step-5 label {
   display: block;
-  margin-bottom: 10px;
-  font-weight: semibold;
-  font-size: 14px; /* Smaller font size */
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
+
+.step-5 .form-control {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  text-indent: 10px;
+}
+
 .step-5 textarea {
-  width: 100%; /* Full width */
-  height: 50px; /* Adjust height */
-  padding: 6px; /* Reduced padding for mobile */
-  font-size: 12px; /* Smaller font size */
-  line-height: 18px; /* Improved readability */
-  border-radius: 4px; /* Rounded corners */
-  border: 1px solid #ccc; /* Light border */
-  resize: vertical; /* Allow vertical resizing */
-  transition: border-color 0.3s ease; /* Smooth border color change */
+  width: 100%;
+  height: 60px;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-5 .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.step-5 textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  outline: none;
 }
 
 .step-5 .form-check-container {
   display: flex;
-  gap: 15px; /* Reduced gap */
+  gap: 12px;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.step-5 .form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .step-5 .form-check-label {
-  font-size: 14px; /* Smaller font size */
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 450;
 }
-/* Placeholder style */
+
 .step-5 textarea::placeholder {
-  font-size: 14px; /* Same as text */
-  color: #aaa; /* Lighter color for placeholder */
-  font-style: italic; /* Italicized for distinction */
-  transition: color 0.3s ease; /* Smooth color transition */
+  font-size: 14px;
+  color: #aaa;
+  font-style: italic;
+  transition: color 0.3s ease;
 }
 
-/* Focus state for textarea */
-.step-5 textarea:focus {
-  border-color: #007bff; /* Change border color on focus */
-  outline: none; /* Remove default outline */
-}
-
-/* Adjust when typing */
 .step-5 textarea:focus::placeholder {
-  color: transparent; /* Hide placeholder text on focus */
+  color: transparent;
 }
+
+.step-5 .text-danger {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+
 /* Step 6: Submit Step */
 .step-6 .submit-box {
   width: 100%; /* Full width */
@@ -475,9 +495,15 @@ body[dir="rtl"] .investor-form-container {
   padding: 0 20px; /* Reduced padding */
 }
 
-.step-6 .submit-button-container {
-  display: flex;
-  justify-content: center;
+.step-6 .submitted-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  background-color: #2B37A0; /* Dark blue */
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-align: center;
+  display: inline-block;
   margin-top: 20px;
 }
 

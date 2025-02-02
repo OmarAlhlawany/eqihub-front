@@ -191,9 +191,10 @@
       "EXIT_STRATEGY_DETAILS_INVALID": "Exit strategy is invalid."
     },
     "STEP_6": {
-      "TITLE": "Submit Application",
-      "DESCRIPTION": "Please review all the information you have provided in the previous steps, and if all the information is correct, submit your application for review within 24 - 48 hours.",
-      "SUBMIT_BUTTON": "Submit"
+      "SUBMIT_TITLE": "Submit your investor request",
+      "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
+      "SUBMIT_BUTTON": "Submit",
+      "SUBMITTED_TEXT": "Submitted"    
     },
     "NAVIGATION": {
       "PREVIOUS_STEP": "Previous Step",
@@ -313,7 +314,7 @@
     "STEP_5": {
       "SUBMIT_TITLE": "Submit your investor request",
       "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
-      "SUBMIT_BUTTON": "Submit"
+      "SUBMITTED_TEXT": "Submitted"
     },
     "NAVIGATION": {
       "PREVIOUS_STEP": "Previous Step",
