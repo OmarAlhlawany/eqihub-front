@@ -167,6 +167,7 @@
       />
       <label class="custom-control-label" for="budget1">{{ 'INVESTOR_FORM.STEP_3.BUDGET_1' | translate }}</label>
     </div>
+    
     <div class="custom-control custom-radio budget-option">
       <input
         type="radio"
@@ -178,6 +179,7 @@
       />
       <label class="custom-control-label" for="budget2">{{ 'INVESTOR_FORM.STEP_3.BUDGET_2' | translate }}</label>
     </div>
+
     <div class="custom-control custom-radio budget-option">
       <input
         type="radio"
@@ -189,6 +191,7 @@
       />
       <label class="custom-control-label" for="budget3">{{ 'INVESTOR_FORM.STEP_3.BUDGET_3' | translate }}</label>
     </div>
+
     <div class="custom-control custom-radio budget-option">
       <input
         type="radio"
@@ -200,6 +203,7 @@
       />
       <label class="custom-control-label" for="budget4">{{ 'INVESTOR_FORM.STEP_3.BUDGET_4' | translate }}</label>
     </div>
+
     <div
       class="custom-control custom-radio budget-option full-width"
       [class.selected]="investorForm.controls['projectBudget'].value === 'Other'"
@@ -226,13 +230,13 @@
       </div>
     </div>
   </div>
-  <div *ngIf="investorForm.get('projectBudget')?.invalid && (investorForm.get('projectBudget')?.dirty || investorForm.get('projectBudget')?.touched)" class="text-danger">
-    <div *ngIf="investorForm.get('projectBudget')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_3.PROJECT_BUDGET_REQUIRED' | translate }}</div>
-  </div>
   <div *ngIf="investorForm.get('otherBudget')?.invalid && (investorForm.get('otherBudget')?.dirty || investorForm.get('otherBudget')?.touched)" class="text-danger">
-    <div *ngIf="investorForm.get('otherBudget')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_3.OTHER_BUDGET_REQUIRED' | translate }}</div>
-
-    <div *ngIf="investorForm.get('otherBudget')?.errors?.['pattern']">{{ 'INVESTOR_FORM.STEP_3.OTHER_INVALID' | translate }}</div>
+    <div *ngIf="investorForm.get('otherBudget')?.errors?.['required']">
+      {{ 'INVESTOR_FORM.STEP_3.OTHER_BUDGET_REQUIRED' | translate }}
+    </div>
+    <div *ngIf="investorForm.get('otherBudget')?.errors?.['pattern']">
+      {{ 'INVESTOR_FORM.STEP_3.OTHER_INVALID' | translate }}
+    </div>
   </div>
 </div>
 

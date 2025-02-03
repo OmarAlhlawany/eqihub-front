@@ -14,7 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class InvestorFormComponent implements OnInit {
   investorForm: FormGroup;
-  currentStep: number = 2;
+  currentStep: number = 3;
 
   tags: string[] = [
     'INVESTOR_FORM.STEP_2.TAG_TECHNOLOGY',
@@ -70,7 +70,7 @@ export class InvestorFormComponent implements OnInit {
       favoriteSectors: ['', Validators.required],
       // Step 3
       projectBudget: ['', Validators.required],
-      otherBudget: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]], // Only numbers allowed
+      otherBudget: ['', [Validators.pattern(/^[0-9]+$/)]], // Remove Validators.required here
       // Step 4
       geographicalScope: ['', Validators.required],
       coInvest: ['', Validators.required],
@@ -78,9 +78,26 @@ export class InvestorFormComponent implements OnInit {
       additionalNotes: [''],
     });
 
+      // Watch for changes in projectBudget and dynamically set the validator for otherBudget
+  this.investorForm.get('projectBudget')?.valueChanges.subscribe((value) => {
+    this.updateOtherBudgetValidation(value);
+  });
+
+  
     this.translate.setDefaultLang('en');
   }
 
+  private updateOtherBudgetValidation(selectedBudget: string): void {
+    const otherBudgetControl = this.investorForm.get('otherBudget');
+  
+    if (selectedBudget === 'Other') {
+      otherBudgetControl?.setValidators([Validators.required, Validators.pattern(/^[0-9]+$/)]);
+    } else {
+      otherBudgetControl?.clearValidators();
+    }
+  
+    otherBudgetControl?.updateValueAndValidity();
+  }
   switchLanguage(language: string) {
     this.translate.use(language);
   }
@@ -162,10 +179,8 @@ export class InvestorFormComponent implements OnInit {
         case 3:
           const projectBudget = this.investorForm.get('projectBudget')?.value;
           const otherBudgetValid = projectBudget !== 'Other' || this.investorForm.get('otherBudget')?.valid;
-          return !!(
-            this.investorForm.get('projectBudget')?.valid &&
-            otherBudgetValid
-          );
+          return !!(this.investorForm.get('projectBudget')?.valid && otherBudgetValid);
+    
       case 4:
         return !!(
           this.investorForm.get('geographicalScope')?.valid &&
@@ -211,14 +226,27 @@ export class InvestorFormComponent implements OnInit {
     }
   }
 
+   // Helper method to log invalid controls and their errors
+   logInvalidControls() {
+    Object.keys(this.investorForm.controls).forEach((controlName) => {
+      const control = this.investorForm.get(controlName);
+      if (control && control.invalid) {
+        console.log(`Invalid Control: ${controlName}`);
+        console.log('Errors:', control.errors); // Log the validation errors
+      }
+    });
+  }
   onSubmit() {
     if (this.investorForm.valid) {
       console.log('Form Submitted!', this.investorForm.value);
-    }
-    else {
+    } else {
       console.log('Form is invalid. Please check the fields.');
+      this.logInvalidControls(); // Log invalid controls and their errors
     }
   }
+  
+ 
+  
 }
 
 
