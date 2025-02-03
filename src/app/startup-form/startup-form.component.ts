@@ -155,9 +155,9 @@ export class StartupFormComponent implements OnInit {
       case 2:
         return ['productService', 'sector', 'operationalStage', 'problemSolved'];
       case 3:
-        return ['fundingAmount', 'fundingUsage', 'previousFundingSources', 'targetMarket', 'openToJointInvestment', 'hasExistingPartners'];
+        return ['fundingAmount', 'fundingUsage', 'previousFundingSources', 'targetMarket'];
       case 4:
-        return ['monthlyRevenue', 'isProfitable', 'profitPercentage', 'revenueGoal'];
+        return ['openToJointInvestment', 'hasExistingPartners', 'monthlyRevenue', 'isProfitable', 'profitPercentage', 'revenueGoal'];
       case 5:
         return ['hasMajorDebts', 'currentDebtSize', 'breakEvenPoint', 'financialGoal', 'hasExitStrategy', 'exitStrategyDetails'];
       default:
