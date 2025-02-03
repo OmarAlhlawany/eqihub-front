@@ -107,12 +107,15 @@
 
   <div class="form-group">
     <label for="favoriteInvestment">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT' | translate }}<span class="required-asterisk">*</span></label>
+    <div class="dropdown" style="position: relative;">
+
     <select id="favoriteInvestment" formControlName="favoriteInvestment" required (change)="onFavoriteInvestmentChange()">
       <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_INVESTMENT' | translate }}</option>
       <option value="preSeed">{{ 'INVESTOR_FORM.STEP_2.PRE_SEED' | translate }}</option>
       <option value="seed">{{ 'INVESTOR_FORM.STEP_2.SEED' | translate }}</option>
       <option value="preSeriesA">{{ 'INVESTOR_FORM.STEP_2.PRE_SERIES_A' | translate }}</option>
     </select>
+    </div>
     <div *ngIf="investorForm.get('favoriteInvestment')?.invalid && (investorForm.get('favoriteInvestment')?.dirty || investorForm.get('favoriteInvestment')?.touched)" class="text-danger">
       <div *ngIf="investorForm.get('favoriteInvestment')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT_REQUIRED' | translate }}</div>
     </div>
@@ -135,6 +138,7 @@
           {{ tag | translate }}
         </span>
       </div>
+
     </div>
     <div class="tags-input" id="favoriteSectors">
       <span class="tag selected" *ngFor="let tag of selectedTags">
