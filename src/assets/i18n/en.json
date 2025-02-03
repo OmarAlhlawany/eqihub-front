@@ -314,7 +314,8 @@
     "STEP_5": {
       "SUBMIT_TITLE": "Submit your investor request",
       "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
-      "SUBMITTED_TEXT": "Submitted"
+      "SUBMITTED_TEXT": "Submitted",
+      "SUBMIT_BUTTON": "Submit"
     },
     "NAVIGATION": {
       "PREVIOUS_STEP": "Previous Step",

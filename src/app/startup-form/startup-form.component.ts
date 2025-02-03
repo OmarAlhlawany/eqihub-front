@@ -124,15 +124,9 @@ export class StartupFormComponent implements OnInit {
 
 
   nextStep() {
-    if (this.currentStep < 6) {
-      // Mark all form controls as touched to show validation errors
-      this.markCurrentStepControlsAsTouched();
-
-      // Check if the current step is valid
-      if (this.isStepValid(this.currentStep)) {
+    if (this.currentStep < 5) {
         this.currentStep++; // Move to the next step
       }
-    }
   }
 
   prevStep() {
