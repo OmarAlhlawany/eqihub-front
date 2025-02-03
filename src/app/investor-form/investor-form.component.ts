@@ -14,7 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class InvestorFormComponent implements OnInit {
   investorForm: FormGroup;
-  currentStep: number = 5;
+  currentStep: number = 1;
 
   tags: string[] = [
     'INVESTOR_FORM.STEP_2.TAG_TECHNOLOGY',
