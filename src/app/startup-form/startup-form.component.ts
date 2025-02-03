@@ -124,9 +124,15 @@ export class StartupFormComponent implements OnInit {
 
 
   nextStep() {
-    if (this.currentStep < 5) {
+    if (this.currentStep < 6) {
+      // Mark all form controls as touched to show validation errors
+      this.markCurrentStepControlsAsTouched();
+
+      // Check if the current step is valid
+      if (this.isStepValid(this.currentStep)) {
         this.currentStep++; // Move to the next step
       }
+    }
   }
 
   prevStep() {
@@ -159,17 +165,25 @@ export class StartupFormComponent implements OnInit {
     }
   }
 
+  logInvalidControls() {
+    Object.keys(this.startupForm.controls).forEach((controlName) => {
+      const control = this.startupForm.get(controlName);
+      if (control && control.invalid) {
+        console.log(`Invalid Control: ${controlName}`);
+        console.log('Errors:', control.errors); // Log the validation errors
+      }
+    });
+  }
   onSubmit() {
     if (this.startupForm.valid) {
       console.log('Form Submitted!', this.startupForm.value);
-      // You can add your form submission logic here (e.g., API call)
     } else {
       console.log('Form is invalid. Please check the fields.');
+      this.logInvalidControls(); // Log invalid controls and their errors
     }
   }
+
 }
-
-
 /*
 
 nextStep() {
