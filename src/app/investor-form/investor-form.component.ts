@@ -14,7 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class InvestorFormComponent implements OnInit {
   investorForm: FormGroup;
-  currentStep: number = 1;
+  currentStep: number = 3;
 
   tags: string[] = [
     'INVESTOR_FORM.STEP_2.TAG_TECHNOLOGY',
@@ -214,6 +214,9 @@ export class InvestorFormComponent implements OnInit {
   onSubmit() {
     if (this.investorForm.valid) {
       console.log('Form Submitted!', this.investorForm.value);
+    }
+    else {
+      console.log('Form is invalid. Please check the fields.');
     }
   }
 }

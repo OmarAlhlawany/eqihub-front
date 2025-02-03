@@ -632,7 +632,7 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-3 .budget-options {
-  grid-template-columns: 1fr; /* Single column for mobile */
+  grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
   gap: 8px; /* Reduced gap */
 }
 
@@ -670,6 +670,7 @@ body[dir="rtl"] .investor-form-container {
 .step-3 .other-budget-label {
   font-size: 12px; /* Smaller font size for label */
 }
+  /*budget*/
 
 .step-4 {
   width: 100%;
@@ -887,7 +888,7 @@ body[dir="rtl"] .investor-form-container {
     font-size: 13px; /* Adjust font size */
     padding: 7px; /* Adjust padding */
   }
-  
+  /*budget*/
   .step-4 {
     width: 80%; /* Reduce width for tablet view */
     padding: 15px;
