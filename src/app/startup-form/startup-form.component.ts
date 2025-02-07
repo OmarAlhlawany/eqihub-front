@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { HeaderService } from '../services/header.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-startup-form',
@@ -14,47 +15,48 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class StartupFormComponent implements OnInit {
   startupForm: FormGroup;
-  currentStep: number = 1; // Start from step 1
+  currentStep: number = 3; // Start from step 1
 
   
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private headerService: HeaderService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private apiService: ApiService
   ) {
     this.startupForm = this.fb.group({
       // Step 1: Basic Information
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      phoneNumber: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]],
-      companyName: ['', [Validators.required, Validators.minLength(2)]],
+      phone_number: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]],
+      company: ['', [Validators.required, Validators.minLength(2)]],
       website: ['', [Validators.required, Validators.pattern(/^(http|https):\/\/[^ "]+$/)]],
-      productService: ['', [Validators.required, Validators.minLength(10)]],
-      sector: ['', [Validators.required]],
-      operationalStage: ['', [Validators.required]],
-      problemSolved: ['', [Validators.required, Validators.minLength(20)]],
+      product_service_description: ['', [Validators.required, Validators.minLength(10)]],
+      company_sector: ['', [Validators.required]],
+      operational_phase: ['', [Validators.required]],
+      problem_solved: ['', [Validators.required, Validators.minLength(20)]],
 
       // Step 2: Funding Details
-      fundingAmount: ['', [Validators.required]],
-      fundingUsage: ['', [Validators.required, Validators.minLength(20)]],
-      previousFundingSources: ['', [Validators.required]],
-      targetMarket: ['', [Validators.required]],
-      openToJointInvestment: ['', [Validators.required]],
-      hasExistingPartners: ['', [Validators.required]],
+      funding_amount: ['', [Validators.required]],
+      funding_used: ['', [Validators.required, Validators.minLength(20)]],
+      previous_funding_source: ['', [Validators.required]],
+      target_market: ['', [Validators.required]],
+      joint_investment: ['', [Validators.required]],
+      existing_partners: ['', [Validators.required]],
 
       // Step 3: Financial Information
       monthlyRevenue: ['', [Validators.required, Validators.min(0)]],
-      isProfitable: ['', [Validators.required]],
+      is_profitable: ['', [Validators.required]],
       profitPercentage: ['', [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)]],
-      revenueGoal: ['', [Validators.required, Validators.min(0)]],
+      revenue_goal: ['', [Validators.required, Validators.min(0)]],
 
       // Step 4: Exit Strategy
-      hasMajorDebts: ['', [Validators.required]],
+      have_debts: ['', [Validators.required]],
       currentDebtSize: [''],
-      breakEvenPoint: ['', [Validators.required]],
-      financialGoal: ['', [Validators.required, Validators.minLength(20)]],
-      hasExitStrategy: ['', [Validators.required]],
+      break_even_point: ['', [Validators.required]],
+      financial_goal: ['', [Validators.required, Validators.minLength(20)]],
+      has_exit_strategy: ['', [Validators.required]],
       exitStrategyDetails: [''],
 
       // Step 5: Financial Goals (fields already included in Step 4)
@@ -81,41 +83,41 @@ export class StartupFormComponent implements OnInit {
         return !!(
           this.startupForm.get('name')?.valid &&
           this.startupForm.get('email')?.valid &&
-          this.startupForm.get('phoneNumber')?.valid &&
-          this.startupForm.get('companyName')?.valid &&
+          this.startupForm.get('phone_number')?.valid &&
+          this.startupForm.get('company')?.valid &&
           this.startupForm.get('website')?.valid
         );
       case 2:
         return !!(
-          this.startupForm.get('productService')?.valid &&
-          this.startupForm.get('sector')?.valid &&
-          this.startupForm.get('operationalStage')?.valid &&
-          this.startupForm.get('problemSolved')?.valid
+          this.startupForm.get('product_service_description')?.valid &&
+          this.startupForm.get('company_sector')?.valid &&
+          this.startupForm.get('operational_phase')?.valid &&
+          this.startupForm.get('problem_solved')?.valid
         );
       case 3:
         return !!(
-          this.startupForm.get('fundingAmount')?.valid &&
-          this.startupForm.get('fundingUsage')?.valid &&
-          this.startupForm.get('previousFundingSources')?.valid &&
-          this.startupForm.get('targetMarket')?.valid 
+          this.startupForm.get('funding_amount')?.valid &&
+          this.startupForm.get('funding_used')?.valid &&
+          this.startupForm.get('previous_funding_source')?.valid &&
+          this.startupForm.get('target_market')?.valid 
         );
       case 4:
         return !!(
-          this.startupForm.get('openToJointInvestment')?.valid &&
-          this.startupForm.get('hasExistingPartners')?.valid&&
+          this.startupForm.get('joint_investment')?.valid &&
+          this.startupForm.get('existing_partners')?.valid&&
           this.startupForm.get('monthlyRevenue')?.valid &&
-          this.startupForm.get('isProfitable')?.valid &&
+          this.startupForm.get('is_profitable')?.valid &&
           this.startupForm.get('profitPercentage')?.valid &&
-          this.startupForm.get('revenueGoal')?.valid
+          this.startupForm.get('revenue_goal')?.valid
         );
       case 5:
         return !!(
-          this.startupForm.get('hasMajorDebts')?.valid &&
-          (this.startupForm.get('hasMajorDebts')?.value === 'no' || this.startupForm.get('currentDebtSize')?.valid) &&
-          this.startupForm.get('breakEvenPoint')?.valid &&
-          this.startupForm.get('financialGoal')?.valid &&
-          this.startupForm.get('hasExitStrategy')?.valid &&
-          (this.startupForm.get('hasExitStrategy')?.value === 'no' || this.startupForm.get('exitStrategyDetails')?.valid)
+          this.startupForm.get('have_debts')?.valid &&
+          (this.startupForm.get('have_debts')?.value === 'no' || this.startupForm.get('currentDebtSize')?.valid) &&
+          this.startupForm.get('break_even_point')?.valid &&
+          this.startupForm.get('financial_goal')?.valid &&
+          this.startupForm.get('has_exit_strategy')?.valid &&
+          (this.startupForm.get('has_exit_strategy')?.value === 'no' || this.startupForm.get('exitStrategyDetails')?.valid)
         );
       default:
         return true;
@@ -151,15 +153,15 @@ export class StartupFormComponent implements OnInit {
   getControlsForStep(step: number): string[] {
     switch (step) {
       case 1:
-        return ['name', 'email', 'phoneNumber', 'companyName', 'website'];
+        return ['name', 'email', 'phone_number', 'company', 'website'];
       case 2:
-        return ['productService', 'sector', 'operationalStage', 'problemSolved'];
+        return ['product_service_description', 'company_sector', 'operational_phase', 'problem_solved'];
       case 3:
-        return ['fundingAmount', 'fundingUsage', 'previousFundingSources', 'targetMarket'];
+        return ['funding_amount', 'funding_used', 'previous_funding_source', 'target_market'];
       case 4:
-        return ['openToJointInvestment', 'hasExistingPartners', 'monthlyRevenue', 'isProfitable', 'profitPercentage', 'revenueGoal'];
+        return ['joint_investment', 'existing_partners', 'monthlyRevenue', 'is_profitable', 'profitPercentage', 'revenue_goal'];
       case 5:
-        return ['hasMajorDebts', 'currentDebtSize', 'breakEvenPoint', 'financialGoal', 'hasExitStrategy', 'exitStrategyDetails'];
+        return ['have_debts', 'currentDebtSize', 'break_even_point', 'financial_goal', 'has_exit_strategy', 'exitStrategyDetails'];
       default:
         return [];
     }
@@ -176,10 +178,22 @@ export class StartupFormComponent implements OnInit {
   }
   onSubmit() {
     if (this.startupForm.valid) {
-      console.log('Form Submitted!', this.startupForm.value);
+      const formData = this.startupForm.value;
+      console.log('Form Submitted!', formData);
+
+      // Send the form data to the API
+      this.apiService.submitStartupForm(formData).subscribe({
+        next: (response) => {
+          console.log('Response:', response);
+          // Handle the response (e.g., show a success message)
+        },
+        error: (error) => {
+          console.error('Error:', error);
+          // Handle the error (e.g., show an error message)
+        }
+      });
     } else {
       console.log('Form is invalid. Please check the fields.');
-      this.logInvalidControls(); // Log invalid controls and their errors
     }
   }
 

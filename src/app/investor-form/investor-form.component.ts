@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { HeaderService } from '../services/header.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-investor-form',
@@ -16,37 +17,37 @@ export class InvestorFormComponent implements OnInit {
   investorForm: FormGroup;
   currentStep: number = 1;
 
-  tags: string[] = [
-    'INVESTOR_FORM.STEP_2.TAG_TECHNOLOGY',
-    'INVESTOR_FORM.STEP_2.TAG_FINTECH',
-    'INVESTOR_FORM.STEP_2.TAG_ECOMMERCE',
-    'INVESTOR_FORM.STEP_2.TAG_HEALTHCARE',
-    'INVESTOR_FORM.STEP_2.TAG_EDTECH',
-    'INVESTOR_FORM.STEP_2.TAG_RENEWABLE_ENERGY',
-    'INVESTOR_FORM.STEP_2.TAG_MANUFACTURING',
-    'INVESTOR_FORM.STEP_2.TAG_LOGISTICS',
-    'INVESTOR_FORM.STEP_2.TAG_REAL_ESTATE',
-    'INVESTOR_FORM.STEP_2.TAG_AI',
-    'INVESTOR_FORM.STEP_2.TAG_BIG_DATA',
-    'INVESTOR_FORM.STEP_2.TAG_CYBERSECURITY',
-    'INVESTOR_FORM.STEP_2.TAG_DIGITAL_MARKETING',
-    'INVESTOR_FORM.STEP_2.TAG_GENERAL_TRADE',
-    'INVESTOR_FORM.STEP_2.TAG_TRAVEL_TOURISM',
-    'INVESTOR_FORM.STEP_2.TAG_FOOD_BEVERAGE',
-    'INVESTOR_FORM.STEP_2.TAG_RETAIL',
-    'INVESTOR_FORM.STEP_2.TAG_SPORTS_ENTERTAINMENT',
-    'INVESTOR_FORM.STEP_2.TAG_ROBOTICS',
-    'INVESTOR_FORM.STEP_2.TAG_AGRITECH',
-    'INVESTOR_FORM.STEP_2.TAG_ENVIRONMENT_SUSTAINABILITY',
-    'INVESTOR_FORM.STEP_2.TAG_AR_VR',
-    'INVESTOR_FORM.STEP_2.TAG_DIGITAL_PAYMENTS',
-    'INVESTOR_FORM.STEP_2.TAG_FINANCIAL_SERVICES',
-    'INVESTOR_FORM.STEP_2.TAG_MEDIA_COMMUNICATION',
-    'INVESTOR_FORM.STEP_2.TAG_GAMING',
-    'INVESTOR_FORM.STEP_2.TAG_BIOTECH',
-    'INVESTOR_FORM.STEP_2.TAG_INSURTECH',
-    'INVESTOR_FORM.STEP_2.TAG_PROPERTY_DEVELOPMENT',
-    'INVESTOR_FORM.STEP_2.TAG_SOCIAL_INNOVATION'
+  tags: { value: string; label: string }[] = [
+    { value: 'Technology', label: 'INVESTOR_FORM.STEP_2.TAG_TECHNOLOGY' },
+    { value: 'FinTech', label: 'INVESTOR_FORM.STEP_2.TAG_FINTECH' },
+    { value: 'E-Commerce', label: 'INVESTOR_FORM.STEP_2.TAG_ECOMMERCE' },
+    { value: 'Healthcare & HealthTech', label: 'INVESTOR_FORM.STEP_2.TAG_HEALTHCARE' },
+    { value: 'Education & EdTech', label: 'INVESTOR_FORM.STEP_2.TAG_EDTECH' },
+    { value: 'Renewable Energy', label: 'INVESTOR_FORM.STEP_2.TAG_RENEWABLE_ENERGY' },
+    { value: 'Manufacturing', label: 'INVESTOR_FORM.STEP_2.TAG_MANUFACTURING' },
+    { value: 'Logistics & Transportation', label: 'INVESTOR_FORM.STEP_2.TAG_LOGISTICS' },
+    { value: 'Real Estate', label: 'INVESTOR_FORM.STEP_2.TAG_REAL_ESTATE' },
+    { value: 'Artificial Intelligence', label: 'INVESTOR_FORM.STEP_2.TAG_AI' },
+    { value: 'Big Data & Analytics', label: 'INVESTOR_FORM.STEP_2.TAG_BIG_DATA' },
+    { value: 'CyperSecurity', label: 'INVESTOR_FORM.STEP_2.TAG_CYBERSECURITY' },
+    { value: 'Digital Marketing', label: 'INVESTOR_FORM.STEP_2.TAG_DIGITAL_MARKETING' },
+    { value: 'General Trade', label: 'INVESTOR_FORM.STEP_2.TAG_GENERAL_TRADE' },
+    { value: 'Travel & Tourism', label: 'INVESTOR_FORM.STEP_2.TAG_TRAVEL_TOURISM' },
+    { value: 'Food & Baverage', label: 'INVESTOR_FORM.STEP_2.TAG_FOOD_BEVERAGE' },
+    { value: 'Retail', label: 'INVESTOR_FORM.STEP_2.TAG_RETAIL' },
+    { value: 'Sports & Entertainment', label: 'INVESTOR_FORM.STEP_2.TAG_SPORTS_ENTERTAINMENT' },
+    { value: 'Robotics', label: 'INVESTOR_FORM.STEP_2.TAG_ROBOTICS' },
+    { value: 'AgriTech', label: 'INVESTOR_FORM.STEP_2.TAG_AGRITECH' },
+    { value: 'Environmental & Sustainability', label: 'INVESTOR_FORM.STEP_2.TAG_ENVIRONMENT_SUSTAINABILITY' },
+    { value: 'AR/VR', label: 'INVESTOR_FORM.STEP_2.TAG_AR_VR' },
+    { value: 'Digital Payments', label: 'INVESTOR_FORM.STEP_2.TAG_DIGITAL_PAYMENTS' },
+    { value: 'Financial Services', label: 'INVESTOR_FORM.STEP_2.TAG_FINANCIAL_SERVICES' },
+    { value: 'Media & Communication', label: 'INVESTOR_FORM.STEP_2.TAG_MEDIA_COMMUNICATION' },
+    { value: 'Gaming', label: 'INVESTOR_FORM.STEP_2.TAG_GAMING' },
+    { value: 'BioTech', label: 'INVESTOR_FORM.STEP_2.TAG_BIOTECH' },
+    { value: 'InsurTech', label: 'INVESTOR_FORM.STEP_2.TAG_INSURTECH' },
+    { value: 'Property Development', label: 'INVESTOR_FORM.STEP_2.TAG_PROPERTY_DEVELOPMENT' },
+    { value: 'Social Innovation', label: 'INVESTOR_FORM.STEP_2.TAG_SOCIAL_INNOVATION' }
   ];
 
   showDropdown = false; // Controls dropdown visibility
@@ -56,30 +57,31 @@ export class InvestorFormComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private headerService: HeaderService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private apiService: ApiService
   ) {
     this.investorForm = this.fb.group({
       // Step 1
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
       email: ['', [Validators.required, Validators.email]],
-      phoneNumber: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]], // Allow only digits, spaces, hyphens, and plus signs
+      phone_number: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]], // Allow only digits, spaces, hyphens, and plus signs
       company: ['', [Validators.required, Validators.minLength(2)]],
       // Step 2
       investment: ['', Validators.required],
-      favoriteInvestment: ['', Validators.required],
-      favoriteSectors: ['', Validators.required],
+      favourite_investment: ['', Validators.required],
+      favourite_sectors: ['', Validators.required],
       // Step 3
-      projectBudget: ['', Validators.required],
-      otherBudget: ['', [Validators.pattern(/^[0-9]+$/)]], // Remove Validators.required here
+      budget: ['', Validators.required],
+      other_budget: ['', [Validators.pattern(/^[0-9]+$/)]], // Remove Validators.required here
       // Step 4
-      geographicalScope: ['', Validators.required],
-      coInvest: ['', Validators.required],
-      investmentPrivacy: ['', Validators.required], // Investment Privacy (New Dropdown)
-      additionalNotes: [''],
+      geographical_scope: ['', Validators.required],
+      co_invest: ['', Validators.required],
+      investment_private: ['', Validators.required], // Investment Privacy (New Dropdown)
+      additional_notes: [''],
     });
 
-      // Watch for changes in projectBudget and dynamically set the validator for otherBudget
-  this.investorForm.get('projectBudget')?.valueChanges.subscribe((value) => {
+      // Watch for changes in budget and dynamically set the validator for otherBudget
+  this.investorForm.get('budget')?.valueChanges.subscribe((value) => {
     this.updateOtherBudgetValidation(value);
   });
 
@@ -88,7 +90,7 @@ export class InvestorFormComponent implements OnInit {
   }
 
   private updateOtherBudgetValidation(selectedBudget: string): void {
-    const otherBudgetControl = this.investorForm.get('otherBudget');
+    const otherBudgetControl = this.investorForm.get('other_budget');
   
     if (selectedBudget === 'Other') {
       otherBudgetControl?.setValidators([Validators.required, Validators.pattern(/^[0-9]+$/)]);
@@ -112,7 +114,7 @@ export class InvestorFormComponent implements OnInit {
   }
 
   onFavoriteInvestmentChange() {
-    const favoriteInvestmentControl = this.investorForm.get('favoriteInvestment');
+    const favoriteInvestmentControl = this.investorForm.get('favorite_investment');
     if (favoriteInvestmentControl) {
       favoriteInvestmentControl.markAsTouched(); // Mark as touched
       favoriteInvestmentControl.markAsDirty(); // Mark as dirty
@@ -127,30 +129,33 @@ export class InvestorFormComponent implements OnInit {
     }
   }
 
+  getTagLabel(tagValue: string): string {
+    const tag = this.tags.find(t => t.value === tagValue);
+    return tag ? tag.label : tagValue; // Fallback to the original value if not found
+  }
   toggleDropdown() {
     this.showDropdown = !this.showDropdown;
   }
 
-  toggleTag(tag: string): void {
-    if (this.selectedTags.includes(tag)) {
-      this.selectedTags = this.selectedTags.filter(t => t !== tag);
+  toggleTag(tag: { value: string; label: string }): void {
+    if (this.selectedTags.includes(tag.value)) {
+      this.selectedTags = this.selectedTags.filter(t => t !== tag.value);
     } else {
-      this.selectedTags.push(tag);
+      this.selectedTags.push(tag.value);
     }
     this.updateFavoriteSectors();
   }
 
-  removeTag(tag: string): void {
-    this.selectedTags = this.selectedTags.filter((t) => t !== tag);
+  removeTag(tagValue: string): void {
+    this.selectedTags = this.selectedTags.filter(t => t !== tagValue);
     this.updateFavoriteSectors();
   }
 
   private updateFavoriteSectors(): void {
-    const translatedTags = this.selectedTags.map(tag => this.translate.instant(tag));
-    this.investorForm.controls['favoriteSectors'].setValue(translatedTags.join(', '));
-    this.investorForm.controls['favoriteSectors'].markAsTouched(); // Mark as touched
-    this.investorForm.controls['favoriteSectors'].markAsDirty(); // Mark as dirty
-    this.investorForm.controls['favoriteSectors'].updateValueAndValidity(); // Trigger revalidation
+    this.investorForm.controls['favourite_sectors'].setValue(this.selectedTags);
+    this.investorForm.controls['favourite_sectors'].markAsTouched(); // Mark as touched
+    this.investorForm.controls['favourite_sectors'].markAsDirty(); // Mark as dirty
+    this.investorForm.controls['favourite_sectors'].updateValueAndValidity(); // Trigger revalidation
   }
 
   ngOnInit(): void {
@@ -167,25 +172,25 @@ export class InvestorFormComponent implements OnInit {
         return !!(
           this.investorForm.get('name')?.valid &&
           this.investorForm.get('email')?.valid &&
-          this.investorForm.get('phoneNumber')?.valid &&
+          this.investorForm.get('phone_number')?.valid &&
           this.investorForm.get('company')?.valid
         );
       case 2:
         return !!(
           this.investorForm.get('investment')?.valid &&
-          this.investorForm.get('favoriteInvestment')?.valid &&
-          this.investorForm.get('favoriteSectors')?.valid
+          this.investorForm.get('favourite_investment')?.valid &&
+          this.investorForm.get('favourite_sectors')?.valid
         );
         case 3:
-          const projectBudget = this.investorForm.get('projectBudget')?.value;
-          const otherBudgetValid = projectBudget !== 'Other' || this.investorForm.get('otherBudget')?.valid;
-          return !!(this.investorForm.get('projectBudget')?.valid && otherBudgetValid);
+          const budget = this.investorForm.get('budget')?.value;
+          const otherBudgetValid = budget !== 'Other' || this.investorForm.get('other_budget')?.valid;
+          return !!(this.investorForm.get('budget')?.valid && otherBudgetValid);
     
       case 4:
         return !!(
-          this.investorForm.get('geographicalScope')?.valid &&
-          this.investorForm.get('coInvest')?.valid &&
-          this.investorForm.get('investmentPrivacy')?.valid
+          this.investorForm.get('geographical_scope')?.valid &&
+          this.investorForm.get('co_invest')?.valid &&
+          this.investorForm.get('investment_private')?.valid
         );
       default:
         return true;
@@ -215,13 +220,13 @@ export class InvestorFormComponent implements OnInit {
   getControlsForStep(step: number): string[] {
     switch (step) {
       case 1:
-        return ['name', 'email', 'phoneNumber', 'company'];
+        return ['name', 'email', 'phone_number', 'company'];
       case 2:
-        return ['investment', 'favoriteInvestment', 'favoriteSectors'];
+        return ['investment', 'favourite_investment', 'favourite_sectors'];
       case 3:
-        return ['projectBudget', 'otherBudget'];
+        return ['budget', 'other_budget'];
       case 4:
-        return ['geographicalScope', 'coInvest', 'investmentPrivacy'];
+        return ['geographical_scope', 'co_invest', 'investment_private'];
       default:
         return [];
     }
@@ -244,10 +249,22 @@ export class InvestorFormComponent implements OnInit {
   }
   onSubmit() {
     if (this.investorForm.valid) {
-      console.log('Form Submitted!', this.investorForm.value);
+      const formData = this.investorForm.value;
+      console.log('Form Submitted!', formData);
+      
+      // Send the form data to the API
+      this.apiService.submitInvestorForm(formData).subscribe({
+        next: (response) => {
+          console.log('Response:', response);
+          // Handle the response (e.g., show a success message)
+        },
+        error: (error) => {
+          console.error('Error:', error);
+          // Handle the error (e.g., show an error message)
+        }
+      });
     } else {
       console.log('Form is invalid. Please check the fields.');
-      this.logInvalidControls(); // Log invalid controls and their errors
     }
   }
   
