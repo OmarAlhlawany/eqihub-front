@@ -149,10 +149,10 @@
       "IS_PROFITABLE_YES": "Yes",
       "IS_PROFITABLE_NO": "No",
 
-      "PROFIT_PERCENTAGE": "What is your revenue growth rate over the last 12 months?",
-      "PROFIT_PERCENTAGE_PLACEHOLDER": "Enter your profit percentage",
-      "PROFIT_PERCENTAGE_REQUIRED": "Profit percentage is required.",
-      "PROFIT_PERCENTAGE_INVALID": "Profit percentage is invalid.",
+      "REVENUE_GROWTH": "What is your revenue growth rate over the last 12 months?",
+      "REVENUE_GROWTH_PLACEHOLDER": "Enter your profit percentage",
+      "REVENUE_GROWTH_REQUIRED": "Profit percentage is required.",
+      "REVENUE_GROWTH_INVALID": "Profit percentage is invalid.",
 
       "REVENUE_GOAL": "What is your main revenue goal over the next 12 months?",
       "REVENUE_GOAL_PLACEHOLDER": "Enter your revenue goal",
@@ -298,6 +298,7 @@
       "GEOGRAPHICAL_SCOPE_REQUIRED": "Geographical scope is required.",
 
       "CO_INVEST": "Would you like to co-invest?",
+      "SELECT_CO_INVEST": "Select co-invest option",
       "CO_INVEST_YES": "Yes",
       "CO_INVEST_NO": "No",
       "CO_INVEST_REQUIRED": "Co-invest is required.",

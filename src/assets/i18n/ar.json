@@ -301,6 +301,7 @@
 
 
       "CO_INVEST": "هل ترغب في الاستثمار المشترك؟",
+      "SELECT_CO_INVEST": "اختر الاستثمار المشترك",
       "CO_INVEST_YES": "نعم",
       "CO_INVEST_NO": "لا",
       "CO_INVEST_REQUIRED": "الاستثمار المشترك مطلوب.",

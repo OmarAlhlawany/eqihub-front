@@ -16,42 +16,10 @@ import { ApiService } from '../services/api.service';
 export class InvestorFormComponent implements OnInit {
   investorForm: FormGroup;
   currentStep: number = 1;
-
-  tags: { value: string; label: string }[] = [
-    { value: 'Technology', label: 'INVESTOR_FORM.STEP_2.TAG_TECHNOLOGY' },
-    { value: 'FinTech', label: 'INVESTOR_FORM.STEP_2.TAG_FINTECH' },
-    { value: 'E-Commerce', label: 'INVESTOR_FORM.STEP_2.TAG_ECOMMERCE' },
-    { value: 'Healthcare & HealthTech', label: 'INVESTOR_FORM.STEP_2.TAG_HEALTHCARE' },
-    { value: 'Education & EdTech', label: 'INVESTOR_FORM.STEP_2.TAG_EDTECH' },
-    { value: 'Renewable Energy', label: 'INVESTOR_FORM.STEP_2.TAG_RENEWABLE_ENERGY' },
-    { value: 'Manufacturing', label: 'INVESTOR_FORM.STEP_2.TAG_MANUFACTURING' },
-    { value: 'Logistics & Transportation', label: 'INVESTOR_FORM.STEP_2.TAG_LOGISTICS' },
-    { value: 'Real Estate', label: 'INVESTOR_FORM.STEP_2.TAG_REAL_ESTATE' },
-    { value: 'Artificial Intelligence', label: 'INVESTOR_FORM.STEP_2.TAG_AI' },
-    { value: 'Big Data & Analytics', label: 'INVESTOR_FORM.STEP_2.TAG_BIG_DATA' },
-    { value: 'CyperSecurity', label: 'INVESTOR_FORM.STEP_2.TAG_CYBERSECURITY' },
-    { value: 'Digital Marketing', label: 'INVESTOR_FORM.STEP_2.TAG_DIGITAL_MARKETING' },
-    { value: 'General Trade', label: 'INVESTOR_FORM.STEP_2.TAG_GENERAL_TRADE' },
-    { value: 'Travel & Tourism', label: 'INVESTOR_FORM.STEP_2.TAG_TRAVEL_TOURISM' },
-    { value: 'Food & Baverage', label: 'INVESTOR_FORM.STEP_2.TAG_FOOD_BEVERAGE' },
-    { value: 'Retail', label: 'INVESTOR_FORM.STEP_2.TAG_RETAIL' },
-    { value: 'Sports & Entertainment', label: 'INVESTOR_FORM.STEP_2.TAG_SPORTS_ENTERTAINMENT' },
-    { value: 'Robotics', label: 'INVESTOR_FORM.STEP_2.TAG_ROBOTICS' },
-    { value: 'AgriTech', label: 'INVESTOR_FORM.STEP_2.TAG_AGRITECH' },
-    { value: 'Environmental & Sustainability', label: 'INVESTOR_FORM.STEP_2.TAG_ENVIRONMENT_SUSTAINABILITY' },
-    { value: 'AR/VR', label: 'INVESTOR_FORM.STEP_2.TAG_AR_VR' },
-    { value: 'Digital Payments', label: 'INVESTOR_FORM.STEP_2.TAG_DIGITAL_PAYMENTS' },
-    { value: 'Financial Services', label: 'INVESTOR_FORM.STEP_2.TAG_FINANCIAL_SERVICES' },
-    { value: 'Media & Communication', label: 'INVESTOR_FORM.STEP_2.TAG_MEDIA_COMMUNICATION' },
-    { value: 'Gaming', label: 'INVESTOR_FORM.STEP_2.TAG_GAMING' },
-    { value: 'BioTech', label: 'INVESTOR_FORM.STEP_2.TAG_BIOTECH' },
-    { value: 'InsurTech', label: 'INVESTOR_FORM.STEP_2.TAG_INSURTECH' },
-    { value: 'Property Development', label: 'INVESTOR_FORM.STEP_2.TAG_PROPERTY_DEVELOPMENT' },
-    { value: 'Social Innovation', label: 'INVESTOR_FORM.STEP_2.TAG_SOCIAL_INNOVATION' }
-  ];
-
-  showDropdown = false; // Controls dropdown visibility
-  selectedTags: string[] = [];
+  dynamicData: any = {}; // To store dynamic tables data
+  isLoading: boolean = false;
+  showDropdown: boolean = false; // Controls dropdown visibility
+  selectedTags: string[] = []; // Stores selected tags for favourite sectors
 
   constructor(
     private fb: FormBuilder,
@@ -64,108 +32,123 @@ export class InvestorFormComponent implements OnInit {
       // Step 1
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
       email: ['', [Validators.required, Validators.email]],
-      phone_number: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]], // Allow only digits, spaces, hyphens, and plus signs
+      phone_number: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]],
       company: ['', [Validators.required, Validators.minLength(2)]],
       // Step 2
-      investment: ['', Validators.required],
-      favourite_investment: ['', Validators.required],
-      favourite_sectors: ['', Validators.required],
+      investment_type_id: ['', Validators.required],
+      favourite_investment_stage_id: ['', Validators.required],
+      favourite_sectors: [[], Validators.required], // Array of selected sector IDs
       // Step 3
-      budget: ['', Validators.required],
-      other_budget: ['', [Validators.pattern(/^[0-9]+$/)]], // Remove Validators.required here
+      budget_range_id: ['', Validators.required],
+      other_budget: ['', [Validators.pattern(/^[0-9]+$/)]], // Optional, only required if "Other" is selected
       // Step 4
-      geographical_scope: ['', Validators.required],
-      co_invest: ['', Validators.required],
-      investment_private: ['', Validators.required], // Investment Privacy (New Dropdown)
+      geographical_scope_id: ['', Validators.required],
+      co_invest_id: ['', Validators.required],
+      investment_privacy_option_id: ['', Validators.required],
       additional_notes: [''],
     });
 
-      // Watch for changes in budget and dynamically set the validator for otherBudget
-  this.investorForm.get('budget')?.valueChanges.subscribe((value) => {
-    this.updateOtherBudgetValidation(value);
-  });
-
-  
-    this.translate.setDefaultLang('en');
+    // Watch for changes in budget and dynamically set the validator for otherBudget
+    this.investorForm.get('budget_range_id')?.valueChanges.subscribe((value) => {
+      this.updateOtherBudgetValidation(value);
+    });
   }
 
+  ngOnInit(): void {
+    this.headerService.setTitle(this.translate.instant('INVESTOR_FORM.TITLE'));
+    this.fetchDynamicData(); // Fetch dynamic data on component initialization
+  }
+
+  /**
+   * Fetch dynamic data from the API
+   */
+  fetchDynamicData(): void {
+    this.isLoading = true;
+    this.apiService.getDynamicTables().subscribe({
+      next: (data) => {
+        this.dynamicData = data;
+        this.isLoading = false;
+      },
+      error: (error) => {
+        console.error('Error fetching dynamic data:', error);
+        this.isLoading = false;
+      },
+    });
+  }
+
+  /**
+   * Update validation for "other_budget" based on selected budget
+   */
   private updateOtherBudgetValidation(selectedBudget: string): void {
     const otherBudgetControl = this.investorForm.get('other_budget');
-  
     if (selectedBudget === 'Other') {
       otherBudgetControl?.setValidators([Validators.required, Validators.pattern(/^[0-9]+$/)]);
     } else {
       otherBudgetControl?.clearValidators();
     }
-  
     otherBudgetControl?.updateValueAndValidity();
   }
-  switchLanguage(language: string) {
-    this.translate.use(language);
-  }
 
-  onInvestmentChange() {
-    const investmentControl = this.investorForm.get('investment');
-    if (investmentControl) {
-      investmentControl.markAsTouched(); // Mark as touched
-      investmentControl.markAsDirty(); // Mark as dirty
-      investmentControl.updateValueAndValidity(); // Trigger revalidation
-    }
-  }
-
-  onFavoriteInvestmentChange() {
-    const favoriteInvestmentControl = this.investorForm.get('favorite_investment');
-    if (favoriteInvestmentControl) {
-      favoriteInvestmentControl.markAsTouched(); // Mark as touched
-      favoriteInvestmentControl.markAsDirty(); // Mark as dirty
-      favoriteInvestmentControl.updateValueAndValidity(); // Trigger revalidation
-    }
-  }
-
-  selectTag(tag: string): void {
-    if (!this.selectedTags.includes(tag)) {
-      this.selectedTags.push(tag);
-      this.updateFavoriteSectors();
-    }
-  }
-
-  getTagLabel(tagValue: string): string {
-    const tag = this.tags.find(t => t.value === tagValue);
-    return tag ? tag.label : tagValue; // Fallback to the original value if not found
-  }
-  toggleDropdown() {
+  /**
+   * Toggle dropdown visibility
+   */
+  toggleDropdown(): void {
     this.showDropdown = !this.showDropdown;
   }
 
-  toggleTag(tag: { value: string; label: string }): void {
-    if (this.selectedTags.includes(tag.value)) {
-      this.selectedTags = this.selectedTags.filter(t => t !== tag.value);
+  /**
+   * Toggle tag selection for favourite sectors
+   */
+  toggleTag(tag: any): void {
+    const selectedSectors = this.investorForm.get('favourite_sectors')?.value;
+    if (selectedSectors.includes(tag.id)) {
+      this.selectedTags = selectedSectors.filter((id: number) => id !== tag.id);
     } else {
-      this.selectedTags.push(tag.value);
+      this.selectedTags = [...selectedSectors, tag.id];
     }
-    this.updateFavoriteSectors();
+    this.investorForm.get('favourite_sectors')?.setValue(this.selectedTags);
   }
 
+  /**
+   * Remove a selected tag
+   */
   removeTag(tagValue: string): void {
-    this.selectedTags = this.selectedTags.filter(t => t !== tagValue);
-    this.updateFavoriteSectors();
+    this.selectedTags = this.selectedTags.filter((tag) => tag !== tagValue);
+    this.investorForm.get('favourite_sectors')?.setValue(this.selectedTags);
   }
 
-  private updateFavoriteSectors(): void {
-    this.investorForm.controls['favourite_sectors'].setValue(this.selectedTags);
-    this.investorForm.controls['favourite_sectors'].markAsTouched(); // Mark as touched
-    this.investorForm.controls['favourite_sectors'].markAsDirty(); // Mark as dirty
-    this.investorForm.controls['favourite_sectors'].updateValueAndValidity(); // Trigger revalidation
+  /**
+   * Get the label for a tag
+   */
+  getTagLabel(tagValue: string): string {
+    const tag = this.dynamicData.favourite_sectors?.find((sector: any) => sector.id === tagValue);
+    return tag ? tag.name : tagValue; // Fallback to the original value if not found
   }
 
-  ngOnInit(): void {
-    this.headerService.setTitle(this.translate.instant('INVESTOR_FORM.TITLE'));
+  /**
+   * Move to the next step
+   */
+  nextStep(): void {
+    if (this.currentStep < 4) {
+      this.markCurrentStepControlsAsTouched();
+      if (this.isStepValid(this.currentStep)) {
+        this.currentStep++;
+      }
+    }
   }
 
-  goToStep(step: number) {
-    this.currentStep = step;
+  /**
+   * Move to the previous step
+   */
+  prevStep(): void {
+    if (this.currentStep > 1) {
+      this.currentStep--;
+    }
   }
 
+  /**
+   * Check if the current step is valid
+   */
   isStepValid(step: number): boolean {
     switch (step) {
       case 1:
@@ -177,121 +160,70 @@ export class InvestorFormComponent implements OnInit {
         );
       case 2:
         return !!(
-          this.investorForm.get('investment')?.valid &&
-          this.investorForm.get('favourite_investment')?.valid &&
+          this.investorForm.get('investment_type_id')?.valid &&
+          this.investorForm.get('favourite_investment_stage_id')?.valid &&
           this.investorForm.get('favourite_sectors')?.valid
         );
-        case 3:
-          const budget = this.investorForm.get('budget')?.value;
-          const otherBudgetValid = budget !== 'Other' || this.investorForm.get('other_budget')?.valid;
-          return !!(this.investorForm.get('budget')?.valid && otherBudgetValid);
-    
+      case 3:
+        const budget = this.investorForm.get('budget_range_id')?.value;
+        const otherBudgetValid = budget !== 'Other' || this.investorForm.get('other_budget')?.valid;
+        return !!(this.investorForm.get('budget_range_id')?.valid && otherBudgetValid);
       case 4:
         return !!(
-          this.investorForm.get('geographical_scope')?.valid &&
-          this.investorForm.get('co_invest')?.valid &&
-          this.investorForm.get('investment_private')?.valid
+          this.investorForm.get('geographical_scope_id')?.valid &&
+          this.investorForm.get('co_invest_id')?.valid &&
+          this.investorForm.get('investment_privacy_option_id')?.valid
         );
       default:
         return true;
     }
   }
 
-  nextStep() {
-    if (this.currentStep < 6) {
-      // Mark all form controls as touched to show validation errors
-      this.markCurrentStepControlsAsTouched();
-
-      // Check if the current step is valid
-      if (this.isStepValid(this.currentStep)) {
-        this.currentStep++; // Move to the next step
-      }
-    }
-  }
-
-  // Helper method to mark all form controls for the current step as touched
-  markCurrentStepControlsAsTouched() {
+  /**
+   * Mark all controls in the current step as touched
+   */
+  markCurrentStepControlsAsTouched(): void {
     const stepControls = this.getControlsForStep(this.currentStep);
     stepControls.forEach((controlName) => {
       this.investorForm.get(controlName)?.markAsTouched();
     });
   }
-    // Helper method to get form controls for the current step
+
+  /**
+   * Get form controls for the current step
+   */
   getControlsForStep(step: number): string[] {
     switch (step) {
       case 1:
         return ['name', 'email', 'phone_number', 'company'];
       case 2:
-        return ['investment', 'favourite_investment', 'favourite_sectors'];
+        return ['investment_type_id', 'favourite_investment_stage_id', 'favourite_sectors'];
       case 3:
-        return ['budget', 'other_budget'];
+        return ['budget_range_id', 'other_budget'];
       case 4:
-        return ['geographical_scope', 'co_invest', 'investment_private'];
+        return ['geographical_scope_id', 'co_invest_id', 'investment_privacy_option_id'];
       default:
         return [];
     }
   }
-  prevStep() {
-    if (this.currentStep > 1) {
-      this.currentStep--;
-    }
-  }
 
-   // Helper method to log invalid controls and their errors
-   logInvalidControls() {
-    Object.keys(this.investorForm.controls).forEach((controlName) => {
-      const control = this.investorForm.get(controlName);
-      if (control && control.invalid) {
-        console.log(`Invalid Control: ${controlName}`);
-        console.log('Errors:', control.errors); // Log the validation errors
-      }
-    });
-  }
-  onSubmit() {
+  /**
+   * Submit the form
+   */
+  onSubmit(): void {
     if (this.investorForm.valid) {
       const formData = this.investorForm.value;
-      console.log('Form Submitted!', formData);
-      
-      // Send the form data to the API
       this.apiService.submitInvestorForm(formData).subscribe({
         next: (response) => {
-          console.log('Response:', response);
-          // Handle the response (e.g., show a success message)
+          console.log('Investor registered successfully:', response);
+          this.router.navigate(['/success']); // Navigate to a success page
         },
         error: (error) => {
-          console.error('Error:', error);
-          // Handle the error (e.g., show an error message)
-        }
+          console.error('Error submitting form:', error);
+        },
       });
     } else {
       console.log('Form is invalid. Please check the fields.');
     }
   }
-  
- 
-  
 }
-
-
-
-/*
- nextStep() {
-   if (this.currentStep < 5) {
-      this.currentStep++; // Move to the next step
-    }
-  }
-*/
-
-/*
-nextStep() {
-  if (this.currentStep < 5) {
-    // Mark all form controls as touched to show validation errors
-    this.markCurrentStepControlsAsTouched();
-
-    // Check if the current step is valid
-    if (this.isStepValid(this.currentStep)) {
-      this.currentStep++; // Move to the next step
-    }
-  }
-}
-*/

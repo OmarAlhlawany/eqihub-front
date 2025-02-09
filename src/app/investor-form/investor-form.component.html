@@ -27,317 +27,207 @@
     <!-- Line under the step indicators -->
     <div *ngIf="currentStep !== 5" class="step-indicator-line"></div>
 
+    <!-- Step 1: Contact Details -->
+    <div *ngIf="currentStep === 1" class="form-step step-1">
+      <h3>{{ 'INVESTOR_FORM.STEP_1.TITLE' | translate }}</h3>
+      <p>{{ 'INVESTOR_FORM.STEP_1.DESCRIPTION' | translate }}</p>
 
-
-<!-- Step 1: Contact Details -->
-<div *ngIf="currentStep === 1" class="form-step step-1">
-  <h3>{{ 'INVESTOR_FORM.STEP_1.TITLE' | translate }}</h3>
-  <p>{{ 'INVESTOR_FORM.STEP_1.DESCRIPTION' | translate }}</p>
-
-  <div class="row mb-3">
-
-    <div class="col-md-6">
-      <label for="name">{{ 'INVESTOR_FORM.STEP_1.NAME' | translate }}<span class="required-asterisk">*</span></label>
-      <div class="input-icon-container">
-        <i class="material-icons">person</i> <!-- Icon for name -->
-        <input id="name" formControlName="name" placeholder="{{ 'INVESTOR_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
-      </div>
-      <div *ngIf="investorForm.get('name')?.invalid && (investorForm.get('name')?.dirty || investorForm.get('name')?.touched)" class="text-danger">
-        <div *ngIf="investorForm.get('name')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_1.NAME_REQUIRED' | translate }}</div>
-        <div *ngIf="investorForm.get('name')?.errors?.['minlength']">{{ 'INVESTOR_FORM.STEP_1.NAME_MIN_LENGTH' | translate }}</div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <label for="email">{{ 'INVESTOR_FORM.STEP_1.EMAIL' | translate }}<span class="required-asterisk">*</span></label>
-      <div class="input-icon-container">
-        <i class="material-icons">email</i> <!-- Icon for email -->
-        <input id="email" type="email" formControlName="email" placeholder="{{ 'INVESTOR_FORM.STEP_1.EMAIL_PLACEHOLDER' | translate }}" class="form-control" required />
-      </div>
-      <div *ngIf="investorForm.get('email')?.invalid && (investorForm.get('email')?.dirty || investorForm.get('email')?.touched)" class="text-danger">
-        <div *ngIf="investorForm.get('email')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_1.EMAIL_REQUIRED' | translate }}</div>
-        <div *ngIf="investorForm.get('email')?.errors?.['email']">{{ 'INVESTOR_FORM.STEP_1.EMAIL_INVALID' | translate }}</div>
-      </div>
-    </div>
-  
-  </div>
-
-  <div class="row mb-3">
-
-    <div class="col-md-6">
-      <label for="phone_number">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER' | translate }}<span class="required-asterisk">*</span></label>
-      <div class="input-icon-container">
-        <i class="material-icons">phone</i> <!-- Icon for phone number -->
-        <input id="phoneNumber" type="tel" formControlName="phone_number" placeholder="{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_PLACEHOLDER' | translate }}" class="form-control" required />
-      </div>
-      <div *ngIf="investorForm.get('phone_number')?.invalid && (investorForm.get('phone_number')?.dirty || investorForm.get('phone_number')?.touched)" class="text-danger">
-        <div *ngIf="investorForm.get('phone_number')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_REQUIRED' | translate }}</div>
-        <div *ngIf="investorForm.get('phone_number')?.errors?.['pattern']">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_INVALID' | translate }}</div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <label for="company">{{ 'INVESTOR_FORM.STEP_1.COMPANY' | translate }}<span class="required-asterisk">*</span></label>
-      <div class="input-icon-container">
-        <i class="material-icons">business</i> <!-- Icon for company -->
-        <input id="company" formControlName="company" placeholder="{{ 'INVESTOR_FORM.STEP_1.COMPANY_PLACEHOLDER' | translate }}" class="form-control" required />
-      </div>
-      <div *ngIf="investorForm.get('company')?.invalid && (investorForm.get('company')?.dirty || investorForm.get('company')?.touched)" class="text-danger">
-        <div *ngIf="investorForm.get('company')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_1.COMPANY_REQUIRED' | translate }}</div>
-        <div *ngIf="investorForm.get('company')?.errors?.['minlength']">{{ 'INVESTOR_FORM.STEP_1.COMPANY_MIN_LENGTH' | translate }}</div>
-      </div>
-    </div>
-  
-  </div>
-</div>
-
-<!-- Step 2: Investment Details -->
-<div *ngIf="currentStep === 2" class="form-step step-2">
-  <div class="form-group">
-    <label for="investment">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT' | translate }}<span class="required-asterisk">*</span></label>
-    <select id="investment" formControlName="investment" required (change)="onInvestmentChange()">
-      <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_2.SELECT_INVESTMENT' | translate }}</option>
-      <option value="Angel Investment">{{ 'INVESTOR_FORM.STEP_2.ANGEL_INVESTMENT' | translate }}</option>
-      <option value="Investment Funding">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT_FUNDING' | translate }}</option>
-    </select>
-    <div *ngIf="investorForm.get('investment')?.invalid && (investorForm.get('investment')?.dirty || investorForm.get('investment')?.touched)" class="text-danger">
-      <div *ngIf="investorForm.get('investment')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT_REQUIRED' | translate }}</div>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="favourite_investment">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT' | translate }}<span class="required-asterisk">*</span></label>
-    <div class="dropdown" style="position: relative;">
-
-    <select id="favoriteInvestment" formControlName="favourite_investment" required (change)="onFavoriteInvestmentChange()">
-      <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_INVESTMENT' | translate }}</option>
-      <option value="pre-seed">{{ 'INVESTOR_FORM.STEP_2.PRE_SEED' | translate }}</option>
-      <option value="seed">{{ 'INVESTOR_FORM.STEP_2.SEED' | translate }}</option>
-      <option value="pre-series A">{{ 'INVESTOR_FORM.STEP_2.PRE_SERIES_A' | translate }}</option>
-    </select>
-    </div>
-    <div *ngIf="investorForm.get('favourite_investment')?.invalid && (investorForm.get('favourite_investment')?.dirty || investorForm.get('favourite_investment')?.touched)" class="text-danger">
-      <div *ngIf="investorForm.get('favourite_investment')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT_REQUIRED' | translate }}</div>
-    </div>
-  </div>
-
-  <!-- Selected Tags Display -->
-  <div class="form-group">
-      <label for="favourite_sectors">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS' | translate }}<span class="required-asterisk">*</span></label>
-      <div class="dropdown" style="position: relative;">
-        <button type="button" class="dropdown-toggle" (click)="toggleDropdown()">
-          {{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_SECTORS' | translate }}
-        </button>
-        <div class="dropdown-menu show" *ngIf="showDropdown">
-          <span 
-            class="dropdown-item"
-            *ngFor="let tag of tags"
-            (click)="toggleTag(tag)"
-            [class.selected]="selectedTags.includes(tag.value)"
-          >
-            {{ tag.label | translate }}
-          </span>
-        </div>
-      </div>
-    
-      <div class="tags-input" id="favoriteSectors">
-        <span class="tag selected" *ngFor="let tagValue of selectedTags">
-          {{ getTagLabel(tagValue) | translate }}
-          <span class="tag-close" (click)="removeTag(tagValue)">×</span>
-        </span>
-        <div *ngIf="investorForm.get('favourite_sectors')?.invalid && (investorForm.get('favourite_sectors')?.dirty || investorForm.get('favourite_sectors')?.touched)" class="text-danger">
-          <div *ngIf="investorForm.get('favourite_sectors')?.errors?.['required']">
-            {{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS_REQUIRED' | translate }}
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="name">{{ 'INVESTOR_FORM.STEP_1.NAME' | translate }}<span class="required-asterisk">*</span></label>
+          <div class="input-icon-container">
+            <i class="material-icons">person</i>
+            <input id="name" formControlName="name" placeholder="{{ 'INVESTOR_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
+          <div *ngIf="investorForm.get('name')?.invalid && (investorForm.get('name')?.dirty || investorForm.get('name')?.touched)" class="text-danger">
+            <div *ngIf="investorForm.get('name')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_1.NAME_REQUIRED' | translate }}</div>
+            <div *ngIf="investorForm.get('name')?.errors?.['minlength']">{{ 'INVESTOR_FORM.STEP_1.NAME_MIN_LENGTH' | translate }}</div>
           </div>
         </div>
-      </div>  
-  </div>
-</div>
 
-<!-- Step 3: Project Budget -->
-<div *ngIf="currentStep === 3" class="form-step step-3">
-  <h3>{{ 'INVESTOR_FORM.STEP_3.PROJECT_BUDGET' | translate }} <span class="required-asterisk">*</span></h3>
-  <div class="budget-options">
-    <div class="custom-control custom-radio budget-option">
-      <input
-        type="radio"
-        formControlName="budget"
-        value="$ 100K to $ 500k"
-        class="custom-control-input"
-        id="budget1"
-        required
-      />
-      <label class="custom-control-label" for="budget1">{{ 'INVESTOR_FORM.STEP_3.BUDGET_1' | translate }}</label>
-    </div>
-    
-    <div class="custom-control custom-radio budget-option">
-      <input
-        type="radio"
-        formControlName="budget"
-        value="$ 500K to $ 1M"
-        class="custom-control-input"
-        id="budget2"
-        required
-      />
-      <label class="custom-control-label" for="budget2">{{ 'INVESTOR_FORM.STEP_3.BUDGET_2' | translate }}</label>
-    </div>
+        <div class="col-md-6">
+          <label for="email">{{ 'INVESTOR_FORM.STEP_1.EMAIL' | translate }}<span class="required-asterisk">*</span></label>
+          <div class="input-icon-container">
+            <i class="material-icons">email</i>
+            <input id="email" type="email" formControlName="email" placeholder="{{ 'INVESTOR_FORM.STEP_1.EMAIL_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
+          <div *ngIf="investorForm.get('email')?.invalid && (investorForm.get('email')?.dirty || investorForm.get('email')?.touched)" class="text-danger">
+            <div *ngIf="investorForm.get('email')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_1.EMAIL_REQUIRED' | translate }}</div>
+            <div *ngIf="investorForm.get('email')?.errors?.['email']">{{ 'INVESTOR_FORM.STEP_1.EMAIL_INVALID' | translate }}</div>
+          </div>
+        </div>
+      </div>
 
-    <div class="custom-control custom-radio budget-option">
-      <input
-        type="radio"
-        formControlName="budget"
-        value="$ 1M to $ 5M"
-        class="custom-control-input"
-        id="budget3"
-        required
-      />
-      <label class="custom-control-label" for="budget3">{{ 'INVESTOR_FORM.STEP_3.BUDGET_3' | translate }}</label>
-    </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="phone_number">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER' | translate }}<span class="required-asterisk">*</span></label>
+          <div class="input-icon-container">
+            <i class="material-icons">phone</i>
+            <input id="phoneNumber" type="tel" formControlName="phone_number" placeholder="{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
+          <div *ngIf="investorForm.get('phone_number')?.invalid && (investorForm.get('phone_number')?.dirty || investorForm.get('phone_number')?.touched)" class="text-danger">
+            <div *ngIf="investorForm.get('phone_number')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_REQUIRED' | translate }}</div>
+            <div *ngIf="investorForm.get('phone_number')?.errors?.['pattern']">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_INVALID' | translate }}</div>
+          </div>
+        </div>
 
-    <div class="custom-control custom-radio budget-option">
-      <input
-        type="radio"
-        formControlName="budget"
-        value="$ 5M+"
-        class="custom-control-input"
-        id="budget4"
-        required
-      />
-      <label class="custom-control-label" for="budget4">{{ 'INVESTOR_FORM.STEP_3.BUDGET_4' | translate }}</label>
-    </div>
-
-    <div
-      class="custom-control custom-radio budget-option full-width"
-      [class.selected]="investorForm.controls['budget'].value === 'other'"
-    >
-      <div class="other-budget-container">
-        <label class="custom-control-label other-budget-label" for="budget5">
-          <input
-            type="radio"
-            formControlName="budget"
-            value="other"
-            class="custom-control-input"
-            id="budget5"
-            required
-          />
-          {{ 'INVESTOR_FORM.STEP_3.OTHER' | translate }}
-        </label>
-        <input
-          type="text"
-          formControlName="other_budget"
-          placeholder="{{ 'INVESTOR_FORM.STEP_3.OTHER_PLACEHOLDER' | translate }}"
-          class="form-control other-budget-input"
-          *ngIf="investorForm.controls['budget']?.value === 'other'"
-        />
+        <div class="col-md-6">
+          <label for="company">{{ 'INVESTOR_FORM.STEP_1.COMPANY' | translate }}<span class="required-asterisk">*</span></label>
+          <div class="input-icon-container">
+            <i class="material-icons">business</i>
+            <input id="company" formControlName="company" placeholder="{{ 'INVESTOR_FORM.STEP_1.COMPANY_PLACEHOLDER' | translate }}" class="form-control" required />
+          </div>
+          <div *ngIf="investorForm.get('company')?.invalid && (investorForm.get('company')?.dirty || investorForm.get('company')?.touched)" class="text-danger">
+            <div *ngIf="investorForm.get('company')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_1.COMPANY_REQUIRED' | translate }}</div>
+            <div *ngIf="investorForm.get('company')?.errors?.['minlength']">{{ 'INVESTOR_FORM.STEP_1.COMPANY_MIN_LENGTH' | translate }}</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div *ngIf="investorForm.get('other_budget')?.invalid && (investorForm.get('other_budget')?.dirty || investorForm.get('other_budget')?.touched)" class="text-danger">
-    <div *ngIf="investorForm.get('other_budget')?.errors?.['required']">
-      {{ 'INVESTOR_FORM.STEP_3.OTHER_BUDGET_REQUIRED' | translate }}
+
+    <!-- Step 2: Investment Details -->
+    <div *ngIf="currentStep === 2" class="form-step step-2">
+      <div class="form-group">
+        <label for="investment_type_id">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT' | translate }}<span class="required-asterisk">*</span></label>
+        <select id="investment_type_id" formControlName="investment_type_id" required>
+          <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_2.SELECT_INVESTMENT' | translate }}</option>
+          <option *ngFor="let type of dynamicData.investment_types" [value]="type.id">{{ type.name }}</option>
+        </select>
+        <div *ngIf="investorForm.get('investment_type_id')?.invalid && (investorForm.get('investment_type_id')?.dirty || investorForm.get('investment_type_id')?.touched)" class="text-danger">
+          <div *ngIf="investorForm.get('investment_type_id')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_2.INVESTMENT_REQUIRED' | translate }}</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="favourite_investment_stage_id">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT' | translate }}<span class="required-asterisk">*</span></label>
+        <select id="favourite_investment_stage_id" formControlName="favourite_investment_stage_id" required>
+          <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_INVESTMENT' | translate }}</option>
+          <option *ngFor="let stage of dynamicData.favourite_investment_stages" [value]="stage.id">{{ stage.name }}</option>
+        </select>
+        <div *ngIf="investorForm.get('favourite_investment_stage_id')?.invalid && (investorForm.get('favourite_investment_stage_id')?.dirty || investorForm.get('favourite_investment_stage_id')?.touched)" class="text-danger">
+          <div *ngIf="investorForm.get('favourite_investment_stage_id')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_INVESTMENT_REQUIRED' | translate }}</div>
+        </div>
+      </div>
+
+      <!-- Favourite Sectors Dropdown -->
+      <div class="form-group">
+        <label for="favourite_sectors">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS' | translate }}<span class="required-asterisk">*</span></label>
+        <div class="dropdown" style="position: relative;">
+          <button type="button" class="dropdown-toggle" (click)="toggleDropdown()">
+            {{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_SECTORS' | translate }}
+          </button>
+          <div class="dropdown-menu show" *ngIf="showDropdown">
+            <span *ngFor="let sector of dynamicData.favourite_sectors" class="dropdown-item" (click)="toggleTag(sector)">
+              {{ sector.name }}
+            </span>
+          </div>
+        </div>
+        <div class="tags-input" id="favoriteSectors">
+          <span class="tag selected" *ngFor="let tagValue of selectedTags">
+            {{ getTagLabel(tagValue) | translate }}
+            <span class="tag-close" (click)="removeTag(tagValue)">×</span>
+          </span>
+        </div>
+        <div *ngIf="investorForm.get('favourite_sectors')?.invalid && (investorForm.get('favourite_sectors')?.dirty || investorForm.get('favourite_sectors')?.touched)" class="text-danger">
+          <div *ngIf="investorForm.get('favourite_sectors')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_2.FAVORITE_SECTORS_REQUIRED' | translate }}</div>
+        </div>
+      </div>
     </div>
-    <div *ngIf="investorForm.get('other_budget')?.errors?.['pattern']">
-      {{ 'INVESTOR_FORM.STEP_3.OTHER_INVALID' | translate }}
+
+    <!-- Step 3: Project Budget -->
+    <div *ngIf="currentStep === 3" class="form-step step-3">
+      <h3>{{ 'INVESTOR_FORM.STEP_3.PROJECT_BUDGET' | translate }} <span class="required-asterisk">*</span></h3>
+      <div class="budget-options">
+        <div *ngFor="let range of dynamicData.budget_ranges" class="custom-control custom-radio budget-option">
+          <input
+            type="radio"
+            formControlName="budget_range_id"
+            [value]="range.id"
+            class="custom-control-input"
+            [id]="'budget' + range.id"
+            required
+          />
+          <label class="custom-control-label" [for]="'budget' + range.id">{{ range.name }}</label>
+        </div>
+      </div>
+      <div *ngIf="investorForm.get('budget_range_id')?.invalid && (investorForm.get('budget_range_id')?.dirty || investorForm.get('budget_range_id')?.touched)" class="text-danger">
+        <div *ngIf="investorForm.get('budget_range_id')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_3.BUDGET_REQUIRED' | translate }}</div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Step 4: Additional Information -->
-<div *ngIf="currentStep === 4" class="form-step step-4">
-<!-- Geographical Scope Dropdown -->
-<div class="form-group">
-  <label for="geographical_scope">
-    {{ 'INVESTOR_FORM.STEP_4.GEOGRAPHICAL_SCOPE' | translate }} <span class="required-asterisk">*</span></label>
-  <select id="geographicalScope" formControlName="geographical_scope" class="form-control"  required>
-    <option value="" disabled selected>
-      {{ 'INVESTOR_FORM.STEP_4.SELECT_GEOGRAPHICAL_SCOPE' | translate }}
-    </option>
-    <option value="United Arab Emirates">{{ 'INVESTOR_FORM.STEP_4.REGION_1' | translate }}</option>
-    <option value="GCC">{{ 'INVESTOR_FORM.STEP_4.REGION_2' | translate }}</option>
-    <option value="Regional">{{ 'INVESTOR_FORM.STEP_4.REGION_3' | translate }}</option>
-  </select>
-  <div *ngIf="investorForm.get('geographical_scope')?.invalid && (investorForm.get('geographical_scope')?.dirty || investorForm.get('geographical_scope')?.touched)" class="text-danger">
-    <div *ngIf="investorForm.get('geographical_scope')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_4.GEOGRAPHICAL_SCOPE_REQUIRED' | translate }}</div>
-  </div>
-</div>
+    <!-- Step 4: Additional Information -->
+    <div *ngIf="currentStep === 4" class="form-step step-4">
+      <div class="form-group">
+        <label for="geographical_scope_id">{{ 'INVESTOR_FORM.STEP_4.GEOGRAPHICAL_SCOPE' | translate }}<span class="required-asterisk">*</span></label>
+        <select id="geographical_scope_id" formControlName="geographical_scope_id" required>
+          <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_4.SELECT_GEOGRAPHICAL_SCOPE' | translate }}</option>
+          <option *ngFor="let scope of dynamicData.geographical_scopes" [value]="scope.id">{{ scope.name }}</option>
+        </select>
+        <div *ngIf="investorForm.get('geographical_scope_id')?.invalid && (investorForm.get('geographical_scope_id')?.dirty || investorForm.get('geographical_scope_id')?.touched)" class="text-danger">
+          <div *ngIf="investorForm.get('geographical_scope_id')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_4.GEOGRAPHICAL_SCOPE_REQUIRED' | translate }}</div>
+        </div>
+      </div>
 
-<!--  Co-Invest -->
-<div class="form-group">
-  <label>{{ 'INVESTOR_FORM.STEP_4.CO_INVEST' | translate }}</label>
-  <div class="form-check-container">
-    <div class="form-check">
-      <input type="radio" formControlName="co_invest" value="yes" class="form-check-input" id="coInvestYes" />
-      <label class="form-check-label" for="coInvestYes">{{ 'INVESTOR_FORM.STEP_4.CO_INVEST_YES' | translate }}</label>
+      <div class="form-group">
+        <label for="co_invest_id">{{ 'INVESTOR_FORM.STEP_4.CO_INVEST' | translate }}<span class="required-asterisk">*</span></label>
+        <select id="co_invest_id" formControlName="co_invest_id" required>
+          <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_4.SELECT_CO_INVEST' | translate }}</option>
+          <option *ngFor="let option of dynamicData.yes_no_options" [value]="option.id">{{ option.name }}</option>
+        </select>
+        <div *ngIf="investorForm.get('co_invest_id')?.invalid && (investorForm.get('co_invest_id')?.dirty || investorForm.get('co_invest_id')?.touched)" class="text-danger">
+          <div *ngIf="investorForm.get('co_invest_id')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_4.CO_INVEST_REQUIRED' | translate }}</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="investment_privacy_option_id">{{ 'INVESTOR_FORM.STEP_4.INVESTMENT_PRIVACY' | translate }}<span class="required-asterisk">*</span></label>
+        <select id="investment_privacy_option_id" formControlName="investment_privacy_option_id" required>
+          <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_4.SELECT_INVESTMENT_PRIVACY' | translate }}</option>
+          <option *ngFor="let option of dynamicData.investment_privacy_options" [value]="option.id">{{ option.name }}</option>
+        </select>
+        <div *ngIf="investorForm.get('investment_privacy_option_id')?.invalid && (investorForm.get('investment_privacy_option_id')?.dirty || investorForm.get('investment_privacy_option_id')?.touched)" class="text-danger">
+          <div *ngIf="investorForm.get('investment_privacy_option_id')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_4.INVESTMENT_PRIVACY_REQUIRED' | translate }}</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="additional_notes">{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES' | translate }}</label>
+        <textarea id="additional_notes" formControlName="additional_notes" placeholder="{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES_PLACEHOLDER' | translate }}" class="form-control"></textarea>
+      </div>
     </div>
-    <div class="form-check">
-      <input type="radio" formControlName="co_invest" value="no" class="form-check-input" id="coInvestNo" />
-      <label class="form-check-label" for="coInvestNo">{{ 'INVESTOR_FORM.STEP_4.CO_INVEST_NO' | translate }}</label>
+
+    <!-- Step 5: Submit Step -->
+    <div *ngIf="currentStep === 5" class="form-step step-5">
+      <div class="submit-box">
+        <img src="../../assets/submit.png" alt="Submit Icon" class="submit-icon" />
+        <h4 class="submit-title">{{ 'INVESTOR_FORM.STEP_5.SUBMIT_TITLE' | translate }}</h4>
+        <p class="submit-description">
+          {{ 'INVESTOR_FORM.STEP_5.SUBMIT_DESCRIPTION' | translate }}
+        </p>
+        <div class="submitted-text">{{ 'INVESTOR_FORM.STEP_5.SUBMITTED_TEXT' | translate }}</div>
+      </div>
     </div>
-  </div>
-  <div *ngIf="investorForm.get('co_invest')?.invalid && (investorForm.get('co_invest')?.dirty || investorForm.get('co_invest')?.touched)" class="text-danger">
-    <div *ngIf="investorForm.get('co_invest')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_4.CO_INVEST_REQUIRED' | translate }}</div>
-  </div>
-</div>
-
-
-<!-- Investment Privacy Dropdown -->
-<div class="form-group">
-  <label for="investment_private">
-    {{ 'INVESTOR_FORM.STEP_4.INVESTMENT_PRIVACY' | translate }}
-  </label>
-  <select id="investmentPrivacy" formControlName="investment_private" class="form-control" required>
-    <option value="" disabled selected>{{ 'INVESTOR_FORM.STEP_4.SELECT_INVESTMENT_PRIVACY' | translate }}</option>
-    <option value="Keep my investments private">{{ 'INVESTOR_FORM.STEP_4.PRIVACY_PRIVATE' | translate }}</option>
-    <option value="Announce my investments">{{ 'INVESTOR_FORM.STEP_4.PRIVACY_PUBLIC' | translate }}</option>
-  </select>
-  <div *ngIf="investorForm.get('investment_private')?.invalid && (investorForm.get('investment_private')?.dirty || investorForm.get('investment_private')?.touched)" class="text-danger">
-    <div *ngIf="investorForm.get('investment_private')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_4.INVESTMENT_PRIVACY_REQUIRED' | translate }}</div>
-  </div>
-  </div>
-
-  <!--Additional Notes -->
-  <div class="form-group">
-    <label for="additional_notes">{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES' | translate }}</label>
-    <textarea id="additionalNotes" formControlName="additional_notes" placeholder="{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES_PLACEHOLDER' | translate }}" class="form-control"></textarea>
-  </div>
-
-</div>
-
-<!-- Step 5: Submit Step -->
-<div *ngIf="currentStep === 5" class="form-step step-5">
-  <div class="submit-box">
-    <img src="../../assets/submit.png" alt="Submit Icon" class="submit-icon" />
-    <h4 class="submit-title">{{ 'INVESTOR_FORM.STEP_5.SUBMIT_TITLE' | translate }}</h4>
-    <p class="submit-description">
-      {{ 'INVESTOR_FORM.STEP_5.SUBMIT_DESCRIPTION' | translate }}
-    </p>
-    <div class="submitted-text">{{ 'INVESTOR_FORM.STEP_5.SUBMITTED_TEXT' | translate }}</div>
-  </div>
-</div>
-
-
   </form>
 
-<!-- Navigation Buttons -->
-<div class="form-navigation" [ngClass]="{'multiple-buttons': currentStep !== 1}">
-  <!-- Previous Button -->
-  <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary" *ngIf="currentStep !== 1">
-    {{ 'INVESTOR_FORM.NAVIGATION.PREVIOUS_STEP' | translate }}
-  </button>
-
-  <!-- Next or Submit Button -->
-  <ng-container *ngIf="currentStep !== 4 && currentStep !== 5">
-    <button type="button" (click)="nextStep()" class="btn btn-primary">
-      {{ 'INVESTOR_FORM.NAVIGATION.NEXT_STEP' | translate }}
+  <!-- Navigation Buttons -->
+  <div class="form-navigation" [ngClass]="{'multiple-buttons': currentStep !== 1}">
+    <!-- Previous Button -->
+    <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary" *ngIf="currentStep !== 1">
+      {{ 'INVESTOR_FORM.NAVIGATION.PREVIOUS_STEP' | translate }}
     </button>
-  </ng-container>
 
-  <!-- Submit Button for Step 4 -->
-  <ng-container *ngIf="currentStep === 4"  >
-    <button type="submit" [disabled]="!isStepValid(4)" class="btn btn-success"  (click)="nextStep()" (click) = "onSubmit()">
-      {{ 'INVESTOR_FORM.STEP_5.SUBMIT_BUTTON' | translate }}
-    </button>
-      </ng-container>
-</div>
+    <!-- Next or Submit Button -->
+    <ng-container *ngIf="currentStep !== 4 && currentStep !== 5">
+      <button type="button" (click)="nextStep()" class="btn btn-primary">
+        {{ 'INVESTOR_FORM.NAVIGATION.NEXT_STEP' | translate }}
+      </button>
+    </ng-container>
 
+    <!-- Submit Button for Step 4 -->
+    <ng-container *ngIf="currentStep === 4">
+      <button type="submit" [disabled]="!isStepValid(4)" class="btn btn-success" (click)="nextStep()" (click)="onSubmit()">
+        {{ 'INVESTOR_FORM.STEP_5.SUBMIT_BUTTON' | translate }}
+      </button>
+    </ng-container>
+  </div>
 </div>
