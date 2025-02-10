@@ -129,7 +129,7 @@ export class InvestorFormComponent implements OnInit {
    * Move to the next step
    */
   nextStep(): void {
-    if (this.currentStep < 4) {
+    if (this.currentStep < 5) {
       this.markCurrentStepControlsAsTouched();
       if (this.isStepValid(this.currentStep)) {
         this.currentStep++;
@@ -216,7 +216,6 @@ export class InvestorFormComponent implements OnInit {
       this.apiService.submitInvestorForm(formData).subscribe({
         next: (response) => {
           console.log('Investor registered successfully:', response);
-          this.router.navigate(['/success']); // Navigate to a success page
         },
         error: (error) => {
           console.error('Error submitting form:', error);
