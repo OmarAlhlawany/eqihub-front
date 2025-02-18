@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
+
 }
 .form-title {
   text-align: center; /* Center-align the title */
@@ -196,7 +196,7 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-2 select::after {
-  float:inline-end;  
+  float:inline-end;
   margin-top: 6px;
   border-radius: 50%;
   position: relative;
@@ -216,7 +216,7 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-2 .dropdown-toggle::after {
-  float:inline-end;  
+  float:inline-end;
   margin-top: 6px;
   border-radius: 50%;
   position: relative;
@@ -597,7 +597,7 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-line {
-  width: 60px; /* Shorter line on mobile */
+  width: 2.3rem; /* Shorter line on mobile */
   margin: 0 10px; /* Reduced margin between circle and line */
 }
 .form-step {
@@ -711,7 +711,7 @@ body[dir="rtl"] .investor-form-container {
 
 .step-4 label {
   font-size: 12px; /* Smaller font size */
-  
+
 }
 
 .step-4 select,
@@ -942,7 +942,7 @@ body[dir="rtl"] .investor-form-container {
   .step-4 .form-check-label {
     font-size: 13px; /* Adjust radio button label size */
   }
-  
+
   .step-5 .submit-box {
     padding: 20px; /* Normal padding for tablet */
   }

@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
+
 }
 .form-title {
   text-align: center; /* Center-align the title */
@@ -579,28 +579,28 @@ body[dir="rtl"] .investor-form-container {
     .step-indicator-line {
       bottom: 5px; /* Adjusted for smaller screens */
     }
-  
+
     /* Step Indicator */
     .form-steps-indicator {
       flex-direction: row; /* Stack indicators vertically */
       align-items: flex-start;
       margin-bottom: 10px;
     }
-  
+
     .step-indicator {
       justify-content: center; /* Center indicators on small screens */
       padding: 10px 0;
     }
-  
+
     .step-circle {
       width: 20px; /* Smaller circle */
       height: 20px; /* Smaller circle */
       line-height: 20px; /* Adjusted line height */
       font-size: 10px; /* Smaller font size */
     }
-  
+
     .step-line {
-      width: 50px; /* Shorter line */
+      width: 2.3rem; /* Shorter line */
       height: 3px; /* Thinner line */
       margin: 0 3px; /* Smaller margin */
     }
