@@ -452,6 +452,29 @@ body[dir="rtl"] .investor-form-container {
   font-weight: 450;
 }
 
+.step-5 .form-check-input {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  accent-color: #007bff; /* Blue accent color for checked radio button */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-5 .form-check-input:checked {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.step-5 .form-check-input:focus {
+  outline: none;
+}
+
+.step-5 .form-check-input:disabled {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+}
+
 .step-5 textarea::placeholder {
   font-size: 14px;
   color: #aaa;

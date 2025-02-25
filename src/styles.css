@@ -5,7 +5,7 @@ body, html {
   height: 100%;
   width: 100%;
   transition:  15s ease !important;
-  
+
 }
 
 /* Ensure the header does not overlap the background */
@@ -129,29 +129,29 @@ body[dir="rtl"] .step-2 .dropdown-toggle::after {
 }
 
 body[dir="rtl"] .step-2 .dropdown-menu {
-  text-align: right; 
+  text-align: right;
 }
 
 body[dir="rtl"] .step-2 .dropdown-menu.show {
-  right: 0; 
+  right: 0;
 }
 
 body[dir="rtl"] .step-2 .tag-close {
-  padding-left: 10px; 
-  padding-right: 0; 
+  padding-left: 10px;
+  padding-right: 0;
 }
 
 body[dir="rtl"] .step-2 .dropdown-item {
-  text-align: right; 
+  text-align: right;
 }
 
 body[dir="rtl"] .step-2 .tags-input .tag .tag-close {
-  left: auto; 
-  right: 5px; 
+  left: auto;
+  right: 5px;
 }
 
 body[dir="rtl"] .step-2 .form-group label {
-  text-align: right; 
+  text-align: right;
 }
 
 
@@ -185,21 +185,38 @@ body[dir="rtl"] .step-3 .other-budget-input {
   margin-right: 20px; /* Adjust for RTL */
 }
 
-body[dir="rtl"] .step-4 .form-check-container {
-  gap: 30px;
-  flex-direction:row;
+body[dir="rtl"] .step-4 .form-check-container,
+body[dir="rtl"] .step-5 .form-check-container {
+
+  display: flex;
+  gap: 12px; /* ضمان المسافة بين العناصر */
+  align-items: center;
+  flex-wrap: wrap;
+
 }
 
-body[dir="rtl"] .step-4 .form-check-label {
+body[dir="rtl"] .step-4 .form-check,
+body[dir="rtl"] .step-5 .form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer; /* إضافة مؤشر الفأرة ليظهر أن العنصر قابل للنقر */
+}
+
+body[dir="rtl"] .step-4 .form-check-label,
+body[dir="rtl"] .step-5 .form-check-label {
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 450;
   text-align: right;
-  padding-right: 25px;
+  cursor: pointer; /* إضافة تأثير المؤشر ليظهر أن النص قابل للنقر */
 }
-
 
 body[dir="rtl"] .step-5 .submit-box {
   text-align: right;
 }
 
-body[dir="rtl"] .form-check-container {
-  flex-direction: row-reverse;
+body[dir="rtl"] .form-check-input {
+  margin-left: 0; /* إزالة المسافة اليسرى من زر الراديو */
+  margin-right: 0px; /* إضافة مسافة صغيرة بين زر الراديو والنص */
 }

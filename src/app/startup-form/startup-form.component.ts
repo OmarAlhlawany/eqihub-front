@@ -97,7 +97,7 @@ export class StartupFormComponent implements OnInit {
    * Move to the next step
    */
   nextStep(): void {
-    if (this.currentStep < 5) {
+    if (this.currentStep < 6) {
       this.markCurrentStepControlsAsTouched();
       if (this.isStepValid(this.currentStep)) {
         this.currentStep++;
@@ -203,7 +203,6 @@ export class StartupFormComponent implements OnInit {
       this.apiService.submitStartupForm(formData).subscribe({
         next: (response) => {
           console.log('Startup registered successfully:', response);
-          this.router.navigate(['/success']); // Navigate to a success page
         },
         error: (error) => {
           console.error('Error submitting form:', error);
