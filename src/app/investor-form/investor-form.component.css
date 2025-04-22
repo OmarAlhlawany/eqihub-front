@@ -1,28 +1,55 @@
 /* Investor Form Styles */
 .investor-form-container {
-  background-image: url('../../assets/background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  min-height: 90vh;
+  background-color: #FBFDFF;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
 }
+.form-container {
+  width: 75%;
+  max-width: 650px;
+  padding: 40px;
+  border: solid 1px #E5E7EB;
+  background: #FFFFFF;
+  border-radius: 27px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 500px;
+  margin: 50px auto;
+}
 .form-title {
   text-align: center; /* Center-align the title */
-  font-size: 36px; /* Larger font size for prominence */
-  font-weight: bold; /* Bold the text */
-  color: #4b49ac; /* Use the primary color from your project */
+  font-size: 30px; /* Larger font size for prominence */
+  font-weight: 700; /* Bold the text */
+  color: #374151; /* Use the primary color from your project */
+  margin-top: 10px;
+}
+.form-description{
+  text-align: center; /* Center-align the title */
+  font-size: 16px; /* Larger font size for prominence */
+  font-weight: 400; /* Bold the text */
+  color: #6B7280; /* Use the primary color from your project */
   margin-bottom: 20px; /* Add space below the title */
-  text-transform: uppercase; /* Capitalize the title */
-  background-color: #ffffff;
-  width: 100%;
+}
+hr{
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  color: #9496a7;
 
 }
 
+.form-navigation
+{
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  margin-top: 20px; /* Space above the buttons */
+  width: 100%; /* Full width of the container */
+}
 body[dir="rtl"] .form-title {
   text-align: right; /* Right-align for Arabic (RTL) */
 }
@@ -31,18 +58,6 @@ body[dir="rtl"] .investor-form-container {
   direction: rtl !important;
 }
 
-.form-container {
-  width: 90%;
-  max-width: 500px; /* Smaller width for a more square shape */
-  padding: 20px; /* Reduced padding */
-  background: white;
-  border-radius: 20px; /* Smaller border radius */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  min-height: 400px; /* Adjusted for square shape */
-}
 
 /* Line under the step indicators */
 .step-indicator-line {
@@ -50,13 +65,14 @@ body[dir="rtl"] .investor-form-container {
   bottom: 10px; /* Adjust this value to position the line correctly */
   left: 0;
   width: 100%;
-  height: 1px;
+  height: .1px;
   background-color: #D9DBE9; /* Color of the line */
   z-index: 1; /* Ensure the line is behind the step indicators */
+  
 }
 /* Step Indicator */
 .form-steps-indicator {
-  display: flex;
+  display: center;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0; /* Removed gap between indicator and form */
@@ -70,22 +86,29 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-circle {
-  width: 24px; /* Smaller circle */
-  height: 24px; /* Smaller circle */
-  line-height: 24px; /* Adjusted line height */
-  border-radius: 50%;
-  background-color: #ccc;
+  width: 35px;
+  height: 35px;
+  line-height: normal;
+  border-radius: 27px;
+  background-color: #E5E7EB;
   text-align: center;
   font-weight: bold;
-  color: #000;
+  color: #ffffff;
   z-index: 1;
   transition: box-shadow 0.3s ease;
-  font-size: 12px; /* Smaller font size */
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .step-circle.active {
-  background-color: #2B37A0;
+  background-color: #0E57FF;
   color: white;
+  transition: 1s;
+  transition-delay: 1.5s !important;
 }
 
 .step-circle.unlocked {
@@ -93,12 +116,13 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-line {
-  width: 100px; /* Shorter line */
-  height: 4px; /* Thinner line */
-  background-color: #ccc;
-  margin: 0 5px; /* Reduced margin */
+  width: 130px;
+  height: 6px;
+  background-color: #E5E7EB;
+  margin: 0 5px 0 5px;
   position: relative;
   overflow: hidden;
+  border-radius: 30px;
 }
 
 .step-line::before {
@@ -108,98 +132,181 @@ body[dir="rtl"] .investor-form-container {
   left: 0;
   height: 100%;
   width: 0;
-  background-color: #2B37A0;
-  transition: width 0.3s ease;
+  background-color: #0E57FF;
+  transition: width .80s ease-in-out;
 }
 
-.step-line.half-filled::before {
+.half-filled::before {
   width: 50%;
 }
 
-.step-line.fully-filled::before {
+.fully-filled::before {
   width: 100%;
 }
 
+.step-line.step-1::before {
+  transition-delay: 0s;
+}
+
+.step-line.step-2::before {
+  transition-delay: 0.3s;
+}
+
+.step-line.step-3::before {
+  transition-delay: 0.9s;
+}
+
+.step-1.half-filled::before {
+  width: 50%;
+  transition-delay: 0.9s;
+}
+.step-2.half-filled::before {
+  width: 50%;
+  transition-delay: 1.5s;
+}
+.step-3.half-filled::before {
+  width: 50%;
+  transition-delay: 1.9s;
+}
 /* Form Steps */
 .form-step {
   margin-top: 10px; /* Reduced margin */
 }
-
 /* Step 1: Contact Details */
+.step-1 h3,.step-2 h3 ,.step-3 h3 ,.step-4 h3 {
+  font-size: 12px; /* Smaller font size */
+  font-weight: 500;
+  margin: 10px 0 10px;
+}
 .step-1 h3 {
-  font-size: 18px; /* Smaller font size */
-  font-weight: bold;
+  font-size: 22px; /* Smaller font size */
+  font-weight: 600;
+  margin: 10px 0 40px;
 }
-
-.step-1 label {
+.step-1 label,.step-2 label,.step-3 label,.step-4 label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: semibold;
-  font-size: 14px; /* Smaller font size */
-  font-weight: bold;
+  color: #000000;
+  margin: 5px;
+  font-size: 12px; /* Smaller font size */
+  font-weight: 500;
 
 }
 
-.step-1 input {
+.step-1 input, .step-2 input, .step-3 input, .step-4 input, .step-5 input {
   width: 100%; /* Full width */
-  height: 40px; /* Smaller height */
+  height: 30px; /* Smaller height */
   padding: 8px; /* Reduced padding */
   margin-top: 3px;
-  border: 1px solid #ccc;
-  border-radius: 20px; /* Smaller border radius */
-  font-size: 14px; /* Smaller font size */
-  text-indent: 10px; ;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px; /* Smaller border radius */
+  font-size: 9px; /* Smaller font size */
+  text-indent: 3px; ;
+}
+.step-1 input:focus  {
+  border: 1px solid #3B82F6;
+  caret-color: #3B82F6ed; 
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a shadow effect */
+  transition: border-color 0.5s ease; /* Smooth transition */
 }
 
 /* Step 2: Investment Details */
 .step-2 {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .step-2 h3 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 /* Labels */
-.step-2 label {
+/* .step-2 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 14px;
-}
+} */
 
 /* Select Inputs */
 .step-2 select,
-.step-2 .dropdown-toggle {
-  width: 100%;
-  height: 40px;
-  margin-top: 3px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 14px;
-  background-color: white;
-  cursor: pointer;
-  text-indent: 10px;
-  position: relative;
+.step-2 .dropdown-toggle, .step-4 select, .step-2 .dropdown-toggle {
+    width: 100%;
+    height: 40px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+    text-indent: -16px;
+    color: #33333392;
+    position: relative;
+    box-shadow: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 8px 30px 8px 15px;
+    font-weight: 400 !important;
+    font-size: 9px !important;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-
-.step-2 select {
-  text-align:justify;
+select#investment_type_id,
+select#favourite_investment_stage_id, select#investment_stage_id, select#investment_type_id, select#investment_stage_id, select#favourite_investment_stage_id {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background-color: #fff;
   border: 1px solid #ccc;
-  font-weight: normal;
-  border-radius: 20px;
-  position: relative; /* Ensure the arrow is positioned relative to the button */
+  border-radius: 8px;
+  padding: 10px 20px 10px 10px;
+  font-size: 16px;
+  color: #33333392;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
 }
 
+
+
+.step-2 select, .step-4 select {
+  text-align: justify;
+  background-color: #fff;
+  border: 1px solid #E5E7EB;
+  font-weight: 500;
+  border-radius: 6px;
+  position: relative;
+  color: #4f4f4f;
+  text-indent: 8px;
+  font-size: 11px;
+
+}
+.step-2 select, .step-4 select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23333' stroke-width='1' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  /* padding-right: 36px; */
+}
+
+
+.step-2 select:valid, .step-4 select:valid {
+  color: #232323 !important; /* Placeholder color */
+  font-size: 12px; /* Smaller font size */
+  /* text-indent: 8px; */
+}
 .step-2 select::after {
   float:inline-end;
   margin-top: 6px;
   border-radius: 50%;
   position: relative;
+  
 }
 
 
@@ -208,40 +315,53 @@ body[dir="rtl"] .investor-form-container {
 .step-2 .dropdown-toggle {
   text-align:justify;
   background-color: #fff;
-  border: 1px solid #ccc;
   font-weight: normal;
   border-radius: 20px;
   position: relative; /* Ensure the arrow is positioned relative to the button */
   padding: 8px 12px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23333' stroke-width='1' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 36px;
 }
 
+.dropdown-toggle::after {
+  content: none !important;
+}
 .step-2 .dropdown-toggle::after {
   float:inline-end;
   margin-top: 6px;
   border-radius: 50%;
   position: relative;
+  
 }
 
 /* Dropdown Menu */
 .step-2 .dropdown-menu {
   width: 100%;
-  max-height: 150px; /* Reduced height */
-  overflow-y: auto; /* Add scrollbar when content exceeds height */
+  max-height: 150px;
+  overflow-y: auto;
   border-radius: 10px;
   border: 1px solid #ccc;
   padding: 5px 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position the dropdown absolutely */
-  bottom: 100%; /* Position above the button */
-  margin-bottom: 5px; /* Add spacing between dropdown and button */
-  z-index: 1000; /* Ensure dropdown appears above other elements */
-  background-color: white; /* Ensure background is white */
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: -2px;
+  z-index: 1000;
+  background-color: white;
+  
+  
 }
 
 /* Dropdown Items */
 .step-2 .dropdown-menu .dropdown-item {
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 9px;
   cursor: pointer ;
   border-radius: 5px;
   transition: background 0.3s ease;
@@ -249,7 +369,7 @@ body[dir="rtl"] .investor-form-container {
 
 .step-2 .dropdown-menu .dropdown-item:hover,
 .step-2 .dropdown-menu .dropdown-item.selected {
-  background-color: #4252e1;
+  background-color: #0E57FF;
   color: white;
 }
 
@@ -291,10 +411,10 @@ body[dir="rtl"] .investor-form-container {
 .step-2 .tags-input .tag {
   display: inline-flex;
   align-items: center;
-  background-color: #4252e1;
+  background-color: #0d6efd;
   color: #fff;
   padding: 6px 10px;
-  border-radius: 20px;
+  border-radius: 9px;
   font-size: 12px;
 }
 
@@ -306,30 +426,39 @@ body[dir="rtl"] .investor-form-container {
 }
 
 /* Step 3: Project Budget */
-.step-3 h3 {
-  font-size: 18px; /* Smaller font size */
+/* .step-3 h3 {
+  font-size: 18px; 
   font-weight: bold;
-}
+} */
 
 .step-3 .budget-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  gap: 10px; /* Reduced gap */
-  margin-top: 10px; /* Reduced margin */
+  gap: 10px 20px;
+  margin-top: 20px;
+}
+.step-3 .budget-options > :last-child {
+  grid-column: 1 / -1;
+  padding-left: 40px;
+  color: #e9f5ff;
 }
 
 .step-3 .budget-option {
-  width: 100%; /* Full width */
-  height: 60px; /* Smaller height */
+  width: auto;
+  height: 70px;
   display: flex;
   align-items: center;
+  align-self: center;
   margin: 0;
-  border: 1px solid #ccc;
-  border-radius: 10px; /* Smaller border radius */
-  background-color: #f9f9f9;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  background-color: #ffffff;
   transition: all 0.3s ease;
-  cursor: pointer;
   position: relative;
+  padding: 17px 15%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .step-3 .budget-option input[type="radio"] {
@@ -345,13 +474,19 @@ body[dir="rtl"] .investor-form-container {
 .step-3 .budget-option label {
   flex: 1;
   margin: 0;
-  font-size: 14px; /* Smaller font size */
+  font-size: 17px;
+  font-weight: 500;
+  height: 0;
+  line-height: 0;
+  cursor: pointer;
 }
+/* .step-3 .budget-options > :last-child label  {
+  color: #adadad;
 
+} */
 .step-3 .budget-option:hover,
 .step-3 .budget-option:focus-within {
-  border-color: #007bff;
-  background-color: #e9f5ff;
+  border: 2px solid #007bff;
 }
 
 .step-3 .budget-option.selected {
@@ -396,37 +531,20 @@ body[dir="rtl"] .investor-form-container {
 }
 
 /* Step 4: Additional Information */
-.step-4 h3 {
-  font-size: 18px; /* Smaller font size */
+/* .step-4 h3 {
+  font-size: 18px;
   font-weight: bold;
-}
+} */
 
-.step-4 label {
+/* .step-4 label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 14px; /* Smaller font size */
-}
+  font-size: 14px; 
+} */
 
 /* Dropdown list with cursor arrow */
-.step-4 select {
-  width: 100%; /* Full width */
-  height: 35px;
-  padding: 3px; /* Reduced padding */
-  margin: 3px 0 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 20px; /* Smaller border radius */
-  font-size: 14px; /* Smaller font size */
-  cursor: pointer; /* Show pointer cursor */
-  appearance: none; /* Remove default arrow */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
-  background-repeat: no-repeat;
-  background-position: right 8px center; /* Position arrow */
-  background-size: 12px; /* Size of arrow */
-  padding-right: 25px; /* Add space for arrow */
-  text-indent: 10px;
 
-}
 
 
 
@@ -438,22 +556,22 @@ body[dir="rtl"] .investor-form-container {
 
 /* Textarea with border radius */
 .step-4 textarea {
-  width: 100%; /* Full width */
-  height: 50px; /* Adjust height */
-  padding: 6px; /* Reduced padding for mobile */
-  font-size: 12px; /* Smaller font size */
-  line-height: 18px; /* Improved readability */
-  border-radius: 8px; /* Added border radius */
-  border: 1px solid #ccc; /* Light border */
-  resize: vertical; /* Allow vertical resizing */
-  transition: border-color 0.3s ease; /* Smooth border color change */
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 10px;
+  border: 1px solid #E5E7EB;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  min-height: 100px;
 }
 
 /* Placeholder style */
 .step-4 textarea::placeholder {
-  font-size: 14px; /* Same as text */
-  color: #aaa; /* Lighter color for placeholder */
-  font-style: italic; /* Italicized for distinction */
+  font-size: 9px; /* Same as text */
+  color: #ebebeb98; /* Lighter color for placeholder */
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
@@ -461,6 +579,29 @@ body[dir="rtl"] .investor-form-container {
 .step-4 textarea:focus {
   border-color: #007bff; /* Change border color on focus */
   outline: none; /* Remove default outline */
+}
+
+
+.custom-textarea-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-textarea {
+  width: 100%;
+  min-height: 100px;
+  resize:both; 
+  padding-bottom: 30px;
+}
+
+::-webkit-resizer {
+  background-image: url('/assets/corner-dots.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: se-resize;
+  resize: both;
+  width: 50px ; /* Adjust size as needed */
 }
 
 /* Adjust when typing */
@@ -491,12 +632,12 @@ body[dir="rtl"] .investor-form-container {
   font-size: 18px; /* Smaller font size */
   font-weight: bold;
   margin-top: 10px;
-  color: #2B37A0;
+  color: #0E57FF;
 }
 
 .step-5 .submit-description {
   font-size: 14px; /* Smaller font size */
-  color: #2B37A0;
+  color: #0E57FF;
   margin-top: 10px;
   padding: 0 20px; /* Reduced padding */
 }
@@ -505,7 +646,7 @@ body[dir="rtl"] .investor-form-container {
   font-size: 16px;
   font-weight: bold;
   color: #ffffff; /* White text */
-  background-color: #2B37A0; /* Dark blue */
+  background-color: #0E57FF; /* Dark blue */
   padding: 10px 20px;
   border-radius: 25px;
   text-align: center;
@@ -514,7 +655,7 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .btn-success {
-  background-color: #2B37A0;
+  background-color: #0E57FF;
   color: white;
   padding: 8px 20px; /* Reduced padding */
   font-size: 14px; /* Smaller font size */
@@ -528,35 +669,6 @@ body[dir="rtl"] .investor-form-container {
 }
 
 /* Navigation Buttons (Moved Outside Form) */
-.form-navigation {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px; /* Space between buttons */
-  margin-top: 20px; /* Space between form and buttons */
-  width: 100%;
-  max-width: 500px; /* Match form width */
-}
-
-.btn {
-  padding: 8px 20px; /* Reduced padding */
-  border-radius: 20px; /* Smaller border radius */
-  cursor: pointer;
-  font-size: 14px; /* Smaller font size */
-}
-
-.btn-secondary {
-  background-color: #ffffff;
-  color: #091690;
-  border: 2px solid #091690;
-}
-
-.btn-primary {
-  background-color: #2B37A0;
-  color: white;
-}
-
-
-
 
 /* Media Queries for Responsive Design */
 
@@ -574,14 +686,14 @@ body[dir="rtl"] .investor-form-container {
   }
 
   .form-container {
-    width: 100%; /* Ensure form takes full width on mobile */
+    width: 100%;
     max-width: 100%; /* Remove max-width constraint */
     padding: 15px; /* Reduce form padding */
   }
 .form-steps-indicator {
   gap: 5px; /* Reduce gap on mobile */
   flex-direction: row; /* Stack the steps vertically on small screens */
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start; /* Align steps to the left */
 }
 
@@ -590,15 +702,15 @@ body[dir="rtl"] .investor-form-container {
 }
 
 .step-circle {
-  width: 20px; /* Smaller circle on mobile */
-  height: 20px; /* Smaller circle */
+  width: 30px;
+  height: 30px;
   line-height: 20px; /* Adjusted line height */
   font-size: 10px; /* Smaller font size */
 }
 
 .step-line {
-  width: 2.3rem; /* Shorter line on mobile */
-  margin: 0 10px; /* Reduced margin between circle and line */
+  width: 4rem;
+  margin: 0 2px;
 }
 .form-step {
   padding: 0 10px; /* Add padding for mobile screens */
@@ -716,7 +828,7 @@ body[dir="rtl"] .investor-form-container {
 
 .step-4 select,
 .step-4 textarea {
-  font-size: 12px; /* Consistent smaller font */
+  font-size: 9px; /* Consistent smaller font */
 }
 
 .step-4 .form-check-container {
@@ -809,7 +921,6 @@ body[dir="rtl"] .investor-form-container {
 
   .form-container {
     width: 100%; /* Keep form width as percentage */
-    max-width: 480px; /* Adjust max-width for tablets */
     padding: 18px; /* Slightly reduce padding */
   }
   .form-steps-indicator {
@@ -827,15 +938,15 @@ body[dir="rtl"] .investor-form-container {
   }
 
   .step-circle {
-    width: 22px; /* Slightly smaller circle for tablet */
-    height: 22px; /* Adjusted size */
+    width: 35px;
+    height: 35px;
     line-height: 22px; /* Adjusted line height */
     font-size: 11px; /* Slightly smaller font size */
   }
 
   .step-line {
-    width: 80px; /* Shorter line on tablet */
-    margin: 0 10px; /* Adjust margin */
+    width: 8rem;
+    margin: 0 2px;
   }
   .form-step {
     padding: 0 15px; /* Adjust padding for tablets */
@@ -904,8 +1015,12 @@ body[dir="rtl"] .investor-form-container {
 
   .step-3 .budget-option label {
     font-size: 13px; /* Adjust label font size */
+    height: 0;
+    line-height: 0;
   }
-
+  .step-3 .budget-options > :last-child  {
+    padding-left: 10px;
+  }
   .step-3 .budget-option.full-width {
     height: 55px; /* Slightly larger height */
   }
@@ -918,7 +1033,7 @@ body[dir="rtl"] .investor-form-container {
   }
   /*budget*/
   .step-4 {
-    width: 80%; /* Reduce width for tablet view */
+    width: 100%; /* Reduce width for tablet view */
     padding: 15px;
   }
 
@@ -932,7 +1047,7 @@ body[dir="rtl"] .investor-form-container {
 
   .step-4 select,
   .step-4 textarea {
-    font-size: 13px; /* Adjust font size for better readability */
+    font-size: 9px; /* Adjust font size for better readability */
   }
 
   .step-4 .form-check-container {

@@ -1,20 +1,22 @@
-<h2 class="form-title">{{ 'INVESTOR_FORM.TITLE' | translate }}</h2>
 
 <div class="investor-form-container">
   <form [formGroup]="investorForm" (ngSubmit)="onSubmit()" class="form-container">
+    <h2 class="form-title">{{ 'INVESTOR_FORM.TITLE' | translate }}</h2>
+    <p class="form-description">{{ 'INVESTOR_FORM.DESCRIPTION' | translate }}</p>
+    <hr>
     <!-- Step Indicator (Hidden on Step 5) -->
     <div *ngIf="currentStep !== 5" class="form-steps-indicator d-flex align-items-center mb-4">
       <div class="step-indicator">
-        <span class="step-circle" [ngClass]="{'active': currentStep >= 1, 'unlocked': currentStep > 1}">1</span>
-        <div class="step-line" [ngClass]="{'half-filled': currentStep === 1, 'fully-filled': currentStep > 1}"></div>
+        <span class="step-circle no-tra" [ngClass]="{'active': currentStep >= 1, 'unlocked': currentStep > 1}">1</span>
+        <div class="step-line step-1" [ngClass]="{'half-filled': currentStep === 1, 'fully-filled': currentStep > 1}"></div>
       </div>
       <div class="step-indicator">
         <span class="step-circle" [ngClass]="{'active': currentStep >= 2, 'unlocked': currentStep > 2}">2</span>
-        <div class="step-line" [ngClass]="{'half-filled': currentStep === 2, 'fully-filled': currentStep > 2}"></div>
+        <div class="step-line step-2" [ngClass]="{'half-filled': currentStep === 2, 'fully-filled': currentStep > 2}"></div>
       </div>
       <div class="step-indicator">
         <span class="step-circle" [ngClass]="{'active': currentStep >= 3, 'unlocked': currentStep > 3}">3</span>
-        <div class="step-line" [ngClass]="{'half-filled': currentStep === 3, 'fully-filled': currentStep > 3}"></div>
+        <div class="step-line step-3" [ngClass]="{'half-filled': currentStep === 3, 'fully-filled': currentStep > 3}"></div>
       </div>
       <div class="step-indicator">
         <span class="step-circle" [ngClass]="{'active': currentStep >= 4, 'unlocked': currentStep > 4}">4</span>
@@ -30,13 +32,13 @@
     <!-- Step 1: Contact Details -->
     <div *ngIf="currentStep === 1" class="form-step step-1">
       <h3>{{ 'INVESTOR_FORM.STEP_1.TITLE' | translate }}</h3>
-      <p>{{ 'INVESTOR_FORM.STEP_1.DESCRIPTION' | translate }}</p>
+      <!-- <p>{{ 'INVESTOR_FORM.STEP_1.DESCRIPTION' | translate }}</p> -->
 
       <div class="row mb-3">
         <div class="col-md-6">
           <label for="name">{{ 'INVESTOR_FORM.STEP_1.NAME' | translate }}<span class="required-asterisk">*</span></label>
           <div class="input-icon-container">
-            <i class="material-icons">person</i>
+            <img src="assets/person.svg" alt="person" class="material-icons" />
             <input id="name" formControlName="name" placeholder="{{ 'INVESTOR_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
           </div>
           <div *ngIf="investorForm.get('name')?.invalid && (investorForm.get('name')?.dirty || investorForm.get('name')?.touched)" class="text-danger">
@@ -62,7 +64,7 @@
         <div class="col-md-6">
           <label for="phone_number">{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER' | translate }}<span class="required-asterisk">*</span></label>
           <div class="input-icon-container">
-            <i class="material-icons">phone</i>
+            <i class="material-icons">call</i>
             <input id="phoneNumber" type="tel" formControlName="phone_number" placeholder="{{ 'INVESTOR_FORM.STEP_1.PHONENUMBER_PLACEHOLDER' | translate }}" class="form-control" required />
           </div>
           <div *ngIf="investorForm.get('phone_number')?.invalid && (investorForm.get('phone_number')?.dirty || investorForm.get('phone_number')?.touched)" class="text-danger">
@@ -74,7 +76,7 @@
         <div class="col-md-6">
           <label for="company">{{ 'INVESTOR_FORM.STEP_1.COMPANY' | translate }}<span class="required-asterisk">*</span></label>
           <div class="input-icon-container">
-            <i class="material-icons">business</i>
+            <i class="material-icons">work</i>
             <input id="company" formControlName="company" placeholder="{{ 'INVESTOR_FORM.STEP_1.COMPANY_PLACEHOLDER' | translate }}" class="form-control" required />
           </div>
           <div *ngIf="investorForm.get('company')?.invalid && (investorForm.get('company')?.dirty || investorForm.get('company')?.touched)" class="text-danger">
@@ -151,7 +153,7 @@
         </div>
       </div>
       <div *ngIf="investorForm.get('budget_range_id')?.invalid && (investorForm.get('budget_range_id')?.dirty || investorForm.get('budget_range_id')?.touched)" class="text-danger">
-        <div *ngIf="investorForm.get('budget_range_id')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_3.BUDGET_REQUIRED' | translate }}</div>
+        <div *ngIf="investorForm.get('budget_range_id')?.errors?.['required']">{{ 'INVESTOR_FORM.STEP_3.PROJECT_BUDGET_REQUIRED' | translate }}</div>
       </div>
     </div>
 
@@ -190,16 +192,17 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group custom-textarea-wrapper">
         <label for="additional_notes">{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES' | translate }}</label>
-        <textarea id="additional_notes" formControlName="additional_notes" placeholder="{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES_PLACEHOLDER' | translate }}" class="form-control"></textarea>
+        <textarea id="additional_notes" formControlName="additional_notes" placeholder="{{ 'INVESTOR_FORM.STEP_4.ADDITIONAL_NOTES_PLACEHOLDER' | translate }}" class="form-control custom-textarea"></textarea>
+        <div class="resize-icon"></div>
       </div>
     </div>
 
     <!-- Step 5: Submit Step -->
     <div *ngIf="currentStep === 5" class="form-step step-5">
       <div class="submit-box">
-        <img src="../../assets/submit.png" alt="Submit Icon" class="submit-icon" />
+        <img src="../../assets/Logo.svg" alt="Submit Icon" class="submit-icon" />
         <h4 class="submit-title">{{ 'INVESTOR_FORM.STEP_5.SUBMIT_TITLE' | translate }}</h4>
         <p class="submit-description">
           {{ 'INVESTOR_FORM.STEP_5.SUBMIT_DESCRIPTION' | translate }}
@@ -207,14 +210,14 @@
         <div class="submitted-text">{{ 'INVESTOR_FORM.STEP_5.SUBMITTED_TEXT' | translate }}</div>
       </div>
     </div>
-  </form>
-
+    
   <!-- Navigation Buttons -->
   <div class="form-navigation" [ngClass]="{'multiple-buttons': currentStep !== 1}">
     <!-- Previous Button -->
-    <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary" *ngIf="currentStep !== 1">
-      {{ 'INVESTOR_FORM.NAVIGATION.PREVIOUS_STEP' | translate }}
+    <button type="button" (click)="prevStep()" class="btn btn-secondary" *ngIf="currentStep !== 0">
+      {{ currentStep === 1 ? ('INVESTOR_FORM.NAVIGATION.CANCEL' | translate) : ('INVESTOR_FORM.NAVIGATION.PREVIOUS_STEP' | translate) }}
     </button>
+    
 
     <!-- Next or Submit Button -->
     <ng-container *ngIf="currentStep !== 4 && currentStep !== 5">
@@ -230,4 +233,5 @@
       </button>
     </ng-container>
   </div>
+  </form>
 </div>
