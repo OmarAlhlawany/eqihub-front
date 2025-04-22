@@ -1,24 +1,25 @@
-<h2 class="form-title">{{ 'STARTUP_FORM.TITLE' | translate }}</h2>
-
 <div class="startup-form-container">
   <form [formGroup]="startupForm" (ngSubmit)="onSubmit()" class="form-container">
+    <h2 class="form-title">{{ 'STARTUP_FORM.TITLE' | translate }}</h2>
+    <p class="form-description">{{ 'STARTUP_FORM.STEP_1.DESCRIPTION' | translate }}</p>
+    <hr>
     <!-- Step Indicator (Hidden on Step 6) -->
     <div *ngIf="currentStep !== 6" class="mb-4 form-steps-indicator d-flex align-items-center">
       <div class="step-indicator">
-        <span class="step-circle" [ngClass]="{'active': currentStep >= 1, 'unlocked': currentStep > 1}">1</span>
-        <div class="step-line" [ngClass]="{'half-filled': currentStep === 1, 'fully-filled': currentStep > 1}"></div>
+        <span class="step-circle no-tra" [ngClass]="{'active': currentStep >= 1, 'unlocked': currentStep > 1}">1</span>
+        <div class="step-line step-1" [ngClass]="{'half-filled': currentStep === 1, 'fully-filled': currentStep > 1}"></div>
       </div>
       <div class="step-indicator">
         <span class="step-circle" [ngClass]="{'active': currentStep >= 2, 'unlocked': currentStep > 2}">2</span>
-        <div class="step-line" [ngClass]="{'half-filled': currentStep === 2, 'fully-filled': currentStep > 2}"></div>
+        <div class="step-line step-2" [ngClass]="{'half-filled': currentStep === 2, 'fully-filled': currentStep > 2}"></div>
       </div>
       <div class="step-indicator">
         <span class="step-circle" [ngClass]="{'active': currentStep >= 3, 'unlocked': currentStep > 3}">3</span>
-        <div class="step-line" [ngClass]="{'half-filled': currentStep === 3, 'fully-filled': currentStep > 3}"></div>
+        <div class="step-line step-3" [ngClass]="{'half-filled': currentStep === 3, 'fully-filled': currentStep > 3}"></div>
       </div>
       <div class="step-indicator">
         <span class="step-circle" [ngClass]="{'active': currentStep >= 4, 'unlocked': currentStep > 4}">4</span>
-        <div class="step-line" [ngClass]="{'half-filled': currentStep === 4, 'fully-filled': currentStep > 4}"></div>
+        <div class="step-line step-4" [ngClass]="{'half-filled': currentStep === 4, 'fully-filled': currentStep > 4}"></div>
       </div>
       <div class="step-indicator">
         <span class="step-circle" [ngClass]="{'active': currentStep >= 5, 'unlocked': currentStep > 5}">5</span>
@@ -34,14 +35,11 @@
     <!-- Step 1: Basic Information -->
     <div *ngIf="currentStep === 1" class="form-step step-1">
       <h3>{{ 'STARTUP_FORM.STEP_1.TITLE' | translate }}</h3>
-      <p>{{ 'STARTUP_FORM.STEP_1.DESCRIPTION' | translate }}</p>
-
       <div class="mb-3 row">
         <div class="col-md-6">
           <label for="name">{{ 'STARTUP_FORM.STEP_1.NAME' | translate }}<span class="required-asterisk">*</span></label>
           <div class="input-icon-container">
-            <i class="material-icons">person</i>
-            <input id="name" formControlName="name" placeholder="{{ 'STARTUP_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
+            <img _ngcontent-ng-c1514946455="" src="assets/person.svg" alt="person" class="material-icons">            <input id="name" formControlName="name" placeholder="{{ 'STARTUP_FORM.STEP_1.NAME_PLACEHOLDER' | translate }}" class="form-control" required />
           </div>
           <div *ngIf="startupForm.get('name')?.invalid && (startupForm.get('name')?.dirty || startupForm.get('name')?.touched)" class="text-danger">
             <div *ngIf="startupForm.get('name')?.errors?.['required']">{{ 'STARTUP_FORM.STEP_1.NAME_REQUIRED' | translate }}</div>
@@ -78,7 +76,7 @@
         <div class="col-md-6">
           <label for="company">{{ 'STARTUP_FORM.STEP_1.COMPANY_NAME' | translate }}<span class="required-asterisk">*</span></label>
           <div class="input-icon-container">
-            <i class="material-icons">business</i>
+            <i class="material-icons">work</i>
             <input id="companyName" formControlName="company" placeholder="{{ 'STARTUP_FORM.STEP_1.COMPANY_NAME_PLACEHOLDER' | translate }}" class="form-control" required />
           </div>
           <div *ngIf="startupForm.get('company')?.invalid && (startupForm.get('company')?.dirty || startupForm.get('company')?.touched)" class="text-danger">
@@ -89,7 +87,7 @@
       </div>
 
       <div class="mb-3 row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <label for="website">{{ 'STARTUP_FORM.STEP_1.WEBSITE' | translate }}<span class="required-asterisk">*</span></label>
           <div class="input-icon-container">
             <i class="material-icons">link</i>
@@ -105,7 +103,7 @@
 
     <!-- Step 2: Funding Details -->
     <div *ngIf="currentStep === 2" class="form-step step-2">
-      <div class="mb-3 row">
+      <div class="mb-3 row custom-textarea-wrapper">
         <label for="product_service_description">{{ 'STARTUP_FORM.STEP_2.PRODUCT_SERVICE' | translate }}<span class="required-asterisk">*</span></label>
         <textarea id="productService" formControlName="product_service_description" placeholder="{{ 'STARTUP_FORM.STEP_2.PRODUCT_SERVICE_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
         <div *ngIf="startupForm.get('product_service_description')?.invalid && (startupForm.get('product_service_description')?.dirty || startupForm.get('product_service_description')?.touched)" class="text-danger">
@@ -115,6 +113,7 @@
       </div>
 
       <div class="mb-3 row">
+        <div class="col-md-6 p-0">
         <label for="company_sector_id">{{ 'STARTUP_FORM.STEP_2.SECTOR' | translate }}<span class="required-asterisk">*</span></label>
         <select id="company_sector_id" formControlName="company_sector_id" class="form-control" required>
           <option value="" disabled selected>{{ 'STARTUP_FORM.STEP_2.SELECT_SECTOR' | translate }}</option>
@@ -123,9 +122,9 @@
         <div *ngIf="startupForm.get('company_sector_id')?.invalid && (startupForm.get('company_sector_id')?.dirty || startupForm.get('company_sector_id')?.touched)" class="text-danger">
           {{ 'STARTUP_FORM.STEP_2.SECTOR_REQUIRED' | translate }}
         </div>
-      </div>
+        </div>
 
-      <div class="mb-3 row">
+      <div class="col-md-6 ">
         <label for="operational_phase_id">{{ 'STARTUP_FORM.STEP_2.OPERATIONAL_STAGE' | translate }}<span class="required-asterisk">*</span></label>
         <select id="operational_phase_id" formControlName="operational_phase_id" class="form-control" required>
           <option value="" disabled selected>{{ 'STARTUP_FORM.STEP_2.SELECT_OPERATIONAL_STAGE' | translate }}</option>
@@ -135,8 +134,9 @@
           {{ 'STARTUP_FORM.STEP_2.OPERATIONAL_STAGE_REQUIRED' | translate }}
         </div>
       </div>
+     </div>
 
-      <div class="mb-3 row">
+      <div class="mb-3 row custom-textarea-wrapper">
         <label for="problem_solved">{{ 'STARTUP_FORM.STEP_2.PROBLEM_SOLVED' | translate }}<span class="required-asterisk">*</span></label>
         <textarea id="problemSolved" formControlName="problem_solved" placeholder="{{ 'STARTUP_FORM.STEP_2.PROBLEM_SOLVED_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
         <div *ngIf="startupForm.get('problem_solved')?.invalid && (startupForm.get('problem_solved')?.dirty || startupForm.get('problem_solved')?.touched)" class="text-danger">
@@ -159,7 +159,7 @@
         </div>
       </div>
 
-      <div class="mb-3 row">
+      <div class="mb-3 row custom-textarea-wrapper">
         <label for="funding_used">{{ 'STARTUP_FORM.STEP_3.FUNDING_USAGE' | translate }}<span class="required-asterisk">*</span></label>
         <textarea id="fundingUsage" formControlName="funding_used" placeholder="{{ 'STARTUP_FORM.STEP_3.FUNDING_USAGE_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
         <div *ngIf="startupForm.get('funding_used')?.invalid && (startupForm.get('funding_used')?.dirty || startupForm.get('funding_used')?.touched)" class="text-danger">
@@ -167,8 +167,8 @@
           <div *ngIf="startupForm.get('funding_used')?.errors?.['minlength']">{{ 'STARTUP_FORM.STEP_3.FUNDING_USAGE_MIN_LENGTH' | translate }}</div>
         </div>
       </div>
-
       <div class="mb-3 row">
+        <div class="col-md-6 p-0">
         <label for="previous_funding_source_id">{{ 'STARTUP_FORM.STEP_3.PREVIOUS_FUNDING_SOURCES' | translate }}<span class="required-asterisk">*</span></label>
         <select id="previous_funding_source_id" formControlName="previous_funding_source_id" class="form-control" required>
           <option value="" disabled selected>{{ 'STARTUP_FORM.STEP_3.SELECT_PREVIOUS_FUNDING_SOURCES' | translate }}</option>
@@ -179,7 +179,7 @@
         </div>
       </div>
 
-      <div class="mb-3 row">
+      <div class="col-md-6 ">
         <label for="target_market_id">{{ 'STARTUP_FORM.STEP_3.TARGET_MARKET' | translate }}<span class="required-asterisk">*</span></label>
         <select id="target_market_id" formControlName="target_market_id" class="form-control" required>
           <option value="" disabled selected>{{ 'STARTUP_FORM.STEP_3.SELECT_TARGET_MARKET' | translate }}</option>
@@ -190,7 +190,7 @@
         </div>
       </div>
     </div>
-
+    </div>
     <!-- Step 4: Exit Strategy -->
     <div *ngIf="currentStep === 4" class="form-step step-4">
     <!-- Open to Joint Investment -->
@@ -292,7 +292,7 @@
     </div>
 
     <!-- Break Even Point -->
-    <div class="mb-3 row">
+    <div class="mb-3 row custom-textarea-wrapper">
       <label for="breakEvenPoint">{{ 'STARTUP_FORM.STEP_5.BREAK_EVEN_POINT' | translate }}<span class="required-asterisk">*</span></label>
       <textarea id="breakEvenPoint" formControlName="break_even_point" placeholder="{{ 'STARTUP_FORM.STEP_5.BREAK_EVEN_POINT_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
       <div *ngIf="startupForm.get('break_even_point')?.invalid && (startupForm.get('break_even_point')?.dirty || startupForm.get('break_even_point')?.touched)" class="text-danger">
@@ -301,7 +301,7 @@
     </div>
 
     <!-- Financial Goal -->
-    <div class="mb-3 row">
+    <div class="mb-3 row custom-textarea-wrapper">
       <label for="financialGoal">{{ 'STARTUP_FORM.STEP_5.FINANCIAL_GOAL' | translate }}<span class="required-asterisk">*</span></label>
       <textarea id="financialGoal" formControlName="financial_goal" placeholder="{{ 'STARTUP_FORM.STEP_5.FINANCIAL_GOAL_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
       <div *ngIf="startupForm.get('financial_goal')?.invalid && (startupForm.get('financial_goal')?.dirty || startupForm.get('financial_goal')?.touched)" class="text-danger">
@@ -324,7 +324,7 @@
     </div>
 
     <!-- Exit Strategy Details (Only if "Yes") -->
-    <div class="mb-3 row" *ngIf="startupForm.get('has_exit_strategy')?.value == 1">
+    <div class="mb-3 row custom-textarea-wrapper" *ngIf="startupForm.get('has_exit_strategy')?.value == 1">
       <label for="exitStrategyDetails">{{ 'STARTUP_FORM.STEP_5.EXIT_STRATEGY_DETAILS' | translate }}<span class="required-asterisk">*</span></label>
       <textarea id="exitStrategyDetails" formControlName="exit_strategy_details" placeholder="{{ 'STARTUP_FORM.STEP_5.EXIT_STRATEGY_DETAILS_PLACEHOLDER' | translate }}" class="form-control" required></textarea>
       <div *ngIf="startupForm.get('exit_strategy_details')?.invalid && (startupForm.get('exit_strategy_details')?.dirty || startupForm.get('exit_strategy_details')?.touched)" class="text-danger">
@@ -338,7 +338,7 @@
     <!-- Step 6: Submit Step -->
     <div *ngIf="currentStep === 6" class="form-step step-6">
       <div class="submit-box">
-        <img src="../../assets/submit.png" alt="Submit Icon" class="submit-icon" />
+        <img src="../../assets/Logo.svg" alt="Submit Icon" class="submit-icon" />
         <h4 class="submit-title">{{ 'STARTUP_FORM.STEP_6.SUBMIT_TITLE' | translate }}</h4>
         <p class="submit-description">
           {{ 'STARTUP_FORM.STEP_6.SUBMIT_DESCRIPTION' | translate }}
@@ -347,13 +347,12 @@
       </div>
     </div>
 
-  </form>
 
   <!-- Navigation Buttons -->
 <div class="form-navigation" [ngClass]="{'multiple-buttons': currentStep !== 1}">
   <!-- Previous Button -->
-  <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" class="btn btn-secondary" *ngIf="currentStep !== 1">
-    {{ 'STARTUP_FORM.NAVIGATION.PREVIOUS_STEP' | translate }}
+  <button type="button" (click)="prevStep()" class="btn btn-secondary" *ngIf="currentStep !== 0">
+    {{ currentStep === 1 ? ('INVESTOR_FORM.NAVIGATION.CANCEL' | translate) : ('INVESTOR_FORM.NAVIGATION.PREVIOUS_STEP' | translate) }}
   </button>
 
   <!-- Next or Submit Button -->
@@ -370,4 +369,5 @@
     </button>
       </ng-container>
 </div>
+</form>
 </div>

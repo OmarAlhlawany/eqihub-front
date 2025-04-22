@@ -105,14 +105,17 @@ export class StartupFormComponent implements OnInit {
     }
   }
 
-  /**
-   * Move to the previous step
-   */
-  prevStep(): void {
-    if (this.currentStep > 1) {
-      this.currentStep--;
-    }
+/**
+ * Move to the previous step
+ */
+prevStep(): void {
+  if (this.currentStep === 1) {
+    window.location.href = 'https://apply.equihub.co/';
+  } else if (this.currentStep > 1) {
+    this.currentStep--;
   }
+}
+
 
   /**
    * Check if the current step is valid

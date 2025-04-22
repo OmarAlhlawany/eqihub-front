@@ -198,17 +198,19 @@
     },
     "NAVIGATION": {
       "PREVIOUS_STEP": "Previous Step",
-      "NEXT_STEP": "Next Step",
+      "CANCEL": "Cancel",
+      "NEXT_STEP": "Next",
       "SUBMIT": "Submit"
     }
   },
   "INVESTOR_FORM": {
-    "TITLE": "Join as Investor",
+    "TITLE": "Join as an Investor",
+    "DESCRIPTION": "Provide your personal and business details to start the application.",
     "STEP_1": {
       "TITLE": "Contact details",
       "DESCRIPTION": "Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.",
       "NAME": "Name",
-      "NAME_PLACEHOLDER": "John Carter",
+      "NAME_PLACEHOLDER": "Enter your name",
       "NAME_REQUIRED": "Name is required.",
       "NAME_MIN_LENGTH": "Name must be at least 3 characters.",
 
@@ -309,18 +311,19 @@
       "PRIVACY_PUBLIC": "Announce my investments",
       "INVESTMENT_PRIVACY_REQUIRED": "Investment privacy is required.",
       
-      "ADDITIONAL_NOTES": "Additional Notes",
-      "ADDITIONAL_NOTES_PLACEHOLDER": "Additional notes"
+      "ADDITIONAL_NOTES": "How will the funding be used?",
+      "ADDITIONAL_NOTES_PLACEHOLDER": "How will the funding be used?"
     },
     "STEP_5": {
-      "SUBMIT_TITLE": "Submit your investor request",
-      "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
+      "SUBMIT_TITLE": "Submitted Succesfully",
+      "SUBMIT_DESCRIPTION": "We are Proccsing your Request now, You will recieve a project quote within 24 - 48 hours.",
       "SUBMITTED_TEXT": "Submitted",
       "SUBMIT_BUTTON": "Submit"
     },
     "NAVIGATION": {
       "PREVIOUS_STEP": "Previous Step",
-      "NEXT_STEP": "Next Step"
+      "CANCEL": "Cancel",
+      "NEXT_STEP": "Next"
     }
   }
   }
