@@ -5,7 +5,7 @@ body, html {
   height: 100%;
   width: 100%;
   transition:  15s ease !important;
-
+  font-family: "Inter", sans-serif !important;
 }
 
 /* Ensure the header does not overlap the background */
@@ -17,20 +17,62 @@ header {
   z-index: 1; /* Ensure the header stays above the background */
 }
 
+button , btn-primary {
+  background: #0E57FF;
+  color: #ffffff; 
+  border: none;  
+  padding: 10px 35px !important; /* Adjust padding for tablet */
+  min-width: 130px !important;
+  border-radius: 9px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: "Inter", sans-serif !important;
+}
+.btn-secondary {
+  color: #A8AEB9 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  background-color: #ffffff  !important;
+  border: .5px solid #E5E7EB !important;
+  box-shadow: none !important;
+}
+.btn-secondary:hover {
+  color: #606060 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  background-color: #a8aeb934  !important;
+  border: .5px solid #E5E7EB !important;
+  box-shadow: none !important;
+}
 .input-icon-container {
   position: relative;
 }
+::placeholder {
+  color: #E5E7EB !important;
+  font-size: 9px;
+}
 
+.input-icon-container:focus-within ::placeholder{
+  color: #00000000 !important;
+}
 .input-icon-container .material-icons {
   position: absolute;
   right: 10px; /* Move icon to the right */
   top: 50%;
   transform: translateY(-50%);
-  color: #A0A3BD; /* Icon color */
-  font-size: 20px; /* Adjust icon size */
+  color: #3B82F6; /* Icon color */
+  font-size: 14px; /* Adjust icon size */
   pointer-events: none; /* Ensure the icon doesn't interfere with input */
-}
+  filter: opacity(0.15);
+  width: 12px;
 
+}
+.input-icon-container:focus-within img, .input-icon-container:focus-within i  {
+  filter: contrast(1.0);
+}
 .input-icon-container input {
   padding-right: 40px; /* Add padding to prevent text overlap with the icon */
 }
@@ -85,9 +127,9 @@ body[dir="rtl"] .step-circle {
   order: 1;
 }
 
-body[dir="rtl"] .step-line {
-  margin-left: 15px;
-  margin-right: 0;
+body[dir=rtl] .step-line {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 body[dir="rtl"] .step-line::before {
@@ -121,6 +163,7 @@ body[dir="rtl"] .step-2 .tags-input .tag {
 
 body[dir="rtl"] .step-2 .dropdown-toggle {
   text-align: right; /* Align text to the right */
+  padding-right: 43px !important;
 }
 
 body[dir="rtl"] .step-2 .dropdown-toggle::after {
@@ -132,13 +175,17 @@ body[dir="rtl"] .step-2 .dropdown-menu {
   text-align: right;
 }
 
+body[lang='ar'] .dropdown-toggle::placeholder {
+  padding-right: 12px; 
+}
+
 body[dir="rtl"] .step-2 .dropdown-menu.show {
   right: 0;
 }
 
 body[dir="rtl"] .step-2 .tag-close {
-  padding-left: 10px;
-  padding-right: 0;
+  padding-right: 8px;
+  margin: 0;
 }
 
 body[dir="rtl"] .step-2 .dropdown-item {
@@ -220,3 +267,32 @@ body[dir="rtl"] .form-check-input {
   margin-left: 0; /* إزالة المسافة اليسرى من زر الراديو */
   margin-right: 0px; /* إضافة مسافة صغيرة بين زر الراديو والنص */
 }
+html[lang="ar"] body {
+  font-family: 'Cairo', sans-serif !important;
+}
+html[lang="ar"] {
+  font-family: 'Cairo', sans-serif !important;
+}
+.arabic-font, .arabic-font * {
+  font-family: 'Cairo', sans-serif !important;
+}
+.material-icons {
+  font-family: 'Material Icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px; 
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.no-tra {
+    transition: none !important;
+    transition-delay: 0s !important;
+  }
