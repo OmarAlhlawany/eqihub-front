@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     // Set the initial language
-    this.currentLanguage = this.translate.currentLang || 'en';
+    this.currentLanguage = this.languageService.currentLanguage;
 
     // Update title based on the active route
     this.router.events.subscribe(() => {

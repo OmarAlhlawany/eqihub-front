@@ -16,7 +16,7 @@ import { LanguageService } from './services/language.service';
     InvestorFormComponent,
     StartupFormComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -28,5 +28,7 @@ export class AppComponent {
   constructor() {
     // Set default language
     this.languageService.initLanguage();
+    const currentLang = localStorage.getItem('lang') || 'en';
+    document.documentElement.lang = currentLang;
   }
 }

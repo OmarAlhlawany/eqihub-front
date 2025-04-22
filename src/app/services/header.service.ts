@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class HeaderService {
-  private titleSubject = new BehaviorSubject<string>('EquiHub'); // Default title
+  private titleSubject = new BehaviorSubject<string>('Angel East'); // Default title
   title$ = this.titleSubject.asObservable();
 
   setTitle(newTitle: string) {

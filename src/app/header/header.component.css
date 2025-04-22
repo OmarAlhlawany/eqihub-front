@@ -6,12 +6,14 @@
   justify-content: space-between; /* Space out the items */
   position: relative; /* Ensure the header is part of the normal flow */
   z-index: 1; /* Ensure the header stays above the background */
-  padding: 10px 20px; /* Add padding for better spacing */
+  padding: 18px 30px; /* Add padding for better spacing */
+  border-bottom: 1px solid #E5E7EB;
+  min-height: 108px;
 }
 
 .header-logo {
-  height: 51px; /* Adjust the height as needed */
-  width: 233px;
+  height: 65px; /* Adjust the height as needed */
+  width: 65px;
   cursor: pointer; /* Add pointer cursor to indicate clickable */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
@@ -40,20 +42,22 @@
 }
 
 .language-switcher button {
-  background: linear-gradient(135deg, #4b49ac, #3a378d); /* Gradient background */
+  background: #0E57FF; /* Gradient background */
   color: #ffffff; /* White text */
-  border: none;
-  padding: 10px 20px; /* Slightly larger padding */
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 25px; /* Rounded corners */
+  border: none;  
+  font-size: 15px; /* Adjust font size for tablet */
+  padding: 13px 27px; /* Adjust padding for tablet */
+  border-radius: 10px;
+  font-size: 13px !important;
+  font-weight: 500 !important;
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transitions */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
+  font-family: "Cairo", sans-serif !important; /* Font family */
+} 
 
 .language-switcher button:hover {
-  background: linear-gradient(135deg, #3a378d, #4b49ac); /* Reverse gradient on hover */
+  background: #092b79; /* Reverse gradient on hover */
   transform: translateY(-2px); /* Slight lift on hover */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
@@ -86,7 +90,7 @@
   }
 
   .header-logo {
-    width: 150px; /* Adjust logo width for mobile */
+    width: 50px; /* Adjust logo width for mobile */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 10px; /* Add some space below logo */
   }
@@ -102,10 +106,7 @@
     gap: 8px; /* Reduce the gap between language buttons */
   }
 
-  .language-switcher button {
-    font-size: 14px; /* Adjust button font size */
-    padding: 8px 16px; /* Adjust button padding */
-  }
+
 }
 
 /* Tablet screens */
@@ -118,7 +119,7 @@
   }
 
   .header-logo {
-    width: 200px; /* Adjust logo width for tablet */
+    width: 50px; /* Adjust logo width for tablet */
     height: auto;
   }
 
@@ -126,8 +127,5 @@
     font-size: 26px; /* Adjust font size for tablet screens */
   }
 
-  .language-switcher button {
-    font-size: 15px; /* Adjust font size for tablet */
-    padding: 9px 18px; /* Adjust padding for tablet */
-  }
+
 }
