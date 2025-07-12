@@ -1,131 +1,158 @@
-.header {
-  background-color: #ffffff; /* Solid white background */
+.main-header {
+  background-color: #fff;
   display: flex;
-  flex-direction: row; /* Arrange logo and buttons in a row */
-  align-items: center; /* Align items vertically centered */
-  justify-content: space-between; /* Space out the items */
-  position: relative; /* Ensure the header is part of the normal flow */
-  z-index: 1; /* Ensure the header stays above the background */
-  padding: 18px 30px; /* Add padding for better spacing */
-  border-bottom: 1px solid #E5E7EB;
-  min-height: 108px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
-.header-logo {
-  height: 65px; /* Adjust the height as needed */
-  width: 65px;
-  cursor: pointer; /* Add pointer cursor to indicate clickable */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-}
-
-.header-logo:hover {
-  opacity: 0.8; /* Slightly fade the logo on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-.header-title {
-  margin: 5px 0 0 5px; /* Add margin above the title and align with the logo */
-  text-align: left; /* Align the title text to the left */
-  color: #4b49ac; /* Add color to the title */
-  font-size: 30px; /* Adjust font size */
-  font-weight: bold; /* Make the title bold */
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.header-title:hover {
-  color: #3a378d; /* Darker shade on hover */
-}
-
-.language-switcher {
+.logo {
   display: flex;
-  gap: 10px; /* Space between buttons */
+  align-items: center;
+  justify-content: start;
+  min-width: 15%;
+}
+.logo img {
+  height: 40px;
+  transition: 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
 }
 
-.language-switcher button {
-  background: #0E57FF; /* Gradient background */
-  color: #ffffff; /* White text */
-  border: none;  
-  font-size: 15px; /* Adjust font size for tablet */
-  padding: 13px 27px; /* Adjust padding for tablet */
-  border-radius: 10px;
-  font-size: 13px !important;
-  font-weight: 500 !important;
+.nav-links {
+  display: flex;
+  gap: 50px;
+  align-items: start;
+  flex-grow: 1;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0e57ff;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 15px;
+}
+
+.lang-toggle {
+  color: #1A1A1A;
+  background: transparent;
+  padding: 7px 14px;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transitions */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  font-family: "Cairo", sans-serif !important; /* Font family */
-} 
-
-.language-switcher button:hover {
-  background: #092b79; /* Reverse gradient on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transition: all 0.3s ease;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2px;
+  font-family: "cairo", sans-serif !important;
 }
 
-.language-switcher button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(75, 73, 172, 0.3); /* Glow effect on focus */
+.lang-toggle:hover {
+  color: #4085FA;
+}
+.active-link {
+  color: #4085FA !important;
+  font-weight: 600 !important;
+  position: relative;
 }
 
-.language-switcher button:active {
-  transform: translateY(0); /* Reset lift on click */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+.nav-links.a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4085FA;
+}
+.LangGlobe {
+  height: 16px;
+  padding: 0px;
 }
 
-/* Active Language Button Style */
-.language-switcher button.active {
-  background: linear-gradient(135deg, #ff9800, #f57c00); /* Highlight active language */
-  color: #fff;
+/* ✅ Tablet screens */
+@media (max-width: 1024px) {
+  .main-header {
+    padding: 12px;
+  }
+
+  .logo img {
+    height: 36px;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .lang-toggle {
+    font-size: 15px !important;
+    padding: 6px 12px;
+  }
+
+  .LangGlobe {
+    height: 15px;
+  }
 }
 
-/* Media Queries for Responsiveness */
-
-/* Mobile screens */
+/* ✅ Mobile screens */
 @media (max-width: 767px) {
-  .header {
-    flex-direction: row; /* Stack the logo and language buttons vertically */
-    align-items: center; /* Center align items */
-    justify-content: space-between; /* Center content horizontally */
-    padding: 15px; /* Adjust padding for mobile */
+  .main-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+    padding: 10px;
   }
 
-  .header-logo {
-    width: 50px; /* Adjust logo width for mobile */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Add some space below logo */
+  .logo {
+    justify-content: center;
   }
 
-  .header-title {
-    font-size: 24px; /* Adjust font size for smaller screens */
-    text-align: center; /* Center align title */
-    margin: 10px 0; /* Add spacing around the title */
+  .logo img {
+    height: 35px;
   }
 
-  .language-switcher {
-    flex-direction: column; /* Stack language buttons vertically */
-    gap: 8px; /* Reduce the gap between language buttons */
+  .nav-links {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
-
-}
-
-/* Tablet screens */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .header {
-    flex-direction: row; /* Keep logo and language buttons in a row */
-    align-items: center; /* Align items vertically centered */
-    justify-content: space-between; /* Space out the items */
-    padding: 15px 30px; /* Adjust padding for tablet */
+  .nav-links a {
+    font-size: 12px;
   }
 
-  .header-logo {
-    width: 50px; /* Adjust logo width for tablet */
-    height: auto;
+  .header-right {
+    justify-content: end;
   }
 
-  .header-title {
-    font-size: 26px; /* Adjust font size for tablet screens */
+  .lang-toggle {
+    font-size: 14px !important;
+    padding: 5px;
   }
 
-
+  .LangGlobe {
+    height: 14px;
+  }
 }

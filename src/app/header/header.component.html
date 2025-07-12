@@ -1,10 +1,28 @@
-<header class="header">
-  <a href="https://www.equihub.co/">
-    <img src="../../assets/Logo.svg" alt="EquiHub Logo" class="header-logo">
+<header class="main-header">
+  <a routerLink="/" class="logo">
+    <img src="../../assets/Logo.svg" alt="EquiHub Logo" />
   </a>
-  <!-- Single Language Switcher Button -->
-  <div class="language-switcher">
-    <button (click)="toggleLanguage()">
+
+<nav class="nav-links">
+  <a 
+    routerLink="/investor"
+    [ngClass]="{ 'active-link': isActive('/investor') }"
+  >
+    {{ 'HEADER.INVESTOR' | translate }}
+  </a>
+
+  <a 
+    routerLink="/startup"
+    [ngClass]="{ 'active-link': isActive('/startup') }"
+  >
+    {{ 'HEADER.STARTUP' | translate }}
+  </a>
+</nav>
+
+
+  <div class="header-right">
+    <button class="lang-toggle" (click)="toggleLanguage()">
+      <img src="../../assets/LangGlobe.svg" alt="LangGlobe" class="LangGlobe"/>
       {{ currentLanguage === 'en' ? 'العربية' : 'English' }}
     </button>
   </div>

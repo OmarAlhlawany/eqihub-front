@@ -1,4 +1,8 @@
-{
+{ 
+  "HEADER": {
+    "STARTUP": "الشركات الناشئة",
+    "INVESTOR": "المستثمرين"
+  },
   "STARTUP_FORM": {
     "TITLE": "انضم كشركة ناشئة",
     "STEP_1": {

@@ -1,4 +1,8 @@
 {
+  "HEADER": {
+    "STARTUP": "Startups",
+    "INVESTOR": "Investors"
+  },
   "STARTUP_FORM": {
     "TITLE": "Join as Startup",
     "STEP_1": {

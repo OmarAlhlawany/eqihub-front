@@ -1,72 +1,50 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Router } from '@angular/router';
-import { HeaderService } from '../services/header.service';
+import { RouterModule } from '@angular/router';
 import { LanguageService } from '../services/language.service';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { NavigationEnd, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title: string = ''; // Will be dynamically set
-  currentLanguage: string = 'en'; // Default language
-
-  private languageService = inject(LanguageService);
-  private translate = inject(TranslateService);
+  currentLanguage: string = 'en';
+  currentRoute: string = '';
   private router = inject(Router);
-
-  constructor(private headerService: HeaderService) {}
+  private translate = inject(TranslateService);
+  private languageService = inject(LanguageService);
 
   ngOnInit() {
-    // Set the initial language
     this.currentLanguage = this.languageService.currentLanguage;
-
-    // Update title based on the active route
-    this.router.events.subscribe(() => {
-      this.updateTitleBasedOnRoute();
-    });
-
-    // Update title when language changes
-    this.translate.onLangChange.subscribe((event) => {
-      this.currentLanguage = event.lang; // Update current language
-      this.updateTitleBasedOnRoute();
-    });
-
-    // Allow external updates via HeaderService
-    this.headerService.title$.subscribe((newTitle) => {
-      this.title = newTitle;
-    });
-
-    // Set initial title
-    this.updateTitleBasedOnRoute();
-  }
-
-  // Toggle between English and Arabic
-  toggleLanguage() {
-    const newLanguage = this.currentLanguage === 'en' ? 'ar' : 'en';
-    this.languageService.switchLanguage(newLanguage);
-  }
-
-  private updateTitleBasedOnRoute() {
-    const url = this.router.url;
-
-    if (url.includes('investor-form')) {
-      this.translate.get('HEADER.TITLE_INVESTOR').subscribe((res) => {
-        this.title = res;
-      });
-    } else if (url.includes('startup-form')) {
-      this.translate.get('HEADER.TITLE_STARTUP').subscribe((res) => {
-        this.title = res;
-      });
-    } else {
-      this.translate.get('HEADER.TITLE_DEFAULT').subscribe((res) => {
-        this.title = res;
-      });
+    
+      this.router.events.subscribe((event) => {
+    if (event instanceof NavigationEnd) {
+      this.currentRoute = event.urlAfterRedirects;
     }
+  });
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLanguage = event.lang;
+    });
   }
+
+  toggleLanguage() {
+    const newLang = this.currentLanguage === 'en' ? 'ar' : 'en';
+    this.languageService.switchLanguage(newLang);
+  }
+
+isActive(path: string): boolean {
+  if (path === '/investor') {
+    return this.currentRoute === '/' || this.currentRoute.includes('/investor');
+  }
+
+  return this.currentRoute.includes(path);
+}
+
+
 }

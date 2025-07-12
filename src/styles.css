@@ -18,7 +18,7 @@ header {
 }
 
 button , btn-primary {
-  background: #0E57FF;
+  background: #4085FA;
   color: #ffffff; 
   border: none;  
   padding: 10px 35px !important; /* Adjust padding for tablet */
@@ -93,12 +93,7 @@ body[dir="rtl"] .input-icon-container .material-icons {
   left: 10px; /* Move icon to the left */
   right: auto;
 }
-/* Prevent header from being affected by RTL direction */
-body[dir="rtl"] header {
-  direction: ltr !important;
 
-  text-align: left !important; /* Force left alignment */
-}
 
 /* Global Styles - RTL Support */
 body[dir="rtl"] {
