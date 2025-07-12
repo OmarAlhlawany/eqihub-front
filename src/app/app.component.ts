@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { InvestorFormComponent } from './investor-form/investor-form.component';
-import { StartupFormComponent } from './startup-form/startup-form.component';
+import { InvestorFormComponent } from './forms/investor-form/investor-form.component';
+import { StartupFormComponent } from './forms/startup-form/startup-form.component';
 import { HeaderComponent } from './header/header.component';
 import { LanguageService } from './services/language.service';
 

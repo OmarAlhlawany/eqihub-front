@@ -2,9 +2,9 @@ import { Component, OnInit, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { HeaderService } from '../services/header.service';
+import { HeaderService } from '../../services/header.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-startup-form',

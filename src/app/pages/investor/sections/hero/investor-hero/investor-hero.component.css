@@ -1,0 +1,99 @@
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #dae7f8 48.5%);
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.hero-overlay .blur-circle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: blur(819px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.blur-circle.purple {
+  background: rgba(193, 117, 255, 0.15);
+  top: 800px;
+  left: 1300px;
+  border-radius: 50%;
+}
+
+.blur-circle.pink {
+  background: rgba(255, 232, 234, 0.8);
+  top: 780px;
+  right: 1340px;
+  border-radius: 50%;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 .highlight {
+  color: #4085FA;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.primary-btn {
+  padding: 12px 28px;
+  background-color: #4085FA;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #1A1A1A;
+}
+
+.hero-animation {
+  position: relative;
+  width: 50%;
+  height: 500px;
+}
+
+.hero-img {
+  position: absolute;
+  max-width: 300px;
+}
+
+.hero-img.left {
+  left: 0;
+  top: 0;
+}
+
+.hero-img.right {
+  right: 0;
+  top: 0;
+}
