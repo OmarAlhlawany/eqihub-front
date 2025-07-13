@@ -3,6 +3,26 @@
     "STARTUP": "Startups",
     "INVESTOR": "Investors"
   },
+  
+"investor": {
+  "hero": {
+    "title": "Find Your Ideal Startup Today",
+    "description": "Finding your opportunity in the MENA region has never been easier! Join us today and discover high-potential startups",
+    "button": "Join Now",
+    "keywords": {
+      "Ai": "AI",
+      "Technology": "Technology",
+      "Startup": "Startup",
+      "Fintech": "Fintech"
+    }
+  },
+  "marquee": {
+    "1": "Find exclusive opportunities",
+    "2": "Grow your Portfolio",
+    "3": "Expand Your Network"
+  }
+},
+
   "STARTUP_FORM": {
     "TITLE": "Join as Startup",
     "STEP_1": {

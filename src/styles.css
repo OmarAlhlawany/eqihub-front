@@ -263,13 +263,13 @@ body[dir="rtl"] .form-check-input {
   margin-right: 0px; /* إضافة مسافة صغيرة بين زر الراديو والنص */
 }
 html[lang="ar"] body {
-  font-family: 'Cairo', sans-serif !important;
+  font-family: 'Tajawal', sans-serif !important;
 }
 html[lang="ar"] {
-  font-family: 'Cairo', sans-serif !important;
+  font-family: 'Tajawal', sans-serif !important;
 }
 .arabic-font, .arabic-font * {
-  font-family: 'Cairo', sans-serif !important;
+  font-family: 'Tajawal', sans-serif !important;
 }
 .material-icons {
   font-family: 'Material Icons' !important;
@@ -291,3 +291,116 @@ html[lang="ar"] {
     transition: none !important;
     transition-delay: 0s !important;
   }
+
+html[dir="rtl"] .send-icon {
+  transform: scaleX(-1) !important;
+}
+html[lang="ar"] .send-icon {
+  transform: scaleX(-1) !important;
+}
+
+/* لما اللغة تكون عربي (RTL) نقلب السهم */
+html[dir="rtl"] .send-icon {
+  transform: scaleX(-1) !important;
+}
+  html[lang="ar"] .send-icon{
+  transform: scaleX(-1) !important;
+}
+
+
+/* للشريط لما اللغة عربي */
+html[lang="ar"] .marquee,
+html[lang="ar"] .marquee-clone,
+html[lang="ar"] .marquee-track {
+  animation: scrollRight 50s linear infinite;
+  flex-direction: row-reverse;
+}
+
+
+@keyframes scrollRight {
+  100% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+#global-loader {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: hideLoader 0s 3s forwards;
+}
+
+.loader-logo {
+  width: 60px;
+  height: 60px;
+  animation: pulse 1.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.loader-logo {
+  width: 80px;
+  height: 80px;
+  animation: spinPulse 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes spinPulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.1) rotate(90deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.7;
+  }
+  75% {
+    transform: scale(1.1) rotate(270deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes hideLoader {
+  to {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+}
+#global-loader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-logo {
+  width: 80px;
+  animation: pulseSpin 3s infinite ease-in-out;
+}
+
+@keyframes pulseSpin {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.9) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}

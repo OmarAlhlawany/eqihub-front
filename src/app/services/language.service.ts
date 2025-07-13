@@ -2,14 +2,13 @@ import { Injectable, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { BehaviorSubject } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class LanguageService {
   private translate = inject(TranslateService);
-  currentLang: string = 'en'; 
-  languageSwitched$ = new BehaviorSubject<boolean>(false); 
+  currentLang: string = 'en';
+  languageSwitched$ = new BehaviorSubject<boolean>(false);
 
   constructor() {}
 
@@ -21,14 +20,16 @@ export class LanguageService {
   }
 
   switchLanguage(lang: string) {
-    this.languageSwitched$.next(false); 
+    // ✅ أظهر اللودر فورًا قبل أي حاجة تتغير
+    document.body.classList.add('show-loader');
 
+  setTimeout(() => {
     this.translate.use(lang).subscribe(() => {
-      this.currentLang = lang;
-      localStorage.setItem('lang', lang);
       this.setDirection(lang);
-      this.languageSwitched$.next(true); 
+      localStorage.setItem('lang', lang);
+      window.location.reload(); // يعيد تحميل الصفحة بعد تغيير اللغة
     });
+  }, 500);
   }
 
   get currentLanguage(): string {
@@ -45,7 +46,7 @@ export class LanguageService {
     } else {
       body.setAttribute('dir', 'ltr');
       body.setAttribute('lang', 'en');
-      body.classList.remove('arabic-font'); 
+      body.classList.remove('arabic-font');
     }
   }
 }
