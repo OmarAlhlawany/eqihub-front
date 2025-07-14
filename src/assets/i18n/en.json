@@ -22,6 +22,14 @@
       }
     ]
   },
+  "mapStats": {
+  "title": "Accelerate your Success Through the MENA startup Ecosystem",
+  "investmentDeal": "Investment deal",
+  "activeStartup": "Active startup",
+  "capitalDeployed": "Capital deployed",
+  "marketEvolution": "Market Evolution"
+}
+  ,
 "investor": {
   "hero": {
     "title": "Find Your Ideal Startup Today",

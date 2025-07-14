@@ -1,0 +1,26 @@
+<section class="map-stats" #counterSection>
+  <div class="map-overlay"></div>
+  <div class="container">
+    <div class="content">
+      <h2>{{ 'mapStats.title' | translate }}</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>+{{ investmentCount }}</h3>
+          <p>{{ 'mapStats.investmentDeal' | translate }}</p>
+        </div>
+        <div class="stat-item">
+          <h3>+{{ startupCount }}</h3>
+          <p>{{ 'mapStats.activeStartup' | translate }}</p>
+        </div>
+        <div class="stat-item">
+          <h3>+{{ capitalCount }}B$</h3>
+          <p>{{ 'mapStats.capitalDeployed' | translate }}</p>
+        </div>
+        <div class="stat-item">
+          <h3>+{{ evolutionCount }}%</h3>
+          <p>{{ 'mapStats.marketEvolution' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
