@@ -3,6 +3,25 @@
     "STARTUP": "Startups",
     "INVESTOR": "Investors"
   },
+  "features": {
+    "badge": "Angel East",
+    "title": "Why Join the Angel East Network?",
+    "subtitle": "The MENA startup ecosystem is evolving  Discover the highest potential startups",
+    "cards": [
+      {
+        "title": "Tailored Support",
+        "description": "Get matched with investors who align with your vision and growth goals."
+      },
+      {
+        "title": "Credibility",
+        "description": "Gain access to a network of verified and trusted investors."
+      },
+      {
+        "title": "Growth Opportunities",
+        "description": "Connect with a vibrant community of investors and startups in the MENA region to accelerate your journey."
+      }
+    ]
+  },
 "investor": {
   "hero": {
     "title": "Find Your Ideal Startup Today",

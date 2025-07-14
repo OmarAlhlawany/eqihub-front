@@ -1,0 +1,126 @@
+.features-section {
+  position: relative;
+  padding: 6rem 1rem;
+  text-align: center;
+  background: radial-gradient(
+    49.99% 99.99% at 50.01% -0.13%,
+    rgba(20, 122, 255, 0.13) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  overflow: hidden;
+}
+
+/* Overlay Mask Image */
+.features-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../../../../assets/mask-group.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top-center;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* عشان المحتوى يظهر فوق الخلفية */
+.features-section > * {
+  position: relative;
+  z-index: 1;
+}
+.features-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.features-section .features-badge {
+  display: inline-block;
+  background-color: #0049FF;
+  color: #DAE7F8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.features-section p.subtitle {
+  color: #525252;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.features-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media(min-width: 768px) {
+  .features-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: left;
+  border: 2px solid #E5E7EB;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex: 1;
+  min-width: 280px;
+}
+
+.feature-card:hover {
+  background-color: #0049FF;
+  transform: translateY(-20px) rotate(-.1deg) scale(1.1);
+    transition: transform 0.6s ease, background-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  
+  color: white;
+}
+
+.feature-card:hover h3,
+.feature-card:hover p {
+  color: white;
+}
+
+.feature-card img {
+  width: 40px;
+  height: 40px;
+}
+
+.feature-card:hover img {
+  width: 60px;
+  height: 60px;
+  transition: width 0.3s ease, height 0.3s ease;
+    filter: brightness(0) invert(1);
+
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #6B7280;
+  line-height: 1.6;
+}

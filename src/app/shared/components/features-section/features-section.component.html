@@ -1,0 +1,22 @@
+<section class="features-section">
+  <div class="features-header">
+    <span class="features-badge">Angel East</span>
+    <h2>{{ 'features.title' | translate }}</h2>
+    <p>{{ 'features.subtitle' | translate }}</p>
+  </div>
+
+  <div class="features-cards features-container">
+    <div
+      class="feature-card"
+      *ngFor="let feature of features"
+      [class.active]="feature.active"
+      (mouseenter)="feature.active = true"
+      (mouseleave)="feature.active = false"
+    >
+      <h3>
+        <img [src]="'../../../../../../assets/' + feature.icon" [alt]="feature.titleKey | translate" />
+        {{ feature.titleKey | translate }}</h3>
+      <p>{{ feature.descriptionKey | translate }}</p>
+    </div>
+  </div>
+</section>
