@@ -312,11 +312,9 @@ html[dir="rtl"] .send-icon {
 html[lang="ar"] .marquee,
 html[lang="ar"] .marquee-clone,
 html[lang="ar"] .marquee-track {
-  animation: scrollRight 50s linear infinite;
+  animation: scrollRight 90s linear infinite;
   flex-direction: row-reverse;
 }
-
-
 @keyframes scrollRight {
   100% {
     transform: translateX(-100%);
@@ -325,6 +323,8 @@ html[lang="ar"] .marquee-track {
     transform: translateX(100%);
   }
 }
+
+
 #global-loader {
   position: fixed;
   inset: 0;

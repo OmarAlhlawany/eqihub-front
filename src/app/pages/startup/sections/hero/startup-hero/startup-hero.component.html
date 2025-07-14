@@ -1,1 +1,38 @@
-<p>startup-hero works!</p>
+<section class="startup-hero">
+  <div class="background-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">{{ 'startup.hero.title' | translate }}</h1>
+    <p class="hero-description">
+      {{ 'startup.hero.description' | translate }}
+    </p>
+    <button class="hero-button">{{ 'startup.hero.button' | translate }}</button>
+  </div>
+
+  <div class="curved-hero-container">
+    <div class="curve-gradient"></div>
+    <img class="curve-icon" src="../../../../../../assets/Overlay+Shadow.svg" alt="Overlay Icon" />
+  </div>
+
+  <div class="typing-box-container">
+    <div class="typing-box">
+      <span class="typing-text">{{ displayedText }}</span>
+      <img class="send-icon" src="../../../../../../assets/send.svg" alt="Send Icon" />
+    </div>
+  </div>
+
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <div class="marquee" *ngFor="let i of [1,2,3,4,5,6
+      ]">
+        <div class="marquee-item" *ngFor="let message of marqueeMessages">
+          <img [src]="'../../../../../../assets/'+ message.icon" alt="icon" />
+          <span>{{ message.text | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img class="cards-left" src="../../../../../../assets/left-cards.svg" alt="Left Cards" />
+  <img class="cards-right" src="../../../../../../assets/right-cards.svg" alt="Right Cards" />
+</section>

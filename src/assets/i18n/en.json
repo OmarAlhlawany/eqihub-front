@@ -3,7 +3,6 @@
     "STARTUP": "Startups",
     "INVESTOR": "Investors"
   },
-  
 "investor": {
   "hero": {
     "title": "Find Your Ideal Startup Today",
@@ -20,6 +19,149 @@
     "1": "Find exclusive opportunities",
     "2": "Grow your Portfolio",
     "3": "Expand Your Network"
+  }
+},
+
+  "INVESTOR_FORM": {
+    "TITLE": "Join as an Investor",
+    "DESCRIPTION": "Provide your personal and business details to start the application.",
+    "STEP_1": {
+      "TITLE": "Contact details",
+      "DESCRIPTION": "Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.",
+      "NAME": "Name",
+      "NAME_PLACEHOLDER": "Enter your name",
+      "NAME_REQUIRED": "Name is required.",
+      "NAME_MIN_LENGTH": "Name must be at least 3 characters.",
+
+      "EMAIL": "Email",
+      "EMAIL_PLACEHOLDER": "Email address",
+      "EMAIL_REQUIRED": "Email is required.",
+      "EMAIL_INVALID": "Email is invalid.",
+      
+      "PHONENUMBER": "Phone Number",
+      "PHONENUMBER_PLACEHOLDER": "(123) 456 - 7890",
+      "PHONENUMBER_REQUIRED": "Phone number is required.",
+      "PHONENUMBER_INVALID": "Phone number is invalid.",
+      
+      "COMPANY": "Company",
+      "COMPANY_PLACEHOLDER": "Company name",
+      "COMPANY_REQUIRED": "Company name is required.",
+      "COMPANY_MIN_LENGTH": "Company name must be at least 2 characters."
+    },
+
+    "STEP_2": {
+      "INVESTMENT": "Investment",
+      "SELECT_INVESTMENT": "Select Investment",
+      "ANGEL_INVESTMENT": "Angel investment",
+      "INVESTMENT_FUNDING": "Investment Funding",
+      "INVESTMENT_REQUIRED": "Investment is required.",
+      
+      "FAVORITE_INVESTMENT": "Your favorite investment",
+      "SELECT_FAVORITE_INVESTMENT": "Select your favorite investment",
+      "PRE_SEED": "Pre-Seed",
+      "SEED": "Seed",
+      "PRE_SERIES_A": "Pre-Series A",
+      "FAVORITE_INVESTMENT_REQUIRED": "Favorite Investment is required.",
+
+      "FAVORITE_SECTORS": "Favorite Sectors",
+      "SELECTED_SECTORS": "Selected Sectors",
+      "SELECT_FAVORITE_SECTORS": "Select favorite sectors",
+      "FAVORITE_SECTORS_REQUIRED": "Select at least one favorite sector.",
+      "TAG_TECHNOLOGY": "Technology",
+      "TAG_FINTECH": "FinTech",
+      "TAG_ECOMMERCE": "E-Commerce",
+      "TAG_HEALTHCARE": "Healthcare & HealthTech",
+      "TAG_EDTECH": "Education & EdTech",
+      "TAG_RENEWABLE_ENERGY": "Renewable Energy",
+      "TAG_MANUFACTURING": "Manufacturing",
+      "TAG_LOGISTICS": "Logistics & Transportation",
+      "TAG_REAL_ESTATE": "Real Estate",
+      "TAG_AI": "Artificial Intelligence",
+      "TAG_BIG_DATA": "Big Data & Analytics",
+      "TAG_CYBERSECURITY": "Cybersecurity",
+      "TAG_DIGITAL_MARKETING": "Digital Marketing",
+      "TAG_GENERAL_TRADE": "General Trade",
+      "TAG_TRAVEL_TOURISM": "Travel & Tourism",
+      "TAG_FOOD_BEVERAGE": "Food & Beverage",
+      "TAG_RETAIL": "Retail",
+      "TAG_SPORTS_ENTERTAINMENT": "Sports & Entertainment",
+      "TAG_ROBOTICS": "Robotics",
+      "TAG_AGRITECH": "AgriTech",
+      "TAG_ENVIRONMENT_SUSTAINABILITY": "Environmental & Sustainability",
+      "TAG_AR_VR": "AR/VR",
+      "TAG_DIGITAL_PAYMENTS": "Digital Payments",
+      "TAG_FINANCIAL_SERVICES": "Financial Services",
+      "TAG_MEDIA_COMMUNICATION": "Media & Communication",
+      "TAG_GAMING": "Gaming",
+      "TAG_BIOTECH": "BioTech",
+      "TAG_INSURTECH": "InsurTech",
+      "TAG_PROPERTY_DEVELOPMENT": "Property Development",
+      "TAG_SOCIAL_INNOVATION": "Social Innovation"
+    },
+    "STEP_3": {
+      "PROJECT_BUDGET": "What's your project budget?",
+      "BUDGET_1": "$ 100K to $ 500k",
+      "BUDGET_2": "$ 500K to $ 1M",
+      "BUDGET_3": "$ 1M to $ 5M",
+      "BUDGET_4": "$ 5M+",
+      "OTHER": "Other",
+      "OTHER_PLACEHOLDER": "Specify amount",
+      "PROJECT_BUDGET_REQUIRED": "Project budget is required.",
+      "OTHER_BUDGET_REQUIRED": "Specify amount is required.",
+      "OTHER_INVALID": "Budger is invalid."
+    },
+    "STEP_4": {
+      "GEOGRAPHICAL_SCOPE": "Geographical Scope",
+      "SELECT_GEOGRAPHICAL_SCOPE": "Select a region",
+      "REGION_1": "United Arab Emirates",
+      "REGION_2": "GCC",
+      "REGION_3": "Regional",
+      "GEOGRAPHICAL_SCOPE_REQUIRED": "Geographical scope is required.",
+
+      "CO_INVEST": "Would you like to co-invest?",
+      "SELECT_CO_INVEST": "Select co-invest option",
+      "CO_INVEST_YES": "Yes",
+      "CO_INVEST_NO": "No",
+      "CO_INVEST_REQUIRED": "Co-invest is required.",
+      
+      "INVESTMENT_PRIVACY": "Would you like to highlight your investments or keep them private?",
+      "SELECT_INVESTMENT_PRIVACY": "Select privacy option",
+      "PRIVACY_PRIVATE": "Keep my investments private",
+      "PRIVACY_PUBLIC": "Announce my investments",
+      "INVESTMENT_PRIVACY_REQUIRED": "Investment privacy is required.",
+      
+      "ADDITIONAL_NOTES": "How will the funding be used?",
+      "ADDITIONAL_NOTES_PLACEHOLDER": "How will the funding be used?"
+    },
+    "STEP_5": {
+      "SUBMIT_TITLE": "Submitted Succesfully",
+      "SUBMIT_DESCRIPTION": "We are Proccsing your Request now, You will recieve a project quote within 24 - 48 hours.",
+      "SUBMITTED_TEXT": "Submitted",
+      "SUBMIT_BUTTON": "Submit"
+    },
+    "NAVIGATION": {
+      "PREVIOUS_STEP": "Previous Step",
+      "CANCEL": "Cancel",
+      "NEXT_STEP": "Next"
+    }
+  },
+
+"startup": {
+  "hero": {
+    "title": "Connect With Your Ideal Investor",
+    "description": "Finding investors for your startup in the MENA region has never been easier! Join us today and elevate your business.",
+    "button": "Join Now",
+    "keywords": {
+      "Ai": "AI",
+      "Technology": "Technology",
+      "Startup": "Startup",
+      "Fintech": "Fintech"
+    }
+  },
+  "marquee": {
+    "1": "Grow your startup",
+    "2": "Find investors and get funded",
+    "3": "Expand your network"
   }
 },
 
@@ -225,129 +367,6 @@
       "CANCEL": "Cancel",
       "NEXT_STEP": "Next",
       "SUBMIT": "Submit"
-    }
-  },
-  "INVESTOR_FORM": {
-    "TITLE": "Join as an Investor",
-    "DESCRIPTION": "Provide your personal and business details to start the application.",
-    "STEP_1": {
-      "TITLE": "Contact details",
-      "DESCRIPTION": "Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.",
-      "NAME": "Name",
-      "NAME_PLACEHOLDER": "Enter your name",
-      "NAME_REQUIRED": "Name is required.",
-      "NAME_MIN_LENGTH": "Name must be at least 3 characters.",
-
-      "EMAIL": "Email",
-      "EMAIL_PLACEHOLDER": "Email address",
-      "EMAIL_REQUIRED": "Email is required.",
-      "EMAIL_INVALID": "Email is invalid.",
-      
-      "PHONENUMBER": "Phone Number",
-      "PHONENUMBER_PLACEHOLDER": "(123) 456 - 7890",
-      "PHONENUMBER_REQUIRED": "Phone number is required.",
-      "PHONENUMBER_INVALID": "Phone number is invalid.",
-      
-      "COMPANY": "Company",
-      "COMPANY_PLACEHOLDER": "Company name",
-      "COMPANY_REQUIRED": "Company name is required.",
-      "COMPANY_MIN_LENGTH": "Company name must be at least 2 characters."
-    },
-
-    "STEP_2": {
-      "INVESTMENT": "Investment",
-      "SELECT_INVESTMENT": "Select Investment",
-      "ANGEL_INVESTMENT": "Angel investment",
-      "INVESTMENT_FUNDING": "Investment Funding",
-      "INVESTMENT_REQUIRED": "Investment is required.",
-      
-      "FAVORITE_INVESTMENT": "Your favorite investment",
-      "SELECT_FAVORITE_INVESTMENT": "Select your favorite investment",
-      "PRE_SEED": "Pre-Seed",
-      "SEED": "Seed",
-      "PRE_SERIES_A": "Pre-Series A",
-      "FAVORITE_INVESTMENT_REQUIRED": "Favorite Investment is required.",
-
-      "FAVORITE_SECTORS": "Favorite Sectors",
-      "SELECTED_SECTORS": "Selected Sectors",
-      "SELECT_FAVORITE_SECTORS": "Select favorite sectors",
-      "FAVORITE_SECTORS_REQUIRED": "Select at least one favorite sector.",
-      "TAG_TECHNOLOGY": "Technology",
-      "TAG_FINTECH": "FinTech",
-      "TAG_ECOMMERCE": "E-Commerce",
-      "TAG_HEALTHCARE": "Healthcare & HealthTech",
-      "TAG_EDTECH": "Education & EdTech",
-      "TAG_RENEWABLE_ENERGY": "Renewable Energy",
-      "TAG_MANUFACTURING": "Manufacturing",
-      "TAG_LOGISTICS": "Logistics & Transportation",
-      "TAG_REAL_ESTATE": "Real Estate",
-      "TAG_AI": "Artificial Intelligence",
-      "TAG_BIG_DATA": "Big Data & Analytics",
-      "TAG_CYBERSECURITY": "Cybersecurity",
-      "TAG_DIGITAL_MARKETING": "Digital Marketing",
-      "TAG_GENERAL_TRADE": "General Trade",
-      "TAG_TRAVEL_TOURISM": "Travel & Tourism",
-      "TAG_FOOD_BEVERAGE": "Food & Beverage",
-      "TAG_RETAIL": "Retail",
-      "TAG_SPORTS_ENTERTAINMENT": "Sports & Entertainment",
-      "TAG_ROBOTICS": "Robotics",
-      "TAG_AGRITECH": "AgriTech",
-      "TAG_ENVIRONMENT_SUSTAINABILITY": "Environmental & Sustainability",
-      "TAG_AR_VR": "AR/VR",
-      "TAG_DIGITAL_PAYMENTS": "Digital Payments",
-      "TAG_FINANCIAL_SERVICES": "Financial Services",
-      "TAG_MEDIA_COMMUNICATION": "Media & Communication",
-      "TAG_GAMING": "Gaming",
-      "TAG_BIOTECH": "BioTech",
-      "TAG_INSURTECH": "InsurTech",
-      "TAG_PROPERTY_DEVELOPMENT": "Property Development",
-      "TAG_SOCIAL_INNOVATION": "Social Innovation"
-    },
-    "STEP_3": {
-      "PROJECT_BUDGET": "What's your project budget?",
-      "BUDGET_1": "$ 100K to $ 500k",
-      "BUDGET_2": "$ 500K to $ 1M",
-      "BUDGET_3": "$ 1M to $ 5M",
-      "BUDGET_4": "$ 5M+",
-      "OTHER": "Other",
-      "OTHER_PLACEHOLDER": "Specify amount",
-      "PROJECT_BUDGET_REQUIRED": "Project budget is required.",
-      "OTHER_BUDGET_REQUIRED": "Specify amount is required.",
-      "OTHER_INVALID": "Budger is invalid."
-    },
-    "STEP_4": {
-      "GEOGRAPHICAL_SCOPE": "Geographical Scope",
-      "SELECT_GEOGRAPHICAL_SCOPE": "Select a region",
-      "REGION_1": "United Arab Emirates",
-      "REGION_2": "GCC",
-      "REGION_3": "Regional",
-      "GEOGRAPHICAL_SCOPE_REQUIRED": "Geographical scope is required.",
-
-      "CO_INVEST": "Would you like to co-invest?",
-      "SELECT_CO_INVEST": "Select co-invest option",
-      "CO_INVEST_YES": "Yes",
-      "CO_INVEST_NO": "No",
-      "CO_INVEST_REQUIRED": "Co-invest is required.",
-      
-      "INVESTMENT_PRIVACY": "Would you like to highlight your investments or keep them private?",
-      "SELECT_INVESTMENT_PRIVACY": "Select privacy option",
-      "PRIVACY_PRIVATE": "Keep my investments private",
-      "PRIVACY_PUBLIC": "Announce my investments",
-      "INVESTMENT_PRIVACY_REQUIRED": "Investment privacy is required.",
-      
-      "ADDITIONAL_NOTES": "How will the funding be used?",
-      "ADDITIONAL_NOTES_PLACEHOLDER": "How will the funding be used?"
-    },
-    "STEP_5": {
-      "SUBMIT_TITLE": "Submitted Succesfully",
-      "SUBMIT_DESCRIPTION": "We are Proccsing your Request now, You will recieve a project quote within 24 - 48 hours.",
-      "SUBMITTED_TEXT": "Submitted",
-      "SUBMIT_BUTTON": "Submit"
-    },
-    "NAVIGATION": {
-      "PREVIOUS_STEP": "Previous Step",
-      "CANCEL": "Cancel",
-      "NEXT_STEP": "Next"
     }
   }
   }

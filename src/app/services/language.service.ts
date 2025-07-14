@@ -16,6 +16,9 @@ export class LanguageService {
     const savedLang = localStorage.getItem('lang') || 'en';
     this.currentLang = savedLang;
     this.translate.setDefaultLang(savedLang);
+    this.translate.use(savedLang).subscribe(() => {
+      this.languageSwitched$.next(true);
+    });
     this.setDirection(savedLang);
   }
 
