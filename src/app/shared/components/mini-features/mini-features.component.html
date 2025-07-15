@@ -1,0 +1,11 @@
+<section class="mini-features">
+  <h2>{{ sectionTitleKey | translate }}</h2>
+
+  <div class="features-wrapper">
+    <div class="feature-box" *ngFor="let feature of features">
+      <img [src]="'../../../../../../assets/' + feature.icon" alt="icon" />
+      <h3>{{ feature.titleKey | translate }}</h3>
+      <p>{{ feature.descKey | translate }}</p>
+    </div>
+  </div>
+</section>

@@ -410,3 +410,13 @@ html[lang='ar'] .process-wrapper, .our-process {
   direction: rtl !important;
   flex-direction: row !important;
 }
+
+html[lang='ar']  .mini-features .feature-box  {
+  padding-right: 3rem;
+
+}
+
+html[lang='ar']  .mini-features .feature-box img {
+  left: auto;
+  right: 0;
+}

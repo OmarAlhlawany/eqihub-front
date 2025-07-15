@@ -4,11 +4,12 @@ import { StartupFormComponent } from "../../../forms/startup-form/startup-form.c
 import { FeaturesSectionComponent } from "../../../shared/components/features-section/features-section.component";
 import { MapStatsComponent } from "../../../shared/components/map-stats/map-stats.component";
 import { OurProcessComponent } from "../../../shared/components/our-process/our-process.component";
+import { MiniFeaturesComponent } from "../../../shared/components/mini-features/mini-features.component";
 
 @Component({
   selector: 'app-startup-page',
   standalone: true,
-  imports: [startupHeroComponent, StartupFormComponent, FeaturesSectionComponent, MapStatsComponent, OurProcessComponent],
+  imports: [startupHeroComponent, StartupFormComponent, FeaturesSectionComponent, MapStatsComponent, OurProcessComponent, MiniFeaturesComponent],
   templateUrl: './startup-page.component.html',
   styleUrl: './startup-page.component.css'
 })

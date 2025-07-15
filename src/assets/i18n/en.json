@@ -61,6 +61,44 @@
     }
   }
 ,
+
+
+  "miniFeatures": {
+    "investor": {
+      "title": "Your gate to the MENA high-potential startup ecosystem",
+      "feature1": {
+        "title": "Future-proofed opportunities",
+        "desc": "With the ecosystem evolving, it only makes sense to jump ahead and invest in the most promising startups"
+      },
+      "feature2": {
+        "title": "Investor-owned platform",
+        "desc": "By investors, to investors. Your challenges and pain points as an investor in the MENA region are understood and will be fixed."
+      },
+      "feature3": {
+        "title": "Attention to Privacy",
+        "desc": "Privacy is crucial, we understand that. Your privacy and security will be put above all else."
+      }
+    },
+    "startup": {
+      "title": "Your gate to the MENA high-potential startup ecosystem",
+      "feature1": {
+        "title": "Real-Time Market Data",
+        "desc": "Relevancy is crucial– Remain updated with tailored industry news and relevant real-time data."
+      },
+      "feature2": {
+        "title": "Startup-Friendly Platform",
+        "desc": "Feel right at home in a platform that prioritizes high-quality blogs, videos, and webinars published to suit your needs."
+      },
+      "feature3": {
+        "title": "Reliable Security",
+        "desc": "Strict security measures to ensure smooth and secure transactions and the safety of your sensitive information."
+      }
+    }
+  }
+
+
+
+,
 "investor": {
   "hero": {
     "title": "Find Your Ideal Startup Today",

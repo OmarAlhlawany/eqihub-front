@@ -1,7 +1,6 @@
 /* startup Form Styles */
 .startup-form-container {
   background-color: #FBFDFF;
-  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
