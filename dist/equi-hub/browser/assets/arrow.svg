@@ -1,0 +1,19 @@
+<svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="17" height="10" fill="#F5F5F5"/>
+<g clip-path="url(#clip0_207_1803)">
+<rect width="1920" height="7271.2" transform="translate(-1563 -5987)" fill="white"/>
+<rect width="1920" height="7271.2" transform="translate(-1563 -5987)" fill="white"/>
+<rect width="1920" height="7271.2" transform="translate(-1563 -5987)" fill="white"/>
+<rect width="1920" height="990" transform="translate(-1563 -341.189)" fill="#FBFDFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.500159 1.04313C0.943069 0.600208 1.66118 0.600208 2.1041 1.04313L8.10705 7.04604L14.11 1.04313C14.5529 0.600208 15.271 0.600208 15.7139 1.04313C16.1568 1.48604 16.1568 2.20415 15.7139 2.64706L8.90905 9.45204C8.46615 9.89494 7.74805 9.89494 7.30505 9.45204L0.500159 2.64706C0.0572388 2.20415 0.0572388 1.48604 0.500159 1.04313Z" fill="#2563EB"/>
+<mask id="path-2-inside-1_207_1803" fill="white">
+<path d="M-1227 -46.3291H21V56.8909H-1227V-46.3291Z"/>
+</mask>
+<path d="M-1227 -46.3291V-45.3291H21V-46.3291V-47.3291H-1227V-46.3291Z" fill="#E2E8F0" mask="url(#path-2-inside-1_207_1803)"/>
+</g>
+<defs>
+<clipPath id="clip0_207_1803">
+<rect width="1920" height="7271.2" fill="white" transform="translate(-1563 -5987)"/>
+</clipPath>
+</defs>
+</svg>

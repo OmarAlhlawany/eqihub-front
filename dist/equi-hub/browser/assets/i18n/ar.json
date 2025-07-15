@@ -1,0 +1,528 @@
+{ 
+  "HEADER": {
+    "STARTUP": "الشركات الناشئة",
+    "INVESTOR": "المستثمرين"
+  },
+  
+  "features": {
+    "badge": "أنجل إيست",
+    "title": "لماذا تنضم إلى شبكة أنجل إيست؟",
+    "subtitle": "منظومة الشركات الناشئة في الشرق الأوسط وشمال إفريقيا تتطور – اكتشف أعلى الإمكانات",
+    "cards": [
+      {
+        "title": " مستثمرين مناسبين",
+        "description": "تواصل مع مستثمرين يتماشون مع رؤيتك وأهدافك للنمو."
+      },
+      {
+        "title": "المصداقية والخصوصية",
+        "description": "يتم توثيق جميع المستثمرين و المؤسسات الناشئة مع الحفاظ التام على خصوصية الفرد و المؤسسة ."
+      },
+      {
+        "title": "فرص للنمو",
+        "description": "انضم إلى مجتمع نشط من المستثمرين والشركات الناشئة في المنطقة لتسريع رحلتك."
+      }
+    ]
+  },
+  "mapStats": {
+  "title": "منظومة الاستثمار الجريء وريادة الأعمال في منطقة الشرق الأوسط وشمال إفريقيا في تطور مستمر",
+  "investmentDeal": "استثمار سنويا",
+  "activeStartup": "شركة ناشئة نشطة",
+  "capitalDeployed": "مليار/ الإستثمارات السنوية",
+  "marketEvolution": "تطور السوق السنوي"
+}
+,
+  "ourProcess": {
+    "title": "خطواتنا",
+    "investor": {
+      "step1": {
+        "title": "املأ النموذج",
+        "desc": "قدّم بياناتك من خلال موقعنا للوصول إلى شبكة المستثمرين في Angel East."
+      },
+      "step2": {
+        "title": "تحقق من الطلب",
+        "desc": "يقوم فريقنا بمراجعة طلبك للتأكد من توافقه مع معايير شبكتنا الاستثمارية."
+      },
+      "step3": {
+        "title": "ابدأ الاستثمار",
+        "desc": "بمجرد التحقق، يمكنك استكشاف صفقات ناشئة منتقاة والتواصل مع مشاريع واعدة."
+      }
+    },
+    "startup": {
+      "step1": {
+        "title": "قدِّم للانضمام",
+        "desc": "املأ النموذج وقدم تفاصيل شركتك الناشئة من خلال منصتنا لتصبح جزءًا من شبكة Angel East."
+      },
+      "step2": {
+        "title": "تحقق من الطلب",
+        "desc": "يقوم فريقنا بمراجعة طلبك للتأكد من توافقه مع معايير شبكتنا واهتمامات المستثمرين."
+      },
+      "step3": {
+        "title": "تواصل ونمِّ شركتك",
+        "desc": "بمجرد الموافقة، ستحصل على وصول إلى شبكة منتقاة من المستثمرين والمؤسسين الداعمين لتطوير شركتك الناشئة."
+      }
+    }
+  },
+"investor": {
+  "hero": {
+    "title": " استثمرْ بذكاء في الشركات الناشئة",
+    "description": "منصة تجمع بين المستثمرين الملائكيين وأصحاب الشركات الريادية الناشئة لتكوين شراكات ذات جدوى اقتصادية، إنظم إلينا و كن جزءا من الإستثمار الذكي في المنظومة العربية",
+    "button": "انضم الآن",
+    "keywords": {
+      "Ai": "الذكاء الاصطناعي",
+      "Technology": "التكنولوجيا",
+      "Startup": "الشركات الناشئة",
+      "Fintech": "التقنية المالية"
+    }
+  },
+  "marquee": {
+    "1": "اكتشف فرصًا حصرية",
+    "2": "نمّي محفظتك الاستثمارية",
+    "3": "تمكين نموك"
+  }
+},
+
+  "miniFeatures": {
+    "investor": {
+      "title": "بوابتك للإستثمار الذكي في الشركات الناشئة  لمنطقة الشرق الأوسط وشمال أفريقيا",
+      "feature1": {
+        "title": "الفرص المستقبلية",
+        "desc": "مع تطور النظام البيئي، من المنطقي أن تقفز إلى الأمام وتستثمر في الشركات الناشئة ذات الإمكانات العالية"
+      },
+      "feature2": {
+        "title": "منصة مملوكة للمستثمرين",
+        "desc": "من المستثمرين، إلى المستثمرين. نحن نتفهم التحدياتك التي تواجهك كمستثمر في منطقة الشرق الأوسط وشمال أفريقيا ونعمل على توفير حلول مستدامة."
+      },
+      "feature3": {
+        "title": "الاهتمام بالخصوصية",
+        "desc": "مع تطور بيئة الإستثمار في الشركات الناشئة، من المنطقي أن تقفز إلى الأمام وتستثمر في الشركات ذات إمكانات النمو المرتفع"
+      }
+    },
+    "startup": {
+      "title": "بوابتك إلى بيئة الشركات الناشئة عالية الإمكانات في منطقة الشرق الأوسط وشمال أفريقيا",
+      "feature1": {
+        "title": "الفرص المستقبلية",
+        "desc": "مع تطور منظومة ريادة الأعمال في المنطقة يجب أن تكون على اطلاع بجميع التطورات و الفرص المتاحة."
+      },
+      "feature2": {
+        "title": "منصة لدعم رواد الأعمال",
+        "desc": "نحن نتفهم تحدياتك ونقاط ضعفك كرائد أعمال في منطقة الشرق الأوسط وشمال أفريقيا ونعمل على حلها."
+      },
+      "feature3": {
+        "title": "الاهتمام بالخصوصية",
+        "desc": "الخصوصية أمر بالغ الأهمية، ونحن نتفهم ذلك. سنضع خصوصيتك وأمانك فوق كل اعتبار."
+      }
+    }
+  },
+
+
+  "faq": {
+    "investor": {
+      "title": "إجابات على أسئلتك",
+      "q1": {
+        "question": "كيف أصبح مستثمرًا في Angel East؟",
+        "answer": "لكي تصبح مستثمرًا في Angel East، ابدأ بملء نموذج التقديم. بعد الإرسال، سنتواصل معك للتحقق من هويتك ومعلوماتك. بعد الموافقة، ستحصل على فرصة الوصول إلى استثمارات حصرية وشركات ناشئة عالية الإمكانات وشبكة المستثمرين الخاصة بنا. ابدأ رحلتك اليوم!"
+      },
+      "q2": {
+        "question": "ما نوع الشركات الناشئة التي يمكنني الوصول إليها؟",
+        "answer": "كجزء من شبكة Angel East للمستثمرين، ستحصل على فرصة الوصول إلى مجموعة مختارة من الشركات الناشئة عالية الإمكانات في مراحلها المبكرة ومراحل النمو في مختلف الصناعات. نحن نركز على المشاريع المبتكرة والقابلة للتوسع، لتناسب أهدافك الاستثمارية."
+      },
+      "q3": {
+        "question": "ما الحد الأدنى المطلوب للاستثمار؟",
+        "answer": "لا يوجد حد أدنى أو أقصى للاستثمار، فالأمر يعتمد على رؤيتك وفهمك كـ مستثمر. لكن عادةً ما يتراوح متوسط الاستثمار بين 20,000 و60,000 دولار أمريكي لكل فرصة."
+      },
+      "q4": {
+        "question": "كيف تختار Angel East الشركات الناشئة؟",
+        "answer": "نقوم في Angel East بعملية اختيار دقيقة، حيث نقيّم الشركات الناشئة بناءً على عوامل مثل: حجم السوق، وإمكانية التوسع، وقوة الفريق المؤسس، والابتكار، والجدوى المالية. كما نستخدم أدوات تحليل البيانات والخبرة لضمان اختيار الشركات الواعدة."
+      },
+      "q5": {
+        "question": "هل Angel East مفتوحة للمستثمرين الدوليين؟",
+        "answer": "نعم! ترحب Angel East بالمستثمرين من جميع أنحاء العالم. يمكن لأي مستثمر يستوفي الشروط القانونية والمعايير المطلوبة الانضمام لشبكتنا والاستفادة من الفرص المتاحة."
+      }
+    },
+    "startup": {
+      "title": "إجابات على أسئلتك",
+      "q1": {
+        "question": "كيف أصبح مالك شركة ناشئة موثقة على Angel East؟",
+        "answer": "قم بملء نموذج التقديم وانتظر موافقة فريق الخبراء لدينا. بعد التوثيق، ستحصل على صلاحية الوصول إلى منصة Angel East واستخدام جميع الأدوات المتاحة للعثور على مستثمرين."
+      },
+      "q2": {
+        "question": "كيف أتأكد أن المستثمرين جادون؟",
+        "answer": "Angel East هي منصة مملوكة للمستثمرين. لا نقبل سوى المستثمرين الحقيقيين الذين يقدمون طلبًا ويخضعون للتحقق قبل الوصول إلى المنصة."
+      },
+      "q3": {
+        "question": "هل يمكنني طلب أي مبلغ تمويل؟",
+        "answer": "نحن نؤمن بالمرونة! يمكنك طلب أي مبلغ يناسب احتياجات شركتك طالما تم الاتفاق عليه من الطرفين."
+      },
+      "q4": {
+        "question": "هل من الآمن مشاركة المستندات والمعلومات الحساسة مع المستثمرين؟",
+        "answer": "نعم. نحرص على الأمان من خلال عملية تحقق دقيقة للمستثمرين، بالإضافة إلى توفير غرف بيانات خاصة للحفاظ على السرية والأمان."
+      },
+      "q5": {
+        "question": "هل يمكن لمستثمرين دوليين خارج منطقة الشرق الأوسط وشمال أفريقيا الاستثمار في شركتي؟",
+        "answer": "نعم! تتيح منصتنا للشركات الناشئة التواصل مع الفرص والاستثمارات من جميع أنحاء العالم."
+      }
+    }
+  }
+,
+"cta": {
+  "investor": {
+    "title1": "تواصل مع شركتك الناشئة المثالية،",
+    "title2": "ونمِّ محفظتك الاستثمارية اليوم!"
+  },
+  "startup": {
+    "title1": "تواصل مع المستثمر المناسب",
+    "title2": "ونمِّ عملك الآن."
+  },
+  "button": "انضم الآن"
+}
+
+,
+  "INVESTOR_FORM": {
+    "TITLE": "انضم كمستثمر",
+    "DESCRIPTION": "قم بتقديم بياناتك الشخصية والتجارية للبدء.",
+    "SUBMIT_DESCRIPTION": "قم بتقديم بياناتك الشخصية والتجارية لبدء التطبيق.",
+    "STEP_1": {
+      "TITLE": "تفاصيل الاتصال",
+      "DESCRIPTION": "يرجى ملء النموذج أدناه لتلقي عرض لمشروعك. لا تتردد في إضافة أكبر قدر ممكن من التفاصيل.",
+      "NAME": "الاسم",
+      "NAME_PLACEHOLDER": "جون كارتر",
+      "NAME_REQUIRED": "الاسم مطلوب.",
+      "NAME_MIN_LENGTH": "الاسم يجب أن يكون على الأقل 3 حروف.",
+      "EMAIL": "البريد الإلكتروني",
+      "EMAIL_PLACEHOLDER": "عنوان البريد الإلكتروني",
+      "EMAIL_REQUIRED": "البريد الإلكتروني مطلوب.",
+      "EMAIL_INVALID": "البريد الإلكتروني غير صحيح.",
+
+      "PHONENUMBER": "رقم الهاتف",
+      "PHONENUMBER_PLACEHOLDER": "(123) 456 - 7890",
+      "PHONENUMBER_REQUIRED": "رقم الهاتف مطلوب.",
+      "PHONENUMBER_INVALID": "رقم الهاتف غير صحيح.",
+      
+      "COMPANY": "الشركة",
+      "COMPANY_PLACEHOLDER": "اسم الشركة",
+      "COMPANY_REQUIRED": "اسم الشركة مطلوب.",
+      "COMPANY_MIN_LENGTH": "اسم الشركة يجب ان يكون على الاقل 2 حروف."
+    },
+    "STEP_2": {
+      "INVESTMENT": "الاستثمار",
+      "SELECT_INVESTMENT": "حدد الاستثمار",
+      "ANGEL_INVESTMENT": "الاستثمار الملاك",
+      "INVESTMENT_FUNDING": "تمويل الاستثمار",
+      "INVESTMENT_REQUIRED": "الاستثمار مطلوب.",
+
+      "FAVORITE_INVESTMENT": "الاستثمار المفضل لديك",
+      "SELECT_FAVORITE_INVESTMENT": "حدد الاستثمار المفضل",
+      "PRE_SEED": "قبل البذرة",
+      "SEED":"بذرة",
+      "PRE_SERIES_A": "قبل الجولة A",
+      "FAVORITE_INVESTMENT_REQUIRED": "الاستثمار المفضل لديك مطلوب.",
+
+
+      "FAVORITE_SECTORS": "القطاعات المفضلة",
+      "SELECTED_SECTORS": "القطاعات المحددة",
+      "SELECT_FAVORITE_SECTORS": "حدد القطاعات المفضلة",
+      "FAVORITE_SECTORS_REQUIRED": " حدد على الاقل قطاع واحد.",
+      "TAG_TECHNOLOGY": "التكنولوجيا",
+      "TAG_FINTECH": "التكنولوجيا المالية",
+      "TAG_ECOMMERCE": "التجارة الإلكترونية",
+      "TAG_HEALTHCARE": "الصحة والتكنولوجيا الصحية",
+      "TAG_EDTECH": "التعليم والتكنولوجيا التعليمية",
+      "TAG_RENEWABLE_ENERGY": "الطاقة المتجددة",
+      "TAG_MANUFACTURING": "الصناعات التحويلية",
+      "TAG_LOGISTICS": "النقل والخدمات اللوجستية",
+      "TAG_REAL_ESTATE": "العقارات",
+      "TAG_AI": "الذكاء الاصطناعي",
+      "TAG_BIG_DATA": "البيانات الضخمة وتحليل البيانات",
+      "TAG_CYBERSECURITY": "الأمن السيبراني",
+      "TAG_DIGITAL_MARKETING": "التسويق الرقمي",
+      "TAG_GENERAL_TRADE": "التجارة العامة",
+      "TAG_TRAVEL_TOURISM": "السفر والسياحة",
+      "TAG_FOOD_BEVERAGE": "الأغذية والمشروبات",
+      "TAG_RETAIL": "التجزئة",
+      "TAG_SPORTS_ENTERTAINMENT": "الرياضة والترفيه",
+      "TAG_ROBOTICS": "الروبوتات",
+      "TAG_AGRITECH": "التكنولوجيا الزراعية",
+      "TAG_ENVIRONMENT_SUSTAINABILITY": "البيئة والاستدامة",
+      "TAG_AR_VR": "الواقع المعزز والافتراضي",
+      "TAG_DIGITAL_PAYMENTS": "المدفوعات الرقمية",
+      "TAG_FINANCIAL_SERVICES": "الخدمات المالية",
+      "TAG_MEDIA_COMMUNICATION": "الوسائط الإعلامية",
+      "TAG_GAMING": "الألعاب الإلكترونية",
+      "TAG_BIOTECH": "التكنولوجيا الحيوية",
+      "TAG_INSURTECH": "التأمين",
+      "TAG_PROPERTY_DEVELOPMENT": "التطوير العقاري",
+      "TAG_SOCIAL_INNOVATION": "الابتكار الاجتماعي"
+    },
+    "STEP_3": {
+      "PROJECT_BUDGET": "ما هو ميزانية مشروعك؟",
+      "BUDGET_1": "$ 100K to $ 500k",
+      "BUDGET_2": "$ 500K to $ 1M",
+      "BUDGET_3": "$ 1M to $ 5M",
+      "BUDGET_4": "$ 5M+",
+      "OTHER": "أخرى",
+      "OTHER_PLACEHOLDER": "حدد المبلغ",
+      "PROJECT_BUDGET_REQUIRED": "ميزانية المشروع مطلوبة.",
+      "OTHER_BUDGET_REQUIRED": "حدد المبلغ مطلوب.",
+      "OTHER_INVALID": "المبلغ غير صحيح."
+    },
+    "STEP_4": {
+      "GEOGRAPHICAL_SCOPE": "النطاق الجغرافي",
+      "SELECT_GEOGRAPHICAL_SCOPE": "اختر منطقة",
+      "REGION_1": "الإمارات العربية المتحدة",
+      "REGION_2": "الخليج",
+      "REGION_3": "إقليمي",
+      "GEOGRAPHICAL_SCOPE_REQUIRED": "النطاق الجغرافي مطلوب.",
+
+
+      "CO_INVEST": "هل ترغب في الاستثمار المشترك؟",
+      "SELECT_CO_INVEST": "اختر الاستثمار المشترك",
+      "CO_INVEST_YES": "نعم",
+      "CO_INVEST_NO": "لا",
+      "CO_INVEST_REQUIRED": "الاستثمار المشترك مطلوب.",
+
+      "INVESTMENT_PRIVACY": "هل تريد تسليط الضوء على استثماراتك أم تفضل الحفاظ على الخصوصية؟",
+      "SELECT_INVESTMENT_PRIVACY": "اختر خيار الخصوصية",
+      "PRIVACY_PRIVATE": "الحفاظ على الخصوصية",
+      "PRIVACY_PUBLIC": "الإعلان عن استثماراتي",
+      "INVESTMENT_PRIVACY_REQUIRED": "خيار الخصوصية مطلوب.",
+
+      "ADDITIONAL_NOTES": "ملاحظات إضافية",
+      "ADDITIONAL_NOTES_PLACEHOLDER": "ملاحظات إضافية"
+    },
+    "STEP_5": {
+      "SUBMIT_TITLE": "تم الإرسال بنجاح",
+      "SUBMIT_DESCRIPTION": "نقوم الآن بمعالجة طلبك، ستتلقى عرض المشروع خلال 24 - 48 ساعة.",
+      "SUBMITTED_TEXT": "تم الإرسال",
+      "SUBMIT_BUTTON": "إرسال"
+    },
+    "NAVIGATION": {
+      "PREVIOUS_STEP": "الخطوة السابقة",
+      "CANCEL": "إالغاء",
+      "NEXT_STEP": "الخطوة التالية"
+    }
+  },
+
+"startup": {
+  "hero": {
+    "title": "المستثمر المثالي على بعد نقرة واحدة…",
+    "description": "لا تضيع وقتك في البحث العشوائي! تواصل اليوم مع المستثمرين من الشرق الأوسط وشمال إفريقيا…",
+    "button": "انضم الآن",
+    "keywords": {
+      "Ai": "الذكاء الاصطناعي",
+      "Technology": "التكنولوجيا",
+      "Startup": "شركة ناشئة",
+      "Fintech": "الخدمات المالية التقنية"
+    }
+  },
+  "marquee": {
+    "1": "نمِّ شركتك الناشئة",
+    "3":"وسّع شبكة علاقاتك",
+    "2":  "اعثر على مستثمرين واحصل على التمويل"
+  }
+},
+
+  "STARTUP_FORM": {
+    "TITLE": "انضم كشركة ناشئة",
+    "STEP_1": {
+      "TITLE": "تفاصيل الاتصال",
+      "DESCRIPTION": "يرجى ملء النموذج الأخير لتلقي عرض لمشروعك. لا تتردد فيإضافة اكبر قدر ممكن من التفاصيل.",
+      "NAME": "الاسم",
+      "NAME_PLACEHOLDER": "أدخل اسمك",
+      "NAME_REQUIRED": "الاسم مطلوب.",
+      "NAME_MIN_LENGTH": "الاسم يجب ان يكون على الأقل 3 حروف.",
+      
+      "EMAIL": "البريد الإلكتروني",
+      "EMAIL_PLACEHOLDER": "أدخل بريدك الإلكتروني",
+      "EMAIL_REQUIRED": "البريد الإلكتروني مطلوب.",
+      "EMAIL_INVALID": "البريد الإلكتروني غير صحيح.",
+      
+      "PHONE_NUMBER": "رقم الهاتف",
+      "PHONE_NUMBER_PLACEHOLDER": "أدخل رقم هاتفك",
+      "PHONE_NUMBER_REQUIRED": "رقم الهاتف مطلوب.",
+      "PHONE_NUMBER_INVALID": "رقم الهاتف غير صحيح.",
+      
+      "COMPANY_NAME": "اسم الشركة",
+      "COMPANY_NAME_PLACEHOLDER": "أدخل اسم شركتك",
+      "COMPANY_NAME_REQUIRED": "اسم الشركة مطلوب.",
+      "COMPANY_NAME_MIN_LENGTH": "اسم الشركة يجب ان يكون على الأقل 2 حروف.",
+      
+      "WEBSITE": "الموقع الإلكتروني",
+      "WEBSITE_PLACEHOLDER": "http://www.example.com",
+      "WEBSITE_REQUIRED": "الموقع الإلكتروني مطلوب.",
+      "WEBSITE_INVALID": "يرجى إدخال رابط صحيح."
+      
+
+    },
+    "STEP_2": {      
+      "PRODUCT_SERVICE": "ما هو المنتج او الخدمة التي تقدمها شركتك؟",
+      "PRODUCT_SERVICE_PLACEHOLDER": "صف المنتج او الخدمة التي تقدمها شركتك",
+      "PRODUCT_SERVICE_REQUIRED": "المنتج أو الخدمة مطلوب.",
+      "PRODUCT_SERVICE_MIN_LENGTH": "المنتج أو الخدمة يجب ان يكون على الأقل 10 حروف.",
+
+      "SECTOR": "ما هو قطاع الذي تنتمي اليه شركتك؟",
+      "SELECT_SECTOR": "حدد قطاع شركتك",
+      "SECTOR_REQUIRED": "القطاع مطلوب.",
+      "SECTOR_TECHNOLOGY": "التكنولوجيا",
+      "SECTOR_FINTECH": "التكنولوجيا المالية",
+      "SECTOR_HEALTH_TECH": "التكنولوجيا الصحية",
+      "SECTOR_EDTECH": "التعليم والتكنولوجيا التعليمية ",
+      "SECTOR_ECOMMERCE": "التجارة الإلكترونية",
+      "SECTOR_RENEWABLE_ENERGY": "الطاقة المتجددة",
+      "SECTOR_CYBERSECURITY": "الأمن السيبراني",
+      "SECTOR_AGRI_TECH": "الزراعة الذكية",
+      "SECTOR_PROP_TECH": "العقارات",
+      "SECTOR_GAMING": "الألعاب الإلكترونية",
+      "SECTOR_SPORTS_FITNESS": "الرياضة واللياقة البدنية",
+      "SECTOR_LOGISTICS_TRANSPORTATION": "النقل والخدمات اللوجستية",
+      "SECTOR_FOOD_BEVERAGE": "الأغذية والمشروبات",
+      "SECTOR_SUSTAINABILITY": "البيئة والاستدامة",
+      "SECTOR_ARTIFICIAL_INTELLIGENCE": "الذكاء الاصطناعي",
+      "SECTOR_OTHER": "اخرى",
+      
+      "OPERATIONAL_STAGE": "ما هي المرحلة التشغيلية التي تقدمها شركتك؟",
+      "SELECT_OPERATIONAL_STAGE": "اختر المرحلة التشغيلية",
+      "OPERATIONAL_STAGE_REQUIRED": "المرحلة التشغيلية مطلوبة.",
+      "STAGE_PRE_SEED": "قبل التمويل",
+      "STAGE_SEED": "التمويل",
+      "STAGE_PRE_SERIES_A": "قبل المجموعة A",
+      "STAGE_SERIES_A": "المجموعة A",
+      "STAGE_SERIES_B": "المجموعة B",
+      
+      "PROBLEM_SOLVED": "ما هو المشكلة التي تحلها شركتك الناشئة؟",
+      "PROBLEM_SOLVED_PLACEHOLDER": "صف المشكلة التي تحلها شركتك الناشئة",
+      "PROBLEM_SOLVED_REQUIRED": "وصف المشكلة مطلوب.",
+      "PROBLEM_SOLVED_MIN_LENGTH": "وصف المشكلة يجب ان يكون على الأقل 10 حروف."
+
+    },
+    "STEP_3": {
+      "MONTHLY_REVENUE": "الإيرادات الشهرية",
+      "MONTHLY_REVENUE_PLACEHOLDER": "أدخل إيراداتك الشهرية",
+      "MONTHLY_REVENUE_REQUIRED": "الإيرادات الشهرية مطلوبة.",
+      "IS_PROFITABLE": "هل شركتك تحقق أرباحًا؟",
+      "SELECT_IS_PROFITABLE": "اختر خيارًا",
+      "IS_PROFITABLE_REQUIRED": "هذا الحقل مطلوب.",
+      "REVENUE_GROWTH_RATE": "معدل نمو الإيرادات",
+      "REVENUE_GROWTH_RATE_PLACEHOLDER": "أدخل معدل نمو إيراداتك",
+      "REVENUE_GROWTH_RATE_REQUIRED": "معدل نمو الإيرادات مطلوب.",
+      "REVENUE_GOAL_NEXT_12_MONTHS": "هدف الإيرادات (الـ12 شهرًا القادمة)",
+      "REVENUE_GOAL_NEXT_12_MONTHS_PLACEHOLDER": "أدخل هدف إيراداتك",
+      "REVENUE_GOAL_NEXT_12_MONTHS_REQUIRED": "هدف الإيرادات مطلوب.",
+      "HAS_DEBT": "هل لديك ديون؟",
+      "SELECT_HAS_DEBT": "اختر خيارًا",
+      "HAS_DEBT_REQUIRED": "هذا الحقل مطلوب.",
+      "DEBT_AMOUNT": "مبلغ الدين",
+      "DEBT_AMOUNT_PLACEHOLDER": "أدخل مبلغ دينك",
+      "DEBT_AMOUNT_REQUIRED": "مبلغ الدين مطلوب.",
+      "BREAK_EVEN_POINT": "نقطة التعادل",
+      "BREAK_EVEN_POINT_PLACEHOLDER": "متى تتوقع الوصول إلى نقطة التعادل؟",
+      "BREAK_EVEN_POINT_REQUIRED": "نقطة التعادل مطلوبة.",
+      "FINANCIAL_GOAL_NEXT_3_YEARS": "الهدف المالي (الـ3 سنوات القادمة)",
+      "FINANCIAL_GOAL_NEXT_3_YEARS_PLACEHOLDER": "صف هدفك المالي",
+      "FINANCIAL_GOAL_NEXT_3_YEARS_REQUIRED": "الهدف المالي مطلوب.",
+
+      "FUNDING_AMOUNT": " مبلغ التمويل المطلوب",
+      "FUNDING_AMOUNT_PLACEHOLDER": "أدخل مبلغ التمويل",
+      "SELECT_FUNDING_AMOUNT": "اختر مبلغ التمويل",
+      "FUNDING_AMOUNT_REQUIRED": "مبلغ التمويل مطلوب.",
+      "FUNDING_AMOUNT_1":"$ 100K to $ 500k",
+      "FUNDING_AMOUNT_2":"$ 500K to $ 1M",
+      "FUNDING_AMOUNT_3":"$ 5M+",
+      "FUNDING_AMOUNT_4":"$1M+",
+
+      "FUNDING_USAGE": "كيفية استخدام التمويل؟",
+      "FUNDING_USAGE_PLACEHOLDER": "صف كيفية استخدام التمويل",
+      "FUNDING_USAGE_REQUIRED": "استخدام التمويل مطلوب.",
+      "FUNDING_USAGE_MIN_LENGTH": "استخدام التمويل يجب ان يكون على الأقل 20 حرف.",
+      
+      "PREVIOUS_FUNDING_SOURCES": "مصادر التمويل السابقة",
+      "SELECT_PREVIOUS_FUNDING_SOURCES": "اختر مصادر التمويل السابقة",
+      "PREVIOUS_FUNDING_SOURCES_REQUIRED": "مصادر التمويل السابقة مطلوبة.",
+      "PERVIOUS_FUNDING_SOURCE_1":"ملائكي",
+      "PERVIOUS_FUNDING_SOURCE_2":"قروض",
+      "PERVIOUS_FUNDING_SOURCE_3":"تمويل ذاتي",
+      "PERVIOUS_FUNDING_SOURCE_4":"صناديق استثمار",
+      "PERVIOUS_FUNDING_SOURCE_5":"مصادر اخرى",
+      
+      "TARGET_MARKET": "السوق المستهدف للمشروع",
+      "SELECT_TARGET_MARKET": "اختر السوق المستهدف",
+      "TARGET_MARKET_REQUIRED": "السوق المستهدف مطلوب.",
+      "TARGET_MARKET_1":"محلي (الامارات العربية المتحدة)",
+      "TARGET_MARKET_2":"خليجي",
+      "TARGET_MARKET_3":"إقليمي"
+    },
+    "STEP_4": {
+      "OPEN_TO_JOINT_INVESTMENT": "هل ترغب في التواصل مع مستثمرين؟",
+      "OPEN_TO_JOINT_INVESTMENT_REQUIRED": "هذا الحقل مطلوب.",
+      "OPEN_TO_JOINT_INVESTMENT_YES": "نعم",
+      "OPEN_TO_JOINT_INVESTMENT_NO": "لا",
+
+      "HAS_EXISTING_PARTNERS": "هل لديك شركاء؟",
+      "HAS_EXISTING_PARTNERS_REQUIRED": "هذا الحقل مطلوب.",
+      "HAS_EXISTING_PARTNERS_YES": "نعم",
+      "HAS_EXISTING_PARTNERS_NO": "لا",
+
+      "MONTHLY_REVENUE": "ما هو متوسط ايرادتك الشهرية الحالي؟",
+      "MONTHLY_REVENUE_PLACEHOLDER": "يرجى ادخال ايراداتك الشهرية",
+      "MONTHLY_REVENUE_REQUIRED": "الإيرادات الشهرية مطلوبة.",
+      "MONTHLY_REVENUE_INVALID": "الإيرادات الشهرية غير صحيحة.",
+
+      "IS_PROFITABLE": "هل شركتك تحقق أرباحًا؟",
+      "IS_PROFITABLE_REQUIRED": "هذا الحقل مطلوب.",
+      "IS_PROFITABLE_YES": "نعم",
+      "IS_PROFITABLE_NO": "لا",
+
+      "PROFIT_PERCENTAGE": "ما هي نسبة الربح التي تحلها شركتك الناشئة خلال اخر 12 شهر؟",
+      "PROFIT_PERCENTAGE_PLACEHOLDER": "يرجى ادخال نسبة الربح",
+      "PROFIT_PERCENTAGE_REQUIRED": "نسبة الربح مطلوبة.",
+      "PROFIT_PERCENTAGE_INVALID": "نسبة الربح غير صحيحة.",
+
+      "REVENUE_GOAL": "ما هو هدفك للإيرادات خلال 12 شهر القادم؟",
+      "REVENUE_GOAL_PLACEHOLDER": "يرجى ادخال هدف الإيرادات",
+      "REVENUE_GOAL_REQUIRED": "هدف الإيرادات مطلوب.",
+      "REVENUE_GOAL_INVALID": "هدف الإيرادات غير صحيح."
+    },
+    "STEP_5": {
+      "HAS_MAJOR_DEBTS": "هل لديك أي ديون أو التزامات مالية كبيرة؟",
+      "HAS_MAJOR_DEBTS_REQUIRED": "هذا الحقل مطلوب.",
+      "HAS_MAJOR_DEBTS_YES": "نعم",
+      "HAS_MAJOR_DEBTS_NO": "لا",
+      
+      "CURRENT_DEBT_SIZE": "اذا كان نعم، ما هو حجم الديون الحالي؟",
+      "CURRENT_DEBT_SIZE_PLACEHOLDER": "يرجى ادخال حجم الديون الحالية",
+      "CURRENT_DEBT_SIZE_REQUIRED": "حجم الديون الحالية مطلوب.",
+      "CURRENT_DEBT_SIZE_INVALID": "حجم الديون الحالية غير صحيح.",
+
+      "BREAK_EVEN_POINT":"متى تتوقع تصلك النقطة النهاية؟",
+      "BREAK_EVEN_POINT_REQUIRED": "هذا الحقل مطلوب.",
+      "BREAK_EVEN_POINT_PLACEHOLDER": "يرجى ادخال نقطة النهاية",
+      "BREAK_EVEN_POINT_INVALID": "نقطة النهاية غير صحيح.",
+
+      "FINANCIAL_GOAL":"ما هو هدفك للمال خلال 3 سنوات القادمة؟",
+      "FINANCIAL_GOAL_REQUIRED": "هدف المال مطلوب.",
+      "FINANCIAL_GOAL_PLACEHOLDER": "يرجى ادخال هدف المال",
+      "FINANCIAL_GOAL_INVALID": "هدف المال غير صحيح.",
+
+      "HAS_EXIT_STRATEGY":"هل لديك استراتيجة خروج موثقة؟",
+      "HAS_EXIT_STRATEGY_REQUIRED": "هذا الحقل مطلوب.",
+      "HAS_EXIT_STRATEGY_YES": "نعم",
+      "HAS_EXIT_STRATEGY_NO": "لا",
+
+      "EXIT_STRATEGY_DETAILS":"اذا كان نعم، ما هي استراتيجية الخروج الخاصة بك؟",
+      "EXIT_STRATEGY_DETAILS_REQUIRED": "هذا الحقل مطلوب.",
+      "EXIT_STRATEGY_DETAILS_PLACEHOLDER": "يرجى ادخال استراتيجية الخروج",
+      "EXIT_STRATEGY_DETAILS_INVALID": "استراتيجية الخروج غير صحيحة."
+      
+    },
+    "STEP_6": {
+      "SUBMIT_TITLE": "إرسال طلب المستثمر",
+      "SUBMIT_DESCRIPTION": "يرجى مراجعة جميع المعلومات التي أدخلتها في الخطوات السابقة، وإذا كانت جميع البيانات صحيحة، قدم رسالتك لتلقي عرض المشروع خلال 24 - 48 ساعة.",
+      "SUBMIT_BUTTON": "إرسال",
+      "SUBMITTED_TEXT": "تم الارسال"
+    },
+    "NAVIGATION": {
+      "PREVIOUS_STEP": "السابق",
+      "NEXT_STEP": "التالي",
+      "SUBMIT": "إرسال"
+    }
+  }
+}

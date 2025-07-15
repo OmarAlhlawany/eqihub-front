@@ -1,0 +1,530 @@
+{
+  "HEADER": {
+    "STARTUP": "Startups",
+    "INVESTOR": "Investors"
+  },
+  "features": {
+    "badge": "Angel East",
+    "title": "Why Join the Angel East Network?",
+    "subtitle": "The MENA startup ecosystem is evolving  Discover the highest potential startups",
+    "cards": [
+      {
+        "title": "Tailored Support",
+        "description": "Get matched with investors who align with your vision and growth goals."
+      },
+      {
+        "title": "Credibility",
+        "description": "Gain access to a network of verified and trusted investors."
+      },
+      {
+        "title": "Growth Opportunities",
+        "description": "Connect with a vibrant community of investors and startups in the MENA region to accelerate your journey."
+      }
+    ]
+  },
+  "mapStats": {
+  "title": "Accelerate your Success Through the MENA startup Ecosystem",
+  "investmentDeal": "Investment deal",
+  "activeStartup": "Active startup",
+  "capitalDeployed": "Capital deployed",
+  "marketEvolution": "Market Evolution"
+},
+ "ourProcess": {
+    "title": "Our Process",
+    "investor": {
+      "step1": {
+        "title": "Fill Out the Form",
+        "desc": "Submit your details through our website to gain access to Angel East’s investor network."
+      },
+      "step2": {
+        "title": "Get Verified",
+        "desc": "Our team reviews your application to ensure alignment with our network’s investment criteria."
+      },
+      "step3": {
+        "title": "Start Investing",
+        "desc": "Once verified, explore curated startup deals and connect with high-potential ventures."
+      }
+    },
+    "startup": {
+      "step1": {
+        "title": "Apply to Join",
+        "desc": "Fill the form and Submit your startup details through our platform to become part of the Angel East network."
+      },
+      "step2": {
+        "title": "Get Verified",
+        "desc": "Our team reviews your application to ensure it meets our network’s standards and aligns with investor interests."
+      },
+      "step3": {
+        "title": "Connect & Grow",
+        "desc": "Once approved, gain access to a curated network of investors and fellow founders ready to support and elevate your startup’s journey."
+      }
+    }
+  }
+,
+
+
+  "miniFeatures": {
+    "investor": {
+      "title": "Your gate to the MENA high-potential startup ecosystem",
+      "feature1": {
+        "title": "Future-proofed opportunities",
+        "desc": "With the ecosystem evolving, it only makes sense to jump ahead and invest in the most promising startups"
+      },
+      "feature2": {
+        "title": "Investor-owned platform",
+        "desc": "By investors, to investors. Your challenges and pain points as an investor in the MENA region are understood and will be fixed."
+      },
+      "feature3": {
+        "title": "Attention to Privacy",
+        "desc": "Privacy is crucial, we understand that. Your privacy and security will be put above all else."
+      }
+    },
+    "startup": {
+      "title": "Your gate to the MENA high-potential startup ecosystem",
+      "feature1": {
+        "title": "Real-Time Market Data",
+        "desc": "Relevancy is crucial– Remain updated with tailored industry news and relevant real-time data."
+      },
+      "feature2": {
+        "title": "Startup-Friendly Platform",
+        "desc": "Feel right at home in a platform that prioritizes high-quality blogs, videos, and webinars published to suit your needs."
+      },
+      "feature3": {
+        "title": "Reliable Security",
+        "desc": "Strict security measures to ensure smooth and secure transactions and the safety of your sensitive information."
+      }
+    }
+  },
+
+
+  "faq": {
+    "investor": {
+      "title": "Answers to your questions",
+      "q1": {
+        "question": "How do I become an investor with Angel East?",
+        "answer": "To become an investor with Angel East, start by filling out our investor application form. Once submitted, we’ll connect with you to verify your identity and information. After approval, you’ll gain access to exclusive investment opportunities, high-potential startups, and our investor network. Begin your journey today!"
+      },
+      "q2": {
+        "question": "What kind of startups will I have access to?",
+        "answer": "As part of the Angel East Investors Network, you’ll gain access to a curated selection of high-potential, early-stage, and growth-stage startups across various industries. We focus on innovative, scalable, and investment-ready ventures, ensuring you connect with startups that align with your investment goals. From tech-driven solutions to emerging market disruptors, you’ll be at the forefront of the next big opportunities."
+      },
+      "q3": {
+        "question": "What is the minimum investment required?",
+        "answer": "There is no minimum or maximum investment limit, as we rely on the investor's intuition, understanding, and vision. However, the average investment per opportunity typically ranges between 20,000 to 60,000 USD."
+      },
+      "q4": {
+        "question": "How does Angel East select startups?",
+        "answer": "At Angel East, we have a rigorous selection process to ensure that only high-potential startups make it into our network. Our team evaluates startups based on key factors such as market potential, scalability, founding team strength, innovation, and financial viability. We also leverage data-driven insights and industry expertise to identify startups with the highest growth potential."
+      },
+      "q5": {
+        "question": "Is Angel East open to international investors?",
+        "answer": "Yes! Angel East welcomes investors from around the world. Our network is designed to provide access to high-potential startups regardless of location. As long as you meet our investment criteria and comply with relevant regulations, you can join our investor network and explore exclusive opportunities."
+      }
+    },
+    "startup": {
+      "title": "Answers to your questions",
+      "q1": {
+        "question": "How do I become a verified startup owner on Angel East?",
+        "answer": "Fill out the application form and wait for approval by our team of experts. Once verified, you’ll access to the Angel East platform and be granted permission to use all integrated tools and find investors for your business."
+      },
+      "q2": {
+        "question": "How do I know if the investors are serious?",
+        "answer": "Angel East is an investor-owned platform, we only accept actual investors, and much like startups, they too need to fill out an application form and only access the platform when verified."
+      },
+      "q3": {
+        "question": "Am I free to ask for any amount of funds?",
+        "answer": "We believe in flexibility in deciding how much funds you want to raise for your startup! As long as both parties come to an agreement, any amount is fine."
+      },
+      "q4": {
+        "question": "Is it safe to share sensitive documents and information with investors on Angel East?",
+        "answer": "Yes, it is. From going through a rigorous selection process when approving investors to offering a private data room, we are all about safety and security."
+      },
+      "q5": {
+        "question": "Can international investors outside the MENA region invest in my startup?",
+        "answer": "Yes! Our platform allows our startups to find and match with opportunities from all around the world."
+      }
+    }
+  }
+,
+"cta": {
+  "investor": {
+    "title1": "Connect with your ideal startup,",
+    "title2": "and grow your portfolio today!"
+  },
+  "startup": {
+    "title1": "Connect with your ideal investor",
+    "title2": "and grow your business."
+  },
+  "button": "Join Now"
+}
+
+,
+
+"investor": {
+  "hero": {
+    "title": "Find Your Ideal Startup Today",
+    "description": "Finding your opportunity in the MENA region has never been easier! Join us today and discover high-potential startups",
+    "button": "Join Now",
+    "keywords": {
+      "Ai": "AI",
+      "Technology": "Technology",
+      "Startup": "Startup",
+      "Fintech": "Fintech"
+    }
+  },
+  "marquee": {
+    "1": "Find exclusive opportunities",
+    "2": "Grow your Portfolio",
+    "3": "Expand Your Network"
+  }
+},
+
+  "INVESTOR_FORM": {
+    "TITLE": "Join as an Investor",
+    "DESCRIPTION": "Provide your personal and business details to start the application.",
+    "STEP_1": {
+      "TITLE": "Contact details",
+      "DESCRIPTION": "Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.",
+      "NAME": "Name",
+      "NAME_PLACEHOLDER": "Enter your name",
+      "NAME_REQUIRED": "Name is required.",
+      "NAME_MIN_LENGTH": "Name must be at least 3 characters.",
+
+      "EMAIL": "Email",
+      "EMAIL_PLACEHOLDER": "Email address",
+      "EMAIL_REQUIRED": "Email is required.",
+      "EMAIL_INVALID": "Email is invalid.",
+      
+      "PHONENUMBER": "Phone Number",
+      "PHONENUMBER_PLACEHOLDER": "(123) 456 - 7890",
+      "PHONENUMBER_REQUIRED": "Phone number is required.",
+      "PHONENUMBER_INVALID": "Phone number is invalid.",
+      
+      "COMPANY": "Company",
+      "COMPANY_PLACEHOLDER": "Company name",
+      "COMPANY_REQUIRED": "Company name is required.",
+      "COMPANY_MIN_LENGTH": "Company name must be at least 2 characters."
+    },
+
+    "STEP_2": {
+      "INVESTMENT": "Investment",
+      "SELECT_INVESTMENT": "Select Investment",
+      "ANGEL_INVESTMENT": "Angel investment",
+      "INVESTMENT_FUNDING": "Investment Funding",
+      "INVESTMENT_REQUIRED": "Investment is required.",
+      
+      "FAVORITE_INVESTMENT": "Your favorite investment",
+      "SELECT_FAVORITE_INVESTMENT": "Select your favorite investment",
+      "PRE_SEED": "Pre-Seed",
+      "SEED": "Seed",
+      "PRE_SERIES_A": "Pre-Series A",
+      "FAVORITE_INVESTMENT_REQUIRED": "Favorite Investment is required.",
+
+      "FAVORITE_SECTORS": "Favorite Sectors",
+      "SELECTED_SECTORS": "Selected Sectors",
+      "SELECT_FAVORITE_SECTORS": "Select favorite sectors",
+      "FAVORITE_SECTORS_REQUIRED": "Select at least one favorite sector.",
+      "TAG_TECHNOLOGY": "Technology",
+      "TAG_FINTECH": "FinTech",
+      "TAG_ECOMMERCE": "E-Commerce",
+      "TAG_HEALTHCARE": "Healthcare & HealthTech",
+      "TAG_EDTECH": "Education & EdTech",
+      "TAG_RENEWABLE_ENERGY": "Renewable Energy",
+      "TAG_MANUFACTURING": "Manufacturing",
+      "TAG_LOGISTICS": "Logistics & Transportation",
+      "TAG_REAL_ESTATE": "Real Estate",
+      "TAG_AI": "Artificial Intelligence",
+      "TAG_BIG_DATA": "Big Data & Analytics",
+      "TAG_CYBERSECURITY": "Cybersecurity",
+      "TAG_DIGITAL_MARKETING": "Digital Marketing",
+      "TAG_GENERAL_TRADE": "General Trade",
+      "TAG_TRAVEL_TOURISM": "Travel & Tourism",
+      "TAG_FOOD_BEVERAGE": "Food & Beverage",
+      "TAG_RETAIL": "Retail",
+      "TAG_SPORTS_ENTERTAINMENT": "Sports & Entertainment",
+      "TAG_ROBOTICS": "Robotics",
+      "TAG_AGRITECH": "AgriTech",
+      "TAG_ENVIRONMENT_SUSTAINABILITY": "Environmental & Sustainability",
+      "TAG_AR_VR": "AR/VR",
+      "TAG_DIGITAL_PAYMENTS": "Digital Payments",
+      "TAG_FINANCIAL_SERVICES": "Financial Services",
+      "TAG_MEDIA_COMMUNICATION": "Media & Communication",
+      "TAG_GAMING": "Gaming",
+      "TAG_BIOTECH": "BioTech",
+      "TAG_INSURTECH": "InsurTech",
+      "TAG_PROPERTY_DEVELOPMENT": "Property Development",
+      "TAG_SOCIAL_INNOVATION": "Social Innovation"
+    },
+    "STEP_3": {
+      "PROJECT_BUDGET": "What's your project budget?",
+      "BUDGET_1": "$ 100K to $ 500k",
+      "BUDGET_2": "$ 500K to $ 1M",
+      "BUDGET_3": "$ 1M to $ 5M",
+      "BUDGET_4": "$ 5M+",
+      "OTHER": "Other",
+      "OTHER_PLACEHOLDER": "Specify amount",
+      "PROJECT_BUDGET_REQUIRED": "Project budget is required.",
+      "OTHER_BUDGET_REQUIRED": "Specify amount is required.",
+      "OTHER_INVALID": "Budger is invalid."
+    },
+    "STEP_4": {
+      "GEOGRAPHICAL_SCOPE": "Geographical Scope",
+      "SELECT_GEOGRAPHICAL_SCOPE": "Select a region",
+      "REGION_1": "United Arab Emirates",
+      "REGION_2": "GCC",
+      "REGION_3": "Regional",
+      "GEOGRAPHICAL_SCOPE_REQUIRED": "Geographical scope is required.",
+
+      "CO_INVEST": "Would you like to co-invest?",
+      "SELECT_CO_INVEST": "Select co-invest option",
+      "CO_INVEST_YES": "Yes",
+      "CO_INVEST_NO": "No",
+      "CO_INVEST_REQUIRED": "Co-invest is required.",
+      
+      "INVESTMENT_PRIVACY": "Would you like to highlight your investments or keep them private?",
+      "SELECT_INVESTMENT_PRIVACY": "Select privacy option",
+      "PRIVACY_PRIVATE": "Keep my investments private",
+      "PRIVACY_PUBLIC": "Announce my investments",
+      "INVESTMENT_PRIVACY_REQUIRED": "Investment privacy is required.",
+      
+      "ADDITIONAL_NOTES": "How will the funding be used?",
+      "ADDITIONAL_NOTES_PLACEHOLDER": "How will the funding be used?"
+    },
+    "STEP_5": {
+      "SUBMIT_TITLE": "Submitted Succesfully",
+      "SUBMIT_DESCRIPTION": "We are Proccsing your Request now, You will recieve a project quote within 24 - 48 hours.",
+      "SUBMITTED_TEXT": "Submitted",
+      "SUBMIT_BUTTON": "Submit"
+    },
+    "NAVIGATION": {
+      "PREVIOUS_STEP": "Previous Step",
+      "CANCEL": "Cancel",
+      "NEXT_STEP": "Next"
+    }
+  },
+
+"startup": {
+  "hero": {
+    "title": "Connect With Your Ideal Investor",
+    "description": "Finding investors for your startup in the MENA region has never been easier! Join us today and elevate your business.",
+    "button": "Join Now",
+    "keywords": {
+      "Ai": "AI",
+      "Technology": "Technology",
+      "Startup": "Startup",
+      "Fintech": "Fintech"
+    }
+  },
+  "marquee": {
+    "1": "Grow your startup",
+    "2": "Find investors and get funded",
+    "3": "Expand your network"
+  }
+},
+
+  "STARTUP_FORM": {
+    "TITLE": "Join as Startup",
+    "STEP_1": {
+      "TITLE": "Contact details",
+      "DESCRIPTION": "Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.",
+      "NAME": "Name",
+      "NAME_PLACEHOLDER": "Enter your name",
+      "NAME_REQUIRED": "Name is required.",
+      "NAME_MIN_LENGTH": "Name must be at least 3 characters.",
+
+      "EMAIL": "Email",
+      "EMAIL_PLACEHOLDER": "Enter your email",
+      "EMAIL_REQUIRED": "Email is required.",
+      "EMAIL_INVALID": "Email is invalid.",
+      
+      "PHONE_NUMBER": "Phone Number",
+      "PHONE_NUMBER_PLACEHOLDER": "Enter your phone number",
+      "PHONE_NUMBER_REQUIRED": "Phone number is required.",
+      "PHONE_NUMBER_INVALID": "Phone number is invalid.",
+      
+      "COMPANY_NAME": "Company Name",
+      "COMPANY_NAME_PLACEHOLDER": "Enter your company name",
+      "COMPANY_NAME_REQUIRED": "Company name is required.",
+      "COMPANY_NAME_MIN_LENGTH": "Company name must be at least 2 characters.",
+      
+      "WEBSITE": "Website",
+      "WEBSITE_PLACEHOLDER": "http://www.example.com",
+      "WEBSITE_REQUIRED": "Website is required.",
+      "WEBSITE_INVALID": "Please enter a valid URL."
+      
+    },
+    "STEP_2": {
+      "PRODUCT_SERVICE": "What is the primary product or service your company offers?",
+      "PRODUCT_SERVICE_PLACEHOLDER": "Describe your product or service",
+      "PRODUCT_SERVICE_REQUIRED": "Product or service is required.",
+      "PRODUCT_SERVICE_MIN_LENGTH": "Product or service must be at least 10 characters.",
+      
+      "SECTOR": "The sector to which the company belongs",
+      "SELECT_SECTOR": "Select your Company sector",
+      "SECTOR_REQUIRED": "Sector is required.",
+      "SECTOR_TECHNOLOGY": "Technology",
+      "SECTOR_FINTECH": "Fintech",
+      "SECTOR_HEALTH_TECH": "HealthTech",
+      "SECTOR_EDTECH": "Edtech",
+      "SECTOR_ECOMMERCE": "E-commerce",
+      "SECTOR_RENEWABLE_ENERGY": "Renewable Energy",
+      "SECTOR_CYBERSECURITY": "Cybersecurity",
+      "SECTOR_AGRI_TECH": "AgriTech",
+      "SECTOR_PROP_TECH": "PropTech",
+      "SECTOR_GAMING": "Gaming",
+      "SECTOR_SPORTS_FITNESS": "Sports & Fitness",
+      "SECTOR_LOGISTICS_TRANSPORTATION": "Logistics & Transportation",
+      "SECTOR_FOOD_BEVERAGE": "Food & Beverages",
+      "SECTOR_SUSTAINABILITY": "Sustainability",
+      "SECTOR_ARTIFICIAL_INTELLIGENCE": "Artificial Intelligence",
+      "SECTOR_OTHER": "Other",
+      
+      "OPERATIONAL_STAGE": "Operational phase of the project",
+      "SELECT_OPERATIONAL_STAGE": "Select your operational phase",
+      "OPERATIONAL_STAGE_REQUIRED": "Operational phase is required.",
+      "STAGE_PRE_SEED": "Pre-Seed",
+      "STAGE_SEED": "Seed",
+      "STAGE_PRE_SERIES_A": "Pre-Series A",
+      "STAGE_SERIES_A": "Series A",
+      "STAGE_SERIES_B": "Series B",
+      
+      "PROBLEM_SOLVED": "What problem does your startup solve?",
+      "PROBLEM_SOLVED_PLACEHOLDER": "Describe the problem your startup solves",
+      "PROBLEM_SOLVED_REQUIRED": "Problem solved is required.",
+      "PROBLEM_SOLVED_MIN_LENGTH": "Problem solved must be at least 10 characters."
+
+      
+    },
+    "STEP_3": {
+      "MONTHLY_REVENUE": "Monthly Revenue",
+      "MONTHLY_REVENUE_PLACEHOLDER": "Enter your monthly revenue",
+      "MONTHLY_REVENUE_REQUIRED": "Monthly revenue is required.",
+      "IS_PROFITABLE": "Is Your Startup Profitable?",
+      "SELECT_IS_PROFITABLE": "Select an option",
+      "IS_PROFITABLE_REQUIRED": "This field is required.",
+      "REVENUE_GROWTH_RATE": "Revenue Growth Rate",
+      "REVENUE_GROWTH_RATE_PLACEHOLDER": "Enter your revenue growth rate",
+      "REVENUE_GROWTH_RATE_REQUIRED": "Revenue growth rate is required.",
+      "REVENUE_GOAL_NEXT_12_MONTHS": "Revenue Goal (Next 12 Months)",
+      "REVENUE_GOAL_NEXT_12_MONTHS_PLACEHOLDER": "Enter your revenue goal",
+      "REVENUE_GOAL_NEXT_12_MONTHS_REQUIRED": "Revenue goal is required.",
+      "HAS_DEBT": "Do You Have Debt?",
+      "SELECT_HAS_DEBT": "Select an option",
+      "HAS_DEBT_REQUIRED": "This field is required.",
+      "DEBT_AMOUNT": "Debt Amount",
+      "DEBT_AMOUNT_PLACEHOLDER": "Enter your debt amount",
+      "DEBT_AMOUNT_REQUIRED": "Debt amount is required.",
+      "BREAK_EVEN_POINT": "Break-Even Point",
+      "BREAK_EVEN_POINT_PLACEHOLDER": "When do you expect to break even?",
+      "BREAK_EVEN_POINT_REQUIRED": "Break-even point is required.",
+      "FINANCIAL_GOAL_NEXT_3_YEARS": "Financial Goal (Next 3 Years)",
+      "FINANCIAL_GOAL_NEXT_3_YEARS_PLACEHOLDER": "Describe your financial goal",
+      "FINANCIAL_GOAL_NEXT_3_YEARS_REQUIRED": "Financial goal is required.",
+
+      "FUNDING_AMOUNT": "Amount required for funding",
+      "SELECT_FUNDING_AMOUNT": "Select the funding amount",
+      "FUNDING_AMOUNT_REQUIRED": "Funding amount is required.",
+      "FUNDING_AMOUNT_1":"$ 100K to $ 500k",
+      "FUNDING_AMOUNT_2":"$ 500K to $ 1M",
+      "FUNDING_AMOUNT_3":"$ 1M to $ 5M",
+      "FUNDING_AMOUNT_4":"$ 5M+",
+
+      "FUNDING_USAGE": "How will the funding be used? ",
+      "FUNDING_USAGE_PLACEHOLDER": "Describe how the funding will be used",
+      "FUNDING_USAGE_REQUIRED": "Funding usage is required.",
+      "FUNDING_USAGE_MIN_LENGTH": "Funding usage must be at least 20 characters.",
+      
+      "PREVIOUS_FUNDING_SOURCES": "What are the previous sources of funding? ",
+      "SELECT_PREVIOUS_FUNDING_SOURCES": "Select previous funding sources",
+      "PREVIOUS_FUNDING_SOURCES_REQUIRED": "Previous funding sources are required.",
+      "PREVIOUS_FUNDING_SOURCES_1":"Angel Funding",
+      "PREVIOUS_FUNDING_SOURCES_2":"Loans",
+      "PREVIOUS_FUNDING_SOURCES_3":"Self-financing",
+      "PREVIOUS_FUNDING_SOURCES_4":"Investment funds",
+      "PREVIOUS_FUNDING_SOURCES_5":"Other Sources",
+      
+      "TARGET_MARKET": "Target market for the project*",
+      "SELECT_TARGET_MARKET": "Select the target market",
+      "TARGET_MARKET_REQUIRED": "Target market is required.",
+      "TARGET_MARKET_1":"Local (UAE)",
+      "TARGET_MARKET_2":"Gulf",
+      "TARGET_MARKET_3":"Regional"
+
+    },
+    "STEP_4": {
+      "OPEN_TO_JOINT_INVESTMENT": "Are you open to a joint investment?",  
+      "OPEN_TO_JOINT_INVESTMENT_REQUIRED": "This field is required.",
+      "OPEN_TO_JOINT_INVESTMENT_YES": "Yes",
+      "OPEN_TO_JOINT_INVESTMENT_NO": "No",
+
+      "HAS_EXISTING_PARTNERS": "Do you have existing partners?",
+      "HAS_EXISTING_PARTNERS_REQUIRED": "This field is required.",
+      "HAS_EXISTING_PARTNERS_YES": "Yes",
+      "HAS_EXISTING_PARTNERS_NO": "No",
+
+      "MONTHLY_REVENUE": "What is your average monthly revenue currently?",
+      "MONTHLY_REVENUE_PLACEHOLDER": "Enter your monthly revenue",
+      "MONTHLY_REVENUE_REQUIRED": "Monthly revenue is required.",
+      "MONTHLY_REVENUE_INVALID": "Monthly revenue is invalid.",
+
+      "IS_PROFITABLE": "Is your company currently profitable?",
+      "IS_PROFITABLE_REQUIRED": "This field is required.",
+      "IS_PROFITABLE_YES": "Yes",
+      "IS_PROFITABLE_NO": "No",
+
+      "REVENUE_GROWTH": "What is your revenue growth rate over the last 12 months?",
+      "REVENUE_GROWTH_PLACEHOLDER": "Enter your profit percentage",
+      "REVENUE_GROWTH_REQUIRED": "Profit percentage is required.",
+      "REVENUE_GROWTH_INVALID": "Profit percentage is invalid.",
+
+      "REVENUE_GOAL": "What is your main revenue goal over the next 12 months?",
+      "REVENUE_GOAL_PLACEHOLDER": "Enter your revenue goal",
+      "REVENUE_GOAL_REQUIRED": "Revenue goal is required.",
+      "REVENUE_GOAL_INVALID": "Revenue goal is invalid."
+    },
+    "STEP_5": {
+      "HAS_MAJOR_DEBTS": "Do you have any major debts or financial obligations?",
+      "HAS_MAJOR_DEBTS_REQUIRED": "This field is required.",
+      "HAS_MAJOR_DEBTS_YES": "Yes",
+      "HAS_MAJOR_DEBTS_NO": "No",
+
+      "CURRENT_DEBT_SIZE": "If yes, what is the current debt size?",
+      "CURRENT_DEBT_SIZE_PLACEHOLDER": "Enter your current debt size",
+      "CURRENT_DEBT_SIZE_REQUIRED": "Current debt size is required.",
+      "CURRENT_DEBT_SIZE_INVALID": "Current debt size is invalid.",
+
+      "BREAK_EVEN_POINT":"When do you expect to reach the break-even point?",
+      "BREAK_EVEN_POINT_REQUIRED": "This field is required.",
+      "BREAK_EVEN_POINT_PLACEHOLDER": "Enter break-even point",
+      "BREAK_EVEN_POINT_INVALID": "Break-even point is invalid.",
+
+      "FINANCIAL_GOAL":"What is your financial goal for the next three years?",
+      "FINANCIAL_GOAL_REQUIRED": "This field is required.",
+      "FINANCIAL_GOAL_PLACEHOLDER": "Enter your financial goal",
+      "FINANCIAL_GOAL_INVALID": "Financial goal is invalid.",
+
+      "HAS_EXIT_STRATEGY":"Do you have a clear exit strategy?",
+      "HAS_EXIT_STRATEGY_REQUIRED": "This field is required.",
+      "HAS_EXIT_STRATEGY_YES": "Yes",
+      "HAS_EXIT_STRATEGY_NO": "No",
+
+      "EXIT_STRATEGY_DETAILS":"If yes, what is your exit strategy?",
+      "EXIT_STRATEGY_DETAILS_REQUIRED": "This field is required.",
+      "EXIT_STRATEGY_DETAILS_PLACEHOLDER": "Enter your exit strategy",
+      "EXIT_STRATEGY_DETAILS_INVALID": "Exit strategy is invalid."
+    },
+    "STEP_6": {
+      "SUBMIT_TITLE": "Submit your investor request",
+      "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
+      "SUBMIT_BUTTON": "Submit",
+      "SUBMITTED_TEXT": "Submitted"    
+    },
+    "NAVIGATION": {
+      "PREVIOUS_STEP": "Previous Step",
+      "CANCEL": "Cancel",
+      "NEXT_STEP": "Next",
+      "SUBMIT": "Submit"
+    }
+  }
+  }
+
