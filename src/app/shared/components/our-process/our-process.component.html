@@ -1,0 +1,25 @@
+<section class="our-process">
+  <h2 class="section-title">{{ 'ourProcess.title' | translate }}</h2>
+
+  <div class="process-wrapper">
+    <ng-container *ngFor="let step of steps; let i = index">
+      <div class="process-card">
+        <div class="icon-wrapper">
+          <div class="icon-bg">
+            <img [src]="'../../../../../../assets/' + step.icon" alt="step icon" />
+          </div>
+        </div>
+        <h3>{{ step.titleKey | translate }}</h3>
+        <p>{{ step.descKey | translate }}</p>
+      </div>
+
+      <div
+        *ngIf="i < steps.length - 1"
+        class="connector"
+        aria-hidden="true"
+      >
+        <div class="line-animation"></div>
+      </div>
+    </ng-container>
+  </div>
+</section>

@@ -404,3 +404,9 @@ html[lang="ar"] .marquee-track {
     transform: scale(1) rotate(360deg);
   }
 }
+
+
+html[lang='ar'] .process-wrapper, .our-process {
+  direction: rtl !important;
+  flex-direction: row !important;
+}
