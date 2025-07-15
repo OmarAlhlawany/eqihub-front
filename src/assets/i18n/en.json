@@ -94,11 +94,61 @@
         "desc": "Strict security measures to ensure smooth and secure transactions and the safety of your sensitive information."
       }
     }
+  },
+
+
+  "faq": {
+    "investor": {
+      "title": "Answers to your questions",
+      "q1": {
+        "question": "How do I become an investor with Angel East?",
+        "answer": "To become an investor with Angel East, start by filling out our investor application form. Once submitted, we’ll connect with you to verify your identity and information. After approval, you’ll gain access to exclusive investment opportunities, high-potential startups, and our investor network. Begin your journey today!"
+      },
+      "q2": {
+        "question": "What kind of startups will I have access to?",
+        "answer": "As part of the Angel East Investors Network, you’ll gain access to a curated selection of high-potential, early-stage, and growth-stage startups across various industries. We focus on innovative, scalable, and investment-ready ventures, ensuring you connect with startups that align with your investment goals. From tech-driven solutions to emerging market disruptors, you’ll be at the forefront of the next big opportunities."
+      },
+      "q3": {
+        "question": "What is the minimum investment required?",
+        "answer": "There is no minimum or maximum investment limit, as we rely on the investor's intuition, understanding, and vision. However, the average investment per opportunity typically ranges between 20,000 to 60,000 USD."
+      },
+      "q4": {
+        "question": "How does Angel East select startups?",
+        "answer": "At Angel East, we have a rigorous selection process to ensure that only high-potential startups make it into our network. Our team evaluates startups based on key factors such as market potential, scalability, founding team strength, innovation, and financial viability. We also leverage data-driven insights and industry expertise to identify startups with the highest growth potential."
+      },
+      "q5": {
+        "question": "Is Angel East open to international investors?",
+        "answer": "Yes! Angel East welcomes investors from around the world. Our network is designed to provide access to high-potential startups regardless of location. As long as you meet our investment criteria and comply with relevant regulations, you can join our investor network and explore exclusive opportunities."
+      }
+    },
+    "startup": {
+      "title": "Answers to your questions",
+      "q1": {
+        "question": "How do I become a verified startup owner on Angel East?",
+        "answer": "Fill out the application form and wait for approval by our team of experts. Once verified, you’ll access to the Angel East platform and be granted permission to use all integrated tools and find investors for your business."
+      },
+      "q2": {
+        "question": "How do I know if the investors are serious?",
+        "answer": "Angel East is an investor-owned platform, we only accept actual investors, and much like startups, they too need to fill out an application form and only access the platform when verified."
+      },
+      "q3": {
+        "question": "Am I free to ask for any amount of funds?",
+        "answer": "We believe in flexibility in deciding how much funds you want to raise for your startup! As long as both parties come to an agreement, any amount is fine."
+      },
+      "q4": {
+        "question": "Is it safe to share sensitive documents and information with investors on Angel East?",
+        "answer": "Yes, it is. From going through a rigorous selection process when approving investors to offering a private data room, we are all about safety and security."
+      },
+      "q5": {
+        "question": "Can international investors outside the MENA region invest in my startup?",
+        "answer": "Yes! Our platform allows our startups to find and match with opportunities from all around the world."
+      }
+    }
   }
 
 
-
 ,
+
 "investor": {
   "hero": {
     "title": "Find Your Ideal Startup Today",

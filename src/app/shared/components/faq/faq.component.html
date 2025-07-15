@@ -1,0 +1,27 @@
+<section class="faq-section">
+  <h2 class="faq-title">
+    {{ 'faq.' + pageType + '.title' | translate }}
+  </h2>
+
+  <div class="faq-wrapper faq-container">
+    <div
+      class="faq-item"
+      *ngFor="let i of [1,2,3,4,5]"
+      [class.active]="i === activeIndex"
+      (click)="toggle(i)"
+    >
+      <div class="faq-question">
+        {{ ('faq.' + pageType + '.q' + i + '.question') | translate }}
+        <img
+          [src]="'../../../../../../assets/arrow.svg'"
+          alt="Toggle arrow"
+          [class.rotated]="i === activeIndex"
+        />
+      </div>
+
+      <div class="faq-answer" *ngIf="i === activeIndex">
+        {{ ('faq.' + pageType + '.q' + i + '.answer') | translate }}
+      </div>
+    </div>
+  </div>
+</section>

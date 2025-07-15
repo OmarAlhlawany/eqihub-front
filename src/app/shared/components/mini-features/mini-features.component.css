@@ -81,6 +81,9 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .mini-features {
+  padding: 1rem;
+}
   .features-wrapper {
     flex-direction: column !important;
     align-items: center;
@@ -88,11 +91,14 @@
 
   .feature-box {
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     text-align: center;
   }
-
+  h2 {
+    font-size: 26px !important;
+    margin: 2rem 1rem !important;
+  }
   .feature-box img {
     position: relative;
     left: auto;
