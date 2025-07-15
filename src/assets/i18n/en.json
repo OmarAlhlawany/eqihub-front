@@ -145,7 +145,18 @@
       }
     }
   }
-
+,
+"cta": {
+  "investor": {
+    "title1": "Connect with your ideal startup,",
+    "title2": "and grow your portfolio today!"
+  },
+  "startup": {
+    "title1": "Connect with your ideal investor",
+    "title2": "and grow your business."
+  },
+  "button": "Join Now"
+}
 
 ,
 

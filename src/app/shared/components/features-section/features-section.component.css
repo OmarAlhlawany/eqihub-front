@@ -79,7 +79,7 @@
   background-color: white;
   border-radius: 20px;
   padding: 2rem;
-  text-align: left;
+  text-align: start;
   border: 2px solid #E5E7EB;
   transition: transform 0.3s ease, background-color 0.3s ease;
   flex: 1;

@@ -1,0 +1,18 @@
+<section class="cta-section">
+  <img src="../../../../../../assets/left-cards.svg" class="bg-img left" />
+  <img src="../../../../../../assets/right-cards.svg" class="bg-img right" />
+
+  <div class="cta-content">
+    <h2>{{ 'cta.' + pageType + '.title1' | translate }}</h2>
+    <h2>{{ 'cta.' + pageType + '.title2' | translate }}</h2>
+
+<a
+  class="cta-btn"
+  [routerLink]="['/', pageType]"
+  [fragment]="pageType + 'FormContainer'"
+  rel="noopener noreferrer">
+        {{ 'cta.button' | translate }}
+    </a>
+  </div>
+</section>
+

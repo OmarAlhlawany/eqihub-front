@@ -1,0 +1,80 @@
+.cta-section {
+    background: linear-gradient(to bottom, #87b9fa, #5491f5, #2679f3);
+    position: relative;
+    padding: 8rem;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    border-radius: 5rem;
+    margin: 0rem;
+    border: 3rem solid #ffffff;
+}
+
+.bg-img {
+  position: absolute;
+  opacity: 0.5;
+  max-width: 400px;
+  z-index: 0;
+}
+
+.bg-img.left {
+  left: 0;
+  top: 0;
+}
+
+.bg-img.right {
+  right: 0;
+  top: 0;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #4a8bf5;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-content h2 {
+    font-size: 1.4rem;
+  }
+  .bg-img.left {
+  top: unset;
+  bottom: 0 !important;
+}
+
+.bg-img.right {
+  top: unset;
+  bottom: 0 !important;
+}
+  .bg-img {
+    max-width: 150px;
+  }
+
+  .cta-section {
+    padding: 5rem 1rem;
+    border-radius: 2rem;
+    margin: 0rem;
+    border: 1rem solid #ffffff;
+}
+}
