@@ -1,0 +1,29 @@
+<section class="videos-wrapper">
+  <div class="videos-header">
+    <h2>{{ 'videos.title' | translate }}</h2>
+    <p>{{ 'videos.description' | translate }}</p>
+  </div>
+
+  <div class="scroll-container" #scrollContainer>
+    <div class="scroll-shadow left-shadow"></div>
+
+<div class="videos-list">
+  <ng-container *ngFor="let _ of [1, 2, 3, 4, 5, 6]">
+    <a
+      class="video-card"
+      *ngFor="let video of videos"
+      [href]="getVideoUrl(video.id)"
+      target="_blank"
+    >
+      <img [src]="getThumbnailUrl(video.id)" class="thumbnail" />
+      <div class="overlay">
+        <img src="../../../../../../assets/play.svg" alt="Play icon" />
+      </div>
+    </a>
+  </ng-container>
+</div>
+
+
+    <div class="scroll-shadow right-shadow"></div>
+  </div>
+</section>

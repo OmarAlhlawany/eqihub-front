@@ -95,8 +95,12 @@
       }
     }
   },
+"videos": {
+  "title": "Discover Our Podcast",
+  "description": "Gain valuable information and knowledge about the business ecosystem and the investment process in the MENA region."
+}
 
-
+,
   "faq": {
     "investor": {
       "title": "Answers to your questions",
@@ -180,7 +184,7 @@
 },
 
   "INVESTOR_FORM": {
-    "TITLE": "Join as an Investor",
+    "TITLE": "Join Our Investor List Now",
     "DESCRIPTION": "Provide your personal and business details to start the application.",
     "STEP_1": {
       "TITLE": "Contact details",
@@ -323,7 +327,7 @@
 },
 
   "STARTUP_FORM": {
-    "TITLE": "Join as Startup",
+    "TITLE": "Join Our Startup Network List Now",
     "STEP_1": {
       "TITLE": "Contact details",
       "DESCRIPTION": "Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.",

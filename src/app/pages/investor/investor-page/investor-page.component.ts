@@ -7,11 +7,12 @@ import { OurProcessComponent } from "../../../shared/components/our-process/our-
 import { MiniFeaturesComponent } from "../../../shared/components/mini-features/mini-features.component";
 import { FaqComponent } from "../../../shared/components/faq/faq.component";
 import { CtaComponent } from "../../../shared/components/cta/cta.component";
+import { VideosSectionComponent } from "../../../shared/components/videos-section/videos-section.component";
 
 @Component({
   selector: 'app-investor-page',
   standalone: true,
-  imports: [InvestorHeroComponent, InvestorFormComponent, FeaturesSectionComponent, MapStatsComponent, OurProcessComponent, MiniFeaturesComponent, FaqComponent, CtaComponent],
+  imports: [InvestorHeroComponent, InvestorFormComponent, FeaturesSectionComponent, MapStatsComponent, OurProcessComponent, MiniFeaturesComponent, FaqComponent, CtaComponent, VideosSectionComponent],
   templateUrl: './investor-page.component.html',
   styleUrls: ['./investor-page.component.css']
 })

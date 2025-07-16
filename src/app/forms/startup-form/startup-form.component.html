@@ -1,6 +1,6 @@
 <div class="startup-form-container" id="startupFormContainer">
+      <h2 class="form-title">{{ 'STARTUP_FORM.TITLE' | translate }}</h2>
   <form [formGroup]="startupForm" (ngSubmit)="onSubmit()" class="form-container">
-    <h2 class="form-title">{{ 'STARTUP_FORM.TITLE' | translate }}</h2>
     <p class="form-description">{{ 'STARTUP_FORM.STEP_1.DESCRIPTION' | translate }}</p>
     <hr>
     <!-- Step Indicator (Hidden on Step 6) -->
