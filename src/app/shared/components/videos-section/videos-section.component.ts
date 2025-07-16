@@ -29,7 +29,6 @@ export class VideosSectionComponent implements AfterViewInit {
     let speed = 0.5;
     let isHovering = false;
 
-    // وقف الحركة عند الهوفر
     container.addEventListener('mouseenter', () => {
       isHovering = true;
     });
@@ -38,7 +37,7 @@ export class VideosSectionComponent implements AfterViewInit {
       isHovering = false;
     });
 
-    // دعم السحب بالماوس
+    // سحب بالماوس (ديسكتوب)
     let isDown = false;
     let startX: number;
     let scrollLeft: number;
@@ -68,9 +67,31 @@ export class VideosSectionComponent implements AfterViewInit {
       container.scrollLeft = scrollLeft - walk;
     });
 
+    // ✨ دعم السحب في الموبايل
+    let touchStartX = 0;
+    let scrollStartLeft = 0;
+    let isTouching = false;
+
+    container.addEventListener('touchstart', (e) => {
+      isTouching = true;
+      touchStartX = e.touches[0].pageX;
+      scrollStartLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('touchmove', (e) => {
+      if (!isTouching) return;
+      const touchX = e.touches[0].pageX;
+      const move = touchStartX - touchX;
+      container.scrollLeft = scrollStartLeft + move;
+    });
+
+    container.addEventListener('touchend', () => {
+      isTouching = false;
+    });
+
     // Auto scroll loop
     const scroll = () => {
-      if (!isHovering && !isDown) {
+      if (!isHovering && !isDown && !isTouching) {
         container.scrollLeft += speed;
 
         if (container.scrollLeft >= container.scrollWidth / 2) {
