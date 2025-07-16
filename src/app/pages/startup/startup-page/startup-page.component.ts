@@ -8,11 +8,12 @@ import { MiniFeaturesComponent } from "../../../shared/components/mini-features/
 import { FaqComponent } from "../../../shared/components/faq/faq.component";
 import { CtaComponent } from "../../../shared/components/cta/cta.component";
 import { VideosSectionComponent } from "../../../shared/components/videos-section/videos-section.component";
+import { ProcessHighlightsComponent } from "../../../shared/components/process-highlights/process-highlights.component";
 
 @Component({
   selector: 'app-startup-page',
   standalone: true,
-  imports: [startupHeroComponent, StartupFormComponent, FeaturesSectionComponent, MapStatsComponent, OurProcessComponent, MiniFeaturesComponent, FaqComponent, CtaComponent, VideosSectionComponent],
+  imports: [startupHeroComponent, StartupFormComponent, FeaturesSectionComponent, MapStatsComponent, OurProcessComponent, MiniFeaturesComponent, FaqComponent, CtaComponent, VideosSectionComponent, ProcessHighlightsComponent],
   templateUrl: './startup-page.component.html',
   styleUrl: './startup-page.component.css'
 })

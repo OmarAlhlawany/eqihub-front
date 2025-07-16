@@ -1,0 +1,41 @@
+<section class="process-wrapper">
+  <div class="process-header">
+    <h2>{{ 'home.process.heading' | translate }}</h2>
+    <p>{{ 'home.process.subheading' | translate }}</p>
+  </div>
+
+  <div class="process-container">
+    <div class="image-wrapper">
+      <img
+        [src]="activeSteps[currentIndex].img"
+        alt="process image"
+        class="process-image"
+      />
+    </div>
+
+    <div class="steps-wrapper">
+      <div
+        *ngFor="let step of activeSteps; let i = index"
+        class="step"
+        [class.active]="i === currentIndex"
+        (click)="setStep(i)"
+      >
+        <div class="step-header">
+          <span class="number">0{{ i + 1 }}.</span>
+          <h3>{{ 'home.process.' + step.key + '.title' | translate }}</h3>
+        </div>
+
+        <div class="progress-line">
+          <div
+            class="progress"
+            [style.width.%]="i === currentIndex ? 100 : 0"
+          ></div>
+        </div>
+
+        <p *ngIf="i === currentIndex" class="description animate-fade">
+          {{ 'home.process.' + step.key + '.description' | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,154 @@
+.process-wrapper {
+  background: #fbfdff;
+  padding: 4rem 20px;
+  direction: ltr;
+  width: 90%;
+  margin: auto;
+}
+
+:host-context([dir="rtl"]) .process-wrapper {
+  direction: rtl;
+}
+
+.process-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.process-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.process-header p {
+  font-size: 16px;
+  color: #525252;
+  margin: 0;
+}
+
+.process-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  flex: 1.1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.process-image {
+  width: 100%;
+  border-radius: 25px;
+  margin: 3rem;
+  object-fit: cover;
+}
+
+.steps-wrapper {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.step {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-header .number {
+  font-weight: bold;
+  font-size: 20px;
+  color: #0049ff;
+  min-width: 40px;
+}
+
+.step-header h3 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 600;
+  color: #26262a;
+}
+
+.progress-line {
+  background: rgba(0, 0, 0, 0.1);
+  height: 4px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 8px;
+  width: 87%;
+  margin: 12px auto;
+}
+
+.progress {
+  height: 70%;
+  background: #0049ff;
+  transition: width 2.5s ease;
+}
+
+.description {
+  font-size: 22px;
+  padding: 1rem 3rem 0 3rem;
+  color: #0c0c0d;
+  line-height: 1.6;
+  margin-top: 12px;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+  overflow: hidden;
+}
+
+.step.active .description {
+  opacity: 1;
+  max-height: 500px;
+}
+
+@media (max-width: 768px) {
+  .process-container {
+    flex-direction: column;
+  }
+
+  .steps-wrapper {
+    gap: 24px;
+  }
+
+  .process-header h2 {
+    font-size: 24px;
+  }
+
+  .process-header p {
+    font-size: 14px;
+  }
+
+  .step-header h3 {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .process-image {
+    max-width: 100%;
+  }
+}

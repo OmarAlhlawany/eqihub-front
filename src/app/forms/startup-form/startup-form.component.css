@@ -684,7 +684,6 @@ select#previous_funding_source_id, select#funding_amount_id, select#operational_
 .step-6 .submit-icon {
   margin: 20px; /* Reduced margin */
   width: 100px; /* Smaller icon */
-  height: 100px; /* Smaller icon */
 }
 
 .step-6 .submit-title {
@@ -1023,7 +1022,6 @@ margin: 0;
 
   .step-6 .submit-icon {
     width: 80px; /* Smaller icon on mobile */
-    height: 80px; /* Smaller icon on mobile */
     margin: 15px; /* Reduced margin */
   }
 
@@ -1297,7 +1295,6 @@ margin: 0;
 
   .step-6 .submit-icon {
     width: 90px; /* Adjusted icon size for tablet */
-    height: 90px; /* Adjusted icon size for tablet */
     margin: 18px; /* Slightly reduced margin */
   }
 

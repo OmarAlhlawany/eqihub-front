@@ -62,7 +62,67 @@
   }
 ,
 
+"dynamicFeatures": {
+  "title": "With the rising startup scene in the MENA region…",
+  "description": "We aim to become your key player in connecting investors with startups",
+  "steps": [
+    {
+      "title": "Automated Matching System",
+      "description": "Our automated matching system will find the right opportunity that meets your needs, end-goals, and criteria you personally fill out prior to the matching."
+    },
+    {
+      "title": "Due Diligence Accessibility",
+      "description": "When asked about the pain points, “Due Diligence” is a recurring problem amongst MENA region investors, we’re planning on changing that!"
+    },
+    {
+      "title": "Private Data Roaming",
+      "description": "Seamless and secure access to startup data while maintaining privacy and confidentiality."
+    },
+    {
+      "title": "AI-Powered Tools",
+      "description": "We are developing cutting-edge AI-driven solutions to enhance investment decisions."
+    }
+  ]
+}
+,
+"home": {
+  "process": {
+    "heading": "With the rising startup scene in the MENA region…",
+    "subheading": "We aim to become your key player in connecting investors with startups",
 
+    "01": {
+      "title": "Automated Matching System",
+      "description": "Our automated matching system will find the right opportunity that meets your needs, end-goals, and criteria you personally fill out prior to the matching."
+    },
+    "02": {
+      "title": "Due Diligence Accessibility",
+      "description": "When asked about the pain points, “Due Diligence” is a recurring problem amongst MENA region investors, we’re planning on changing that!"
+    },
+    "03": {
+      "title": "Private Data Roaming",
+      "description": "Seamless and secure access to startup data while maintaining privacy and confidentiality. Our system will ensure investors can explore opportunities with confidence, without compromising sensitive information."
+    },
+    "04": {
+      "title": "AI-Powered Tools",
+      "description": "We are developing cutting-edge AI-driven solutions to enhance investment decisions. From automated startup matching to intelligent due diligence, our tools will revolutionize how investors discover and evaluate opportunities."
+    },
+
+    "01s": {
+      "title": "Automated Matching System",
+      "description": "You don’t have to worry about finding the right investor, Angel East does that for you! Fill out your funding goals prior to the matching and connect with tailored opportunities."
+    },
+    "02s": {
+      "title": "Pitch Deck Creation",
+      "description": "A built-in tool that allows you to create your startup profile, customize it, and showcase traction and funding goals with visual aids"
+    },
+    "03s": {
+      "title": "AI-Powered Tools",
+      "description": "Stay up-to-date with automated trend analysis and real-time data about industry news."
+    }
+  }
+}
+
+,
   "miniFeatures": {
     "investor": {
       "title": "Your gate to the MENA high-potential startup ecosystem",

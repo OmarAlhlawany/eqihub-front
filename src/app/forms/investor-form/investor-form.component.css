@@ -624,7 +624,6 @@ select#favourite_investment_stage_id, select#investment_stage_id, select#investm
 .step-5 .submit-icon {
   margin: 20px; /* Reduced margin */
   width: 100px; /* Smaller icon */
-  height: 100px; /* Smaller icon */
 }
 
 .step-5 .submit-title {
@@ -846,7 +845,6 @@ select#favourite_investment_stage_id, select#investment_stage_id, select#investm
 
 .step-5 .submit-icon {
   width: 80px; /* Smaller icon on mobile */
-  height: 80px; /* Smaller icon on mobile */
   margin: 15px; /* Reduced margin */
 }
 
@@ -878,7 +876,6 @@ select#favourite_investment_stage_id, select#investment_stage_id, select#investm
 
 .step-5 .submit-icon {
   width: 80px; /* Smaller icon on mobile */
-  height: 80px; /* Smaller icon on mobile */
   margin: 15px; /* Reduced margin */
 }
 
@@ -1063,7 +1060,6 @@ select#favourite_investment_stage_id, select#investment_stage_id, select#investm
 
   .step-5 .submit-icon {
     width: 90px; /* Adjust icon size for tablet */
-    height: 90px;
     margin: 18px; /* Adjust margin for tablet */
   }
 
@@ -1093,7 +1089,6 @@ select#favourite_investment_stage_id, select#investment_stage_id, select#investm
 
   .step-5 .submit-icon {
     width: 90px; /* Adjust icon size for tablet */
-    height: 90px;
     margin: 18px; /* Adjust margin for tablet */
   }
 
