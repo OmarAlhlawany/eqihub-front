@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class FaqComponent {
   @Input() pageType: 'investor' | 'startup' = 'investor';
 
-  activeIndex: number | null = null;
+activeIndex: number | null = 1; // بدل null
 
   toggle(index: number): void {
     this.activeIndex = this.activeIndex === index ? null : index;

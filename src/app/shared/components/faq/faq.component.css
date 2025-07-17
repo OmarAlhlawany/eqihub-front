@@ -29,17 +29,22 @@
 
 .faq-question {
   font-size: 24px;
-  color: #2563eb;
+  color: #64748b; /* Default gray */
   font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: color 0.7s ease;
+}
+
+.faq-question.active {
+  color: #2563eb; /* Blue when active */
 }
 
 .arrow-icon {
   width: 24px;
   height: 24px;
-  transition: transform 0.3s ease;
+  transition: transform 0.9s ease;
 }
 
 .arrow-icon.rotated {
@@ -51,6 +56,18 @@
   color: #334155;
   font-size: 16px;
   line-height: 1.6;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
