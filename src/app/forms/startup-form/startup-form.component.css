@@ -790,8 +790,9 @@ select#previous_funding_source_id, select#funding_amount_id, select#operational_
   }
 
   .form-title {
-    font-size: 24px; /* Smaller font size for mobile */
-    margin-bottom: 15px; /* Reduce bottom margin */
+font-size: 20px;
+        margin-bottom: -25px;
+        padding: 10px;
   }
 
   .form-container {

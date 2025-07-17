@@ -132,6 +132,10 @@
   font-size: 40px ;
  }
 @media (max-width: 768px) {
+  .process-wrapper {
+    padding: 2rem;
+    width: 100%;
+    margin: auto;  }
   .process-container {
     flex-direction: column;
   }

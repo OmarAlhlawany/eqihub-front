@@ -72,11 +72,19 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .faq-section {
+    padding: 2rem;
+  }
   .faq-question {
     font-size: 20px;
   }
 
   .faq-answer {
     font-size: 14px;
+  }
+
+  .arrow-icon {
+    width: 20px;
+    height: 20px;
   }
 }
