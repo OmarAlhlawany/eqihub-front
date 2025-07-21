@@ -34,29 +34,29 @@
     "investor": {
       "step1": {
         "title": "Fill Out the Form",
-        "desc": "Submit your details through our website to gain access to Angel East’s investor network."
+        "desc": "Submit your details through our website to gain access to Angel East’s investor network"
       },
       "step2": {
         "title": "Get Verified",
-        "desc": "Our team reviews your application to ensure alignment with our network’s investment criteria."
+        "desc": "Our team reviews your application to ensure alignment with our network’s investment criteria"
       },
       "step3": {
         "title": "Start Investing",
-        "desc": "Once verified, explore curated startup deals and connect with high-potential ventures."
+        "desc": "Once verified, explore curated startup deals and connect with high-potential ventures"
       }
     },
     "startup": {
       "step1": {
         "title": "Apply to Join",
-        "desc": "Fill the form and Submit your startup details through our platform to become part of the Angel East network."
+        "desc": "Fill the form and Submit your startup details through our platform to become part of the Angel East network"
       },
       "step2": {
         "title": "Get Verified",
-        "desc": "Our team reviews your application to ensure it meets our network’s standards and aligns with investor interests."
+        "desc": "Our team reviews your application to ensure it meets our network’s standards and aligns with investor interests"
       },
       "step3": {
         "title": "Connect & Grow",
-        "desc": "Once approved, gain access to a curated network of investors and fellow founders ready to support and elevate your startup’s journey."
+        "desc": "Once approved, gain access to a curated network of investors and fellow founders ready to support and elevate your startup’s journey"
       }
     }
   }
