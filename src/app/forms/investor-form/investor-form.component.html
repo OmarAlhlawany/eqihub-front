@@ -119,6 +119,9 @@
             {{ 'INVESTOR_FORM.STEP_2.SELECT_FAVORITE_SECTORS' | translate }}
           </button>
           <div class="dropdown-menu show" *ngIf="showDropdown">
+            <span class="dropdown-item select-all" (click)="selectAllSectors()">
+              Select All
+            </span>
             <span *ngFor="let sector of dynamicData.favourite_sectors" class="dropdown-item" (click)="toggleTag(sector)">
               {{ sector.name }}
             </span>

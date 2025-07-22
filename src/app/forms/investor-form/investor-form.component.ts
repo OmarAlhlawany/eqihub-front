@@ -120,6 +120,14 @@ export class InvestorFormComponent implements OnInit {
   /**
    * Get the label for a tag
    */
+  /**
+   * Select all sectors
+   */
+  selectAllSectors(): void {
+    const allSectorIds = this.dynamicData.favourite_sectors?.map((sector: any) => sector.id) || [];
+    this.selectedTags = [...allSectorIds];
+    this.investorForm.get('favourite_sectors')?.setValue(this.selectedTags);
+  }
   getTagLabel(tagValue: string): string {
     const tag = this.dynamicData.favourite_sectors?.find((sector: any) => sector.id === tagValue);
     return tag ? tag.name : tagValue; // Fallback to the original value if not found
