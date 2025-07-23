@@ -151,7 +151,7 @@ export class InvestorFormComponent implements OnInit {
 
  prevStep(): void {
    if (this.currentStep === 1) {
-     window.location.href = 'https://apply.equihub.co/';
+     window.location.href = '/';
    } else if (this.currentStep > 1) {
      this.currentStep--;
    }

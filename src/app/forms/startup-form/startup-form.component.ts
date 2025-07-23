@@ -110,7 +110,7 @@ export class StartupFormComponent implements OnInit {
  */
 prevStep(): void {
   if (this.currentStep === 1) {
-    window.location.href = 'https://apply.equihub.co/';
+    window.location.href = '/'; // Redirect to home if on the first step
   } else if (this.currentStep > 1) {
     this.currentStep--;
   }
