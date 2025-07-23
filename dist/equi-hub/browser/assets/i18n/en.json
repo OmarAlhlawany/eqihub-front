@@ -578,8 +578,8 @@
       "EXIT_STRATEGY_DETAILS_INVALID": "Exit strategy is invalid."
     },
     "STEP_6": {
-      "SUBMIT_TITLE": "Submit your investor request",
-      "SUBMIT_DESCRIPTION": "Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.",
+      "SUBMIT_TITLE": "Submitted Succesfully",
+      "SUBMIT_DESCRIPTION": "We are Proccsing your Request now, You will recieve a project quote within 24 - 48 hours.",
       "SUBMIT_BUTTON": "Submit",
       "SUBMITTED_TEXT": "Submitted"    
     },

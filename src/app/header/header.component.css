@@ -157,3 +157,8 @@
     height: 14px;
   }
 }
+ @media  (max-width: 400px) {
+      .nav-links a {
+    font-size: 10px;
+  }
+ }

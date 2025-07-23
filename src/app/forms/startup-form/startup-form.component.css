@@ -824,10 +824,9 @@ font-size: 20px;
     }
 
     .step-line {
-      width: 2.0rem;
+      width: 8vw;
       height: 6px;
-      margin: 0 3px;
-      margin: 0 2px;
+      margin: 0;
     }
 /* Form Steps */
 .form-step {
@@ -1077,6 +1076,15 @@ margin: 0;
   background-color: #0E57FF;
   color: white;
 }
+}
+
+@media (max-width: 400px) {
+      .step-line {
+      width: 7vw;
+      height: 6px;
+      margin: 0;
+    }
+  
 }
 /* responsive Tablet screens */
 @media (min-width: 768px) and (max-width: 1024px) {
